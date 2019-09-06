@@ -8,10 +8,23 @@ Chapter1:
 5. '/' ;
 6. pair
 7. syntaxError;
-8. camelSpace;
+8. camelCase;
 9. bracket;
-10. the variable is already defined;
+10. a variable is already defined;
 11. to assign;
 
 Chapter2:
-1.
+1. a variable is not defined;
+2. no have a closing quote;
+3. false direction;
+4. syntaxError;
+5. no have a closing bracket;
+6. no have a opening bracket;
+7. syntaxError;
+8. unclosed string;
+9. to read is hard. need a camelCase;
+10. need a camelCase;
+11. need a camelCase;
+12. a first letter in camelCase must be small;
+13. syntaxError;
+14. no quotes;
