@@ -57,3 +57,40 @@
 
 // Chapter 3:
 
+// let amountCommands = 3;
+// let numberId = 1;
+// console.log(numberId % amountCommands);
+//
+// numberId = 2;
+// console.log(numberId % amountCommands);
+//
+// numberId = 3;
+// console.log(numberId % amountCommands);
+//
+// numberId = 4;
+// console.log(numberId % amountCommands);
+//
+// numberId = 5;
+// console.log(numberId % amountCommands);
+//
+// numberId = 6;
+// console.log(numberId % amountCommands);
+//
+// numberId = 7;
+// console.log(numberId % amountCommands);
+//
+// numberId = 8;
+// console.log(numberId % amountCommands);
+//
+// numberId = 9;
+// console.log(numberId % amountCommands);
+//
+// numberId = 10;
+// console.log(numberId % amountCommands);
+//
+// numberId = 11;
+// console.log(numberId % amountCommands);
+//
+// numberId = 12;
+// console.log(numberId % amountCommands);
+

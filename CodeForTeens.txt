@@ -1,6 +1,6 @@
 Answers to a Quiz of the book:
 
-Chapter1:
+Chapter 1:
 1. about:blank;
 2. Ctrl + Shift + I;
 3. var, let;
@@ -13,7 +13,7 @@ Chapter1:
 10. a variable is already defined;
 11. to assign;
 
-Chapter2:
+Chapter 2:
 1. a variable is not defined;
 2. no have a closing quote;
 3. false direction;
@@ -28,3 +28,35 @@ Chapter2:
 12. a first letter in camelCase must be small;
 13. syntaxError;
 14. no quotes;
+
+Chapter 3:
+1. concatenation;
+2. '*';
+3. number;
+4. divide;
+5. number;
+6. brackets;
+7. '*=';
+8. '%';
+9. 'myVariable++';
+10. 'myVariable--';
+11. 3 * ( 4 + 1 );
+12. '2';
+13. myValue -= -8;
+14. '1 2 3 4 0';
+15. combined assignment;
+16. %
+
+Comprehensive review:
+1. camelCase;
+2. ctrl+shift+I;
+3. syntaxError;
+4. true;
+5. yes;
+6. syntaxError;
+7. '%';
+8. 'about:blank';
+9. mathValue += 7;
+10. yes;
+11. no. a variable is already defined.
+
