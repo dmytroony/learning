@@ -75,3 +75,23 @@ Chapter 4:
 12. '\';
 13. "Here's looking at you, kid.";
 
+Chapter 5:
+1. function;
+2. '{}';
+3. function call;
+4. camelCase;
+5. return;
+6. parameters, arguments;
+7. 'DRY';
+8. alert;
+9. ',';
+10. console.log();
+11. ();
+12. 0 - 1;
+13. Math.floor();
+14. true;
+15. true;
+16. false;
+17. tab;
+18. '\n';
+

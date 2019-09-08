@@ -10,7 +10,7 @@
 <body>
 <div>
 
-    <p class="tasks">Task 1: To do a script for counting an average age of my family</p>
+    <p class="tasks">Task 1: <br > To do a script for counting an average age of my family</p>
     <div class="spoiler">
         <input type="checkbox" id="spoiler_id_1">
         <label for="spoiler_id_1">Solution</label>
@@ -26,7 +26,7 @@
     </div>
 
     <p class="tasks">
-        Task 2: a) Divide 16 students into 4 squares.
+        Task 2: <br > a) Divide 16 students into 4 squares.
         b) Each square should have equal students.
     </p>
     <div class="spoiler">
@@ -90,7 +90,7 @@
     </div>
 
     <p class="tasks">
-        not typed
+	    Task 3: <br > a) You must create a function that returns three random numbers. b) Record must be in the format "_-_-_".
     </p>
     <div class="spoiler">
         <input type="checkbox" id="spoiler_id_3">
@@ -98,11 +98,39 @@
         <div class="spoiler_body">
             <pre>
                 <code>
-                    not typed
+					function randomNumber() {
+						let maxNumber = 99;
+						return Math.floor(Math.random() * maxNumber + 1);
+					}
+
+					function lotteryWon() {
+						let firstNum = randomNumber();
+						let secondNum = randomNumber();
+						let thirdNum = randomNumber();
+						return 'Your numbers of the Lottery are \"'+ firstNum + '-' + secondNum + '-' + thirdNum + '\"!';
+					}
+
+					console.log( lotteryWon() );
                 </code>
             </pre>
         </div>
     </div>
+
+	<p class="tasks">
+		Task 4: <br >
+	</p>
+	<div class="spoiler">
+		<input type="checkbox" id="spoiler_id_4">
+		<label for="spoiler_id_4">Solution</label>
+		<div class="spoiler_body">
+            <pre>
+                <code>
+					not typed
+                </code>
+            </pre>
+		</div>
+	</div>
+
 </div>
 </body>
 </html>
