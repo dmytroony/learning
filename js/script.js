@@ -165,16 +165,29 @@
 //
 // pairGameQ();
 
-function randomNumber() {
-	let maxNumber = 99;
-	return Math.floor(Math.random() * maxNumber + 1);
-}
+// function randomNumber() {
+// 	let maxNumber = 99;
+// 	return Math.floor(Math.random() * maxNumber + 1);
+// }
+//
+// function lotteryWon() {
+// 	let firstNum = randomNumber();
+// 	let secondNum = randomNumber();
+// 	let thirdNum = randomNumber();
+// 	return 'Your numbers of the Lottery are \"'+ firstNum + '-' + secondNum + '-' + thirdNum + '\"!';
+// }
+//
+// console.log( lotteryWon() );
 
 function lotteryWon() {
+	let randomNumber = function() {
+		return Math.floor(Math.random() * 100);
+	};
 	let firstNum = randomNumber();
 	let secondNum = randomNumber();
 	let thirdNum = randomNumber();
-	return 'Your numbers of the Lottery are \"'+ firstNum + '-' + secondNum + '-' + thirdNum + '\"!';
+	let wonCombination = '\"' + firstNum + '-' + secondNum + '-' + thirdNum + '\"';
+	return 'Your numbers of the Lottery are: ' + wonCombination;
 }
 
 console.log( lotteryWon() );
