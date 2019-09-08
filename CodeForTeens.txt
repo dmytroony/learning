@@ -60,3 +60,18 @@ Comprehensive review:
 10. yes;
 11. no. a variable is already defined.
 
+Chapter 4:
+1. human;
+2. string;
+3. ignore;
+4. '//';
+5. shift+enter;
+6. '' or "";
+7. /*;
+8. */;
+9. false;
+10. symbols;
+11. concatenation;
+12. '\';
+13. "Here's looking at you, kid.";
+

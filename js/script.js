@@ -94,3 +94,8 @@
 // numberId = 12;
 // console.log(numberId % amountCommands);
 
+// Chapter 4:
+
+// Strings
+// i already know everything about strings
+
