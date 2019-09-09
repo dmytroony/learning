@@ -15,7 +15,7 @@
 //
 // console.log(averagePrice);
 
-// //  Chapter 2
+// //  Chapter 1
 // Variables
 // // Example 1:
 // let favoriteSupplement = 'pepperoni';
@@ -54,7 +54,7 @@
 // // Example 9:
 // console.log(12 / 0);
 
-// // Chapter 3:
+// // Chapter 2:
 // Numbers
 // let amountCommands = 3;
 // let numberId = 1;
@@ -93,10 +93,10 @@
 // numberId = 12;
 // console.log(numberId % amountCommands);
 
-// // Chapter 4:
+// // Chapter 3:
 // strings. i already know everything about them
 
-// Chapter 5:
+// Chapter 4:
 // Functions
 // function enterTheNumberFive() {
 //     return 5;
@@ -179,15 +179,93 @@
 //
 // console.log( lotteryWon() );
 
-function lotteryWon() {
-	let randomNumber = function() {
-		return Math.floor(Math.random() * 100);
-	};
-	let firstNum = randomNumber();
-	let secondNum = randomNumber();
-	let thirdNum = randomNumber();
-	let wonCombination = '\"' + firstNum + '-' + secondNum + '-' + thirdNum + '\"';
-	return 'Your numbers of the Lottery are: ' + wonCombination;
+// function lotteryWon() {
+// 	let randomNumber = function() {
+// 		return Math.floor(Math.random() * 100);
+// 	};
+// 	let firstNum = randomNumber();
+// 	let secondNum = randomNumber();
+// 	let thirdNum = randomNumber();
+// 	let wonCombination = '\"' + firstNum + '-' + secondNum + '-' + thirdNum + '\"';
+// 	return 'Your numbers of the Lottery are: ' + wonCombination;
+// }
+//
+// console.log( lotteryWon() );
+
+// Chapter 5: Boolean
+
+// function canItoTakeChildrenSetPlease(ageChild) {
+// 	let childrenSetsOnlyLess18 = 10;
+// 	if (ageChild <= childrenSetsOnlyLess18) {
+// 		console.log("Take your children set please!");
+// 	} else {
+// 		console.log("Sorry, but you need to do an order from the adult menu!");
+// 	}
+// }
+//
+// let littleChild = 5;
+// canItoTakeChildrenSetPlease(10);
+
+// function heightGiraffe(heightMeters, heightCentimeters) {
+// 	let centimetersInOneMeter = 100;
+// 	let heightGiraffe = heightMeters * centimetersInOneMeter;
+// 		heightGiraffe += heightCentimeters;
+// 	let minHeightGiraffe = 259;
+// 	if ( heightGiraffe >= minHeightGiraffe ) {
+// 		console.log("You are already ready for a carousel!");
+// 	} else {
+// 		console.log("You are small for this!");
+// 	}
+// }
+//
+// heightGiraffe(2, 89);
+
+// function bigNumber(firstNumber, secondNumber) {
+// 	if (firstNumber > secondNumber) {
+// 		console.log(firstNumber + ' more ' + secondNumber);
+// 	} else {
+// 		if (firstNumber < secondNumber) {
+// 			console.log(secondNumber + ' more ' + firstNumber);
+// 		} else {
+// 			console.log('They are equal!');
+// 		}
+// 	}
+// }
+//
+// bigNumber('24', 24);
+
+// function whatLess(firstNum, secondNum) {
+// 	if (firstNum < secondNum) {
+// 		console.log(firstNum + ' less!');
+// 	} else {
+// 		console.log(secondNum + ' less!');
+// 	}
+// }
+//
+// whatLess(3, 1);
+
+
+// function ableToArmy(age) {
+// 	let armyAge = 18;
+// 	if (age >= armyAge) {
+// 		console.log('Able!');
+// 	} else {
+// 		console.log('Little!');
+// 	}
+// }
+// let myAge = 18;
+// ableToArmy(myAge);
+
+function ageForChurch(childAge) {
+	let minAge = 6;
+	let maxAge = 13;
+	if (childAge > maxAge) {
+		console.log('Sorry, you are so adult!');
+	} else if (childAge >= minAge) {
+		console.log('Welcome!');
+	} else {
+		console.log('Sorry, you are so small!');
+	}
 }
 
-console.log( lotteryWon() );
+ageForChurch(13);

@@ -1,6 +1,6 @@
 Answers to a Quiz of the book:
 
-Chapter 1:
+Chapter 0:
 1. about:blank;
 2. Ctrl + Shift + I;
 3. var, let;
@@ -13,7 +13,7 @@ Chapter 1:
 10. a variable is already defined;
 11. to assign;
 
-Chapter 2:
+Chapter 1:
 1. a variable is not defined;
 2. no have a closing quote;
 3. false direction;
@@ -29,7 +29,7 @@ Chapter 2:
 13. syntaxError;
 14. no quotes;
 
-Chapter 3:
+Chapter 2:
 1. concatenation;
 2. '*';
 3. number;
@@ -60,7 +60,7 @@ Comprehensive review:
 10. yes;
 11. no. a variable is already defined.
 
-Chapter 4:
+Chapter 3:
 1. human;
 2. string;
 3. ignore;
@@ -75,7 +75,7 @@ Chapter 4:
 12. '\';
 13. "Here's looking at you, kid.";
 
-Chapter 5:
+Chapter 4:
 1. function;
 2. '{}';
 3. function call;
@@ -95,3 +95,17 @@ Chapter 5:
 17. tab;
 18. '\n';
 
+Chapter 5:
+1. boolean;
+2. '<';
+3. true;
+4. !==;
+5. != and ==;
+6. <=;
+7. if else;
+8. 0 1;
+9. else;
+10. true;
+11. true;
+12. false;
+13. false;
