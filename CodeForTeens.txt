@@ -109,3 +109,29 @@ Chapter 5:
 11. true;
 12. false;
 13. false;
+
+Chapter 6:
+1. undefined;
+2. logic;
+3. null;
+4. undefined, undefined;
+5. ||;
+6. null;
+7. false;
+8. else if;
+9. !;
+10. true;
+11. ||;
+12. true;
+13. false;
+14. true;
+15. &&;
+16. true;
+17. undefined;
+18. undefined;
+19. true;
+20. true;
+21. &&;
+22. falsy, truthy;
+23.
+

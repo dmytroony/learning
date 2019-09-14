@@ -244,7 +244,7 @@
 //
 // whatLess(3, 1);
 
-
+// Chapter 6: logic
 // function ableToArmy(age) {
 // 	let armyAge = 18;
 // 	if (age >= armyAge) {
@@ -256,16 +256,159 @@
 // let myAge = 18;
 // ableToArmy(myAge);
 
-function ageForChurch(childAge) {
-	let minAge = 6;
-	let maxAge = 13;
-	if (childAge > maxAge) {
-		console.log('Sorry, you are so adult!');
-	} else if (childAge >= minAge) {
-		console.log('Welcome!');
-	} else {
-		console.log('Sorry, you are so small!');
-	}
-}
+// function ageForChurch(childAge) {
+// 	let minAge = 6;
+// 	let maxAge = 13;
+// 	if (childAge > maxAge) {
+// 		console.log('Sorry, you are so adult!');
+// 	} else if (childAge >= minAge) {
+// 		console.log('Welcome!');
+// 	} else {
+// 		console.log('Sorry, you are so small!');
+// 	}
+// }
+//
+// ageForChurch(13);
 
-ageForChurch(13);
+// let testCondition = null;
+// if (testCondition) {
+// 	console.log('So, it is look like ' + testCondition + ' is the truly');
+// } else {
+// 	console.log(testCondition + ' is the falsy');
+// }
+
+// function readyToSchool(readyBag, readyLunch, readyShoes) {
+// 	if (readyBag && readyLunch && readyShoes) {
+// 		console.log('1!');
+// 	} else {
+// 		console.log('You are not ready! Fast!!!')
+// 	}
+// }
+//
+// readyToSchool(true, true, true);
+//
+// function alreadyBreakfast(ateEggs, ateCereal) {
+// 	if (ateEggs || ateCereal) {
+// 		console.log('1!');
+// 	} else {
+// 		console.log('Go to eat!');
+// 	}
+// }
+//
+// alreadyBreakfast(true, true);
+
+// function goToSchool(readyBag, readyLunch, readyShoes, ateEggs, ateCereal) {
+// 	if (readyBag && readyLunch && readyShoes && (ateEggs || ateCereal)){
+// 		console.log('Excellent! Go to the School!');
+// 	} else {
+// 		console.log('Try one more time! Fast!');
+// 	}
+// }
+//
+// goToSchool(true,true, true,true,false);
+
+// function amISick(myTemperature, sickWithoutInterruption) {
+// 	let maxHealthyTemperature = 37.7;
+// 	if (!(myTemperature > maxHealthyTemperature || sickWithoutInterruption)) {
+// 		console.log('You are strong! Go to school!');
+// 	} else {
+// 		console.log('You need a doctor!!!')
+// 	}
+// }
+//
+// amISick(37.8, false);
+
+// function reallyGoToSchool(readyBag, readyLunch, readyShoes, ateEggs, ateCereal, myTemperature, sickWithoutInterruption) {
+// 	let maxHealthyTemperature = 37.7;
+// 	if (!(myTemperature > maxHealthyTemperature || sickWithoutInterruption) && (ateEggs || ateCereal) && (readyBag && readyLunch && readyShoes)) {
+// 		console.log('Excellent!!! Go to the School!');
+// 	} else {
+// 		console.log('WTF baby? What happened with you?')
+// 	}
+// }
+//
+// reallyGoToSchool (1, 1, 1, 1, 0, 37.7, 1);
+
+// Alarm clock
+// function timeWakeUp(dayOfWeek) {
+// 	if (dayOfWeek === 'saturday') {
+// 		return null; // without alarm clock
+// 	} else if ( (dayOfWeek === 'sunday') ) {
+// 		console.log('7:30');
+// 	} else {
+// 		console.log('6:30');
+// 	}
+// }
+//
+// timeWakeUp('sunday');
+
+// function goORno(myTemperature, sickWithoutBreak, ateEggs, ateCereal, readyBag, readyLunch, readyShoes) {
+// 	let maxHealthyTemperature = 37.7;
+// 	let message; // undefined
+//
+// 	if (myTemperature > maxHealthyTemperature) {
+// 		message = 'You are in fire! Go to in a bed!';
+// 	} else if (sickWithoutBreak) {
+// 		message = 'No-no-no! Go to in the bed!';
+// 	} else {
+// 		if (ateEggs || ateCereal) {
+// 			if (!readyBag) {
+// 				message = 'Prepare the bag!';
+// 			} else if (!readyLunch) {
+// 				message = 'You have lost a lunch';
+// 			} else if (!readyShoes) {
+// 				message = 'Stop! Where are your shoes?';
+// 			} else {
+// 				message = 'Excellent! Go to the School!';
+// 			}
+// 		} else {
+// 			message = 'A breakfast it is important!';
+// 		}
+// 	}
+// 	console.log(message);
+// }
+//
+// goORno(37.2, false, true, true, true, true, true);
+
+// function canIGetTicketToTheCinema(filmRating, childAge, withAdult) {
+// 	let minAgeForR = 17;
+// 	let minAgeForPg13 = 13;
+// 	let  message = null;
+//
+// 	if (filmRating === 'R' && childAge >= minAgeForR || withAdult) {
+// 		message = 'Take your ticket with a rating \'R\' please';
+// 	} else if (filmRating === 'PG-13' && !(childAge < minAgeForPg13 || withAdult)) {
+// 		message = 'Take your ticket with a rating \'PG-13\' please!';
+// 	} else if (filmRating === 'G') {
+// 		message = 'For films with \'G\' category the enter is open for all!';
+// 	} else {
+// 		message = 'Sorry!';
+// 	}
+// 	console.log(message);
+// }
+//
+// canIGetTicketToTheCinema('R', 15, true);
+
+// function whoIsOlderThatAndFirst(ageFirstMan, ageSecondMan) {
+// 	let whoFirst;
+//
+// 	if ((!ageSecondMan && ageFirstMan) || ageFirstMan > ageSecondMan) {
+// 		whoFirst = 1;
+// 	} else if ((!ageFirstMan && ageSecondMan) || ageSecondMan > ageFirstMan) {
+// 		whoFirst = 2;
+// 	} else {
+// 		whoFirst = null;
+// 	}
+//
+// 	if (whoFirst) {
+// 		console.log(whoFirst + '-й человек' + ' старше, а значит, ходит первым.');
+// 	} else if (!(ageFirstMan || ageSecondMan)) {
+// 		console.log('Нужно предложить возрасты этих двоих в качестве аргументов!');
+// 	} else {
+// 		console.log("Да они же ровесники! \nRandom: " + (Math.floor(Math.random() * 2) + 1) + '-й ходит первым!');
+// 	}
+//
+// }
+//
+// whoIsOlderThatAndFirst(20, 20);
+
