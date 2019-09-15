@@ -144,7 +144,7 @@
 	</div>
 
 	<p class="tasks">
-		Task 5: <br >
+		Task 5: <br > Write a function that opens the temple door provided that Lank has 6 power parts, staff, master key or 10 ordinary keys.
 	</p>
 	<div class="spoiler">
 		<input type="checkbox" id="spoiler_id_5">
@@ -152,7 +152,44 @@
 		<div class="spoiler_body">
             <pre>
                 <code>
-					not typed
+					// // My solution
+					function openTempleDoor(powerPart, ordinaryKey, staffRW, generalKey) {
+
+					let message;
+
+					if (!(powerPart === 6)) {
+						message = 'Go to search other parts, Lank!';
+					} else if (powerPart === 6 && staffRW && (generalKey || ordinaryKey === 10)) {
+						message = 'Welcome, Lank! You can to enter!';
+					} else {
+						message = 'Go there I don\'t know where, bring it, I don\'t know what.';
+					}
+
+					console.log(message);
+					}
+
+					openTempleDoor(6, 2, 1, 1);
+
+					// Book solution
+					function answerTempleDoor(powerPart, staffRW, generalKey, ordinaryKey) {
+
+						let allPowerPart = 6;
+						let minOrdinaryKey = 10;
+						let message;
+						if (!( powerPart >= allPowerPart)) {
+							let notAll = allPowerPart - powerPart;
+							message = 'Тебе не хватает ещё ' + notAll + ' Частиц Силы, чтобы попасть в Храм.';
+						} else if ( staffRW && (generalKey || ordinaryKey >= minOrdinaryKey) ) {
+							message = 'Теперь можешь войти в Полосатый Храм!';
+						} else {
+							let mysteriousMessage = "Возвращайся, когда соберёшь всё необходимое.";
+							message = 'Ты ещё не готов. ' + mysteriousMessage;
+						}
+
+						console.log(message);
+					}
+
+					answerTempleDoor(6, 1, 1, 9);
                 </code>
             </pre>
 		</div>
