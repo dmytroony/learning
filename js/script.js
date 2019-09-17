@@ -412,3 +412,97 @@
 //
 // whoIsOlderThatAndFirst(20, 20);
 
+// Chapter 7:
+
+// function convertFahrenheitToCelsius(degFahrenheit) {
+//
+// 	const CONVERSIONRATE = 1.8;
+// 	const FREEZINGOFWATERONFAHRENHEIT = 32;
+// 	let degCelsius = ( (degFahrenheit - FREEZINGOFWATERONFAHRENHEIT) / CONVERSIONRATE);
+//
+// 	console.log(degCelsius.toFixed(1));
+//
+// }
+//
+// convertFahrenheitToCelsius(132);
+//
+//
+// function convertCelsiusToFahrenheit(degCelsius) {
+//
+// 	const CONVERSIONRATE = 1.8;
+// 	const FREEZINGOFWATERONFAHRENHEIT = 32;
+// 	let degFahrenheit = ( (degCelsius * CONVERSIONRATE) + FREEZINGOFWATERONFAHRENHEIT );
+//
+// 	console.log(degFahrenheit.toFixed(1));
+//
+// }
+//
+// convertCelsiusToFahrenheit(0);
+
+// function didYouBrushedTeeth() {
+// 	if (confirm('Did you brush your teeth?') && confirm('Did you clean your mouth with dental floss?')) {
+// 		console.log("Nice! Come in!");
+// 	} else {
+// 		console.log('Sorry! Go to brush, now!');
+// 	}
+// }
+//
+// didYouBrushedTeeth();
+
+// function cookMe() {
+// 	const lovelyFood = prompt('What is your lovely food?', 'Potato under double cheese');
+//
+// 	if (lovelyFood){
+// 		console.log(lovelyFood + '? Excellent! I\'m already cook it!');
+// 	} else {
+// 		console.log('You don\'t have a lovely food? O_o');
+// 	}
+// }
+//
+// cookMe();
+
+// do it yourself
+//
+// function mysteryDrink() {
+// 	let ingredient1 = prompt('Enter the name of the first ingredient', '');
+// 	let ingredient2 = prompt('Enter the name of the second ingredient', '');
+// 	let ingredient3 = prompt('Enter the name of the third ingredient', '');
+//
+// 	if (ingredient1 && ingredient2 && ingredient3) {
+// 		console.log('Nice! Now we cook this mysterious drink!');
+// 	} else {
+// 		console.log('Sorry! No have ingredients.');
+// 	}
+// }
+//
+// mysteryDrink();
+
+// const TAX = 0.09;
+// const CHARACTERSAFTERTHEDOT = 2;
+// console.log( (2.35 * TAX).toFixed(CHARACTERSAFTERTHEDOT) );
+
+// function leaveTip() {
+// 	const TIPS = 0.18;
+// 	const CHARACTERSAFTERTHEDOT = 2;
+// 	let sumFood = prompt('Input the summary cost yours lunch please', '');
+// 	console.log('We recommend leaving $' + (sumFood * TIPS).toFixed(CHARACTERSAFTERTHEDOT) + ' tips. Thanks!');
+// }
+//
+// leaveTip();
+
+// do it yourself
+
+// function leaveTipsRandom() {
+// 	const CHARACTERSAFTERTHEDOT = 2;
+// 	let sumFood = +prompt('Input the summary cost yours lunch please', '');
+// 	let percentOfTips = +prompt('Input tip\'s percent of yours lunch, which you want to leave for us please', '');
+// 		percentOfTips = (percentOfTips/100) * sumFood;
+// 	let summaryCost = sumFood + percentOfTips;
+//
+// 	console.log('Your lunch cost $' + sumFood + '.'
+// 		+ '\n' + 'We recommend leaving $' + percentOfTips.toFixed(CHARACTERSAFTERTHEDOT)
+// 		+ ' tips. Thanks!' + '\n' + 'Summary cost is $' + summaryCost.toFixed(CHARACTERSAFTERTHEDOT) + '.');
+// }
+//
+// leaveTipsRandom();
+

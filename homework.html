@@ -195,6 +195,92 @@
 		</div>
 	</div>
 
+	<p class="tasks">
+		Task 6: <br > Create a function which asks three ingredients for a some drink or food.
+	</p>
+	<div class="spoiler">
+		<input type="checkbox" id="spoiler_id_6">
+		<label for="spoiler_id_6">Solution</label>
+		<div class="spoiler_body">
+            <pre>
+                <code>
+					function mysteryDrink() {
+						let ingredient1 = prompt('Enter the name of the first ingredient', '');
+						let ingredient2 = prompt('Enter the name of the second ingredient', '');
+						let ingredient3 = prompt('Enter the name of the third ingredient', '');
+
+						if (ingredient1 && ingredient2 && ingredient3) {
+							console.log('Nice! Now we cook this mysterious drink!');
+						} else {
+							console.log('Sorry! No have ingredients.');
+						}
+					}
+
+					mysteryDrink();
+                </code>
+            </pre>
+		</div>
+	</div>
+
+	<p class="tasks">
+		Task 7: <br > Make a tip calculator. Conditions: the client enters the amount of his order; the client enters the % he is ready to give as a tip; we show him the amount.
+	</p>
+	<div class="spoiler">
+		<input type="checkbox" id="spoiler_id_7">
+		<label for="spoiler_id_7">Solution</label>
+		<div class="spoiler_body">
+            <pre>
+                <code>
+					function leaveTipsRandom() {
+
+					    const CHARACTERSAFTERTHEDOT = 2;
+					    let sumFood = +prompt('Input the summary cost yours lunch please', '');
+					    let percentOfTips = +prompt('Input tip\'s percent of yours lunch, which you want to leave for us please', '');
+					        percentOfTips = (percentOfTips/100) * sumFood;
+					    let summaryCost = sumFood + percentOfTips;
+
+					    console.log('Your lunch cost $' + sumFood + '.'
+					        + '\n' + 'We recommend leaving $' + percentOfTips.toFixed(CHARACTERSAFTERTHEDOT)
+					        + ' tips. Thanks!' + '\n' + 'Summary cost is $' + summaryCost.toFixed(CHARACTERSAFTERTHEDOT) + '.');
+
+					}
+
+					leaveTipsRandom();
+                </code>
+            </pre>
+		</div>
+	</div>
+
+	<p class="tasks">
+		Task 8: <br >
+	</p>
+	<div class="spoiler">
+		<input type="checkbox" id="spoiler_id_8">
+		<label for="spoiler_id_8">Solution</label>
+		<div class="spoiler_body">
+            <pre>
+                <code>
+
+                </code>
+            </pre>
+		</div>
+	</div>
+
+	<p class="tasks">
+		Task 9: <br >
+	</p>
+	<div class="spoiler">
+		<input type="checkbox" id="spoiler_id_9">
+		<label for="spoiler_id_9">Solution</label>
+		<div class="spoiler_body">
+            <pre>
+                <code>
+
+                </code>
+            </pre>
+		</div>
+	</div>
+
 </div>
 </body>
 </html>
