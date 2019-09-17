@@ -506,3 +506,27 @@
 //
 // leaveTipsRandom();
 
+// function convertRatingToAbcSystem() {
+//
+// 	const yourRating = prompt('What is your rating? Enter a number from 0 to 100.', '');
+// 	let yourAbcRate;
+//
+// 	if (yourRating >= 90) {
+// 		yourAbcRate = 'A';
+// 	} else if (yourRating >= 80 ) {
+// 		yourAbcRate = 'B';
+// 	} else if (yourRating >= 70) {
+// 		yourAbcRate = 'C';
+// 	} else if (yourRating >= 60) {
+// 		yourAbcRate = 'D';
+// 	} else if (!yourRating) {
+// 		yourAbcRate = 'You did not enter your rating!';
+// 	} else {
+// 		yourAbcRate = 'F';
+// 	}
+//
+// 	console.log(yourAbcRate);
+// }
+//
+// convertRatingToAbcSystem();
+

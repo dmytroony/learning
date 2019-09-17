@@ -252,7 +252,7 @@
 	</div>
 
 	<p class="tasks">
-		Task 8: <br >
+		Task 8: <br > To do a function which asks your rating from 0 to 100. She must return 'A' if >= 90, 'B' if >= 80, 'C' if >= 70, 'D' if >= 60, 'F' if other cases.
 	</p>
 	<div class="spoiler">
 		<input type="checkbox" id="spoiler_id_8">
@@ -260,7 +260,29 @@
 		<div class="spoiler_body">
             <pre>
                 <code>
+					function convertRatingToAbcSystem() {
 
+						const yourRating = prompt('What is your rating? Enter a number from 0 to 100.', '');
+						let yourAbcRate;
+
+						if (yourRating >= 90) {
+							yourAbcRate = 'A';
+						} else if (yourRating >= 80 ) {
+							yourAbcRate = 'B';
+						} else if (yourRating >= 70) {
+							yourAbcRate = 'C';
+						} else if (yourRating >= 60) {
+							yourAbcRate = 'D';
+						} else if (!yourRating) {
+							yourAbcRate = 'You did not enter your rating!';
+						} else {
+							yourAbcRate = 'F';
+						}
+
+						console.log(yourAbcRate);
+					}
+
+					convertRatingToAbcSystem();
                 </code>
             </pre>
 		</div>
