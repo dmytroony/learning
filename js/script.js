@@ -530,3 +530,67 @@
 //
 // convertRatingToAbcSystem();
 
+
+//Chapter 8:
+
+// const animalsInZoo = ['lion', 'tiger', 'bear'];
+// console.log(animalsInZoo.length);
+
+// const instrumentsForMusicalParty = ['guitar', 'drums', 'bass'];
+// instrumentsForMusicalParty[2] = 'bass-guitar';
+// instrumentsForMusicalParty[3] = 'keys';
+// instrumentsForMusicalParty.push('microphone');
+// instrumentsForMusicalParty.pop();
+//
+// const angelaWillPlayOn = instrumentsForMusicalParty.pop();
+// const neaWillPlayOn = instrumentsForMusicalParty.pop();
+// const tonyWillPlayOn = instrumentsForMusicalParty.pop();
+// const andIWillPlayOn = instrumentsForMusicalParty.pop();
+//
+// console.log( 'Our party have four members : Angela(' + angelaWillPlayOn + '), Nea('
+// 	+ neaWillPlayOn +'), Tony(' + tonyWillPlayOn + '), and I(' + andIWillPlayOn + ').' );
+
+// let basketWithLinen = ['pants', 't-shirt', 'trousers', 'socks'];
+// const canStillWorn = basketWithLinen.shift();
+// basketWithLinen.unshift('towel');
+//
+// const yesterdayWashing = ['sweatshirt', 'yesterday\'s trousers', 'striped socks', 'bandanna'];
+// basketWithLinen = basketWithLinen.concat(yesterdayWashing);
+// console.log(basketWithLinen.sort());
+
+// function formatDegrees(allDegrees) {
+// 	allDegrees = allDegrees.toUpperCase().split(',').sort().join(' | ');
+// 	console.log(allDegrees);
+// }
+//
+// formatDegrees('d,b,b,a,a,c,f,d,b,f,a,b,b,c,a,d');
+
+// let resultsRace = [];
+// resultsRace[0] = 'Alan';
+// resultsRace = resultsRace.concat(['Bernardo', 'Cesar', 'Derek', 'Emilio']);
+// resultsRace.push('Frederic');
+// resultsRace.push('Gordon');
+//
+// resultsRace.pop();
+// const deletedCheater = resultsRace.shift();
+//
+// console.log('There are ' + resultsRace.length + ' runners in our list. In ' + deletedCheater + ' found traces of doping, and he dropped out.');
+//
+// resultsRace[2] = 'Derril';
+//
+// console.log('Here is our new command of runners: ' + resultsRace.join(', ') + '. Go to the race!');
+
+// do it yourself
+
+// let myBasket = ['Kit-Kat', 'Skittles'];
+// myBasket = myBasket.concat(['Nuts', 'Bounty']);
+// myBasket.unshift('M&Ms');
+// myBasket.pop();
+// myBasket[2] = 'Starburst';
+//
+// myBasket = myBasket.concat(['Milky Way', 'M&Ms "peanut"', 'Mars', 'Hersheys']);
+// myBasket.shift();
+// myBasket.sort();
+// console.log('Mom, look at my basket! I\'ve received ' + myBasket.length + ' sweets!');
+// console.log('I have: ' + myBasket.join(' and ') + '.');
+
