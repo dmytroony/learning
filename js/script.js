@@ -594,3 +594,23 @@
 // console.log('Mom, look at my basket! I\'ve received ' + myBasket.length + ' sweets!');
 // console.log('I have: ' + myBasket.join(' and ') + '.');
 
+// Chapter 8:
+
+function takingCubes(cubeAll) {
+
+	const cubeLiftingCapacity = 1;
+	let i = 0;
+	console.log('There are ' + cubeAll + ' cubes on the floor.');
+
+	while (cubeAll > 0) {
+
+	cubeAll -= cubeLiftingCapacity;
+	console.log('I take up from the floor already ' + cubeLiftingCapacity + ' cubes. Now here is ' + cubeAll + ' on the floor.');
+	i++;
+}
+
+console.log('Yeah!!! All cubes already in the box! I came for ' + i + ' times.');
+
+}
+
+takingCubes(23);
