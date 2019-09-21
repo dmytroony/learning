@@ -594,23 +594,86 @@
 // console.log('Mom, look at my basket! I\'ve received ' + myBasket.length + ' sweets!');
 // console.log('I have: ' + myBasket.join(' and ') + '.');
 
-// Chapter 8:
+// Chapter 9:
 
-function takingCubes(cubeAll) {
+// function takingCubes(cubeAll, cubeLiftingCapacity) {
+//
+// 	let i = 0;
+// 	console.log('There are ' + cubeAll + ' cubes on the floor.');
+//
+// 	while (cubeAll > 0) {
+//
+// 	cubeAll -= cubeLiftingCapacity;
+// 	console.log('I take up from the floor already ' + cubeLiftingCapacity + ' cubes. Now here is ' + cubeAll + ' on the floor.');
+// 	i++;
+//
+// 	}
+//
+// console.log('Yeah!!! All cubes already in the box! I came for ' + i + ' times.');
+//
+// }
+//
+// takingCubes(prompt('Enter the amount of cubes on the floor.', ''), prompt('What is your lifting capacity?', ''));
 
-	const cubeLiftingCapacity = 1;
-	let i = 0;
-	console.log('There are ' + cubeAll + ' cubes on the floor.');
+// let i = 0;
+// for (i; i < 10; i++) {
+//
+// 	console.log('i = ' + i + ';');
+//
+// }
+// console.log('Stop! Here is ' + i + ' iterations.');
 
-	while (cubeAll > 0) {
+// let i = 0;
+// function circleRun(circlesAmount) {
+//
+// 	for (i; i < circlesAmount; i++) {
+// 		console.log((i + 1) + ' circle done!');
+// 	}
+// 	console.log('I have finished! ' + i + ' circles done!' );
+//
+// }
+//
+// circleRun(12);
 
-	cubeAll -= cubeLiftingCapacity;
-	console.log('I take up from the floor already ' + cubeLiftingCapacity + ' cubes. Now here is ' + cubeAll + ' on the floor.');
-	i++;
-}
+// function tenMonkeys(i) {
+//
+// 	for (i; i > 0; i--) {
+// 		console.log('Here is the ' + i + ' monkeys!');
+// 	}
+// 	console.log('Here is ' + i + ' monkeys :(');
+//
+// }
+//
+// tenMonkeys(10);
 
-console.log('Yeah!!! All cubes already in the box! I came for ' + i + ' times.');
+// function lotteryNumbers(amountNumbers, minValue, maxValue) {
+//
+// 	let result = [];
+//
+// 	for (minValue; minValue < amountNumbers; minValue++) {
+//
+// 		let randomNumber = Math.floor(Math.random() * (maxValue + 1));
+// 		result.push(randomNumber);
+//
+// 	}
+//
+// 	console.log('Here is ' + result.length + ' numbers of the lottery: ' + result.join(' - '));
+//
+// }
+//
+// lotteryNumbers(5, 0, 100);
 
-}
+// function letsCount(finishNumber) {
+//
+// 	const allNumbers = [];
+// 	for (let i = 0; i < finishNumber; i++) {
+//
+// 		allNumbers.push(i + 1);
+//
+// 	}
+//
+// 	console.log(allNumbers.join(' - '));
+// 	console.log('I\'ve already counted! Can i take an Ice cream? :)');
+// }
+// letsCount(100);
 
-takingCubes(23);
