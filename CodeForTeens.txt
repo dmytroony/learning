@@ -172,3 +172,17 @@ Chapter 8:
 17. true;
 18. 5;
 
+Chapter 9:
+1. Cycle;
+2. while;
+3. for;
+4. 5;
+5. agreed arrangement;
+6. infinity;
+7. ';';
+8. condition == while;
+9. undefined. Because the second array does not defined;
+10. 18;
+11. iteration;
+12. hats.length;
+

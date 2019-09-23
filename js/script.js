@@ -677,3 +677,116 @@
 // }
 // letsCount(100);
 
+// let forLetsPlay = ['TV on the Wall',
+// 	'Put the console X-box below',
+// 	'Connect the TV and X-box with a HDMI cable',
+// 	'turn on the TV', 'turn on the X-box',
+// 	'Double click on the MyCraft icon',
+// 	'Lets play!'];
+
+// console.log(forLetsPlay.join(';\n'));
+
+// while (forLetsPlay.length > 0) {
+// 	const nextStep = forLetsPlay.shift();
+// 	console.log(nextStep);
+// }
+
+// ==
+
+// while (forLetsPlay.length) {
+// 	console.log(forLetsPlay.shift());
+// }
+// console.log(forLetsPlay);
+
+// const cookCookies = [
+// 	'Preheat the oven to 175 degrees',
+// 	'Mix margarine, white sugar, dark sugar, vanilla and eggs',
+// 	'Sprinkle flour, starch, salt, baking soda and chocolate crumb',
+// 	'Put on a baking tray',
+// 	'Leave in the oven for 12 minutes',
+// 	'Remove the tray',
+// 	'Bon appetite!'
+// 	];
+//
+// for (let i = 0; i < cookCookies.length; i++) {
+//
+// 	const stepNumber = i + 1;
+// 	const step = cookCookies[i];
+//
+// 	console.log(stepNumber + '. ' + step);
+//
+// }
+//
+// // ==
+//
+// for (let i = 0; i < cookCookies.length; i++) {
+//
+// 	console.log((i + 1) + '. ' + cookCookies[i]);
+//
+// }
+
+// Comparison of the indexes of the two arrays
+
+// function spoilerator(myFilm) {
+//
+// 	const films = ['The Lord of the Rings',
+// 		'Shrek',
+// 		'Toy Story',
+// 		'Star Wars',
+// 		'Cold heart',
+// 		'Hamlet',
+// 		'Cinderella'];
+// 	const spoilers = ['The Almighty\'s Ring is destroyed.',
+// 		'Fiona remained huge Ogr.',
+// 		'Buzz Lighter realized he was a toy.',
+// 		'The death star exploded.',
+// 		'Elsa stopped destroying everything around her.',
+// 		'All died.',
+// 		'And they lived happily ever after.'];
+//
+// 	for (let i = 0; i < films.length; i++) {
+//
+// 		if (films[i] === myFilm) {
+//
+// 			return spoilers[i];
+//
+// 		}
+//
+// 	}
+//
+// 	return 'I\'m sorry! But we don\'t have the film \'' + myFilm +'\' on the list.'
+//
+// }
+//
+// spoilerator();
+
+//	.
+//	|
+// \|/
+//	'
+
+// function severalSpoilers(filmsList) {
+//
+// 	console.log('Warning!'.toUpperCase() + ' Spoilers!');
+//
+// 	for (let i = 0; i < filmsList.length; i++) {
+//
+// 		const name = filmsList[i];
+// 		console.log(name + ': ' + spoilerator(name));
+//
+// 	}
+//
+// }
+//
+// console.log(severalSpoilers(['Toy Story', 'Cold heart', 'Randa hotel', 'The Lord of the Rings']));
+
+const alphabetLetters = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('');
+const alphabetRevert = [];
+
+for (let k = alphabetLetters.length; k > 0; k--) {
+
+	alphabetRevert.push(alphabetLetters[k - 1]);
+
+}
+
+console.log(alphabetRevert.join(' | '));
