@@ -344,7 +344,7 @@
 	</div>
 
 	<p class="tasks">
-		Task 11: <br >
+		Task 11: <br > Sort the list of Sweets. Mark the allowed and forbidden sweets ending in 's'.
 	</p>
 	<div class="spoiler">
 		<input type="checkbox" id="spoiler_id_11">
@@ -352,7 +352,29 @@
 		<div class="spoiler_body">
             <pre>
                 <code>
+					function canITake() {
 
+						const sweets = ['Nuts', 'Hershey\'s', 'Kit‐Kat', 'Milky Way', 'M&M\'s', 'Snickers', 'Starburst', 'Bounty'];
+
+						for (let i = 0; i < sweets.length; i++) {
+
+							const deliciousness = sweets[i];
+							const lastLetterNameSweet = deliciousness.split('').pop();
+
+							if ( lastLetterNameSweet === 's') {
+
+								console.log("NOPE!!! " + deliciousness + "! You are allergic!");
+
+							} else {
+
+								console.log('Yeah! ' + deliciousness + '! Bon appetite!');
+
+							}
+
+						}
+
+					}
+					canITake();
                 </code>
             </pre>
 		</div>
@@ -364,6 +386,21 @@
 	<div class="spoiler">
 		<input type="checkbox" id="spoiler_id_12">
 		<label for="spoiler_id_12">Solution</label>
+		<div class="spoiler_body">
+            <pre>
+                <code>
+
+                </code>
+            </pre>
+		</div>
+	</div>
+
+	<p class="tasks">
+		Task 13: <br >
+	</p>
+	<div class="spoiler">
+		<input type="checkbox" id="spoiler_id_13">
+		<label for="spoiler_id_13">Solution</label>
 		<div class="spoiler_body">
             <pre>
                 <code>

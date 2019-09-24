@@ -853,35 +853,160 @@
 //
 // }
 
-function numericRow(mainNumber) {
+// TODO
 
-	const row = [];
+// function numericRow(mainNumber) {
+//
+// 	const row = [];
+//
+// 	for (let i = 1; i <= 10; i++) {
+//
+// 		row.push(mainNumber * i);
+//
+// 	}
+// 	console.log( row.join(' | ') + '\n\n');
+//
+// }
+// numericRow(9);
+//
+// function fullTable(mainNumber) {
+//
+// 	const rows = [];
+//
+// 	for (let i = 1; i <= mainNumber; i++) {
+//
+// 		rows.push(numericRow(i));
+//
+// 	}
+//
+// 	return rows.join('\n');
+//
+// }
+// fullTable(2);
 
-	for (let i = 1; i <= 10; i++) {
+// /TO DO
 
-		row.push(mainNumber * i);
+// let signalsTrafficLights = 'red-yellow-green'.split('-');
+//
+// for (let r = 0; r < signalsTrafficLights.length; r++) {
+//
+// 	console.log(signalsTrafficLights[r]);
+//
+// }
+
+// function allColorsRainbow() {
+//
+// 	const colors = 'red,orange,yellow,green,azure,blue,violet'.split(',');
+//
+// 	for (let i = 0; i < colors.length; i++) {
+//
+// 		console.log('One of the colors: ' + colors[i]);
+//
+// 	}
+//
+// 	console.log("Here are all the colors of the Rainbow!");
+//
+// }
+//
+// allColorsRainbow();
+
+// function weCountTwos() {
+//
+// 	for (let r = 0; r <= 10; r += 2) {
+//
+// 		console.log(r);
+//
+// 	}
+//
+// }
+//
+// weCountTwos();
+
+// function weCountTwos() {
+//
+// 	for (let s = 0; s <= 10; s++) {
+//
+// 		if (s % 2) {
+//
+// 			console.log(s);
+//
+// 		}
+//
+// 	}
+//
+// }
+//
+// weCountTwos();
+
+// RandomIndex
+
+// const inCold = ['Antarctica', 'North Pole', 'Canada'];
+// const randomIndex = Math.floor(Math.random() * inCold.length);
+// const coldPlace = inCold[randomIndex];
+//
+// console.log('If you want to live in ' + coldPlace + ', you need to have warm clothes!');
+
+// function moneyNeed(wallet) {
+//
+// 	const price = 10.30;
+//
+// 	if ( wallet >= price) {
+//
+// 		console.log('Вам хватит денег!');
+//
+// 	} else {
+//
+// 		console.log("Боюсь, вы не можете себе этого позволить!");
+//
+// 	}
+//
+// }
+// moneyNeed(10.30);
+
+// let x = 10;
+// while (x > 0) {
+// 	console.log('value x is ' + x);
+// 	x--;
+// 	console.log(x);
+// }
+
+// const colors = ['red', 'yellow', 'blue', 'orange', 'green', 'violet'];
+//
+// for (let i = 0; i < colors.length; i++) {
+//
+// 	const color = colors [i];
+//
+// 	// if (colors.length >= 7) {
+//
+// 		console.log(colors);
+//
+// 	// }
+//
+// }
+
+// yourself
+
+function canITake() {
+
+	const sweets = ['Nuts', 'Hershey\'s', 'Kit‐Kat', 'Milky Way', 'M&M\'s', 'Snickers', 'Starburst', 'Bounty'];
+
+	for (let i = 0; i < sweets.length; i++) {
+
+		const deliciousness = sweets[i];
+		const lastLetterNameSweet = deliciousness.split('').pop();
+
+		if ( lastLetterNameSweet === 's') {
+
+			console.log("NOPE!!! " + deliciousness + "! You are allergic!");
+
+		} else {
+
+			console.log('Yeah! ' + deliciousness + '! Bon appetite!');
+
+		}
 
 	}
-	console.log( row.join(' | ') );
 
 }
+canITake();
 
-numericRow(3);
-// numericRow(5);
-// numericRow(7);
-
-function fullTable(mainNumber) {
-
-	const rows = [];
-
-	for (let i = 1; i <= mainNumber; i++) {
-
-		rows.push(numericRow(i));
-
-	}
-
-	return rows.join('\n');
-
-}
-
-fullTable(2);
