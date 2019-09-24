@@ -646,22 +646,28 @@
 //
 // tenMonkeys(10);
 
+// TODO
+
 // function lotteryNumbers(amountNumbers, minValue, maxValue) {
 //
-// 	let result = [];
+// 	const result = [];
+// 	let randomNumber;
 //
-// 	for (minValue; minValue < amountNumbers; minValue++) {
+// 	while (minValue < amountNumbers) {
 //
-// 		let randomNumber = Math.floor(Math.random() * (maxValue + 1));
+// 		randomNumber = Math.floor(Math.random() * (maxValue + 1));
 // 		result.push(randomNumber);
+// 		minValue++;
 //
 // 	}
 //
-// 	console.log('Here is ' + result.length + ' numbers of the lottery: ' + result.join(' - '));
+// 	console.log('Numbers of the lottery (' + result.length + '): \n' + result.join(' - '));
 //
 // }
 //
-// lotteryNumbers(5, 0, 100);
+// lotteryNumbers(5, 0, 5);
+
+// /TO DO
 
 // function letsCount(finishNumber) {
 //
@@ -780,13 +786,102 @@
 //
 // console.log(severalSpoilers(['Toy Story', 'Cold heart', 'Randa hotel', 'The Lord of the Rings']));
 
-const alphabetLetters = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('');
-const alphabetRevert = [];
+// TODO
 
-for (let k = alphabetLetters.length; k > 0; k--) {
+// const alphabetLetters = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase().split('');
+// let k = alphabetLetters.length;
+// const alphabetReverse = [];
+//
+// for (k; k > 0; k--) { // отсчитываем "вниз"
+//
+// 	alphabetReverse.push(alphabetLetters[k - 1]); // добавим буквы в массив
+//
+// }
+//
+// console.log(alphabetReverse.join(' | '));
+//
+// const vowels = 'aeiouy '.toUpperCase().split('');
+// // const consonants = "bcdfghjklmnpqrstvwxy";
+// while (alphabetReverse.length) { // продолжим цикл, пока массив не опустеет
+//
+// 	const thisLetter = alphabetReverse.pop(); // убираем буквы из массива
+//
+// 	for (let m = 0; m < vowels.length; m++) { // цикл по всем гласным
+//
+// 		if (vowels[m] === thisLetter) { // проверим, является ли буква гласной
+//
+// 			console.log(thisLetter + ' — vowel!');
+//
+// 		}
+// 	}
+// }
 
-	alphabetRevert.push(alphabetLetters[k - 1]);
+// /TO DO
+
+// for (let i = 0; i < 30; i+= 3) {
+//
+// 	console.log(i);
+//
+// }
+
+// function whatNumberIsDivisibleBy(maxNumber, divider) {
+//
+// 	console.log('What number less than ' + maxNumber + ' is divisible by ' + divider + '?');
+//
+// 	for (let n = 0; n < maxNumber; n++) {
+//
+// 		if (!(n % divider)) {
+//
+// 			console.log(n + ' is divisible by ' + divider + '!');
+//
+// 		}
+//
+// 	}
+//
+// }
+//
+// whatNumberIsDivisibleBy(100, 10);
+// whatNumberIsDivisibleBy(60, 5);
+// whatNumberIsDivisibleBy(90, 3);
+
+// let p = 0;
+//
+// while (p < 52) {
+//
+// 	console.log(p);
+// 	p += 5;
+//
+// }
+
+function numericRow(mainNumber) {
+
+	const row = [];
+
+	for (let i = 1; i <= 10; i++) {
+
+		row.push(mainNumber * i);
+
+	}
+	console.log( row.join(' | ') );
 
 }
 
-console.log(alphabetRevert.join(' | '));
+numericRow(3);
+// numericRow(5);
+// numericRow(7);
+
+function fullTable(mainNumber) {
+
+	const rows = [];
+
+	for (let i = 1; i <= mainNumber; i++) {
+
+		rows.push(numericRow(i));
+
+	}
+
+	return rows.join('\n');
+
+}
+
+fullTable(2);
