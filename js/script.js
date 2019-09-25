@@ -986,27 +986,148 @@
 
 // yourself
 
-function canITake() {
+// function canITake() {
+//
+// 	const sweets = ['Nuts', 'Hershey\'s', 'Kit‐Kat', 'Milky Way', 'M&M\'s', 'Snickers', 'Starburst', 'Bounty'];
+//
+// 	for (let i = 0; i < sweets.length; i++) {
+//
+// 		const deliciousness = sweets[i];
+// 		const lastLetterNameSweet = deliciousness.split('').pop();
+//
+// 		if ( lastLetterNameSweet === 's') {
+//
+// 			console.log("NOPE!!! " + deliciousness + "! You are allergic!");
+//
+// 		} else {
+//
+// 			console.log('Yeah! ' + deliciousness + '! Bon appetite!');
+//
+// 		}
+//
+// 	}
+//
+// }
+// canITake();
 
-	const sweets = ['Nuts', 'Hershey\'s', 'Kit‐Kat', 'Milky Way', 'M&M\'s', 'Snickers', 'Starburst', 'Bounty'];
+// Chapter 10:
 
-	for (let i = 0; i < sweets.length; i++) {
+function answerForGallows() {
 
-		const deliciousness = sweets[i];
-		const lastLetterNameSweet = deliciousness.split('').pop();
+	const possibleAnswers = [
+		'reciprocity',
+		'applicant',
+		'stopwatch',
+		'car',
+		'adventurer',
+		'cloudiness',
+		'observation',
+		'plaster',
+		'tamer',
+		'cello',
+		'conspirator',
+		'strawberry',
+		'antarctica'
+	];
+	const randomIndex = Math.floor(Math.random() * (possibleAnswers.length) );
 
-		if ( lastLetterNameSweet === 's') {
+	return possibleAnswers[randomIndex].toUpperCase();
+	
+}
 
-			console.log("NOPE!!! " + deliciousness + "! You are allergic!");
+function gameOver(answer, winning) {
+
+	const asciiGallows = '____\n|/ |\n| @\n| /|\\\n| / \\\n|\n=====';
+	let message = '';
+
+	if (winning) {
+
+		message = 'You won!';
+
+	} else {
+
+		message = 'Game over! \n\n' + asciiGallows;
+
+	}
+
+	message += '\n\nRight answer: ' + answer + '!';
+	alert(message);
+
+	return message;
+
+}
+
+function playGallows() {
+
+	const answer = answerForGallows();
+	const lettersAnswer = answer.split('');
+	const wrongGuess = [];
+	const maxWrongGuesses = 7;
+	const gameProgress = '_'.repeat(answer.length).split('');
+
+	const confirmation = confirm('Go to play the "Gallows"!\n\n' +
+		'I thought of the word; you can start guessing the letters!\n' +
+		'This is a regular word of ' + answer.length + ' letters.\n' +
+		'Let\'s go?');
+
+	if (!confirmation) {
+
+		return gameOver(answer, false);
+
+	}
+
+	while (wrongGuess.length < maxWrongGuesses) {
+
+		const messageProgress = 'At the moment, you have achieved: \n' +
+			gameProgress.join(' ') + '\n' +
+			'Errors: [' + wrongGuess.toString() + ']\n\n' +
+			'Choose the next letter!';
+		const answerPlayer = prompt(messageProgress, '');
+
+		if (!answerPlayer) {
+
+			return gameOver(answer);
+
+		}
+
+		const guess = answerPlayer.toUpperCase();
+		let trueGuess = false;
+
+		for (let i = 0; i < lettersAnswer.length; i++) {
+			if (answerPlayer[i] === guess) {
+
+				trueGuess = true;
+				gameProgress[i] = guess;
+
+			}
+		}
+
+		if (trueGuess) {
+
+			if (gameProgress.join('') === answer) {
+
+				return gameOver(answer, true);
+
+			}
+
+			alert('It\'s true!');
 
 		} else {
 
-			console.log('Yeah! ' + deliciousness + '! Bon appetite!');
+			wrongGuess.push(guess);
+			alert('Sorry, the letter ' + guess + ' no have here. ' +
+			'You have ' + (maxWrongGuesses - wrongGuess.length) +
+			' more attempts, before this poor man is hanged.');
 
 		}
 
 	}
 
+	return gameOver(answer, false)
+
 }
-canITake();
+playGallows();
+
+// const temporarySolution = answerForGallows();
+// gameOver(temporarySolution, 1);
 

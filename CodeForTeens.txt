@@ -186,3 +186,5 @@ Chapter 9:
 11. iteration;
 12. hats.length;
 
+Chapter 10:
+1.
