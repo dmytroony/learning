@@ -1042,11 +1042,11 @@ function gameOver(answer, winning) {
 
 	if (winning) {
 
-		message = 'You won!';
+		message = 'CONGRATULATIONS! You won!';
 
 	} else {
 
-		message = 'Game over! \n\n' + asciiGallows;
+		message = 'GAME OVER! You lose!\n\n' + asciiGallows;
 
 	}
 
@@ -1064,11 +1064,10 @@ function playGallows() {
 	const wrongGuess = [];
 	const maxWrongGuesses = 7;
 	const gameProgress = '_'.repeat(answer.length).split('');
-
 	const confirmation = confirm('Go to play the "Gallows"!\n\n' +
 		'I thought of the word; you can start guessing the letters!\n' +
 		'This is a regular word of ' + answer.length + ' letters.\n' +
-		'Let\'s go?');
+		'Are you ready to begin the Game?');
 
 	if (!confirmation) {
 
@@ -1082,7 +1081,7 @@ function playGallows() {
 			gameProgress.join(' ') + '\n' +
 			'Errors: [' + wrongGuess.toString() + ']\n\n' +
 			'Choose the next letter!';
-		const answerPlayer = prompt(messageProgress, '');
+		const answerPlayer = prompt(messageProgress);
 
 		if (!answerPlayer) {
 
@@ -1094,7 +1093,7 @@ function playGallows() {
 		let trueGuess = false;
 
 		for (let i = 0; i < lettersAnswer.length; i++) {
-			if (answerPlayer[i] === guess) {
+			if (lettersAnswer[i] === guess) {
 
 				trueGuess = true;
 				gameProgress[i] = guess;
