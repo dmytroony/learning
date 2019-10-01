@@ -521,3 +521,51 @@ p a:hover {
 #footer div ul li #pinterest:hover {
 
 }
+
+/* Slider */
+#main {
+    position: relative;
+    margin: 10px auto;
+    padding: 5px;
+    width: 660px;
+    height: 360px;
+    /*background-color: silver;*/
+    /*border: 1px solid grey;*/
+    /*border-radius: 50px;*/
+}
+
+#scr {
+    margin: 20px auto;
+    width: 600px;
+    height: 320px;
+    /*margin-top: 20px;*/
+    background-color: white;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*border: 2px solid black;*/
+    /*border-radius: 50px;*/
+}
+
+
+button {
+    position: absolute;
+    top: 150px;
+    width: 30px;
+    height: 30px;
+    font: 12pt arial, tahoma, sans-serif;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: darkcyan;
+}
+
+.left {
+    left: 5px;
+}
+
+.right {
+    right: 5px;
+}
+/* /Slider */
+

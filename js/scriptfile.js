@@ -133,3 +133,47 @@
 //
 // document.write('Max ' + max);
 // document.write('<br>Ind [' + ind[0] + '] [' + ind[1] + ']');
+
+let slider = {
+
+	slides: ['6.jpg', '9.jpg', '20.jpg'],
+	// begin cadre
+	frame: 0,
+	set: function (image) { // set the fon image
+
+		document.getElementById('scr').style.backgroundImage = 'url(images/'+image+')';
+
+	},
+	init: function () {// launching the slider with the begin image
+
+		this.set(this.slides[this.frame]);
+
+	},
+	left: function () {
+
+		this.frame--;
+		if (this.frame < 0) this.frame = this.slides.length-1;
+		this.set(this.slides[this.frame]);
+
+	},
+	right: function () {
+
+		this.frame++;
+		if (this.frame === this.slides.length) this.frame = 0;
+		this.set(this.slides[this.frame]);
+
+	}
+
+};
+
+window.onload = function () { // launching the slider after download this document
+
+	slider.init();
+
+	setInterval(function () { // 5 seconds
+
+		slider.right(); // after switching to the right
+
+	}, 5000);
+
+};
