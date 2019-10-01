@@ -525,7 +525,7 @@ p a:hover {
 /* Slider */
 #main {
     position: relative;
-    margin: 10px auto;
+    margin: 20px auto;
     padding: 5px;
     width: 660px;
     height: 360px;
@@ -551,13 +551,13 @@ p a:hover {
 button {
     position: absolute;
     top: 150px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     font: 12pt arial, tahoma, sans-serif;
     border-radius: 10px;
-    color: white;
+    color: darkcyan;
     font-weight: bold;
-    background-color: darkcyan;
+    background-color: white;
 }
 
 .left {
@@ -569,3 +569,29 @@ button {
 }
 /* /Slider */
 
+/* Tooltips */
+#tt {
+    position: absolute;
+    display: block;
+    padding: 10px;
+    border: 1px solid #089dcb;
+    border-radius: 10px 10px 10px 0;
+    box-shadow: 1px 1px 2px #888;
+    background-color: #ffD;
+}
+
+.hlp1 {
+    color: #000;
+    border: 1px solid #9fbddd;
+    background-color: #e7f5fe;
+    cursor: help;
+    margin-left: 5px;
+    line-height: 14px;
+    width: 12px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 100;
+    text-indent: 0;
+}
+/* /Tooltips */
