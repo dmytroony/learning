@@ -71,3 +71,65 @@
 //
 // }
 
+// let m;
+// m = [5, 3, 4, 1, 2];
+//
+// let months;
+// months = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+//
+// let num0 = m[0];
+// let j = m[3];
+// m[0] = [3, 2, 1];
+// j = m[0][1];
+
+// let m = [7, 66, 55, 4, 88, 1, 8, 99, 3];
+//
+// let Min = m[0];
+// let Min_ind = 0;
+//
+// document.write('Array: <br>');
+//
+// for (let i = 1; i < m.length; i++) {
+//
+// 	if (m[i] < Min) {
+//
+// 		Min = m[i];
+// 		Min_ind = i;
+//
+// 	}
+//
+// 	document.write(m[i] + ' ');
+//
+// }
+//
+// document.write('<br>Minimum: ' + Min);
+// document.write('<br>Index: ' + Min_ind);
+
+// let m;
+// m = [0, 0, 0];
+//
+// m[0] = [3, 2, 1];
+// m[1] = [7, 8, 9];
+// m[2] = [5, 6, 7];
+//
+// let max = m[0][0];
+// let ind = [0, 0];
+//
+// for (let i = 0; i < m.length; i++) {
+//
+// 	for (let j = 0; j < m[i].length; j++) {
+//
+// 		if (m[i][j] > max) {
+//
+// 			max = m[i][j];
+// 			ind[0] = i;
+// 			ind[i] = j;
+//
+// 		}
+//
+// 	}
+//
+// }
+//
+// document.write('Max ' + max);
+// document.write('<br>Ind [' + ind[0] + '] [' + ind[1] + ']');
