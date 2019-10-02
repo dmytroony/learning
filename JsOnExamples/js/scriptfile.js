@@ -179,77 +179,77 @@ window.onload = function () { // launching the slider after download this docume
 };
 
 // Tooltips
-let _tt = function () {
-	let id = 'tt';
-	let top = 3;
-	let left = 3;
-	let maxw = 300;
-	let speed = 8;
-	let timer = 10;
-	let endalpha = 95;
-	let alpha = 0;
-	let tt,t,/*c,b,*/h;
-	let ie = document.all ? true : false;
-
-	return {
-		show: function (e, v, w) {
-			let t = getEventTarget(e);
-			addEvent(t, 'mouseout', this.hide);
-			t.style.cursor = 'help';
-
-			if (tt === null) {
-				tt = document.createElement('div');
-				tt.setAttribute('id', id);
-				document.body.appendChild(tt);
-				tt.style.opacity=0;
-				if (ie)tt.style.filter = 'alpha(opacity=0)';
-			}
-
-			tt.style.display = 'block';
-			tt.innerHTML = v;
-			tt.style.width = w ? w + 'px' : 'auto';
-
-			if (tt.offsetWidth > maxw) {
-				tt.style.width = maxw + 'px'
-			}
-
-			h = parseInt(tt.offsetHeight) + top;
-			clearInterval(tt.timer);
-			tt.timer=setInterval(function () {
-				_tt.fade(1)
-			}, timer);
-			dd=getOffset(t);
-			tt.style.top = (dd.top-h+4) + 'px';
-			tt.style.left = (dd.left+13) + 'px';
-		},
-		pos:function (e) {
-			let u = ie ? event.clientY + document.documentElement.scrollTop : e.pageY;
-			let l = ie ? event.clientX + document.documentElement.scrollLeft : e.pageX;
-			tt.style.top = (u-h) + 'px';
-			tt.style.left = (l + left) + 'px';
-		},
-		fade:function (d) {
-			let a = alpha;
-			if ((a !== endalpha && d === 1) || (a !== 0 && d === -1)) {
-				let i = speed;
-				if (endalpha - a < speed && d === 1) {
-					i = endalpha - a;
-				} else if (alpha < speed && d === -1) {
-					i = a;
-				}
-				alpha = a + (i * d);
-				tt.style.opacity = alpha * .01;
-				if (ie)tt.style.filter = 'alpha(opacity=' + alpha + ')';
-			} else {
-				clearInterval(tt.timer);
-				if (d === -1) {
-					tt.style.display = 'none'
-				}
-			},
-			hide:function(e) {
-				clearInterval(tt.timer);
-				tt.timer = setInterval(function(){_tt.fade(-1)},timer);
-			}
-		};
-	}();
-}
+// let _tt = function () {
+// 	let id = 'tt';
+// 	let top = 3;
+// 	let left = 3;
+// 	let maxw = 300;
+// 	let speed = 8;
+// 	let timer = 10;
+// 	let endalpha = 95;
+// 	let alpha = 0;
+// 	let tt,t,/*c,b,*/h;
+// 	let ie = document.all ? true : false;
+//
+// 	return {
+// 		show: function (e, v, w) {
+// 			let t = getEventTarget(e);
+// 			addEvent(t, 'mouseout', this.hide);
+// 			t.style.cursor = 'help';
+//
+// 			if (tt === null) {
+// 				tt = document.createElement('div');
+// 				tt.setAttribute('id', id);
+// 				document.body.appendChild(tt);
+// 				tt.style.opacity=0;
+// 				if (ie)tt.style.filter = 'alpha(opacity=0)';
+// 			}
+//
+// 			tt.style.display = 'block';
+// 			tt.innerHTML = v;
+// 			tt.style.width = w ? w + 'px' : 'auto';
+//
+// 			if (tt.offsetWidth > maxw) {
+// 				tt.style.width = maxw + 'px'
+// 			}
+//
+// 			h = parseInt(tt.offsetHeight) + top;
+// 			clearInterval(tt.timer);
+// 			tt.timer=setInterval(function () {
+// 				_tt.fade(1)
+// 			}, timer);
+// 			dd=getOffset(t);
+// 			tt.style.top = (dd.top-h+4) + 'px';
+// 			tt.style.left = (dd.left+13) + 'px';
+// 		},
+// 		pos:function (e) {
+// 			let u = ie ? event.clientY + document.documentElement.scrollTop : e.pageY;
+// 			let l = ie ? event.clientX + document.documentElement.scrollLeft : e.pageX;
+// 			tt.style.top = (u-h) + 'px';
+// 			tt.style.left = (l + left) + 'px';
+// 		},
+// 		fade:function (d) {
+// 			let a = alpha;
+// 			if ((a !== endalpha && d === 1) || (a !== 0 && d === -1)) {
+// 				let i = speed;
+// 				if (endalpha - a < speed && d === 1) {
+// 					i = endalpha - a;
+// 				} else if (alpha < speed && d === -1) {
+// 					i = a;
+// 				}
+// 				alpha = a + (i * d);
+// 				tt.style.opacity = alpha * .01;
+// 				if (ie)tt.style.filter = 'alpha(opacity=' + alpha + ')';
+// 			} else {
+// 				clearInterval(tt.timer);
+// 				if (d === -1) {
+// 					tt.style.display = 'none'
+// 				}
+// 			},
+// 			hide:function(e) {
+// 				clearInterval(tt.timer);
+// 				tt.timer = setInterval(function(){_tt.fade(-1)},timer);
+// 			}
+// 		};
+// 	}();
+// }
