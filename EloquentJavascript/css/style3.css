@@ -1,0 +1,46 @@
+.tasks {
+    border-top: 2px solid lightgray;
+    padding-top: 1rem;
+}
+
+.spoiler > input + label:after {
+    content: "+";
+    float: right;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.spoiler > input:checked + label:after {
+    content: "-";
+    float: right;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.spoiler > input {
+    display:none;
+}
+
+.spoiler > input + label , .spoiler > .spoiler_body {
+    background: darkcyan;
+    padding:5px 15px;
+    overflow:hidden;
+    width:100%;
+    box-sizing: border-box;
+    display: block;
+    color: #FFFFFF;
+}
+
+.spoiler > input + label + .spoiler_body {
+    display:none;
+}
+
+.spoiler > input:checked + label + .spoiler_body {
+    display: block;
+}
+.spoiler > .spoiler_body {
+    background: #FFF;
+    border: 3px solid darkcyan;
+    border-top: none;
+    color: black;
+}
