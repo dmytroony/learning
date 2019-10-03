@@ -53,3 +53,50 @@
 //
 // console.log(yourName);
 
+// let result = 1;
+//
+// for (let i = 0; i < 10; i++) {
+// 	result *= 2;
+// 	console.log(i + ') ' + result);
+// }
+//
+// console.log(result);
+
+// for (let current = 20; ; current++) {
+//
+// 	if (current % 7 === 0) {
+//
+// 		console.log(current);
+// 		break;
+//
+// 	}
+//
+// }
+
+//Triangle
+// let a = '#';
+// let i = 0;
+//
+// while (i <= 7) {
+//
+// 	if (a.length === i) {
+//
+// 		console.log(a);
+// 		a = a + '#';
+//
+// 	}
+//
+// 	i++;
+// }
+//
+// for (i; i <= 7; i++) {
+//
+// 	if (a.length === i) {
+//
+// 		console.log(a);
+// 		a = a + '#';
+//
+// 	}
+//
+// }
+
