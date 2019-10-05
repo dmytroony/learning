@@ -73,21 +73,9 @@
 //
 // }
 
-//Triangle
+//Triangle 1/3
 // let a = '#';
 // let i = 0;
-//
-// while (i <= 7) {
-//
-// 	if (a.length === i) {
-//
-// 		console.log(a);
-// 		a = a + '#';
-//
-// 	}
-//
-// 	i++;
-// }
 //
 // for (i; i <= 7; i++) {
 //
@@ -99,4 +87,32 @@
 // 	}
 //
 // }
+
+//FizzBuzz 2/3
+//
+// let a = 'Fizz', b = 'Buzz', result = 1;
+//
+// for (result; result <= 100; result++) {
+//
+// 	if ((result % 3 === 0) && (result % 5 === 0)) {
+//
+// 		console.log(result + ': ' + (a + b));
+//
+// 	} else if (result % 5 === 0) {
+//
+// 		console.log(result + ': ' + b);
+//
+// 	} else if (result % 3 === 0) {
+//
+// 		console.log(result + ': ' + a);
+//
+// 	} else {
+//
+// 		console.log(result + ': ' + result);
+//
+// 	}
+//
+// }
+
+//ChessTable 3/3
 

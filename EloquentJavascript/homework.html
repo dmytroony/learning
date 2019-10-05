@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,28 +22,16 @@
 					let a = '#';
 					let i = 0;
 
-					1)	while (i <= 7) {
+					for (i; i <= 7; i++) {
 
-							if (a.length === i) {
+						if (a.length === i) {
 
-								console.log(a);
-								a = a + '#';
-
-							}
-
-							i++;
-						}
-
-					2)	for (i; i <= 7; i++) {
-
-							if (a.length === i) {
-
-								console.log(a);
-								a = a + '#';
-
-							}
+							console.log(a);
+							a = a + '#';
 
 						}
+
+					}
                 </code>
             </pre>
         </div>
@@ -51,6 +39,10 @@
 
     <p class="tasks">
         Task 2: <br >
+	    1) Output numbers from 1 to 100;<br >
+	    2) for numbers multiple of 3, print "Phys";<br >
+	    3) for numbers multiples of 5, print "Buzz";<br >
+	    4) For numbers, multiples and 3 and 5, enter "FizzBuzz" (conditions 2 and 3 must continue to be fulfilled).
     </p>
     <div class="spoiler">
         <input type="checkbox" id="spoiler_id_2">
@@ -58,7 +50,29 @@
         <div class="spoiler_body">
             <pre>
                 <code>
+					let a = 'Fizz', b = 'Buzz', result = 1;
 
+					for (result; result <= 100; result++) {
+
+						if ((result % 3 === 0) && (result % 5 === 0)) {
+
+							console.log(result + ': ' + (a + b));
+
+						} else if (result % 5 === 0) {
+
+							console.log(result + ': ' + b);
+
+						} else if (result % 3 === 0) {
+
+							console.log(result + ': ' + a);
+
+						} else {
+
+							console.log(result + ': ' + result);
+
+						}
+
+					}
                 </code>
             </pre>
         </div>
