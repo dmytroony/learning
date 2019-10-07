@@ -77,6 +77,7 @@
 // let a = '#';
 // let i = 0;
 //
+// // v.1
 // for (i; i <= 7; i++) {
 //
 // 	if (a.length === i) {
@@ -85,6 +86,16 @@
 // 		a = a + '#';
 //
 // 	}
+//
+// }
+//
+// // v.2
+// let row = '';
+//
+// for (let i = 1; i <= 7; i++) {
+//
+// 	row += '#';
+// 	console.log(row);
 //
 // }
 
@@ -116,3 +127,30 @@
 
 //ChessTable 3/3
 
+let row = '';
+let size = 8;
+
+for (let j = 1; j <= size; j++) {
+
+	for (let i = 1; i <= size; i++) {
+
+		if (i === size) {
+			row += '\n';
+		} else if (i % 2 === 0) {
+			row += '#';
+		} else if (i % 2 === 1) {
+			row += ' ';
+		}
+
+	}
+
+}
+
+console.log(row);
+
+
+// for (let j = 1; j <= size; j++) {
+
+// if (row.length === size) {
+// 	console.log('\n');
+// }
