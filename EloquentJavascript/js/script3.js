@@ -126,31 +126,25 @@
 // }
 
 //ChessTable 3/3
-
-let row = '';
-let size = 8;
-
-for (let j = 1; j <= size; j++) {
-
-	for (let i = 1; i <= size; i++) {
-
-		if (i === size) {
-			row += '\n';
-		} else if (i % 2 === 0) {
-			row += '#';
-		} else if (i % 2 === 1) {
-			row += ' ';
-		}
-
-	}
-
-}
-
-console.log(row);
-
-
-// for (let j = 1; j <= size; j++) {
-
-// if (row.length === size) {
-// 	console.log('\n');
+//
+// let i, j, row = '', size = 8;
+//
+// for (i = 0; i < size; i++) {
+//
+// 	for (j = 0; j < size / 2; j++) {
+//
+// 		if (i % 2 === 0) {
+// 			row += " ";
+// 			row += "#";
+// 		} else {
+// 			row += "#";
+// 			row += " ";
+// 		}
+//
+// 	}
+//
+// 	row += "\n";
 // }
+//
+// console.log(row);
+

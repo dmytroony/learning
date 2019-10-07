@@ -90,7 +90,7 @@
     </div>
 
     <p class="tasks">
-	    Task 3: <br >
+	    Task 3: <br > Make a ChessTable 8x8
     </p>
     <div class="spoiler">
         <input type="checkbox" id="spoiler_id_3">
@@ -98,7 +98,26 @@
         <div class="spoiler_body">
             <pre>
                 <code>
+					let i, j, row = '', size = 8;
 
+					for (i = 0; i < size; i++) {
+
+						for (j = 0; j < size / 2; j++) {
+
+							if (i % 2 === 0) {
+								row += " ";
+								row += "#";
+							} else {
+								row += "#";
+								row += " ";
+							}
+
+						}
+
+						row += "\n";
+					}
+
+					console.log(row);
                 </code>
             </pre>
         </div>
