@@ -245,3 +245,120 @@
 // };
 // horn();
 
+// console.log('A voice from the past:', future());
+// function future() {
+// 	return 'There will be no flying cars!';
+// }
+
+// Call stack
+
+// function greet(who) {
+// 	console.log('Hello, ' + who + '!');
+// }
+//
+// greet('Garry');
+// console.log('Bye!');
+
+// Maximum call stack size exceeded
+// function chicken() {
+// 	return egg();
+// }
+// function egg() {
+// 	return chicken();
+// }
+// console.log(chicken() + ' was the first.');
+
+// function square(x) {
+// 	return x * x;
+// }
+// console.log(square(4, true, 'hedgehog'));
+
+// function minus(a, b) {
+//
+// 	if (b === undefined) {
+// 		return -a;
+// 	} else {
+// 		return a - b;
+// 	}
+//
+// }
+// console.log(minus(10));
+// console.log(minus(10, 5));
+
+// function power(base, exponent = 2) {
+//
+// 	let result = 1;
+//
+// 	for (let count = 0; count < exponent; count++) {
+// 		result *= base;
+// 	}
+//
+// 	return result;
+//
+// }
+// console.log(power(4));
+// console.log(power(2, 6));
+
+// Closure
+
+// function wrapValue(n) {
+//
+// 	let local = n;
+// 	return () => local;
+//
+// }
+//
+// let wrap1 = wrapValue(1);
+// let wrap2 = wrapValue(2);
+// console.log(wrap1());
+// console.log(wrap2());
+
+// function multiplier(factor) {
+//
+// 	return number => number * factor;
+//
+// }
+//
+// let twice = multiplier(2);
+// console.log(twice(5));
+// // 10
+
+// function person() {
+// 	let name = 'Peter';
+//
+// 	return function displayName() { // displayName() - is the Closure
+// 		console.log(name);
+// 	};
+// }
+// let peter = person();
+// peter();
+
+// function getCounter() {
+//
+// 	let counter = 0;
+//
+// 	return function () {
+//
+// 		return counter++;
+//
+// 	}
+// }
+// let count = getCounter();
+// console.log(count()); // 0
+// console.log(count()); // 1
+// console.log(count()); // 2
+// count() - is the Closure
+
+// Lexical Environment
+// lexicalEnvironment = {
+// 	environmentRecord: {
+// 		<identifier> : <value>,
+// 		<identifier> : <value>
+// 		}
+// 	outer: < Reference to the parent lexical environment>
+// }
+
+
+
+// Recursion
+
