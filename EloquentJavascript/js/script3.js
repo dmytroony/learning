@@ -349,6 +349,102 @@
 // console.log(count()); // 2
 // count() - is the Closure
 
+// function init() {
+//
+// 	let name = "Dmytro"; // name - local variable created 'init()'
+//
+// 	function displayName() { // displayName() - internal function, a closure
+//
+// 		console.log(name); // we use a variable declared in the parent function
+//
+// 	}
+//
+// 	displayName();
+//
+// }
+// init();
+
+// function makeFunc() {
+//
+// 	let name = "Dmytro";
+//
+// 	function displayName() {
+//
+// 		console.log(name);
+//
+// 	}
+//
+// 	return displayName;
+//
+// }
+// let myFunc = makeFunc();
+// myFunc();
+
+// function makeAdder(x) {
+//
+// 	return function (y) {
+//
+// 		return x + y;
+//
+// 	};
+//
+// }
+//
+// let add5 = makeAdder(5);
+// let add10 = makeAdder(10);
+//
+// console.log(add5(2)); // 7
+// console.log(add10(2)); // 12
+
+// function makeSizer(size) {
+//
+// 	return function () {
+// 		document.body.style.fontSize = size + 'px';
+// 	};
+//
+// }
+//
+// let size12 = makeSizer(12);
+// let size14 = makeSizer(14);
+// let size16 = makeSizer(16);
+//
+// document.getElementById('size-12').onclick = size12;
+// document.getElementById('size-14').onclick = size14;
+// document.getElementById('size-16').onclick = size16;
+
+// let counter = (function() {
+//
+// 	let privateCounter = 0;
+//
+// 	function changeBy(val) {
+//
+// 		privateCounter += val;
+//
+// 	}
+//
+// 	return {
+// 		increment: function() {
+// 			changeBy(1);
+// 		},
+// 		decrement: function() {
+// 			changeBy(-1);
+// 		},
+// 		value: function() {
+// 			return privateCounter;
+// 		}
+// 	};
+//
+// })();
+//
+// console.log(counter.value()); // logs 0
+// counter.increment();
+// counter.increment();
+// console.log(counter.value()); // logs 2
+// counter.decrement();
+// console.log(counter.value()); // logs 1
+
+
+
 // Lexical Environment
 // lexicalEnvironment = {
 // 	environmentRecord: {
@@ -357,8 +453,6 @@
 // 		}
 // 	outer: < Reference to the parent lexical environment>
 // }
-
-
 
 // Recursion
 
