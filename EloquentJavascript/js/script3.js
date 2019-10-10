@@ -443,6 +443,14 @@
 // counter.decrement();
 // console.log(counter.value()); // logs 1
 
+// let a = 3;
+// function addTwo(x) {
+// 	let result;
+// 		result = x + 2;
+// 	return result;
+// }
+// let  b = addTwo(a);
+// console.log('Example context: ', b);
 
 
 // Lexical Environment
@@ -456,3 +464,54 @@
 
 // Recursion
 
+// Prototype
+// const person = new Object({
+// 	name: 'Dmytro',
+// 	age: 25,
+// 	greet: function () {
+// 		console.log('Greet!');
+// 	}
+// });
+//
+// Object.prototype.sayHello = function () {
+// 	console.log('Hello!');
+// };
+//
+// const ira = Object.create(person);
+// ira.name = 'Iryna';
+//
+// const str = new String('I am string');
+// console.log(str);
+
+// THIS
+function hello() {
+	console.log('Hello', this);
+}
+
+const person = {
+
+	name: 'Dmytro',
+	age: 29,
+	sayHello: hello,
+	sayHelloWindow: hello.bind(window),
+	logInfo: function () {
+		console.group(`${this.name} info:`);
+
+		console.log(`Name: ${this.name}`);
+		console.log(`Age: ${this.age}`);
+
+		console.groupEnd();
+	}
+
+};
+
+person.logInfo();
+
+const ira = {
+
+	name: 'Iryna',
+	age: 25,
+
+};
+
+person.logInfo.bind(ira)();
