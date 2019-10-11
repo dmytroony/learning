@@ -452,8 +452,59 @@
 // let  b = addTwo(a);
 // console.log('Example context: ', b);
 
+// function createCalcFunction(n) {
+//	
+// 	return function () {
+// 		console.log(1000 * n);
+// 	};
+//	
+// }
+// const calc = createCalcFunction(42);
+// calc();
 
-// Lexical Environment
+// function createIncrementor(n) {
+// 	return function (num) {
+// 		return n + num;
+// 	};
+// }
+//
+// const addOne = createIncrementor(1);
+// const addTen = createIncrementor(10);
+//
+// console.log(addOne(12));
+// console.log(addTen(12));
+
+// function urlGenerator(domain) {
+// 	return function (url) {
+// 		return `https://${url}.${domain}`;
+// 	};
+// }
+// const comUrl = urlGenerator('com');
+// const comUaUrl = urlGenerator('ua');
+//
+// console.log(comUrl('google'));
+// console.log(comUrl('netflix'));
+//
+// console.log(comUaUrl('imena'));
+// console.log(comUaUrl('olx'));
+
+// function bind(context, fn) {
+// 	return function (...args) {
+// 		fn.apply(context, args)
+// 	}
+// }
+//
+// function logPerson() {
+// 	console.log(`Person: ${this.name}, ${this.age}, ${this.job}`);
+// }
+//
+// const person1 = {name: 'Dmytro', age: 29, job: 'Frontend'};
+// const person2 = {name: 'Vasyl', age: 32, job: 'Frontend-Backend'};
+//
+// bind(person1, logPerson)();
+// bind(person2, logPerson)();
+
+// // Lexical Environment
 // lexicalEnvironment = {
 // 	environmentRecord: {
 // 		<identifier> : <value>,
@@ -483,35 +534,56 @@
 // const str = new String('I am string');
 // console.log(str);
 
+// const array = [1, 2, 3, 4, 5];
+// // function multBy(arr, n) {
+// // 	return arr.map(function (i) {
+// // 		return i * n;
+// // 	});
+// // }
+//
+// Array.prototype.multBy = function(n) {
+// 	return this.map(function (i) {
+// 		return i * n;
+// 	});
+// };
+// console.log(array.multBy(2));
+
+// console.log(multBy(array, 15));
+
 // THIS
-function hello() {
-	console.log('Hello', this);
-}
+// function hello() {
+// 	console.log('Hello', this);
+// }
+//
+// const person = {
+//
+// 	name: 'Dmytro',
+// 	age: 29,
+// 	sayHello: hello,
+// 	sayHelloWindow: hello.bind(window),
+// 	logInfo: function (job, phone) {
+// 		console.group(`${this.name} info:`);
+//
+// 		console.log(`Name: ${this.name}`);
+// 		console.log(`Age: ${this.age}`);
+// 		console.log(`Job: ${job}`);
+// 		console.log(`Job: ${phone}`);
+//
+// 		console.groupEnd();
+// 	}
+//
+// };
+//
+// person.logInfo();
+//
+// const ira = {
+//
+// 	name: 'Iryna',
+// 	age: 25,
+//
+// };
+//
+// // const fnIraInfoLog = person.logInfo.bind(ira, 'Frontend', '+3809999999')();
+// // person.logInfo.call(ira, 'Frontend', '+3809999999');
+// person.logInfo.apply(ira, ['Frontend', '+3809999999']);
 
-const person = {
-
-	name: 'Dmytro',
-	age: 29,
-	sayHello: hello,
-	sayHelloWindow: hello.bind(window),
-	logInfo: function () {
-		console.group(`${this.name} info:`);
-
-		console.log(`Name: ${this.name}`);
-		console.log(`Age: ${this.age}`);
-
-		console.groupEnd();
-	}
-
-};
-
-person.logInfo();
-
-const ira = {
-
-	name: 'Iryna',
-	age: 25,
-
-};
-
-person.logInfo.bind(ira)();

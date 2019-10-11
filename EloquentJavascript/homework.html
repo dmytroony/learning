@@ -124,7 +124,7 @@
     </div>
 
 	<p class="tasks">
-		Task 4: <br > MakeSizer
+		Task 4: <br > Text Make Sizer
 	</p>
 	<div class="spoiler">
 		<input type="checkbox" id="spoiler_id_4">
@@ -173,7 +173,7 @@
 	</div>
 
 	<p class="tasks">
-		Task 5: <br >
+		Task 5: <br > Url Generator
 	</p>
 	<div class="spoiler">
 		<input type="checkbox" id="spoiler_id_5">
@@ -181,14 +181,26 @@
 		<div class="spoiler_body">
             <pre>
                 <code>
+					function urlGenerator(domain) {
+						return function (url) {
+							return `https://${url}.${domain}`;
+						};
+					}
+					const comUrl = urlGenerator('com');
+					const comUaUrl = urlGenerator('ua');
 
+					console.log(comUrl('google'));
+					console.log(comUrl('netflix'));
+
+					console.log(comUaUrl('imena'));
+					console.log(comUaUrl('olx'));
                 </code>
             </pre>
 		</div>
 	</div>
 
 	<p class="tasks">
-		Task 6: <br >
+		Task 6: <br > Modal window
 	</p>
 	<div class="spoiler">
 		<input type="checkbox" id="spoiler_id_6">
@@ -196,7 +208,24 @@
 		<div class="spoiler_body">
             <pre>
                 <code>
+	                HTML:
+					< button id="open">Open the modal window< /button>
+					< button id="close">Close the modal window< /button>
+					< dialog id="dialog">
+						< h2>Title< /h2>
+						< p>The content< /p>
+					< /dialog>
 
+	                JS:
+					const dialog = document.getElementById("dialog");
+
+					document.getElementById("open").addEventListener("click", () => {
+						dialog.show();
+					});
+
+					document.getElementById("close").addEventListener("click", () => {
+						dialog.close();
+					});
                 </code>
             </pre>
 		</div>
