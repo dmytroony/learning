@@ -597,22 +597,78 @@
 //
 // console.log(power(2, 3));
 
-function findSolution(target) {
+// function findSolution(target) {
+//
+// 	function find(start, history) {
+//
+// 		if (start === target) {
+// 			return history;
+// 		} else if (start > target) {
+// 			return null;
+// 		} else {
+// 			return find(start + 5, '(' + history + ' + 5)') || find(start * 3, '(' + history + ' * 3)');
+// 		}
+//
+// 	}
+// 	return find(1,'1');
+//
+// }
+//
+// console.log(findSolution(24));
 
-	function find(start, history) {
+// Functions
 
-		if (start === target) {
-			return history;
-		} else if (start > target) {
-			return null;
-		} else {
-			return find(start + 5, '(' + history + ' + 5)') || find(start * 3, '(' + history + ' * 3)');
-		}
+// Calc Farm Inventory
 
-	}
-	return find(1,'1');
+// v.1
+// function printFarmInventory(cows, chickens) {
+// 	let cowsString = String(cows);
+// 	for (; cowsString.length < 3; cowsString = '0' + cowsString){
+// 	}
+// 	console.log(cowsString + ' Cows');
+//
+// 	let chickenString = String(chickens);
+// 	while (chickenString.length < 3) {
+// 		chickenString = '0' + chickenString;
+// 	}
+// 	console.log(chickenString + ' Chickens');
+// }
+// printFarmInventory(7, 11);
 
-}
+// v.2
+// function printZeroPaddedWidthLabel(number, label) {
+//
+// 	let numberString = String(number);
+// 	while (numberString < 3) {
+// 		numberString = '0' + numberString;
+// 	}
+// 	console.log(numberString + ' ' + label);
+//
+// }
+//
+// function printFarmInventory(cows, chickens, pigs) {
+//
+// 	printZeroPaddedWidthLabel(cows, 'Cows');
+// 	printZeroPaddedWidthLabel(chickens, 'Chickens');
+// 	printZeroPaddedWidthLabel(pigs, 'Pigs');
+//
+// }
+//
+// printFarmInventory(7, 11, 3);
 
-console.log(findSolution(24));
-
+// v.3
+// function zeroPad(number, width) {
+// 	let string = String(number);
+// 	while (string.length < width) {
+// 		string = '0' + string;
+// 	}
+// 	return string;
+// }
+//
+// function printFarmInventory(cows, chickens, pigs) {
+// 	console.log(zeroPad(cows, 3) + ' Cows');
+// 	console.log(zeroPad(chickens, 3) + ' Chickens');
+// 	console.log(zeroPad(pigs, 3) + ' Pigs');
+// }
+//
+// printFarmInventory(7, 16, 3);
