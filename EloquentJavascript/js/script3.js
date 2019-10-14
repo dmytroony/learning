@@ -672,3 +672,59 @@
 // }
 //
 // printFarmInventory(7, 16, 3);
+
+// Homework
+// Task 1/3
+// const minOrMax = (first, second) => first < second ? first : second;
+// console.log(minOrMax(32, 212));
+//
+// Task 2/3
+// function isEven(number) {
+//
+// 	if (number % 2 === 0) {
+// 		return true;
+// 	} else if (number % 2 === 1) {
+// 		return false;
+// 	} else if (number % 2 === number * isEven(number, number - 2)) {
+// 		return 'recursion';
+// 	} else {
+// 		return 'The value is not a number!';
+// 	}
+//
+// }
+// console.log(isEven(-1));
+//
+// Task 3/3
+//
+// 1)
+// function countBs(str) {
+//
+// 	let i = 0, j = 0;
+// 	while (i < str.length) {
+//
+// 		if (str[i] === 'B') {
+// 			j += 1;
+// 		}
+// 		i++;
+// 	}
+// 	console.log(j);
+//
+// }
+// countBs('Baobab of the Botanic item in Botswana!');
+//
+// 2)
+// function countChar(str, symbol) {
+//
+// 	let i = 0, j = 0;
+// 	while (i < str.length) {
+//
+// 		if (str[i] === symbol) {
+// 			j += 1;
+// 		}
+// 		i++;
+// 	}
+// 	console.log(j);
+//
+// }
+// countChar('Baobab of the Botanic item in Botswana!', 'B');
+
