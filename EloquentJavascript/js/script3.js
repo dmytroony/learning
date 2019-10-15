@@ -822,11 +822,15 @@
 // 	true);
 
 // function phi(table) {
-// 	return (table[3] + table[0] - table[2] * table[1]) /
-// 	Math.sqrt((table[2] + table[3]) *
-// 		(table[0] + table[1]) *
-// 		(table[1] + table[3]) *
-// 		(table[0] + table[2]));
+//
+// 	return ( table[3] + table[0] - table[2] * table[1]) /
+// 		Math.sqrt(
+// 		 (table[2] + table[3]) *
+// 			(table[0] + table[1]) *
+// 			(table[1] + table[3]) *
+// 			(table[0] + table[2])
+// 		);
+//
 // }
 // console.log(phi([76, 9, 4, 1]));
 
@@ -1039,3 +1043,4 @@ function tableFor(event, journal) {
 
 }
 console.log(tableFor('pizza', journal));
+
