@@ -821,18 +821,18 @@
 // 		'break', 'peanut', 'beer'],
 // 	true);
 
-// function phi(table) {
-//
-// 	return ( table[3] + table[0] - table[2] * table[1]) /
-// 		Math.sqrt(
-// 		 (table[2] + table[3]) *
-// 			(table[0] + table[1]) *
-// 			(table[1] + table[3]) *
-// 			(table[0] + table[2])
-// 		);
-//
-// }
-// console.log(phi([76, 9, 4, 1]));
+function phi(table) {
+
+	return ( table[3] + table[0] - table[2] * table[1]) /
+		Math.sqrt(
+		 (table[2] + table[3]) *
+			(table[0] + table[1]) *
+			(table[1] + table[3]) *
+			(table[0] + table[2])
+		);
+
+}
+console.log(phi([76, 9, 4, 1]));
 
 let journal = [
 	{"events":["carrot","exercise","weekend"],
@@ -1044,3 +1044,31 @@ function tableFor(event, journal) {
 }
 console.log(tableFor('pizza', journal));
 
+let map = {};
+function storePhi(event, phi) {
+	map[event] = phi;
+}
+
+storePhi('pizza', 0.069);
+storePhi('touched a tree', -0.081);
+console.log('pizza' in map);
+console.log(map['touched a tree']);
+
+for (let event in map)
+console.log("Correlation for '" + event + "' = " + map[event]);
+
+function gatherCorrelations(journal) {
+	let phis = {};
+	for (let entry = 0; entry < journal.length; entry++) {
+		let events = journal[entry].events;
+		for (let i = 0; i < events.length; i++) {
+			let event = events[i];
+			if (!(event in phis))
+				phis[event] = phi(tableFor(event, journal));
+		}
+	}
+	return phis;
+}
+
+let correlations = gatherCorrelations(journal);
+console.log(correlations.pizza);
