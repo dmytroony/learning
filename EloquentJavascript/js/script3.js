@@ -1130,12 +1130,183 @@
 // }
 // console.log(f2() === undefined);
 
-let obj = {
-    a: 'Custom'
-};
-let a = 'Global';
+// var obj = {
+//     a: 'Custom'
+// };
+// var a = 'Global';
+//
+// function whatsThis() {
+//     return this.a;
+// }
+//
+// console.log(whatsThis());
+// console.log(whatsThis.call(obj));
+// console.log(whatsThis.apply(obj));
 
-function whatsThis() {
-    return this.a;
-}
-console.log(whatsThis());
+// in
+
+// let trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+// let obj = {
+//     a: 1,
+//     b: 2
+// };
+// let c = obj.a;
+// console.log(0 in trees);
+// console.log(3 in trees);
+// console.log(6 in trees);
+// console.log('bay' in trees);
+// console.log(c in trees);
+// console.log(Symbol.iterator in trees);
+// console.log('PI' in Math);
+//
+// let myCar = {
+//     make: 'Honda',
+//     model: 'Accord',
+//     year: 1998
+// };
+// console.log('model' in myCar);
+
+// let a = [2, 9, 9];
+// console.log(a.indexOf(2));
+// console.log(a.indexOf(9));
+// console.log(a.indexOf(9, -1));
+// console.log(a.indexOf(7));
+
+// map
+
+// const map = new Map();
+
+// map.set(23, 'Best number');
+// map.set('23', 'Best number');
+// console.log(map.size); // size of map
+// console.log(map.get(23)); // get value
+// console.log(map.has(23)); // check key
+// console.log(map.delete('23'));
+// console.log(map.size);
+// map.clear();
+// console.log(map.size);
+// console.log(map);
+
+// map.set('HTML', 'Hyper Text Markup Language')
+//     .set('CSS', 'Cascading Style Sheets')
+//     .set('JS', 'Javascript');
+// // console.log([...map.entries()]);
+//
+// // const map2 = new Map(map.entries());
+// // const [first, second, third] = map;
+// // console.log(first, second, third);
+// // const [[key, value], second, third] = map;
+// // console.log(key, value);
+//
+// // for (let kv of map) {
+// // 	console.log(kv);
+// // }
+//
+// // for (let [key, value] of map) {
+// // 	console.log(key, value);
+// // }
+//
+// map.forEach((value, key, map) =>
+// 	console.log(value, key, map));
+
+// Multiply each element of the array by 2.
+// 1)
+// let a = [3, 4, 5]; // 6, 8, 10
+// let b = [];
+// // for (let i = 0; i < a.length; i++) {
+// // 	b[i] = a[i] * 2;
+// // }
+// console.log(a);
+// // console.log(b);
+//
+// // 2)
+// // let b = a.map(function(currentValue, index, array){
+// // return blablabla;
+// // });
+//
+// let c = a.map(function (x, y, z) {
+// 	// console.log(y);
+// 	// console.log(z);
+// 	return x * 2;
+// });
+// console.log(c);
+
+const people = [
+	{name: 'Vlad', age: 29, budget: 40000},
+	{name: 'Lena', age: 17, budget: 3400},
+	{name: 'Igor', age: 49, budget: 50000},
+	{name: 'Michael', age: 15, budget: 1800},
+	{name: 'Vasyl', age: 24, budget: 25000},
+	{name: 'Victoria', age: 38, budget: 2300},
+];
+
+// ES 5
+// for (let i = 0; i < people.length; i++) {
+// 	console.log(people[i]);
+// }
+
+// ===
+
+// ES 6
+// for (let person of people) {
+// 	console.log(person);
+// }
+
+// ForEach
+// people.forEach(function (person) {
+// 	console.log(person.name);
+// });
+
+// people.forEach((person) =>
+// 	console.log(person.name));
+
+// Map
+// const newPeople = people.map((person) =>
+// 	`${person.name} (${person.age})`);
+// console.log(newPeople);
+
+// Filter
+// const adults = [];
+// for (let i = 0; i < people.length; i++) {
+// 	if (people[i].age >= 18) {
+// 		adults.push(people[i]);
+// 	}
+// }
+// console.log(adults);
+
+// ====
+
+// const adults = people.filter(person =>
+// 	person.age >= 18);
+// console.log(adults);
+
+// Reduce
+// let amount = 0;
+// for (let i = 0; i < people.length; i++) {
+// 	amount += people[i].budget;
+// }
+
+// ===
+
+// const amount = people.reduce((total, person) =>
+// 	total + person.budget, 0);
+// console.log(amount);
+
+// Find
+// let igor = people.find(person => person.name === 'Igor');
+// console.log(igor);
+
+// FindIndex
+// let igorIndex = people.findIndex(person => person.name === 'Igor');
+// console.log(igorIndex);
+
+// Summary
+const amount = people.filter(person => person.budget > 3000)
+	.map(person => {
+		return {
+			info: `${person.name} (${person.age})`,
+			budget: Math.floor(Math.sqrt(person.budget))
+		}
+	})
+	.reduce((total, person) => total + person.budget, 0);
+console.log(amount);
