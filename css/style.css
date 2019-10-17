@@ -159,39 +159,39 @@ p a:hover {
     padding: 15px 28px 12px;
 }
 
-#dody > div {
+#body > div {
     margin: 0 auto;
     padding: 0;
     width: 960px;
 }
 
-#dody > div img {
+#body > div img {
     border: 2px solid #292929;
     margin: 24px 0 0;
     padding: 0;
 }
 /*TODO where is .article?*/
-#dody > div .article {
+#body > div .article {
     margin: 0 auto;
     padding: 30px 30px 0;
     width: 560px;
 }
 
-#dody > div .article h2 {
+#body > div .article h2 {
     font-family: "Arial Black", Gadget, sans-serif;
     font-size: 25px;
     font-weight: normal;
     margin: 0 0 30px;
 }
 
-#dody > div .article h3 {
+#body > div .article h3 {
     color: #252525;
     line-height: 24px;
     margin: 0;
     padding: 0;
 }
 
-#dody > div .article h4 {
+#body > div .article h4 {
     background: #252525;
     color: #fff;
     display: inline-block;
@@ -202,17 +202,17 @@ p a:hover {
     padding: 8px 27px 10px;
 }
 
-#dody > div .article p {
+#body > div .article p {
     margin: 0 0 30px;
 }
 
-#dody div ul {
+#body div ul {
     margin: 0;
     padding: 24px 10px 0;
     width: 940px;
 }
 
-#dody div ul li {
+#body div ul li {
     border: 2px solid #1a1a1a;
     display: block;
     list-style: none;
@@ -222,7 +222,7 @@ p a:hover {
 }
 
 /*TODO where is .figure?*/
-#dody div ul li .figure {
+#body div ul li .figure {
     border-right: 2px solid #1a1a1a;
     float: left;
     margin: 0;
@@ -230,7 +230,7 @@ p a:hover {
     width: 376px;
 }
 
-#dody div ul img {
+#body div ul img {
     border: 0;
     display: block;
     margin: 0;
@@ -239,18 +239,18 @@ p a:hover {
     transition: 0.5s ease-in-out;
 }
 
-#dody div ul li .figure:hover img {
+#body div ul li .figure:hover img {
     opacity: 1;
 }
 
-#dody div ul li div {
+#body div ul li div {
     float: left;
     margin: 0;
     padding: 63px 0 20px;
     width: 558px;
 }
 
-#dody div ul li div h3 {
+#body div ul li div h3 {
     color: #252525;
     font-family: "Arial Black", Gadget, sans-serif;
     font-size: 25px;
@@ -260,11 +260,11 @@ p a:hover {
     text-transform: uppercase;
 }
 
-#dody div ul li div p {
+#body div ul li div p {
     padding: 30px 30px 18px;
 }
 
-#dody div ul li div a.more {
+#body div ul li div a.more {
     background: #000;
     color: #fff;
     display: inline-block;
@@ -277,7 +277,7 @@ p a:hover {
     text-transform: uppercase;
 }
 
-#dody div ul li div a.more:hover {
+#body div ul li div a.more:hover {
     color: #252525;
     background: #fff;
     border: 2px solid #252525;
@@ -495,33 +495,33 @@ p a:hover {
     background-position: -129px -10px;
 }
 
-#footer div ul li #twitter:hover {
+/* #footer div ul li #twitter:hover {
 
-}
+} */
 
 #footer div ul li #facebook {
     background-position: -70px -10px;
 }
 
-#footer div ul li #facebook:hover {
+/* #footer div ul li #facebook:hover {
 
-}
+} */
 
 #footer div ul li #googleplus {
     background-position: -192px -10px;
 }
 
-#footer div ul li #googleplus:hover {
+/* #footer div ul li #googleplus:hover {
 
-}
+} */
 
 #footer div ul li #pinterest {
     background-position: -250px -10px;
 }
 
-#footer div ul li #pinterest:hover {
+/* #footer div ul li #pinterest:hover {
 
-}
+} */
 
 /* Slider */
 #main {
