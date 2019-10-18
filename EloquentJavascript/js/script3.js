@@ -1231,14 +1231,14 @@
 // });
 // console.log(c);
 
-const people = [
-	{name: 'Vlad', age: 29, budget: 40000},
-	{name: 'Lena', age: 17, budget: 3400},
-	{name: 'Igor', age: 49, budget: 50000},
-	{name: 'Michael', age: 15, budget: 1800},
-	{name: 'Vasyl', age: 24, budget: 25000},
-	{name: 'Victoria', age: 38, budget: 2300},
-];
+// const people = [
+// 	{name: 'Vlad', age: 29, budget: 40000},
+// 	{name: 'Lena', age: 17, budget: 3400},
+// 	{name: 'Igor', age: 49, budget: 50000},
+// 	{name: 'Michael', age: 15, budget: 1800},
+// 	{name: 'Vasyl', age: 24, budget: 25000},
+// 	{name: 'Victoria', age: 38, budget: 2300},
+// ];
 
 // ES 5
 // for (let i = 0; i < people.length; i++) {
@@ -1301,12 +1301,22 @@ const people = [
 // console.log(igorIndex);
 
 // Summary
-const amount = people.filter(person => person.budget > 3000)
-	.map(person => {
-		return {
-			info: `${person.name} (${person.age})`,
-			budget: Math.floor(Math.sqrt(person.budget))
-		}
-	})
-	.reduce((total, person) => total + person.budget, 0);
-console.log(amount);
+// const amount = people.filter(person => person.budget > 3000)
+// 	.map(person => {
+// 		return {
+// 			info: `${person.name} (${person.age})`,
+// 			budget: Math.floor(Math.sqrt(person.budget))
+// 		}
+// 	})
+// 	.reduce((total, person) => total + person.budget, 0);
+// console.log(amount);
+
+// let obj = {a: 'Custom'};
+// let a = 'Global';
+//
+// function whatsThis() {
+// 	return this.a;
+// }
+// console.log(whatsThis());
+// console.log(whatsThis.call(obj));
+
