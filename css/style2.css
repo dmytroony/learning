@@ -1,0 +1,21 @@
+body {
+  background: lightgreen; }
+
+.block {
+  background-color: lightyellow;
+  height: 20px;
+  margin-bottom: 20px; }
+
+.block:not(.first) {
+  background: darkcyan;
+  width: 70%;
+  border: 2px solid black; }
+
+#central_block {
+  padding: 30px; }
+  #central_block ul {
+    list-style: square;
+    display: inline-block; }
+    #central_block ul li {
+      float: left;
+      margin-right: 30px; }

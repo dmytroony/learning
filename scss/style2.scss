@@ -1,0 +1,44 @@
+$bgColor: darkcyan;
+$blockWidth: 70%;
+
+body {
+  background: lightgreen;
+}
+
+// * {
+//   padding: 0;
+//   margin: 0;
+// }
+
+.block {
+  background-color: lightyellow;
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+.block:not(.first) {
+  background: $bgColor;
+  width: $blockWidth;
+  border: 2px solid black;
+}
+
+#central_block {
+  padding: 30px;
+
+  ul {
+    list-style:square;
+    display: inline-block;
+
+    li {
+      float: left;
+      margin-right: 30px;
+    }
+
+  }
+
+
+}
+
+// #central_block > ul {
+//   list-style:square;
+// }
