@@ -1,85 +1,123 @@
-// Variables
-$bgColor: darkcyan;
-$blockWidth: 70%;
-$aVisitedColor: green;
-$fontSizeMain: 1.1em;
+@import "mixins";
+@import "variables";
 
-// Mixins
-@mixin fontSet1 {
-  font-size: $fontSizeMain;
-  font-weight: bold;
-  font-family: "Arial Black", Gadget, sans-serif;
-  color: #333;
-  text-decoration: none;
+//* {
+//  padding: 0;
+//  margin: 0;
+//}
+
+.d1{
+  grid-area: header;
+  background-color:LightSkyBlue;
 }
 
-@mixin padd($padd...) {
-  padding: $padd;
+.d2{
+  grid-area: advert;
+  background:LightSalmon;
 }
 
-// Styles
-body {
-  background: lightgreen;
+.d3{
+  grid-area: content;
+  background:PaleTurquoise;
 }
 
-// * {
-//   padding: 0;
-//   margin: 0;
-// }
-
-.block {
-  background-color: lightyellow;
-  height: 20px;
-  margin-bottom: 20px;
-  justify-content: center;
-  align-content: center;
+.d4{
+  grid-area: footer;
+  background: lightcyan;
 }
 
-.block:not(.first) {
-  @include padd(20px 40px 30px);
-  background: $bgColor;
-  width: $blockWidth;
-  border: 2px solid black;
-}
-
-#central_block {
-  padding: 30px;
-
-  ul {
-    list-style:square;
-    display: inline-block;
-
-    li {
-      float: left;
-      margin-right: 30px;
-    }
-
-  }
-
-}
-
-ol li a {
-  @include fontSet1;
-
-  &:hover {
-    display: flex;
-    text-decoration: underline;
-    font-size: 1.2em;
-    border: 1px solid yellow;
+@media (min-width: 300px){
+  .container{
+    font-size: 1em;
+    width: 100%;
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+            "header header header"
+            "advert advert advert"
+            "content content content"
+            "footer footer footer";
   }
 }
 
-a:visited {
-  color: $aVisitedColor;
-  text-decoration: none;
-}
-
-.art {
-
-  background-color: #1a1a1a;
-
-  &:hover {
-    background-color: #4C4C4C;
+@media (min-width: 600px) {
+  .container {
+    font-size: 1em;
+    width: 100%;
+    min-height: 300px;
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-gap: 0;
+    grid-template-areas:
+            "header header header"
+            "advert content content"
+            "footer footer footer";
+    justify-content: center;
+    align-content: center;
   }
 }
+
+
+//a {
+//  @include link(darkcyan, red, darkcyan, green);
+//}
+
+
+//
+//// Styles
+//.block {
+//  background-color: lightyellow;
+//  height: 20px;
+//  margin-bottom: 20px;
+//  justify-content: center;
+//  align-content: center;
+//}
+//
+//.block:not(.first) {
+//  @include padd(20px 40px 30px);
+//  background: $bgColor;
+//  width: $blockWidth;
+//  border: 2px solid black;
+//}
+//
+//#central_block {
+//  padding: 30px;
+//
+//  ul {
+//    list-style:square;
+//    display: inline-block;
+//
+//    li {
+//      float: left;
+//      width: (100% / 3);
+//      //margin-right: 30px;
+//    }
+//
+//  }
+//
+//}
+//
+//ol li a {
+//  @include fontSet1;
+//
+//  &:hover {
+//    display: flex;
+//    text-decoration: underline;
+//    font-size: 1.2em;
+//    border: 1px solid yellow;
+//  }
+//}
+//
+//.art {
+//
+//  background-color: #1a1a1a;
+//
+//  &:hover {
+//    background-color: #4C4C4C;
+//  }
+//}
 
