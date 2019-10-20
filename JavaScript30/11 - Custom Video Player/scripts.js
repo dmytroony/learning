@@ -1,4 +1,4 @@
-/* Get Our Elements */
+// Get Our Elements
 const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
 const progress = player.querySelector('.progress');
@@ -7,16 +7,17 @@ const toggle = player.querySelector('.toggle');
 const skipButtons = player.querySelectorAll('[data-skip]');
 const ranges = player.querySelectorAll('.player__slider');
 
-/* Build out functions */
+// Build out functions
 function togglePlay() {
 	const method = video.paused ? 'play' : 'pause';
 	video[method]();
 }
 
 function updateButton() {
-	const icon = this.paused ? '►' : '❚ ❚';
+	const icon = this.paused ? '▶' : '❚❚';
 	console.log(icon);
 	toggle.textContent = icon;
+	// console.log('Update the button');
 }
 
 function skip() {
@@ -25,6 +26,8 @@ function skip() {
 
 function handleRangeUpdate() {
 	video[this.name] = this.value;
+	// console.log(this.name);
+	// console.log(this.value);
 }
 
 function handleProgress() {
@@ -35,9 +38,10 @@ function handleProgress() {
 function scrub(e) {
 	const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
 	video.currentTime = scrubTime;
+	console.log(e);
 }
 
-/* Hook up the event listeners */
+// Hook up the event listeners
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
 video.addEventListener('pause', updateButton);
