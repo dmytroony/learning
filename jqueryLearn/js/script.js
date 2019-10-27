@@ -90,7 +90,51 @@ $(window).scroll(function () {
 
 $('h1').addClass('red');
 
-$('h1').hover(function () {
-	$(this).addClass('blue');
+// HOVER
+// $('h1').hover(function () {
+// 	$(this).toggleClass('blue');
+// });
+
+// ON CLICK
+$('h1').click(function () {
+	$(this).toggleClass('blue');
 });
+
+let text = $('.text').text(); // to receive the text from .text
+console.log('This is the not changed text: ' + text);
+
+$('.text').text('This is the changed text!').css({'backgroundColor': 'crimson', 'color': 'white'}); // to change the text on own
+
+// receiving and changing a html code
+// let newHtmlUl = '<ul><li><span>Changed First</span></li><li>Second</li><li>Third</li><li>Fourth</li></ul>';
+// $('ul').html(newHtmlUl);
+
+// to add a new html-element
+$('ul').append('<li>Fifth (added of the append)</li>');
+$('ul').prepend('<li>Zero (added of the prepend)</li>');
+
+// $('ul').empty(); // clean up inside the element
+// $('ul').remove(); // to remove the element
+
+$('ul').after('<span>This text was added the after()</span>');
+$('ul li:last-child').after('<li>This li was added the after()</li>');
+
+$('form').wrap('<div class="red"></div>');
+$('form').unwrap();
+
+$(document).ready(function(){
+
+	$('.slick-slider').slick({
+		autoplay: true,
+		dots: true,
+		slidesToShow: 2,
+		slidesToScroll: 1,
+	});
+
+	$('.slick-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		console.log(nextSlide);
+	});
+
+});
+
 

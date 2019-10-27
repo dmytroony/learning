@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/script.js" type="text/javascript" defer></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="slick/slick.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="js/script.js" type="text/javascript" defer></script>
+
     <title>jQuery</title>
 </head>
 <body>
@@ -20,7 +26,7 @@
 
 <h2 class="hello" title="test-word">Hello world!</h2>
 
-<p>
+<p class="text">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
@@ -32,8 +38,8 @@
 <button>Click me</button>
 <p></p>
 <form>
-    <input type="text" name="name" value="i am a value!">
-    <input type="submit" name="submit" id="submit" value="Submit">
+    <input type="text" name="name" value="i am a value!" />
+    <input type="submit" name="submit" id="submit" value="Submit" />
 </form>
 
 <ul>
@@ -53,6 +59,13 @@
         <td>Anything</td>
     </tr>
 </table>
+
+<div class="slick-slider">
+    <div><img src="https://images.unsplash.com/photo-1572129421341-77455b1478b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="slide1" width="300px"></div>
+    <div><img src="https://images.unsplash.com/photo-1572173993842-77b05886354c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=376&q=80" alt="slide2" width="300px"></div>
+    <div><img src="https://images.unsplash.com/photo-1572187092690-63fffd19feb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="slide3" width="300px"></div>
+    <div><img src="https://images.unsplash.com/photo-1572187172437-cdfdc55bfd7c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="slide4" width="300px"></div>
+</div>
 
 </body>
 </html>
