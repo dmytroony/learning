@@ -5,5 +5,6 @@
 3. Nikolskiy "JS on examples" - started 2019.09.26 | finished 2019.10.01.
     For technical reasons, I decided to stop studying this book. 
     A lot of morally outdated code with old standards;
-4. Marijn Haverbeke "Eloquent Javascript" - started 2019.10.2 | studying at the moment;
-5. 30 days  JS-Challenge on the javascript30.com - started 2019.10.9 | studying at the moment;
+4. Marijn Haverbeke "Eloquent Javascript": started 2019.10.2 - studying at the moment;
+5. 30 days  JS-Challenge on the javascript30.com: 2019.10.9 - 2019.11.8;
+6. 

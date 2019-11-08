@@ -22,3 +22,18 @@
 // 	element.addEventListener('click', abc);
 // });
 
+let classes = {
+	classA:["Tom","Alice"],
+	classB:["Sam","Bob"],
+	classC:["Ron","John"]
+};
+
+for(let key in classes){
+
+	console.log(key+":");
+
+	for(let val of classes[key]){
+		console.log(val);
+	}
+
+}
