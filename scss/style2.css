@@ -1,0 +1,48 @@
+.d1 {
+  grid-area: header;
+  background-color: LightSkyBlue; }
+
+.d2 {
+  grid-area: advert;
+  background: LightSalmon; }
+
+.d3 {
+  grid-area: content;
+  background: PaleTurquoise; }
+
+.d4 {
+  grid-area: footer;
+  background: lightcyan; }
+
+@media (min-width: 300px) {
+  .container {
+    font-size: 1em;
+    width: 100%;
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header header" "advert advert advert" "content content content" "footer footer footer"; } }
+@media (min-width: 600px) {
+  .container {
+    font-size: 1em;
+    width: 100%;
+    min-height: 300px;
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-gap: 0;
+    grid-template-areas: "header header header" "advert content content" "footer footer footer";
+    justify-content: center;
+    align-content: center; } }
+a {
+  color: darkcyan; }
+  a:active {
+    color: green; }
+  a:visited {
+    color: darkcyan; }
+  a:hover {
+    color: red; }
+
+/*# sourceMappingURL=style2.css.map */

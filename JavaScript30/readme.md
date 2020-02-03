@@ -1,4 +1,4 @@
-![](https://javascript30.com/images/JS3-social-share.png)
+﻿![](https://javascript30.com/images/JS3-social-share.png)
 
 # JavaScript30
 
@@ -43,7 +43,8 @@ Feel free to submit a PR adding a link to your own recaps, guides or reviews!
 * [Kizito](https://github.com/akhilome/)'s follow along [repo](https://github.com/akhilome/js30) with [completed challenges](https://akhilome.github.io/js30) and [notes](https://akhilome.github.io/js30/notes).
 * [VannTile](https://github.com/vanntile)'s [repository](https://github.com/vanntile/JavaScript30) and [GitHub Pages showcase](https://vanntile.github.io/JavaScript30/). Thank you for a great ⌨️ experience.
 * [Alex Kim](https://github.com/Alex-K1m/js30-challenge) completed all the challenges. You can check them out at [github pages](https://alex-k1m.github.io/js30-challenge/).
-
+* [Mikhail Thomas](https://github.com/seckela) created [JS30++](https://github.com/seckela/js30plusplus) to add another level of challenge ontop of this already great course.
+* [Ramon Morcillo](https://github.com/reymon359/JavaScript30) finished this awesome challenge!. You can see the showcase of his implementations on [this link](https://reymon359.github.io/JavaScript30/).
 
 ## Alternative Implementations
 Here are some links of people who have done the tutorials, but in a different language or framework:
@@ -53,6 +54,7 @@ Here are some links of people who have done the tutorials, but in a different la
 * [Akinjide Bankole](https://github.com/akinjide/JS30days) used Node.js with [Jade](http://jadelang.net) to solve the exercises
 * [Adrien Poly](https://github.com/adrienpoly/javascript30-stimulus) a modest attempt to convert Drum Kit, Video Player, Local Tapas, TypeHead to [Stimulus JS](https://stimulusjs.org/) framework in a Rails App.
 * [Bogdan Lazar](https://github.com/tricinel/TypeScript30) all the JavaScript 30 written in [TypeScript](https://www.typescriptlang.org/)
+* [marcoSven](https://github.com/marcoSven) solution suggestion for [10 - Hold Shift and Check Checkboxes](https://github.com/marcoSven/JavaScript30/blob/master/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/index-FINISHED.html)
 
 ## A note on Pull Requests
 

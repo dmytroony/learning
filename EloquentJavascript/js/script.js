@@ -1320,3 +1320,13 @@
 // console.log(whatsThis());
 // console.log(whatsThis.call(obj));
 
+let journal = [];
+
+function addEntry(events, didITurnIntoASquirrel) {
+	journal.push({
+		events: events, squirrel: didITurnIntoASquirrel
+	});
+}
+
+addEntry(["work", "touched a tree", "pizza", "run", "TV"], false);
+console.log(journal);
