@@ -79,3 +79,5 @@
 // 1) Events
 // 2) Objects
 // 3) DOM
+// 4) API
+// 5) ReactJS
