@@ -10,5 +10,5 @@
 6. code-basics.com - 2020.02.03 - present day;
 7. Next(plan for studying the details): Events -> Objects -> DOM -> API -> ReactJS;
 
-#learning python
+# learning python
 1. python.org and others tutorials - 2019.02.15 - present day;
