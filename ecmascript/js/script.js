@@ -72,7 +72,76 @@
 // };
 // console.log(isCorrectPassword('qwerty'));
 
+// const isLannisterSoldier = (isRedArmor, isLionShield) => {
+//
+//     return isRedArmor === 'red' && isLionShield === null || isLionShield === 'lion' || isRedArmor === null;
+//
+// };
+// // console.log(isLannisterSoldier('blue', 'lion'));
+//
+//
+// const isNotLannisterSoldier = (isRedArmor, isLionShield) => {
+//
+//     return !isLannisterSoldier(isRedArmor, isLionShield);
+//
+// };
+// console.log(isNotLannisterSoldier('red', 'lion'));
+// console.log(isNotLannisterSoldier('blue', null));
 
+// const isLeapYear = year => year % 400 === 0 || year % 4 === 0 && year % 100 !== 0;
+// console.log(isLeapYear(1988));
+//
+// const isNeutralSoldier = (armor, shield) => {
+//     return armor !=='red' && shield === 'black';
+// };
+// console.log(isNeutralSoldier('yellow', 'black')); // true
+// console.log(isNeutralSoldier('red', 'black'));    // false
+// console.log(isNeutralSoldier('red', 'red'));      // false
+
+// const getTypeOfSentence = sentence => {
+//     const lastChar = sentence.substr(-1);
+//
+//     if (lastChar === '?') {
+//         return 'question';
+//     } else {
+//         return 'normal';
+//     }
+// };
+// console.log(getTypeOfSentence('Hodor'));
+// console.log(getTypeOfSentence('Hodor?'));
+
+// const getTypeOfSentence = sentence => {
+//     const lastChar = sentence[sentence.length - 1];
+//
+//     let sentenceType;
+//     if (lastChar === '?') {
+//         sentenceType = 'question';
+//     } else {
+//         sentenceType = 'normal';
+//     }
+//
+//     return `Sentence is ${sentenceType}`;
+// };
+// console.log(getTypeOfSentence('Hodor'));
+// console.log(getTypeOfSentence('Hodor?'));
+
+// normalizeUrl to the https:// protocol
+const normalizeUrl = url => {
+    const oldProtocol = 'http://',
+        newProtocol = 'https://';
+
+    if (url.startsWith(oldProtocol)) {
+        return url.slice(oldProtocol.length).padStart(url.length + 1, newProtocol);
+    } else if (url.startsWith(newProtocol)) {
+        return url;
+    } else if (!(url.startsWith(oldProtocol))) {
+        return newProtocol + url;
+    }
+
+};
+console.log(normalizeUrl('google.com'));
+console.log(normalizeUrl('http://ai.fi'));
+console.log(normalizeUrl('https://www.site.com'));
 
 // PLAN
 // 0) code.basics
