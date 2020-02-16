@@ -11,4 +11,5 @@
 7. Next(plan for studying the details): Events -> Objects -> DOM -> API -> ReactJS;
 
 # learning python
-1. python.org and others tutorials - 2019.02.15 - present day;
+1. python.org and other tutorials - 2019.02.15 - present day;
+2. 

@@ -126,27 +126,80 @@
 // console.log(getTypeOfSentence('Hodor?'));
 
 // normalizeUrl to the https:// protocol
-const normalizeUrl = url => {
-    const oldProtocol = 'http://',
-        newProtocol = 'https://';
+// const normalizeUrl = url => {
+//     const oldProtocol = 'http://',
+//         newProtocol = 'https://';
+//
+//     if (url.startsWith(oldProtocol)) {
+//         return url.slice(oldProtocol.length).padStart(url.length + 1, newProtocol);
+//     } else if (url.startsWith(newProtocol)) {
+//         return url;
+//     } else if (!(url.startsWith(oldProtocol))) {
+//         return newProtocol + url;
+//     }
+//
+// };
+// console.log(normalizeUrl('google.com'));
+// console.log(normalizeUrl('http://ai.fi'));
+// console.log(normalizeUrl('https://www.site.com'));
 
-    if (url.startsWith(oldProtocol)) {
-        return url.slice(oldProtocol.length).padStart(url.length + 1, newProtocol);
-    } else if (url.startsWith(newProtocol)) {
-        return url;
-    } else if (!(url.startsWith(oldProtocol))) {
-        return newProtocol + url;
-    }
+// const whoIsThisHouseToStarks = secondName => {
+//     let isWho;
+//     if (secondName === 'Karstark' || secondName === 'Tally') {
+//         isWho = 'friend';
+//     } else if (secondName === 'Lannister' || secondName === 'Frey') {
+//         isWho = 'enemy';
+//     } else {
+//         isWho = 'neutral';
+//     }
+//
+//     return `This family is ${isWho}!`;
+// };
+// console.log(whoIsThisHouseToStarks('Lannister'));
 
-};
-console.log(normalizeUrl('google.com'));
-console.log(normalizeUrl('http://ai.fi'));
-console.log(normalizeUrl('https://www.site.com'));
+// const abs = number => {
+//     if (number >=0) {
+//         return number;
+//     }
+//
+//     return -(-number);
+// };
+// console.log(abs(-5));
+// // EQUAL
+// const abs1 = number => (number >= 0 ? number : -(-number));
+// console.log(abs1(-2));
 
-// PLAN
-// 0) code.basics
-// 1) Events
-// 2) Objects
-// 3) DOM
-// 4) API
-// 5) ReactJS
+// const getTypeOfSense = sentence => {
+//     const lastChar = sentence.substr(-1);
+//
+//     return (lastChar === '?') ? 'question' : 'normal';
+// };
+// console.log(getTypeOfSense('Hodor'));
+// console.log(getTypeOfSense('Hodor?'));
+
+// REVERSE STRING
+//
+// First method with an array
+// const convertText = text => text.split("").reverse().join("");
+//
+// Second method with a cycle FOR
+// const convertText = text => {
+//     let newString = "";
+//     for (let i = text.length -1; i >= 0; i--) {
+//         newString += text[i];
+//     }
+//     return newString;
+// };
+//
+// Third method with a Recursion
+// const convertText = text => (text === "") ? "" : convertText(text.substr(1)) + text.charAt(0);
+//
+// console.log(convertText('Hello'));
+// console.log(convertText('hello'));
+
+// 1) переприсвоїти значення а = 5; b = 7;
+// 2) без використання додаткових змінних;
+// 3) не простим переприсвоюванням;
+// let a = 7, b = 5;
+// console.log(`a = ${a}\nb = ${b}`);
+
