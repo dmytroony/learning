@@ -203,3 +203,26 @@
 // let a = 7, b = 5;
 // console.log(`a = ${a}\nb = ${b}`);
 
+// const isFalsy = (value) => value == false;
+// console.log(isFalsy(3));
+
+// const printNumbers = lastNumber => {
+//     let i = lastNumber;
+//     while (i) {
+//         console.log(i);
+//         i--;
+//     }
+//     console.log(`finished! ${lastNumber} is the last number of this counter!`);
+// };
+// printNumbers(5);
+
+const reverse = text => {
+    let index = text.length - 1;
+    let reversedText = '';
+
+    while (index >= 0) {
+        const currentChar = text[index];
+        reversedText = `${reversedText}${currentChar}`;
+        index -= -1;
+    }
+};
