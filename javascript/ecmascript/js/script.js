@@ -216,13 +216,21 @@
 // };
 // printNumbers(5);
 
-const reverse = text => {
-    let index = text.length - 1;
-    let reversedText = '';
+// const reverse = text => {
+//     let index = text.length - 1;
+//     let reversedText = '';
+//     while (index >= 0) {
+//
+//         const currentChar = text[index];
+//         reversedText = `${reversedText}${currentChar}`;
+//         index = index - 1;
+//     }
+//     return reversedText;
+//
+// };
+// console.log(reverse('Game of Thrones'));
 
-    while (index >= 0) {
-        const currentChar = text[index];
-        reversedText = `${reversedText}${currentChar}`;
-        index -= -1;
-    }
+const mysubstr = (text, strLength) => {
+    return text;
 };
+console.log(mysubstr('If I look back I am lost', 8));
