@@ -9,7 +9,7 @@
 5. 30 days  JS-Challenge on the javascript30.com: 2019.10.9 - 2019.11.8;
 6. code-basics.com - 2020.02.03 - present day;
 7. glo-academy 4days challenge 2020.02.18 - present day; (javascript/jscalc/)
-8. Next(plan for studying the details): Events -> Objects -> DOM -> API -> ReactJS;
+8. Next(plan for studying the details): Events -> Objects -> JSON -> DOM -> API -> ReactJS;
 
 # learning python
 1. python.org and other tutorials - 2019.02.15 - present day;
