@@ -19,17 +19,20 @@ const startButton = document.querySelector('.start-button'),
     formCalculate = document.querySelector('.form-calculate'),
     summary = document.querySelector('.total'),
     fastRange = document.querySelector('.fast-range'),
-    totalPriceSum = document.querySelector('.total_price__sum');
+    totalPriceSum = document.querySelector('.total_price__sum'),
+    mobDesign = document.getElementById('mobileTemplates');
 
 function showElem(elem) {elem.style.display = 'block'}
 
 function hideElem(elem) {elem.style.display = 'none'}
 
+// Counting of a cost
 function priceCalculation (elem) {
     let result = 0,
     index = 0,
     options = [];
 
+    // 
     if (elem.name === 'whichSite') {
         for (const item of formCalculate.elements) {
             if (item.type === 'checkbox') {
@@ -39,6 +42,7 @@ function priceCalculation (elem) {
         hideElem(fastRange);
     }
 
+    //
     for (const item of formCalculate.elements) {
         if (item.name === 'whichSite' && item.checked) {
             index = DATA.whichSite.indexOf(item.value);
@@ -47,6 +51,7 @@ function priceCalculation (elem) {
         }
     }
 
+    //
     options.forEach(function(key) {
         if (typeof(DATA[key]) === 'number') {
             if (key === 'sendOrder') {
@@ -59,18 +64,24 @@ function priceCalculation (elem) {
                 result += DATA.price[index] * DATA.desktopTemplates[index] / 100;
             } else {
                 result += DATA[key][index];
-            }
+            } 
         }
+
+        (DATA['adapt'].checked) ? mobDesign.disabled = true : mobDesign.disabled = false;
     });
 
+    //
     result += DATA.price[index];
 
+    //
     totalPriceSum.textContent = result;
 }
 
+// if a client wants faster
 function handlerCallBackForm (event) {
     const target = event.target;
-    
+
+    // show this hided element
     if (target.classList.contains('want-faster')) {
         target.checked ? showElem(fastRange) : hideElem(fastRange);
     }
@@ -78,6 +89,8 @@ function handlerCallBackForm (event) {
     if (target.classList.contains('calc-handler')) {
         priceCalculation(target);
     }
+
+
 };
 
 startButton.addEventListener('click', () => {
