@@ -22,8 +22,17 @@ const startButton = document.querySelector('.start-button'),
     summary = document.querySelector('.total'),
     fastRange = document.querySelector('.fast-range'),
     totalPriceSum = document.querySelector('.total_price__sum'),
+
     adapt = document.getElementById('adapt'),
     mobileTemplates = document.getElementById('mobileTemplates'),
+    desktopTemplates = document.getElementById('desktopTemplates'),
+    editable = document.getElementById('editable'),
+//
+    adaptValue = document.querySelector('.adapt_value'),
+    mobileTemplatesValue = document.querySelector('.mobileTemplates_value'),
+    desktopTemplatesValue = document.querySelector('.desktopTemplates_value'),
+    editableValue = document.querySelector('.editable_value'),
+
     typeSite = document.querySelector('.type-site'),
     maxDeadline = document.querySelector('.max-deadline'),
     rangeDeadline = document.querySelector('.range-deadline'),
@@ -45,6 +54,11 @@ function renderTextContent(total, site, maxDay, minDay) {
     rangeDeadline.min = minDay;
     rangeDeadline.max = maxDay;
     deadlineValue.textContent = declOfNum(rangeDeadline.value, DAY_STRING);
+
+    adaptValue.textContent = adapt.checked ? 'Да' : 'Нет';
+    mobileTemplatesValue.textContent = mobileTemplates.checked ? 'Да' : 'Нет';
+    desktopTemplatesValue.textContent = desktopTemplates.checked ? 'Да' : 'Нет';
+    editableValue.textContent = editable.checked ? 'Да' : 'Нет';
 }
 
 // Counting of a cost
