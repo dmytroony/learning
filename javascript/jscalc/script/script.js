@@ -24,22 +24,19 @@ const startButton = document.querySelector('.start-button'),
     total = document.querySelector('.total'),
     fastRange = document.querySelector('.fast-range'),
     totalPriceSum = document.querySelector('.total_price__sum'),
-
     adapt = document.getElementById('adapt'),
     mobileTemplates = document.getElementById('mobileTemplates'),
     desktopTemplates = document.getElementById('desktopTemplates'),
     editable = document.getElementById('editable'),
-
     adaptValue = document.querySelector('.adapt_value'),
     mobileTemplatesValue = document.querySelector('.mobileTemplates_value'),
     desktopTemplatesValue = document.querySelector('.desktopTemplates_value'),
     editableValue = document.querySelector('.editable_value'),
-
     typeSite = document.querySelector('.type-site'),
     maxDeadline = document.querySelector('.max-deadline'),
     rangeDeadline = document.querySelector('.range-deadline'),
     deadlineValue = document.querySelector('.deadline-value'),
-    calcDescription = document.querySelector('.calc-descrip'),
+    calcDescription = document.querySelector('.calc-description'),
     metrikaYandex = document.getElementById('metrikaYandex'),
     analyticsGoogle = document.getElementById('analyticsGoogle'),
     sendOrder = document.getElementById('sendOrder'),
@@ -47,57 +44,49 @@ const startButton = document.querySelector('.start-button'),
     totalPrice = document.querySelector('.total_price'),
     firstFieldset = document.querySelector('.first-fieldset');
 
-function declOfNum(n, titles) {
-    return n + ' ' + titles[n % 10 === 1 && n % 100 !== 11 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 1 : 2];
-}
+const declOfNum = (n, titles) => n + ' ' + titles[n % 10 === 1 && n % 100 !== 11 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 1 : 2];
 
-function showElem(elem) {
-    elem.style.display = 'block';
-}
+const showElem = elem => elem.style.display = 'block';
 
-function hideElem(elem) {
-    elem.style.display = 'none';
-}
+const hideElem = elem => elem.style.display = 'none';
 
-function addOptionsString() {
-    // Подключим Яндекс Метрику, Гугл Аналитику и отправку заявок на почту.
+const addOptionsString = (yandex, google, order) => {
     let str = '';
 
-    if (metrikaYandex.checked || analyticsGoogle.checked || sendOrder.checked) {
+    if (yandex || google || order) {
         str += 'Подключим';
 
-        if (metrikaYandex.checked) {
+        if (yandex) {
             str += ' Яндекс Метрику';
 
-            if (analyticsGoogle.checked && sendOrder.checked) {
+            if (google && order) {
                 str += ', Гугл Аналитику и отправку заявок на почту или в телеграм.';
                 return str;
             }
-
-            if (analyticsGoogle.checked || sendOrder.checked) {
+            if (google || order) {
                 str += ' и';
             }
+
         }
 
-        if (analyticsGoogle.checked) {
+        if (google) {
             str += ' Гугл Аналитику';
 
-            if (sendOrder.checked) {
+            if (order) {
                 str += ' и';
             }
         }
 
-        if (sendOrder.checked) {
+        if (order) {
             str += ' отправку заявок на почту или в телеграм';
         }
 
         str += '.';
-
     }
     return str;
-}
+};
 
-function renderTextContent(total, site, maxDay, minDay) {
+const renderTextContent = (total, site, maxDay, minDay) => {
     totalPriceSum.textContent = total;
     typeSite.textContent = site;
     maxDeadline.textContent = declOfNum(maxDay, DAY_STRING);
@@ -113,20 +102,27 @@ function renderTextContent(total, site, maxDay, minDay) {
 
     calcDescription.textContent = `
     Сделаем ${site}${adapt.checked ? ', адаптированный под мобильные устройства и планшеты' : ''}.
-        ${editable.checked ? 'Установим панель админстратора, чтобы вы могли самостоятельно менять содержание на сайте без разработчика.' : ''}
-        ${addOptionsString()}
+    ${editable.checked ? 'Установим панель админстратора, чтобы вы могли самостоятельно менять содержание на сайте без разработчика.' : ''}
+    ${addOptionsString(metrikaYandex.checked, analyticsGoogle.checked, sendOrder.checked)}
     `;
-}
+};
 
 // Counting of a cost
-function priceCalculation(elem = {}) {
-    let result = 0,
-        index = 0,
-        options = [],
-        site = '',
-        maxDeadlineDay = DATA.deadlineDay[index][1],
-        minDeadlineDay = DATA.deadlineDay[index][0],
-        overPercent = 0;
+const priceCalculation = (elem = {}) => {
+    const {
+        whichSite,
+        price,
+        deadlineDay,
+        deadlinePercent
+    } = DATA;
+
+    let result         = 0,
+        index          = 0,
+        options        = [],
+        site           = '',
+        maxDeadlineDay = deadlineDay[index][1],
+        minDeadlineDay = deadlineDay[index][0],
+        overPercent    = 0;
 
     if (elem.name === 'whichSite') {
         for (const item of formCalculate.elements) {
@@ -139,15 +135,15 @@ function priceCalculation(elem = {}) {
 
     for (const item of formCalculate.elements) {
         if (item.name === 'whichSite' && item.checked) {
-            index = DATA.whichSite.indexOf(item.value);
+            index = whichSite.indexOf(item.value);
             site = item.dataset.site;
-            maxDeadlineDay = DATA.deadlineDay[index][1];
-            minDeadlineDay = DATA.deadlineDay[index][0];
+            maxDeadlineDay = deadlineDay[index][1];
+            minDeadlineDay = deadlineDay[index][0];
         } else if (item.classList.contains('calc-handler') && item.checked) {
             options.push(item.value);
         } else if (item.classList.contains('want-faster') && item.checked) {
-            let overDay = maxDeadlineDay - rangeDeadline.value;
-            overPercent = overDay * (DATA.deadlinePercent[index] / 100);
+            const overDay = maxDeadlineDay - rangeDeadline.value;
+            overPercent = overDay * (deadlinePercent[index] / 100);
         }
     }
 
@@ -156,24 +152,36 @@ function priceCalculation(elem = {}) {
     options.forEach(function (key) {
         if (typeof (DATA[key]) === 'number') {
             if (key === 'sendOrder') {
-                result += DATA[key];
+                result += DATA[key]
             } else {
-                result += DATA.price[index] * DATA[key] / 100;
+                result += price[index] * DATA[key] / 100;
             }
         } else {
             if (key === 'desktopTemplates') {
-                result += DATA.price[index] * DATA[key][index] / 100;
+                result += price[index] * DATA[key][index] / 100;
             } else {
                 result += DATA[key][index];
             }
         }
     });
 
+    if (elem.name === 'whichSite') {
+        for (const item of formCalculate.elements) {
+            if (item.type === 'checkbox') {
+                item.checked = false;
+            }
+        }
+        hideElem(fastRange);
+    }
+
+    result += result * overPercent;
+
     renderTextContent(result, site, maxDeadlineDay, minDeadlineDay);
-}
+
+};
 
 // if a client wants faster
-function handlerCallBackForm(event) {
+const handlerCallBackForm = event => {
     const target = event.target;
 
     if (adapt.checked) {
@@ -193,9 +201,9 @@ function handlerCallBackForm(event) {
         priceCalculation(target);
     }
 
-}
+};
 
-function moveBackTotal() {
+const moveBackTotal = () => {
     if (document.documentElement.getBoundingClientRect().bottom > document.documentElement.clientHeight + 200) {
         totalPrice.classList.remove('totalPriceBottom');
         firstFieldset.after(totalPrice);
@@ -203,16 +211,41 @@ function moveBackTotal() {
         window.addEventListener('scroll', moveTotal);
     }
 
-}
+};
 
-function moveTotal() {
+const moveTotal = () => {
     if (document.documentElement.getBoundingClientRect().bottom < document.documentElement.clientHeight + 200) {
         totalPrice.classList.add('totalPriceBottom');
         endButton.before(totalPrice);
         window.removeEventListener('scroll', moveTotal);
         window.addEventListener('scroll', moveBackTotal);
     }
-}
+};
+
+const renderResponse = response => {
+    if (response.ok) {
+        hideElem(total);
+
+        cardHead.textContent = 'Заявка на разработку сайта была отправлена! Мы скоро с вами свяжемся.';
+        cardHead.style.color = '#00dd00';
+    }
+};
+
+const formSubmit = event => {
+    event.preventDefault();
+    const data = new FormData(event.target);
+
+    fetch('server.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'multipart/form-data'
+        },
+        body: data,
+    }).
+    then(renderResponse).
+    catch(error => console.error(error)
+    );
+};
 
 startButton.addEventListener('click', () => {
     showElem(mainForm);
@@ -235,5 +268,7 @@ endButton.addEventListener('click', () => {
 });
 
 formCalculate.addEventListener('change', handlerCallBackForm);
+
+formCalculate.addEventListener('submit', formSubmit);
 
 priceCalculation();
