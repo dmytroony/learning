@@ -223,14 +223,44 @@
 //
 //         const currentChar = text[index];
 //         reversedText = `${reversedText}${currentChar}`;
-//         index = index - 1;
+//         index--;
 //     }
 //     return reversedText;
 //
 // };
 // console.log(reverse('Game of Thrones'));
 
-const mysubstr = (text, strLength) => {
-    return text;
+// const mysubstr = (str, length) => {
+//     let i = 0;
+//     let result = '';
+//     while (i < length) {
+//         const currentChar = str[i];
+//         result = `${result}${currentChar}`;
+//         i++;
+//     }
+//
+//     return result;
+// };
+// // equal
+// const mysubstr = (incomText, amongSymbols) => {
+//     let extracted = incomText.substr(0, amongSymbols);
+//     return extracted;
+// };
+// console.log(mysubstr('If I look back I am lost', 8));
+
+// return false if:
+// 1) lengthSubstr === -number;
+// 2) startIndex === -number;
+// 3) startIndex > str.length - 1;
+// 4) (substr.length + startIndex) > str.length - 1;
+const isArgumentsForSubstrCorrect = (str, startIndex, lengthSubstr) => {
+    return str + startIndex + lengthSubstr;
 };
-console.log(mysubstr('If I look back I am lost', 8));
+console.log(isArgumentsForSubstrCorrect('Lorem ipsum sit dolor amet!', 3, 9));
+const str = 'Sansa Stark';
+isArgumentsForSubstrCorrect(str, -1, 3);  // false
+isArgumentsForSubstrCorrect(str, 4, 100); // false
+isArgumentsForSubstrCorrect(str, 10, 10); // false
+isArgumentsForSubstrCorrect(str, 11, 1);  // false
+isArgumentsForSubstrCorrect(str, 3, 3);   // true
+isArgumentsForSubstrCorrect(str, 0, 5);   // true
