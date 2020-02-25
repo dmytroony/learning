@@ -248,19 +248,54 @@
 // };
 // console.log(mysubstr('If I look back I am lost', 8));
 
-// return false if:
-// 1) lengthSubstr === -number;
-// 2) startIndex === -number;
-// 3) startIndex > str.length - 1;
-// 4) (substr.length + startIndex) > str.length - 1;
-const isArgumentsForSubstrCorrect = (str, startIndex, lengthSubstr) => {
-    return str + startIndex + lengthSubstr;
-};
-console.log(isArgumentsForSubstrCorrect('Lorem ipsum sit dolor amet!', 3, 9));
-const str = 'Sansa Stark';
-isArgumentsForSubstrCorrect(str, -1, 3);  // false
-isArgumentsForSubstrCorrect(str, 4, 100); // false
-isArgumentsForSubstrCorrect(str, 10, 10); // false
-isArgumentsForSubstrCorrect(str, 11, 1);  // false
-isArgumentsForSubstrCorrect(str, 3, 3);   // true
-isArgumentsForSubstrCorrect(str, 0, 5);   // true
+// const isArgumentsForSubstrCorrect = (str, index, length) => {
+//     if (index < 0) {
+//         return false;
+//     }
+//     if (length < 0) {
+//         return false;
+//     }
+//     if (index > str.length - 1) {
+//         return false;
+//     }
+//     if (index + length > str.length) {
+//         return false;
+//     }
+//
+//     return true;
+// };
+// //
+// const isArgumentsForSubstrCorrect = (incomText, startIndex, lengthSubstr) => {
+//     let extractedText = incomText.substr(startIndex, lengthSubstr);
+//
+//     return (lengthSubstr < 0 || startIndex < 0 || startIndex > incomText.length - 1 || (lengthSubstr + startIndex) > (incomText.length - 1)) ? false : true;
+// };
+//
+// const incomText = 'Sansa Stark';
+// console.log(isArgumentsForSubstrCorrect(incomText, -1, 3));  // false
+// console.log(isArgumentsForSubstrCorrect(incomText, 4, 100)); // false
+// console.log(isArgumentsForSubstrCorrect(incomText, 10, 10)); // false
+// console.log(isArgumentsForSubstrCorrect(incomText, 11, 1));  // false
+// console.log(isArgumentsForSubstrCorrect(incomText, 3, 3));   // true
+// console.log(isArgumentsForSubstrCorrect(incomText, 0, 5));   // true
+
+// const countChars = (str, symb) => {
+//     let i = 0, counter = 0;
+//
+//     while (i <= str.length - 1) {
+//         let currentSymb = str[i];
+//
+//         if (currentSymb === symb) {
+//             counter++;
+//         }
+//
+//         i++;
+//     }
+//
+//     return counter;
+// };
+// const str = 'If I look back I am lost';
+// console.log(countChars(str, 'I')); // 3
+// console.log(countChars(str, 'z')); // 0
+// console.log(countChars(str, 'o')); // 3
+
