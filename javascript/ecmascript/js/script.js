@@ -299,3 +299,29 @@
 // console.log(countChars(str, 'z')); // 0
 // console.log(countChars(str, 'o')); // 3
 
+const shouter = text => {
+    let result = '';
+
+    if (text.length > 5) {
+        let counter = 0;
+
+        while (counter !== 100) {
+            result = `${result}${text}`;
+            counter++;
+        }
+    } else if (text.length === 0) {
+        return result;
+    } else if (text.length > 0 && text.length < 5) {
+        return result = text;
+    } else if (text.length === 5) {
+        let counter = 0;
+
+        while (counter !== 10) {
+            result = `${result}${text}`;
+            counter++;
+        }
+    }
+
+    return result;
+};
+console.log(shouter('HELLO'));
