@@ -299,29 +299,157 @@
 // console.log(countChars(str, 'z')); // 0
 // console.log(countChars(str, 'o')); // 3
 
-const shouter = text => {
-    let result = '';
+// const shouter = text => {
+//     let result = '';
+//
+//     if (text.length > 5) {
+//         let counter = 0;
+//
+//         while (counter !== 100) {
+//             result = `${result}${text}`;
+//             counter++;
+//         }
+//     } else if (text.length === 0) {
+//         return result;
+//     } else if (text.length > 0 && text.length < 5) {
+//         return text;
+//     } else if (text.length === 5) {
+//         let counter = 0;
+//
+//         while (counter !== 10) {
+//             result = `${result}${text}`;
+//             counter++;
+//         }
+//     }
+//
+//     return result;
+// };
+// console.log(shouter('HELLO'));
 
-    if (text.length > 5) {
-        let counter = 0;
+// const getEvenNumbersUpTo = num => {
+//     let counter = 1,
+//         result = '';
+//
+//     while (counter <= num) {
+//         if (counter % 2 === 0) {
+//             result += counter;
+//         } else if (counter % 2 === 1 && counter !== 1 && counter !== num) {
+//             result += ',';
+//         }
+//
+//         counter++;
+//     }
+//
+//     return result += '.';
+// };
+// console.log(getEvenNumbersUpTo(9));
 
-        while (counter !== 100) {
-            result = `${result}${text}`;
-            counter++;
-        }
-    } else if (text.length === 0) {
-        return result;
-    } else if (text.length > 0 && text.length < 5) {
-        return result = text;
-    } else if (text.length === 5) {
-        let counter = 0;
+// const getEvenNumbersUpTo = num => {
+//     let counter = 1;
+//     let result = '';
+//
+//     while (counter <= num) {
+//         if (counter % 2 === 0) {
+//             result = `${result}${counter},`;
+//         }
+//
+//         counter++;
+//     }
+//
+//     return result;
+// };
+// console.log(getEvenNumbersUpTo(9));
 
-        while (counter !== 10) {
-            result = `${result}${text}`;
-            counter++;
-        }
-    }
+// const filterString1 = (str, char) => {
+//     let index = 0;
+//     let result = '';
+//     while (index < str.length) {
+//         const currentChar = str[index];
+//         if (currentChar !== char) {
+//             result = `${result}${currentChar}`;
+//         }
+//         index += 1;
+//     }
+//
+//     return result;
+// };
+// console.log(filterString1('this is a new star', 's'));
+// //
+// const filterString = (str, symb) => {
+//     let i = 0;
+//
+//     while (i <= str.length - 1) {
+//         let rewrite = new RegExp(symb, 'g');
+//
+//         if (str[i] === symb) {
+//             str = str.replace(rewrite, '');
+//         }
+//         i++;
+//     }
+//
+//     return str;
+// };
+// console.log(filterString('this is a new star', 's'));
 
-    return result;
-};
-console.log(shouter('HELLO'));
+// const isPrime = number => {
+//     if (number < 2) {
+//         return false;
+//     }
+//
+// let divider = 2;
+//
+// while (divider <= number / 2) {
+//     if (number % divider === 0) {
+//         return false;
+//     }
+//     divider += 1;
+// }
+// return true;
+// };
+// console.log(isPrime(1)); // false
+// console.log(isPrime(2)); // true
+// console.log(isPrime(3)); // true
+// console.log(isPrime(4)); // false
+
+// const doesContain = (str, symb) => {
+//     let i = 0;
+//
+//     while (i <= str.length - 1) {
+//         if (str[i] === symb) {
+//             return true;
+//         }
+//         i++;
+//     }
+//     return false;
+// };
+// console.log(doesContain('Renly', 'R'));
+// console.log(doesContain('Renly', 'r'));
+// console.log(doesContain('Tommy', 'm'));
+// console.log(doesContain('Tommy', 'd'));
+
+// const reverseString = str => {
+//     let i = str.length - 1,
+//         result = '';
+//
+//     for (i; i >= 0; i--) {
+//         const currentChar = str[i];
+//         result = `${result}${currentChar}`;
+//     }
+//
+//     return result;
+// };
+// console.log(reverseString('This is a new Star!'));
+
+// const sumOfSeries = (startNum, finishNum) => {
+//     if (startNum === finishNum) {
+//         return startNum;
+//     }
+//
+//     let result = 0, i = startNum;
+//     for (i; i <= finishNum; i++) {
+//         result += i;
+//     }
+//
+//     return result;
+// };
+// console.log(sumOfSeries(2, 4));
