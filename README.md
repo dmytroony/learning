@@ -10,4 +10,4 @@
 
 # learning python
 1. python.org and other tutorials - 2019.02.15 - present day;
-2. code-basics.com: 2020.02.26 - present day, (77/63 lessons);
+2. code-basics.com: 2020.02.26 - present day, (4/63 lessons);
