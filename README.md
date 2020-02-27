@@ -6,8 +6,9 @@
 5. 30days of the VanillaJS Challenge on javascript30.com: 2019.10.9 - 2019.11.8 (projects/JavaScript30/);
 6. code-basics.com: 2020.02.03 - 2020.02.26, (77/77 lessons);
 7. glo-academy "4days jsChallenge" 2020.02.17 - 2020.02.21; (projects/jscalc/);
+8. advanced js by V.Minin: 2020.02.25 - present day(5/15 lessons);
 8. Next(plan for studying the details): Events -> Objects -> JSON -> DOM -> SQL -> API -> ReactJS;
 
 # learning python
 1. python.org and other tutorials - 2019.02.15 - present day;
-2. code-basics.com: 2020.02.26 - present day, (4/63 lessons);
+2. code-basics.com: 2020.02.26 - present day, (9/63 lessons);
