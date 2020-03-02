@@ -187,7 +187,7 @@
 // delete family.father;
 // delete family.mother.husband;
 
-// type Symbol
+// Symbols
 // let user = {
 //     name: 'Dmytro',
 // };
@@ -195,8 +195,88 @@
 // let idAgain = Symbol.for('id');
 // user[id] = 1;
 
-let symb1 = Symbol.for('Name');
-let symb2 = Symbol.for('id');
+// let symb1 = Symbol.for('Name');
+// let symb2 = Symbol.for('id');
+//
+// console.log(Symbol.keyFor(symb1));
+// console.log(Symbol.keyFor(symb2));
 
-console.log(Symbol.keyFor(symb1));
-console.log(Symbol.keyFor(symb2));
+// let symbol1 = Symbol('mySymbol');
+// let symbol2 = Symbol('mySymbol');
+//
+// let symbol3 = Symbol.for('mySymbol');
+// let symbol4 = Symbol.for('mySymbol');
+//
+// console.log(symbol1 === symbol2);
+// console.log(symbol3 === symbol4);
+//
+// let symbolName = Symbol.keyFor(symbol3);
+// console.log(symbolName);
+//
+// let person = {
+//     name: 'John',
+//     age: 30,
+//     // [Symbol.for('password')] : 'John30',
+//     [Symbol('password')] : 'John30',
+// };
+// // console.log(person.password);
+// // console.log(person[Symbol.for('password')]);
+// console.log(Object.getOwnPropertySymbols(person)); // !! we get an ARRAY with object properties !!
+// console.log(person);
+
+// ===== //
+// this //
+// === //
+// let user = {
+//     name: 'John',
+//     age: 30,
+// };
+//
+// // ex.1
+// user.sayHi = function () {
+//     console.log('Hello! ex.1');
+// };
+// user.sayHi();
+//
+// // ex.2
+// function sayHi() {
+//     console.log(`Hello, my name is ${user.name}! ex.2`);
+// }
+// sayHi();
+//
+// ex.3 // the best
+// user = {
+//     sayHi: function () {
+//         console.log("Hello! ex.3");
+//     }
+// };
+// user.sayHi();
+
+// let user = {
+//     name: 'John',
+//     age: 30,
+//     sayHi() {
+//         console.log(this.name);
+//     },
+// };
+//
+// user.sayHi();
+
+// let user = {
+//     name: 'John',
+// };
+//
+// let admin = {
+//     name: 'admin',
+// };
+//
+// function sayHi() {
+//     console.log(this.name);
+// }
+//
+// user.fn = sayHi;
+// admin.fn = sayHi;
+//
+// user.fn();
+// admin.fn();
+// admin['f']();
