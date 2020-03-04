@@ -45,7 +45,7 @@
 # print(users[0]['rate'])
 
 # import find
-import requests
+# import requests
 
 # users = [
 #     {'first_name': 'Jack 1', 'last_name': 'Black 1', 'age': 90},
@@ -73,16 +73,22 @@ import requests
 #     {'url': 'https://css-tricks.com'},
 # ]
 
-links = [
-    'https://python.org',
-    'https://javascript.info',
-    'https://php.net',
-    'https://jetbrains.com',
-    'https://css-tricks.com',
-]
+# homework Day1
+# import requests
+#
+# links = [
+#     'https://python.org',
+#     'https://javascript.info',
+#     'https://php.net',
+#     'https://jetbrains.com',
+#     'https://css-tricks.com',
+# ]
+#
+# for link in links:
+#     amount = 0
+#     while amount <= 100:
+#         print(amount, link, requests.get(link).status_code)
+#         amount += 1
 
-for link in links:
-    amount = 0
-    while amount <= 100:
-        print(amount, link, requests.get(link).status_code)
-        amount += 1
+import requests
+print(requests.get('https://google.com').text)

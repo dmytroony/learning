@@ -280,3 +280,25 @@
 // user.fn();
 // admin.fn();
 // admin['f']();
+
+// let user = {
+//     name: 'John',
+//     hi() {
+//         console.log(this.name);
+//     },
+//     bye() {
+//         console.log('ByeBye!');
+//     },
+// };
+// user.hi();
+// user.bye();
+// (user.name === 'John' ? user.hi : user.bye)(); // => undefined
+
+let user = {
+    first_name: 'John',
+    sayHi() {
+        let arrow = () => console.log(this.first_name);
+        arrow();
+    },
+};
+user.sayHi();
