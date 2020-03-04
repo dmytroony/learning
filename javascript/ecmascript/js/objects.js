@@ -294,11 +294,76 @@
 // user.bye();
 // (user.name === 'John' ? user.hi : user.bye)(); // => undefined
 
-let user = {
-    first_name: 'John',
-    sayHi() {
-        let arrow = () => console.log(this.first_name);
-        arrow();
+// let user = {
+//     first_name: 'John',
+//     sayHi() {
+//         let arrow = () => console.log(this.first_name);
+//         arrow();
+//     },
+// };
+// user.sayHi();
+
+// let user = {
+//     name: 'John',
+//     go: function () {
+//         console.log(this.name);
+//     },
+// };
+// (user.go)();
+
+// let obj, method;
+//
+// obj = {
+//     go: function() { console.log(this); }
+// };
+//
+// obj.go();               // (1) [object Object]
+//
+// (obj.go)();             // (2) [object Object]
+//
+// (method = obj.go)();    // (3) undefined
+//
+// (obj.go || obj.stop)(); // (4) undefined
+
+// function makeUser() {
+//     return {
+//         name: 'John',
+//         ref: this,
+//     };
+// };
+//
+// let user = makeUser();
+//
+// console.log(user.ref.name);
+// => Uncaught TypeError: Cannot read property 'name' of undefined
+
+// function makeUser() {
+//     return {
+//         name: 'John',
+//         ref() {
+//             return this;
+//         }
+//     };
+// }
+//
+// let user = makeUser();
+//
+// console.log( user.ref().name );
+
+let calculator = {
+    read(first_value, second_value) {
+        let values = {
+
+        };
+    },
+    sum() {
+
+    },
+    mul() {
+
     },
 };
-user.sayHi();
+
+calculator.read();
+console.log(calculator.sum());
+console.log(calculator.mul());
