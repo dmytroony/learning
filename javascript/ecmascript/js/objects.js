@@ -351,15 +351,13 @@
 // console.log( user.ref().name );
 
 let calculator = {
-    read(first_value, second_value) {
-        let values = {
-
-        };
-    },
-    sum() {
+    read: function(first_value, second_value) {
 
     },
-    mul() {
+    sum: function() {
+
+    },
+    mul: function() {
 
     },
 };
