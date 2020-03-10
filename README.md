@@ -12,3 +12,5 @@
 # learning python
 1. python.org and other tutorials - 2019.02.15 - present day;
 2. code-basics.com: 2020.02.26 - present day, (24/63 lessons);
+3. Hacking Challenge: 2020.03.03 - 2020.03.10, (python/hackingchallenge);
+4. 
