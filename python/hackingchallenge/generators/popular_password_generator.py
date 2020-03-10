@@ -1,7 +1,9 @@
 
 class Generator:
     def __init__(self):
-        self.password_list = ['0', '123', '12345']
+        with open('generators/tenmillionpass.txt') as passwords_file:
+            passwords = passwords_file.readlines()
+        self.password_list = [password[:-1] for password in passwords]
         self.index = 0
 
     def next(self):

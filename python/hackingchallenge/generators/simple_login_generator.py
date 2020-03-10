@@ -1,6 +1,7 @@
+
 class Generator:
     def __init__(self):
-        self.login_list = ['cat', 'admin']
+        self.login_list = ['cat', 'admin', 'jack']
         self.index = 0
 
     def next(self):

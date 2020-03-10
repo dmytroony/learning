@@ -24,7 +24,7 @@ def auth():
     login = data['login']
     password = data['password']
 
-    with open('users.json') as users_file:
+    with open('scripts/users.json') as users_file:
         users = json.load(users_file)
 
         # users_file = open('users.json')

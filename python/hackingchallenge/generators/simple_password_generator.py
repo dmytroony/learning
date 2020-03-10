@@ -1,3 +1,4 @@
+
 class Generator:
     def __init__(self):
         self.password_list = ['0', '123', '12345']
@@ -11,5 +12,3 @@ class Generator:
             result = None
 
         return result
-
-# 1 : 24 : 46
