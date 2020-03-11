@@ -350,18 +350,56 @@
 //
 // console.log( user.ref().name );
 
-let calculator = {
-    read: function(first_value, second_value) {
+// let calculator = {
+//     read(first_value, second_value) {
+//         this.value1 = first_value;
+//         this.value2 = second_value;
+//     },
+//     sum() {
+//         return this.value1 + this.value2;
+//     },
+//     mul() {
+//         return this.value1 * this.value2;
+//     },
+// };
+//
+// calculator.read(5, 3);
+// console.log(calculator.sum());
+// console.log(calculator.mul());
 
-    },
-    sum: function() {
+// let ladder = {
+//     step: 0,
+//     up() {
+//         this.step++;
+//     },
+//     down() {
+//         this.step--;
+//     },
+//     showStep() {
+//         console.log(this.step);
+//     },
+// };
+//
+// ladder.up();
+// ladder.up();
+// ladder.down();
+// ladder.showStep();
 
-    },
-    mul: function() {
+// let ladder = {
+//     step: 0,
+//     up() {
+//         this.step++;
+//         return this;
+//     },
+//     down() {
+//         this.step--;
+//         return this;
+//     },
+//     showStep() {
+//         console.log(this.step);
+//         return this;
+//     },
+// };
+//
+// ladder.up().up().down().showStep();
 
-    },
-};
-
-calculator.read();
-console.log(calculator.sum());
-console.log(calculator.mul());
