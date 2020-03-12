@@ -403,3 +403,41 @@
 //
 // ladder.up().up().down().showStep();
 
+// // Symbol.toPrimitive
+// let user = {
+//     name: 'John',
+//     money: 1000,
+//
+//     [Symbol.toPrimitive](hint) {
+//         alert(`hint: ${hint}`);
+//         return hint == 'string' ? `{name: '${this.name}'}` : this.money;
+//     }
+// };
+// alert(user);
+// alert(+user);
+// alert(user + 500);
+
+// // toString / valueOf
+// let user = {
+//     name: 'John',
+//     money: 1000,
+//
+//     toString() {
+//         return `{name: "${this.name}"}`
+//     },
+//     valueOf() {
+//         return this.money;
+//     },
+// };
+// alert(user);
+// alert(+user);
+// alert(user + 500);
+
+// let obj = {
+//     toString() {
+//         return "2";
+//     },
+// };
+// alert(obj * 2); // -> 4
+// alert(obj + 2); // -> 22
+
