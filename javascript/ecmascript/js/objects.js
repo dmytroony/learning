@@ -441,3 +441,87 @@
 // alert(obj * 2); // -> 4
 // alert(obj + 2); // -> 22
 
+// function multiply(multiplier, ...theArgs) {
+//     return theArgs.map(x => multiplier * x);
+// }
+//
+// let arr = multiply(2, 1, 2, 3);
+// console.log(arr); // [2, 4, 6]
+
+// let arr = [1, 2, 3];
+//
+// function displayNums(a, b, c) {
+//     console.log(`${a}, ${b}, ${c}`);
+//     console.log(a, b, c);
+// }
+// displayNums(...arr);
+
+// let display = (...args) => {
+//     let res = '';
+//     for (let val of args) {
+//         res += val + " ";
+//     }
+//     console.log(res);
+// };
+// display();
+// display(1, 2);
+
+// function display(str, ...args){
+//     console.log(str);
+//
+//     for(let index in args){
+//         console.log(args[index]);
+//     }
+// }
+// display("My Nums:", -2, -3, 4, 2, 5); //My Nums: -2 -3 4 2 5
+// display("Strings:", 'str1', 'str2', 'str3');//Strings: str1 str2 str3
+
+// function sum(a, b) {
+//     return a + b;
+// }
+//
+// function print(a, b, func) {
+//     let res = func(a, b);
+//     console.log(`Result: ${res}`);
+// }
+// print(5, 5, sum);
+
+// function getInfo() {
+//     return ['Tom', '25'];
+// }
+// const [name, age] = getInfo();
+// console.log(`${name}: ${age}`);
+//
+// function getInfo2() {
+//     return {name2: 'Derek', age2: 29,};
+// }
+// const {name2, age2} = getInfo2();
+// console.log(`${name2}: ${age2}`);
+
+// let age = 18;
+//
+// let confirmUser = age >= 18 ?
+//     () => console.log('вход разрешен') :
+//     () => console.log('вход запрещен');
+//
+// confirmUser(age);//вход разрешен
+
+// var func = function minus (a) {
+//     if (a > 10) {
+//         minus(--a);
+//         console.log('-1');
+//     }
+// };
+// func(12);
+
+// let obj = {
+//     name: 'Some object',
+//     display: function () {
+//         // console.log(this.name);
+//         console.log(this);
+//     },
+//     // print: () => {console.log(this.name)},
+//     print: () => {console.log(this)},
+// };
+// obj.display();
+// obj.print();

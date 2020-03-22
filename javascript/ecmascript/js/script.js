@@ -453,3 +453,67 @@
 //     return result;
 // };
 // console.log(sumOfSeries(2, 4));
+
+// let proc = (fn, ...args) => {
+//     let result = 0;
+//
+//     for (let index of args) {
+//         result += index;
+//     }
+//     fn(result);
+// };
+
+// ;(function () {
+//     console.log('hello world');
+// })();
+//
+// const fnResult = (function () {
+//     return 'Hello World!';
+// })();
+// console.log(fnResult);
+
+// let pow = (x, n) => {
+//     let res = 1;
+//     return res = x ** n;
+// };
+// console.log(pow(2, 3));
+
+// let nums = '12345';
+// let arrNums = nums.split('');
+// console.log(arrNums);
+
+// let nums = [1, 2, 3, 4];
+// nums[nums.length - 1] = 100;
+// console.log(nums);
+
+// let nums = [1, 2, 3, 4];
+// let n = nums.pop();
+// console.log(nums, n);
+//
+// nums.push(n);
+// console.log(nums, n);
+//
+// let first = nums.shift();
+// console.log(nums, first);
+//
+// nums.unshift(first);
+// console.log(nums, first);
+//
+// delete nums[1];
+// console.log(nums, first, n);
+
+let people = ['Tom', 'Alice', 'Bob', 'Sam'];
+
+for (let i = 0; i < people.length; i++) {
+    console.log(i + ': ' + people[i]);
+}
+
+
+
+// let arr = ["Gerald","Vesemir","ciri","triss"];
+// function print(arr) {
+//     for (let index in arr) {
+//         console.log(`${index}`);
+//     }
+// }
+// print();
