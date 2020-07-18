@@ -1,0 +1,7 @@
+C:\Users\dmytroony\workspace\personal\learning\csharp\ConsoleAppFirstApp\ConsoleAppFirstApp\bin\Debug\ConsoleAppFirstApp.exe.config
+C:\Users\dmytroony\workspace\personal\learning\csharp\ConsoleAppFirstApp\ConsoleAppFirstApp\bin\Debug\ConsoleAppFirstApp.exe
+C:\Users\dmytroony\workspace\personal\learning\csharp\ConsoleAppFirstApp\ConsoleAppFirstApp\bin\Debug\ConsoleAppFirstApp.pdb
+C:\Users\dmytroony\workspace\personal\learning\csharp\ConsoleAppFirstApp\ConsoleAppFirstApp\obj\Debug\ConsoleAppFirstApp.csprojAssemblyReference.cache
+C:\Users\dmytroony\workspace\personal\learning\csharp\ConsoleAppFirstApp\ConsoleAppFirstApp\obj\Debug\ConsoleAppFirstApp.csproj.CoreCompileInputs.cache
+C:\Users\dmytroony\workspace\personal\learning\csharp\ConsoleAppFirstApp\ConsoleAppFirstApp\obj\Debug\ConsoleAppFirstApp.exe
+C:\Users\dmytroony\workspace\personal\learning\csharp\ConsoleAppFirstApp\ConsoleAppFirstApp\obj\Debug\ConsoleAppFirstApp.pdb
