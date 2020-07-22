@@ -10,16 +10,13 @@ namespace ConsoleAppFirstApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the age of your girlfriend: ");
+            Console.WriteLine("enter your year of birth");
             string text = Console.ReadLine();
-            int years = Convert.ToInt32(text);
-            if(years > 16)
+            int x = Convert.ToInt32(text);
+            bool result = x > 2020;
+            if (result)
             {
-                Console.WriteLine("Too old!");
-            }
-            else
-            {
-                Console.WriteLine("Azaz!");
+                Console.WriteLine("Magic!");
             }
             Console.ReadKey();
         }
