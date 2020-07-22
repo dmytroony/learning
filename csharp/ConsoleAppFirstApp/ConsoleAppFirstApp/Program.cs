@@ -17,19 +17,15 @@ namespace ConsoleAppFirstApp
             switch (x)
             {
                 case 1:
-                    Console.WriteLine("Number 1");
-                    break;
                 case 2:
-                    Console.WriteLine("Number 2");
-                    break;
                 case 3:
-                    Console.WriteLine("Number 3");
+                    Console.WriteLine("Number 1 or 2 or 3");
                     break;
                 default:
                     Console.WriteLine("wtf number");
                     break;
             }
-
+            Console.WriteLine("All done!");
             Console.ReadKey();
         }
     }
