@@ -10,14 +10,12 @@ namespace ConsoleAppFirstApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("enter your year of birth");
+            Console.WriteLine("enter a number:");
             string text = Console.ReadLine();
             int x = Convert.ToInt32(text);
-            bool result = x > 2020;
-            if (result)
-            {
-                Console.WriteLine("Magic!");
-            }
+
+            string result = x > 100 ? "more than 100" : "less then 100";
+            Console.WriteLine("Result: " + result);
             Console.ReadKey();
         }
     }
