@@ -10,7 +10,10 @@ namespace ConsoleAppFirstApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            short x = 1000;
+            string str = Convert.ToString(x);
+            Console.WriteLine(x);
+            Console.ReadKey();
         }
     }
 }
