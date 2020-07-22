@@ -10,9 +10,11 @@ namespace ConsoleAppFirstApp
     {
         static void Main(string[] args)
         {
-            short x = 1000;
-            string str = Convert.ToString(x);
-            Console.WriteLine(x);
+            Console.WriteLine("Enter a number:");
+            string x = Console.ReadLine();
+            int a = Convert.ToInt32(x);
+            a = a * a;
+            Console.WriteLine(a);
             Console.ReadKey();
         }
     }
