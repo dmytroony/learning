@@ -10,11 +10,17 @@ namespace ConsoleAppFirstApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a number:");
-            string x = Console.ReadLine();
-            int a = Convert.ToInt32(x);
-            a = a * a;
-            Console.WriteLine(a);
+            Console.WriteLine("Enter the age of your girlfriend: ");
+            string text = Console.ReadLine();
+            int years = Convert.ToInt32(text);
+            if(years > 16)
+            {
+                Console.WriteLine("Too old!");
+            }
+            else
+            {
+                Console.WriteLine("Azaz!");
+            }
             Console.ReadKey();
         }
     }
