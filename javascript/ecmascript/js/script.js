@@ -601,3 +601,35 @@
 // const pow1 = 10e3;
 // const pow2 = 10**3;
 // console.log(pow1, pow2);
+
+// const name = "Dmytro", age = 30;
+// // const output = `Hello, my name is ${name} and I am ${age} years old.`;
+// // console.log(output);
+//
+// console.log(name.toUpperCase());
+// console.log(name.charAt(2));
+// console.log(name.indexOf('tr'));
+// console.log(name.startsWith('dm'));
+// console.log(name.startsWith('Dm'));
+// console.log(name.endsWith('ro'));
+// console.log(name.repeat(3));
+//
+// const pass = '   password   ';
+// console.log(pass);
+// console.log(pass.trim());
+// console.log(pass.trimRight());
+// console.log(pass.trimLeft());
+
+// function logPerson(s, name, age) {
+//     if (age < 0)
+//         age = 'Not yet born'
+//     return `${s[0]}${name}${s[1]}${age}${s[2]}`;
+// }
+// const personName = 'Dmytro',
+//     personName2 = 'Vasyl',
+//     personAge = 30;
+//     personAge2 = -10;
+// const output = logPerson`Name: ${personName}, Age: ${personAge}!`;
+// const output2= logPerson`Name: ${personName2}, Age: ${personAge2}!`;
+// console.log(output);
+// console.log(output2);
