@@ -30,27 +30,36 @@
 // console.log(comUrl('google'));
 // console.log(netUrl('zaycev'));
 
-function bind(context, fn) {
-    return function (...args) {
-        fn.apply(context, )
-    }
-}
+// function bind(context, fn) {
+//     return function (...args) {
+//         fn.apply(context, )
+//     }
+// }
+//
+// function logPerson() {
+//     console.log(`Person: ${this.name}, ${this.age}, ${this.job}`);
+// }
+//
+// const person1 = {
+//     name: 'John',
+//     age: 32,
+//     job: 'Frontend',
+// };
+//
+// const person2 = {
+//     name: 'Michael',
+//     age: 28,
+//     job: 'SMM',
+// };
+//
+// bind(person1, logPerson)();
+// bind(person2, logPerson)();
 
-function logPerson() {
-    console.log(`Person: ${this.name}, ${this.age}, ${this.job}`);
-}
-
-const person1 = {
-    name: 'John',
-    age: 32,
-    job: 'Frontend',
-};
-
-const person2 = {
-    name: 'Michael',
-    age: 28,
-    job: 'SMM',
-};
-
-bind(person1, logPerson)();
-bind(person2, logPerson)();
+// function createMember(name) {
+//     return function (lastName) {
+//         console.log(name + lastName)
+//     }
+// }
+//
+// const logWithLastName =  createMember('Dmytro')
+// console.log(logWithLastName('Onysko'))
