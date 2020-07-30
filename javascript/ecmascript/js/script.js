@@ -502,11 +502,11 @@
 // delete nums[1];
 // console.log(nums, first, n);
 
-let people = ['Tom', 'Alice', 'Bob', 'Sam'];
-
-for (let i = 0; i < people.length; i++) {
-    console.log(i + ': ' + people[i]);
-}
+// let people = ['Tom', 'Alice', 'Bob', 'Sam'];
+//
+// for (let i = 0; i < people.length; i++) {
+//     console.log(i + ': ' + people[i]);
+// }
 
 
 
@@ -517,3 +517,87 @@ for (let i = 0; i < people.length; i++) {
 //     }
 // }
 // print();
+
+// let age = 26;
+// console.log(age);
+// console.log(age.toString());
+// console.log("null type is: " + typeof null);
+// console.log(null);
+
+// let fullAge = 30;
+// const birthYear = 1989;
+// let currentYear = 2020;
+// let isFullAge = currentYear - birthYear;
+// console.log(isFullAge);
+// console.log(isFullAge >= fullAge);
+
+// const courseStatus = 'fail'; // ready, fail, pending
+//
+// if (courseStatus === 'ready') {
+//     console.log('Course is ready now!');
+// } else if (courseStatus === 'pending') {
+//     console.log('Course is in process...');
+// } else {
+//     console.log('Something get wrong.');
+// }
+
+// // const isReady = false;
+// const isReady = true;
+//
+// // if (!isReady)
+// //     console.log('Something get wrong!');
+//
+// isReady ? console.log("All OK!") : console.log("All NOT ok!");
+
+// function calculateAge(year) {
+//     return 2020 - year;
+// }
+// console.log(calculateAge(1989));
+//
+// function logInfoAbout(name, year) {
+//     const age = calculateAge(year);
+//     console.log('A man named ' + name + ' is now ' + age + ' years old.');
+// }
+// logInfoAbout("Dmytro", 1989);
+
+// // const cars = new Array('Mazda', 'Mercedes', 'Ford');
+// const cars = ['Mazda', 'Mercedes', 'Ford', 'Porsche'];
+// // console.log(cars);
+// // console.log(cars.length);
+// // console.log(cars[1]);
+// // cars[1] = 'Porsche';
+// // console.log(cars[1]);
+// // console.log(cars);
+//
+// for (let i = 0; i < cars.length; i++) {
+//     const car = cars[i];
+//     console.log(car);
+// }
+// // equal
+// for (let car of cars)
+//     console.log(car);
+
+// const person = {
+//     firstName: 'Dmytro',
+//     lastName: 'Onysko',
+//     birthYear: 1989,
+//     languages: ['Ua', 'Ru', 'En'],
+//     hasWife: false,
+//     greet: function () {
+//         console.log('greet');
+//     }
+// };
+// console.log(person.firstName);
+// console.log(person['lastName']);
+// const key = 'languages';
+// console.log(person[key]);
+// person.hasWife = true;
+// person.isProgrammer = true;
+// console.log(person);
+// person.greet();
+
+// const numInt = 42;
+// const numFloat = 42.24;
+// const pow1 = 10e3;
+// const pow2 = 10**3;
+// console.log(pow1, pow2);
