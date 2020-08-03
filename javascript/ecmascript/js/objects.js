@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 // let user0 = new Object();
 // equal
@@ -536,14 +536,80 @@ const person = {
     greet() {
         console.log('greet from person');
     },
+    info() {
+        console.log(this);
+        console.log('Info about a person named:', this.name);
+    },
 };
+// console.log(person);
+// console.log(person.name);
+// const ageKey = 'age';
+// console.log(person[ageKey]);
+// console.log(person['complex key']);
+// console.log(person);
+// person.greet();
+//
+// delete person['key_4'];
+// console.log(person);
 
-console.log(person.name);
-const ageKey = 'age';
-console.log(person[ageKey]);
-console.log(person['complex key']);
-console.log(person);
-person.greet();
+// const name = person.name;
+// const age = person.age;
+// const languages = person.languages;
 
-delete person['key_4'];
-console.log(person);
+// const {name, age, languages} = person;
+// console.log(name, age, languages);
+
+// for (let key in person) {
+//     if (person.hasOwnProperty(key)) { // defense prototype
+//         console.log('key: ' + key);
+//         console.log('value: ' + person[key]);
+//     }
+// }
+//
+// const keys = Object.keys(person);
+// console.log(keys);
+//
+// keys.forEach((key) => {
+//     console.log('key: ' + key);
+//     console.log('value: ' + person[key]);
+// });
+
+// Context
+// person.info();
+const logger = {
+    keys() {
+        console.log('Object keys: ', Object.keys(this));
+    },
+    keysAndValues() {
+        // Object.keys(this).forEach(key =>{
+        //     console.log(`"${key}": ${this[key]}`);
+        // });
+        // const self = this;
+        Object.keys(this)
+            .forEach(function(key) {
+                console.log(`"${key}": ${this[key]}`);
+            }.bind(this));
+    },
+    withParams(top = false, between = false, bottom = false) {
+        if (top) {
+            console.log('----- Start -----');
+        }
+        Object.keys(this)
+            .forEach((key, index, array) => {
+                console.log(`"${key}": ${this[key]}`);
+                if (between && index !== array.length - 1) {
+                    console.log('---------------');
+                }
+            });
+        if (bottom) {
+            console.log('----- End -----');
+        }
+    },
+};
+// const bound = logger.keys.bind(person);
+// bound();
+// logger.keys.call(person);
+// logger.keysAndValues.call({a: 1, c: 2,});
+// logger.keysAndValues.call(person);
+// logger.withParams.call(person, true, true, true);
+logger.withParams.apply(person, [true, true, true]);
