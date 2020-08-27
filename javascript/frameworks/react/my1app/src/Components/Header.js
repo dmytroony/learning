@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import {
 	Navbar,
-	Container,
 	Nav,
 	FormControl,
+	Container,
 	Form,
-	Button,
+	Button
 } from "react-bootstrap";
 import logo from "./logo192.png";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -20,7 +20,7 @@ export default class Header extends Component {
 		return (
 			<>
 				<Navbar 
-				fixed="top" 
+				// fixed="top" 
 				collapseOnSelect 
 				expand="md" 
 				bg="dark" 
