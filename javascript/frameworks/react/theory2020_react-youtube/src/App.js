@@ -2,9 +2,12 @@ import React, {useEffect} from 'react';
 import TodoList from './Todo/TodoList';
 import Context from "./context";
 import AddTodo from "./Todo/AddTodo";
+import Loader from "./Loader";
 
 function App() {
 	const [todos, setTodos] = React.useState([]);
+
+	const [loading, setLoading] = React.useState(true);
 
 	useEffect(() => {
 		fetch('https://jsonplaceholder.typicode.com/todos?_limit=5')
@@ -12,6 +15,7 @@ function App() {
 			.then(todos => {
 				setTimeout(() => {
 					setTodos(todos);
+					setLoading(false);
 				}, 2000);
 			})
 	}, [])
@@ -28,7 +32,7 @@ function App() {
 	function removeTodo(id) {
 		setTodos(todos.filter(todo => todo.id !== id))
 	}
-	
+
 	function addTodo(title) {
 		setTodos(todos.concat([{
 			title,
@@ -41,11 +45,13 @@ function App() {
 		<Context.Provider value={{removeTodo}}>
 			<div className='wrapper'>
 				<h1>React tutorial</h1>
-				<AddTodo onCreate={addTodo} />
-				{todos.length ?
+				<AddTodo onCreate={addTodo}/>
+				{loading && <Loader/>}
+				{todos.length ? (
 					<TodoList todos={todos} onToggle={toggleTodo}/>
-					: <p>You have no todos!</p>
-				}
+				):  loading ? null : (
+					<p>You have no todos!</p>
+				)}
 
 			</div>
 		</Context.Provider>
