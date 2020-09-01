@@ -1,27 +1,34 @@
 import React from 'react';
 import TodoList from './Todo/TodoList';
+import Context from "./context";
 
 function App() {
-	let todos = [
+	const [todos, setTodos] = React.useState([
 		{id: 1, completed: false, title: 'Buy bread'},
 		{id: 2, completed: false, title: 'Buy oil'},
 		{id: 3, completed: false, title: 'Buy milk'},
-	];
+	]);
 
 	function toggleTodo(id) {
-		todos.map(todo => {
+		setTodos(todos.map(todo => {
 			if (todo.id === id) {
 				todo.completed = !todo.completed
 			}
 			return todo
-		})
+		}))
+	}
+
+	function removeTodo(id) {
+		setTodos(todos.filter(todo => todo.id !== id))
 	}
 
 	return (
-		<div className='wrapper'>
-			<h1>React tutorial</h1>
-			<TodoList todos={todos} onToggle={toggleTodo} />
-		</div>
+		<Context.Provider value={{ removeTodo }}>
+			<div className='wrapper'>
+				<h1>React tutorial</h1>
+				<TodoList todos={todos} onToggle={toggleTodo} />
+			</div>
+		</Context.Provider>
 	);
 }
 
