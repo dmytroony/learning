@@ -5,9 +5,11 @@
 
 // Auto generation elements
 let p = document.createElement('p');
+document.body.insertBefore(p, document.querySelector('#out'));
+
 p.innerHTML = 'Created element Example';
 p.classList.add('main', 'green');
 
-document.body.appendChild(p);
+// document.body.appendChild(p);
 
 console.log(p);
