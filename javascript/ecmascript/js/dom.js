@@ -65,3 +65,47 @@
 // console.log(hyper.parentElement.parentElement.parentElement);
 // console.log(hyper.parentElement.nextElementSibling);
 // console.log(hyper.parentElement.nextElementSibling);
+
+// Lesson 3
+// console.log(window.innerHeight); // Global Object - Parent for DOM and BOM
+// document.body.style.background = 'green'; // DOM
+// console.log(navigator.platform); // BOM
+
+// let html = document.documentElement;
+// let body = document.body;
+// let head = document.head;
+// console.log(html);
+// console.log(body);
+// console.log(head);
+
+// for (let i = 0; i < document.body.childNodes.length; i++) {
+//     console.log(i + ': ' + document.body.childNodes[i]);
+// }
+
+// for (let child of document.body.childNodes) {
+//     console.log(child);
+// }
+
+// let arr = Array.from(document.body.childNodes);
+// arr.forEach((elem) => console.log(elem) );
+
+// let html = document.documentElement;
+// // let first = html.firstChild;
+// // let last = html.lastChild;
+// let first = html.childNodes[0];
+// let last = html.childNodes[html.childNodes.length-1];
+//
+// console.log(html);
+// console.log(html.hasChildNodes());
+// console.log(first);
+// console.log(last);
+// console.log(html.children);
+
+// console.log(document.head.nextSibling);
+// console.log(document.head.previousSibling);
+
+// let html = document.documentElement;
+// console.log(html.parentNode);
+// console.log(html.parentElement);
+
+console.log(table_digs.rows[0].cells[1].innerHTML);
