@@ -108,4 +108,41 @@
 // console.log(html.parentNode);
 // console.log(html.parentElement);
 
-console.log(table_digs.rows[0].cells[1].innerHTML);
+// console.log(table_digs.rows[0].cells[1].innerHTML);
+
+// Lesson 4
+
+// let divElem = document.getElementById('div_id');
+// console.log(divElem);
+// console.log(divElem.innerHTML);
+// console.log(divElem.innerText);
+
+// console.log( div_id ); // not recommend
+
+// let list = document.querySelectorAll('ul > li');
+// let list = document.querySelectorAll('ul > li:first-child');
+// for (let val of list) {
+//     console.log(val);
+// }
+
+// let list = document.querySelector('ol > li');
+// console.log(list);
+
+// let list = document.querySelectorAll("ul.stars-list > li");
+// for (let item of list) {
+//     if (item.matches("li.star")) {
+//         console.log(item);
+//     }
+// }
+
+// let li = document.querySelector("li.star");
+// console.log(li.closest('.stars-list'));
+// console.log(li.closest('.content-table'));
+// console.log(li.closest('h1'));
+
+let div = document.querySelector('div.content-table');
+let ul = document.querySelector('ul.stars-list');
+
+if (div.contains(ul)) {
+    console.log('<ul> is a child');
+}
