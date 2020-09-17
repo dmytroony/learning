@@ -179,7 +179,43 @@
 // let msg = prompt('Your comment', '');
 // comm.textContent = msg;
 
-// equal style="display: none / block" in CSS
-let comm = document.getElementById("comm");
-comm.hidden = true;
-setInterval(() => comm.hidden = !comm.hidden, 1000);
+// // equal style="display: none / block" in CSS
+// let comm = document.getElementById("comm");
+// comm.hidden = true;
+// setInterval(() => comm.hidden = !comm.hidden, 1000);
+
+// let body = document.body;
+// // body.myStyle = "color: green";
+// body.myStyle = {
+// 	color: "green",
+// 	fontSize: 20,
+// }
+// console.log(body.myStyle);
+//
+// console.log(body.myStyle.fontSize);
+//
+// body.getFontSize = function() {
+// 	return this.myStyle.fontSize;
+// }
+//
+// console.log(body.getFontSize())
+//
+// console.dir(body);
+
+// let comm = document.getElementById("comm");
+// console.log(comm.hasAttribute("id"));
+// console.log(comm.getAttribute("id"));
+// comm.setAttribute("newID", "newProperty");
+// console.log(comm.getAttribute("newID"));
+//
+// for (let val of comm.attributes) {
+// 	console.log(val);
+// }
+
+// let inp = document.getElementById('input');
+// console.log(typeof inp.checked);
+
+for (let cell of document.querySelectorAll('[data-cell-red]')) {
+	let attr = cell.getAttribute('data-cell-red');
+	cell.style.background = attr;
+}
