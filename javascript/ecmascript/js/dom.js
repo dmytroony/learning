@@ -215,7 +215,73 @@
 // let inp = document.getElementById('input');
 // console.log(typeof inp.checked);
 
-for (let cell of document.querySelectorAll('[data-cell-red]')) {
-	let attr = cell.getAttribute('data-cell-red');
-	cell.style.background = attr;
-}
+// Lesson 6
+// for (let cell of document.querySelectorAll('[data-cell-red]')) {
+// 	let attr = cell.getAttribute('data-cell-red');
+// 	cell.style.background = attr;
+// }
+
+// let div = document.createElement('div');
+// div.className = 'msg';
+// div.innerHTML = 'Important information!';
+// document.body.append(div);
+
+// let list = document.querySelector('ul');
+// // list.before('before');
+// // list.after('after');
+// //
+// // let li_1 = document.createElement('li');
+// // li_1.innerHTML = 'first element';
+// // list.prepend(li_1);
+// //
+// // let li_2 = document.createElement('li');
+// // li_2.innerHTML = 'last element';
+// // list.append(li_2);
+//
+// // list.replaceWith(
+// // 	document.createElement('hr'),
+// // 	'replace',
+// // 	document.createElement('br'));
+
+// let li = document.querySelector('ul > li:first-child');
+// let list = document.querySelector('ul');
+// list.append(li);
+
+// let textNode = document.createElement('Text element');
+// document.body.append(textNode);
+
+// document.body.append('<p>Text with a tag</p>');
+// document.body.insertAdjacentHTML('beforebegin', '<p>Text with a tag</p>');
+// document.body.insertAdjacentHTML('afterend', '<p>Text with a tag</p>');
+
+// let idRemove = setInterval(function () {
+// 	let li = document.querySelector('ul.list > li:last-child');
+//
+// 	if (li === null) {
+// 		clearInterval(idRemove);
+// 		alert('List was deleted!');
+// 	} else {
+// 		li.remove();
+// 	}
+// }, 500);
+
+// let t = document.querySelector('table');
+// let r = document.querySelector('table > tbody > tr:last-child');
+//
+// let row = r.cloneNode(true);
+// row.firstChild.innerHTML = 'Venus';
+// t.append(row);
+
+// let fr = new DocumentFragment();
+// let list = ['Mercury', 'Venus', 'Earth', 'Mars'];
+//
+// for (let p of list) {
+// 	let item = document.createElement('li');
+// 	item.innerHTML = p;
+// 	fr.append(item);
+// }
+//
+// let ul = document.querySelector('ul');
+// ul.append(fr);
+
+
