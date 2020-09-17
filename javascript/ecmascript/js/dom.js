@@ -140,9 +140,46 @@
 // console.log(li.closest('.content-table'));
 // console.log(li.closest('h1'));
 
-let div = document.querySelector('div.content-table');
-let ul = document.querySelector('ul.stars-list');
+// let div = document.querySelector('div.content-table');
+// let ul = document.querySelector('ul.stars-list');
+//
+// if (div.contains(ul)) {
+//     console.log('<ul> is a child');
+// }
 
-if (div.contains(ul)) {
-    console.log('<ul> is a child');
-}
+// console.log(document.body.constructor.name);
+//
+// console.log(document.body instanceof HTMLBodyElement); // true
+// console.log(document.body instanceof HTMLElement); // true
+// console.log(document.body instanceof Element); // true
+// console.log(document.body instanceof Text); // false
+
+// console.dir(document.body);
+// console.log(document.body);
+// console.log(document.body.nodeType);
+
+// let comm = document.body.firstChild;
+// console.log(comm.nodeName);
+// console.log(comm.tagName);
+// console.log(document.body.nodeName);
+// console.log(document.body.tagName);
+
+// let h1 = document.querySelector('h1');
+// console.log(h1.innerHTML);
+// h1.innerHTML = "<i>Inner</i> Page title";
+// console.log(h1.innerHTML);
+//
+// h1.innerHTML += " plus added text";
+// console.log(h1.innerHTML);
+// console.log(h1.outerHTML);
+//
+// h1.outerHTML = "<h2>Smaller Page title</h2>"
+
+// console.log(document.body.textContent);
+// let msg = prompt('Your comment', '');
+// comm.textContent = msg;
+
+// equal style="display: none / block" in CSS
+let comm = document.getElementById("comm");
+comm.hidden = true;
+setInterval(() => comm.hidden = !comm.hidden, 1000);
