@@ -37,17 +37,19 @@
 				<a href="#" class="nav-link">Home</a>
 			</li>
 			<li class="nav-item">
+				<a href="#" class="nav-link">
+					About us
+				</a>
+			</li>
+			<li class="nav-item">
 				<a
 						href="#"
 						class="nav-link"
 						data-toggle="modal"
 						data-target="#exampleModal"
 				>
-					Pricing
+					Log in
 				</a>
-			</li>
-			<li class="nav-item">
-				<a href="#" class="nav-link">About us</a>
 			</li>
 		</ul>
 		<form class="form-inline my-2 my-lg-0">
@@ -57,7 +59,9 @@
 					placeholder="Search"
 					aria-label="Search"
 			/>
-			<button class="btn btn-outline-success my-2 my-sm-0">Search</button>
+			<button class="btn btn-outline-success my-2 my-sm-0">
+				Search
+			</button>
 		</form>
 	</div>
 </nav>
@@ -190,11 +194,11 @@
 		aria-labelledby="exampleModal"
 		aria-hidden="true"
 >
-	<div class="modal-dialog modal-md" role="document">
+	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title" id="exampleModalLabel">
-					Modal title
+					Login
 				</h5>
 				<button
 						class="close"
@@ -207,19 +211,49 @@
 			</div>
 			<div class="modal-body">
 				<div class="container-fluid">
-					<div class="row text-center">
-						<div class="col-4">1</div>
-						<div class="col-8">2</div>
-					</div>
+					<form>
+						<div class="form-row">
+							<div class="col">
+								<div class="form-group">
+									<label for="exampleInputEmail">Email address</label>
+									<input
+											type="email"
+											class="form-control"
+											id="exampleInputEmail"
+											aria-describedby="emailHelp"
+											placeholder="Email"
+											required
+									>
+									<small id="emailHelp" class="form-text text-muted">
+										Enter your email
+									</small>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-group">
+									<label for="exampleInputPass">Password</label>
+									<input
+											type="password"
+											class="form-control"
+											id="exampleInputPass"
+											placeholder="Password"
+											required
+									>
+									<small id="passHelp" class="form-text text-muted">
+										Password >= 10 symbols
+									</small>
+								</div>
+							</div>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label">
+								<input type="checkbox" class="form-check-input">
+								Remember me
+							</label>
+						</div>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</form>
 				</div>
-			</div>
-			<div class="modal-footer">
-				<button class="btn btn-secondary" data-dismiss="modal">
-					Close
-				</button>
-				<button class="btn btn-primary" data-dismiss="modal">
-					Save
-				</button>
 			</div>
 		</div>
 
