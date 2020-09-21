@@ -64,3 +64,13 @@
 .font-roboto{
     font-family: var(--roboto);
 }
+
+button:focus, button:active, button:hover,
+.btn:active, .btn.active {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+.title-h1 {
+    font: normal bold 39px/49px var(--roboto);
+}
