@@ -195,7 +195,7 @@
 /* Services Area END */
 
 /* Project Area START */
-.site-main .project-area {
+.site-main .project-area{
     padding: 4rem 0;
 }
 
@@ -214,8 +214,50 @@
     font: normal 700 25px/12px var(--roboto);
 }
 
-.site-main .project-area .grid .our-project .img a:hover img{
+.site-main .project-area .grid .our-project .img a:hover img {
     filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
 }
-
 /* Project Area END */
+
+/* About Area START */
+.site-main .about-area .about-title p {
+    padding: 1rem 7rem;
+}
+
+.site-main .about-area .client {
+    background: #ffffff10;
+    box-shadow: var(--box-shadow);
+    margin: 3rem 0;
+}
+
+.site-main .about-area .client .client-img {
+    padding: 2rem;
+}
+
+.site-main .about-area .client .about-client {
+    padding: 2rem;
+}
+
+.site-main .about-area .client .about-client h4 {
+    font: normal 500 21px/20px var(--roboto);
+}
+
+.site-main .about-area .client .about-client p {
+    font-size: 14px;
+}
+
+.site-main .about-area .owl-carousel .owl-item {
+    display: flex;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+
+.site-main .about-area .owl-carousel .owl-dot.active span {
+    background-color: var(--primary-color);
+    width: 12px;
+    height: 12px;
+}
+/* About Area END */
+
+/* Subscribe Area START */
+/* Subscribe Area END */
