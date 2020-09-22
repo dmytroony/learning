@@ -1,6 +1,4 @@
 
-
-
 /* if the viewport is equal to 340px or less than that */ 
 @media only screen and (max-width: 340px){
     .header_area .main-menu .navbar,
@@ -25,9 +23,7 @@
     .site-main > .services-area .services{
         width: 13rem;
     }
-
 }
-
 
 /* if the viewport is equal to 340px or less than that */ 
 @media only screen and (max-width: 792px){
@@ -64,8 +60,6 @@
     }
 }
 
-
-
 /* if the viewport is equal to 1910px or less than that */ 
 @media only screen and (max-width: 1910px){
     .header_area .main-menu .navbar{
@@ -81,6 +75,4 @@
     .site-main .about-area{
         padding: 3% 4%;
     }
-
-
 }
