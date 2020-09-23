@@ -4,15 +4,15 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-	<link rel="stylesheet" href="css/animate.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="./css/animate.css"/>
+	<link rel="stylesheet" href="./css/style.css"/>
 	<title>Dmytro Onysko Portfolio</title>
 </head>
 <body>
 <div class="container navbar">
 	<header>
 		<div class="lgo">
-			<h1>Dmytro</h1>
+			<h1>Dmytro Onysko</h1>
 		</div>
 
 		<nav>
@@ -35,7 +35,7 @@
 			<span>I</span>
 			<span class="m-left">&apos;</span>
 			<span class="m-left">m</span>
-			<span class="m-left">D</span>
+			<span class="name">D</span>
 			<span class="m-left name">m</span>
 			<span class="m-left name">y</span>
 			<span class="m-left name">t</span>
@@ -56,11 +56,11 @@
 			<span class="m-left">e</span>
 			<span class="m-left">r</span>
 		</h1>
-		<p>CSS / JavaScript / React</p>
+		<p>HTML / CSS / JavaScript / React</p>
 		<a href="#contact">contact me</a>
 	</div>
 	<div class="profile-image">
-		<img src="img/profile-image.png" alt="My Photo">
+		<img src="./img/profile-image.png" alt="My Photo">
 	</div>
 </div>
 
@@ -80,7 +80,7 @@
 			fuga id incidunt ipsa ipsum, iusto libero nostrum quibusdam quis quod sequi tenetur totam vero?
 		</p>
 	</div>
-	<img src="img/dotted-shape.png" alt="dotted-shape">
+	<img src="./img/dotted-shape.png" alt="dotted-shape">
 </div>
 
 <div class="container skills" id="skills">
@@ -127,17 +127,59 @@
 <div class="container work" id="work">
 	<h1>Work</h1>
 	<div class="work-category">
-		<button id="designing" class="active">Web Designing</button>
-		<button id="animation">Web Animation</button>
-		<button id="project">React Projects</button>
+		<button id="designing" class="active" onclick="showRequiredCategory(this)">Web Designing</button>
+		<button id="animation" onclick="showRequiredCategory(this)">Web Animation</button>
+		<button id="project" onclick="showRequiredCategory(this)">React Projects</button>
+	</div>
+	<div class="category-designing showCategory">
+		<a href=""><img src="./img/1.png" alt="img1"></a>
+		<a href=""><img src="./img/2.png" alt="img2"></a>
+		<a href=""><img src="./img/3.png" alt="img3"></a>
+		<a href=""><img src="./img/2.png" alt="img2"></a>
+		<a href=""><img src="./img/3.png" alt="img3"></a>
+	</div>
+	<div class="category-animation hideCategory">
+		<a href=""><img src="./img/1.png" alt="img1"></a>
+		<a href=""><img src="./img/2.png" alt="img2"></a>
+		<a href=""><img src="./img/3.png" alt="img3"></a>
+	</div>
+	<div class="category-project hideCategory">
+		<a href=""><img src="./img/1.png" alt="img1"></a>
+		<a href=""><img src="./img/2.png" alt="img2"></a>
+		<a href=""><img src="./img/3.png" alt="img3"></a>
+		<a href=""><img src="./img/2.png" alt="img2"></a>
 	</div>
 </div>
 
-<script src="js/ScrollMagic.min.js"></script>
-<script src="js/animation.gsap.min.js"></script>
-<script src="js/TimelineLite.min.js"></script>
-<script src="js/TweenMax.min.js"></script>
-<script src="js/CSSPlugin.min.js"></script>
-<script src="js/script.js"></script>
+<div class="container contact" id="contact">
+	<h1>Contact</h1>
+	<form>
+		<input type="text" name="name" placeholder="Full Name" required>
+		<input type="email" placeholder="Email" required>
+		<input
+				type="email"
+				placeholder="dmytroony@gmail.com"
+				disabled
+		>
+		<textarea name="message" cols="30" rows="10" placeholder="Message">
+		</textarea>
+		<input type="submit">
+	</form>
+</div>
+
+<footer>
+	<hr/>
+	<p>
+		2020 Copyright. All rights reserved.
+	</p>
+</footer>
+
+<script src="./js/ScrollMagic.min.js"></script>
+<script src="./js/animation.gsap.min.js"></script>
+<script src="./js/TimelineLite.min.js"></script>
+<script src="./js/TweenMax.min.js"></script>
+<script src="./js/CSSPlugin.min.js"></script>
+<script src="./js/script.js"></script>
+
 </body>
 </html>
