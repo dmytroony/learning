@@ -13,10 +13,152 @@
 			crossorigin="anonymous"
 	>
 
+	<!--FontAwesome-->
+	<link rel="stylesheet" href="./css/all.min.css">
+
+	<!--Custom CSS-->
+	<link rel="stylesheet" href="./css/style.css">
+
 	<title>Dmytro Portfolio</title>
 </head>
-<body>
-<h1>Hello, world!</h1>
+<body data-spy="scroll" data-target=".navbar">
+
+<!--Navbar START-->
+<div id="Header">
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<button
+					class="navbar-toggler"
+					data-toggle="collapse"
+					data-target="#Navbar"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a href="#" class="navbar-brand">
+				<h3>Dmytro Onysko</h3>
+			</a>
+			<div class="collapse navbar-collapse" id="Navbar">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a href="#About" class="nav-link">About me</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Skills</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Experience</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Contact me</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</div>
+<!--Navbar END-->
+
+<!--ShowCase START-->
+<div id="bg-img"></div>
+<!--ShowCase END-->
+
+<!--About me START-->
+<div id="About">
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div id="AboutData">
+					<div class="card bg-light">
+						<div class="card-title my-5">
+							<div class="media">
+								<img
+										class="img-fluid rounded-top mx-5 d-none d-lg-block"
+										src="./img/me.png"
+										alt="Person photo"
+								>
+								<div class="media-body">
+									<h3 class="display-4 ml-5">
+										I&apos;m Dmytro
+									</h3>
+									<p class="text-muted ml-5">
+										Programmer &amp; Web-Developer
+									</p>
+									<div class="container">
+										<table class="table table-responsive ml-4">
+											<tr>
+												<td class="text-muted">Age</td>
+												<td>:</td>
+												<td><span id="currentAge">Age</span> Years Old</td>
+											</tr>
+											<tr>
+												<td class="text-muted">Email</td>
+												<td>:</td>
+												<td>
+													<a class="btn-link" href="mailto:dmytroony@gmail.com">
+														dmytroony@gmail.com
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="text-muted">Phone</td>
+												<td>:</td>
+												<td>
+													<a class="btn-link" href="tel:+380958052625">
+														+38 095 805 26 25
+													</a>
+												</td>
+											</tr>
+											<tr>
+												<td class="text-muted">Skype</td>
+												<td>:</td>
+												<td>
+													<a class="btn-link" href="skype:dm.onysko?chat">
+														dm.onysko
+													</a>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer bg-banner bg-dark text-right">
+							<a href="https://github.com/dmytroony" class="socicon" target="_blank"><i
+									class="fab fa-github fa-2x mx-3"></i></a>
+							<a href="https://www.facebook.com/dmytroony/" class="socicon" target="_blank"><i
+									class="fab fa-facebook fa-2x mx-5"></i></a>
+							<a href="https://www.linkedin.com/in/dmytroony/" class="socicon" target="_blank"><i
+									class="fab fa-linkedin fa-2x mx-5"></i></a>
+							<a href="https://twitter.com/dmytroony" class="socicon" target="_blank"><i
+									class="fab fa-twitter fa-2x mx-5"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container mt-5" id="AboutMe">
+		<div class="row">
+			<div class="col">
+				<span class="bg-info text-white">About Me</span>
+				<hr class="bg-info" />
+				<p class="lead text-justify">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nesciunt placeat similique voluptate!
+					Aspernatur culpa cupiditate dignissimos doloribus, facere fugit ipsa non, numquam odit pariatur
+					rerum, soluta sunt temporibus voluptatem.
+				</p>
+				<p class="lead text-justify">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nesciunt placeat similique voluptate!
+					Aspernatur culpa cupiditate dignissimos doloribus, facere fugit ipsa non, numquam odit pariatur
+					rerum, soluta sunt temporibus voluptatem.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--About me END-->
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -35,6 +177,12 @@
 		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 		crossorigin="anonymous"
 ></script>
+
+<!--FontAwesome-->
+<script src="./js/all.min.js"></script>
+
+<!--Custom JS-->
+<script src="./js/main.js"></script>
 
 </body>
 </html>
