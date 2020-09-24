@@ -37,12 +37,18 @@ a.socicon:hover, .navbar-brand h3:hover {
 	margin: 0 5% !important;
 }
 
-#About #AboutMe span, #Skills span, #Experience span {
+#About #AboutMe span,
+#Skills span,
+#Experience span,
+#Contact span {
 	padding: 10px 20px;
 	border-radius: 5px 5px 0 0;
 }
 
-#About #AboutMe hr, #Skills hr, #Experience hr {
+#About #AboutMe hr,
+#Skills hr,
+#Experience hr,
+#Contact hr {
 	border-width: 3px;
 	margin-top: 6px;
 }
