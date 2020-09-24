@@ -37,11 +37,12 @@ a.socicon:hover, .navbar-brand h3:hover {
 	margin: 0 5% !important;
 }
 
-#About #AboutMe span, #Skills span {
+#About #AboutMe span, #Skills span, #Experience span {
 	padding: 10px 20px;
+	border-radius: 5px 5px 0 0;
 }
 
-#About #AboutMe hr, #Skills hr {
+#About #AboutMe hr, #Skills hr, #Experience hr {
 	border-width: 3px;
 	margin-top: 6px;
 }
@@ -81,4 +82,13 @@ a.socicon:hover, .navbar-brand h3:hover {
 #Skills h3 {
 	margin-top: 6px;
 	margin-bottom: -3px;
+}
+
+#Experience img {
+	width: 200px;
+	height: 80px;
+}
+
+#Experience .card {
+	border-top: 3px solid dodgerblue;
 }
