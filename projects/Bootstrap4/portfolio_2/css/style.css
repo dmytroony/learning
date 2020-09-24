@@ -1,3 +1,10 @@
+
+html {
+	scroll-behavior: smooth;
+	padding: 0;
+	margin: 0;
+}
+
 body {
 	background: #ccc;
 	height: 2000px;
@@ -15,9 +22,7 @@ body {
 }
 
 #About {
-	position: relative;
-	top: -20%;
-	left: 0;
+	margin-top: -18%;
 }
 
 a.socicon {
@@ -28,11 +33,52 @@ a.socicon:hover, .navbar-brand h3:hover {
 	color: #61dafb;
 }
 
-#About #AboutMe span {
+.svg-inline--fa {
+	margin: 0 5% !important;
+}
+
+#About #AboutMe span, #Skills span {
 	padding: 10px 20px;
 }
 
-#About #AboutMe hr {
+#About #AboutMe hr, #Skills hr {
 	border-width: 3px;
 	margin-top: 6px;
+}
+
+#progress-html .progress-bar {
+	width: 95%;
+}
+
+#progress-css .progress-bar {
+	width: 95%;
+}
+
+#progress-js .progress-bar {
+	width: 45%;
+}
+
+#progress-jquery .progress-bar {
+	width: 70%;
+}
+
+#progress-react .progress-bar {
+	width: 30%;
+}
+
+#progress-sass-less-scss .progress-bar {
+	width: 70%;
+}
+
+#progress-flex-grid .progress-bar {
+	width: 70%;
+}
+
+#progress-git .progress-bar {
+	width: 60%;
+}
+
+#Skills h3 {
+	margin-top: 6px;
+	margin-bottom: -3px;
 }
