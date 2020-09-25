@@ -1,6 +1,6 @@
 
 @import url("https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap");
-/*Global styles*/
+/*Global styles START*/
 *,
 *::before,
 *::after {
@@ -48,6 +48,7 @@ p {
     margin: 0 auto;
     padding: 0 2.4rem;
 }
+/*Global styles END*/
 
 /*Header START*/
 header {
@@ -250,7 +251,7 @@ header {
 }
 /*Hero END*/
 
-/*Discover story START*/
+/*Discover our story START*/
 .global-headline {
     text-align: center;
     margin-top: 3.9rem;
@@ -316,4 +317,148 @@ header {
 .body-btn:focus::before {
     background-color: var(--main-font-color-dark);
 }
-/*Discover story END*/
+/*Discover our story END*/
+
+/*Tasteful recipes START*/
+.tasteful-recipes {
+    background: url("../images/tasteful-recipes.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.between {
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+}
+/*Tasteful recipes END*/
+
+/*Discover our menu START*/
+.image-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.discover-our-menu .restaurant-description {
+    padding-top: 3rem;
+    margin-bottom: 0;
+}
+/*Discover our menu END*/
+
+/*The perfect blend START*/
+.perfect-blend {
+    background: url("../images/perfect-blend.jpg") center no-repeat;
+    background-size: cover;
+}
+/*The perfect blend END*/
+
+/*Footer START*/
+footer {
+    padding: 7.9rem;
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.back-to-top {
+    width: 7rem;
+    height: 7rem;
+    background-color: #121212;
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.back-to-top i {
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.footer-content {
+    /*overflow: hidden;*/
+}
+
+.footer-content h4 {
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+}
+
+.footer-content .asterisk {
+    margin: 2.4rem 0;
+}
+
+.footer-content-about {
+    margin-bottom: 5.4rem;
+}
+
+.footer-content-about p {
+    line-height: 2;
+}
+
+.social-icons {
+    list-style: none;
+    margin-bottom: 5.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons i {
+    font-size: 2rem;
+    color: #fff;
+    padding: .8rem;
+    opacity: .5;
+    transition: color .5s;
+}
+
+.social-icons i:hover,
+.social-icons i:focus {
+    color: var(--secondary-font-color);
+
+}
+
+.newsletter-form {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#email-label {
+    width: 100%;
+}
+
+.newsletter-input {
+    width: 100%;
+    max-width: 25rem;
+    padding: 1rem;
+    border-radius: .4rem;
+}
+
+.newsletter-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--main-font-color-dark);
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 1px .6rem 0 .6rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin: 0 2rem 0 0;
+    transition: color .5s;
+}
+
+.newsletter-btn i:hover,
+.newsletter-btn i:focus {
+    color: var(--secondary-font-color);
+}
+/*Footer END*/
