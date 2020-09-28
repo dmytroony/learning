@@ -32,10 +32,10 @@
 				<img id="profile_pic" src="./images/me.png" alt="My Photo">
 				<h5>Personalize Theme</h5>
 				<div id="theme-options-wrapper">
-					<div class="theme-dot" id="light-mode"></div>
-					<div class="theme-dot" id="blue-mode"></div>
-					<div class="theme-dot" id="green-mode"></div>
-					<div class="theme-dot" id="purple-mode"></div>
+					<div class="theme-dot" data-mode="light" id="light-mode"></div>
+					<div class="theme-dot" data-mode="blue" id="blue-mode"></div>
+					<div class="theme-dot" data-mode="green" id="green-mode"></div>
+					<div class="theme-dot" data-mode="purple" id="purple-mode"></div>
 				</div>
 				<p id="settings-note">
 					&ast;Theme settings will be saved<br>
@@ -100,7 +100,7 @@
 				</div>
 			</div>
 			<div class="social-links">
-				<img id="social_img" src="./images/follow.jpg" alt="Den Ivy">
+				<img id="social_img" src="https://keep-calm.net/images/keep-calm-and-follow-me-1920-1080-black-white.jpg" alt="Den Ivy">
 				<h3>Find me on Twitter &amp; Facebook</h3>
 				<a href="#" target="_blank">Facebook: @dmytroony</a>
 				<br/>
@@ -174,17 +174,17 @@
 		<h3 class="blocks-title" id="Contact">Get In Touch</h3>
 
 		<form id="contact-form">
-			<label>Name</label>
-			<input class="input-field" type="text" name="name" required>
+			<label for="Name">Name</label>
+			<input id="Name" class="input-field" type="text" name="name" required>
 
-			<label>Subject</label>
-			<input class="input-field" type="text" name="subject">
+			<label for="Subject">Subject</label>
+			<input id="Subject" class="input-field" type="text" name="subject">
 
-			<label>Email</label>
-			<input class="input-field" type="email" name="email" required>
+			<label for="Email">Email</label>
+			<input id="Email" class="input-field" type="email" name="email" required>
 
-			<label>Message</label>
-			<textarea class="input-field" type="textarea" name="message" required></textarea>
+			<label for="Message">Message</label>
+			<textarea id="Message" class="input-field" name="message" required></textarea>
 
 			<input id="submit-btn" type="submit" value="Send">
 		</form>

@@ -17,6 +17,10 @@ html, body {
 	margin: 0;
 }
 
+body * {
+	transition: .3s;
+}
+
 h1, h2, h3, h4, h5, h6, strong {
 	color: var(--mainText);
 	font-family: 'Russo One', sans-serif;
@@ -107,6 +111,10 @@ h6 { font-size: 16px; }
 	display: inline-block;
 	margin-left: 5px;
 	margin-right: 5px;
+}
+
+#navigation a {
+	color: var(--mainText);
 }
 
 .dots-wrapper {
@@ -323,12 +331,11 @@ h6 { font-size: 16px; }
 #contact-form {
 	display: block;
 	max-width: 600px;
-	margin: 0 auto;
+	margin: 0 auto 50px auto;
 	border: 1px solid var(--borderColor);
 	padding: 15px;
 	border-radius: 5px;
 	background-color: var(--mainColor);
-	margin-bottom: 50px;
 }
 
 #contact-form label {
