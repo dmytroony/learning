@@ -67,6 +67,10 @@ h6 { font-size: 16px; }
 	min-height: 10em;
 }
 
+.greeting-wrapper h1 {
+	color: var(--themeDotBorder);
+}
+
 .intro-wrapper {
 	background-color: var(--secondaryColor);
 	border: 1px solid var(--borderColor);
@@ -247,6 +251,30 @@ h6 { font-size: 16px; }
 #corner-bl {
 	bottom: -5px;
 	left: -5px;
+}
+
+.about-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	padding-top: 50px;
+	padding-bottom: 50px;
+	gap: 100px;
+}
+
+#skills {
+	display: flex;
+	justify-content: space-evenly;
+	background-color: var(--previewShadow);
+}
+
+.social-links {
+	display: grid;
+	align-content: center;
+	text-align: center;
+}
+
+#social_img {
+	width: 100%;
 }
 
 @media screen and (max-width: 1200px){
