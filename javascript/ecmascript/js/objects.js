@@ -526,21 +526,21 @@
 // obj.display();
 // obj.print();
 
-const person = {
-    name: 'Dmytro',
-    age: 30,
-    isProgrammer: true,
-    languages: ['ua', 'ru', 'en'],
-    'complex key': 'Complex value',
-    ['key_' + (1 + 3)]: 'Computed key',
-    greet() {
-        console.log('greet from person');
-    },
-    info() {
-        console.log(this);
-        console.log('Info about a person named:', this.name);
-    },
-};
+// const person = {
+//   name: 'Dmytro',
+//   age: 30,
+//   isProgrammer: true,
+//   languages: ['ua', 'ru', 'en'],
+//   'complex key': 'Complex value',
+//   ['key_' + (1 + 3)]: 'Computed key',
+//   greet() {
+//     console.log('greet from person');
+//   },
+//   info() {
+//     console.log(this);
+//     console.log('Info about a person named:', this.name);
+//   },
+// };
 // console.log(person);
 // console.log(person.name);
 // const ageKey = 'age';
@@ -574,42 +574,172 @@ const person = {
 //     console.log('value: ' + person[key]);
 // });
 
-// Context
-// person.info();
-const logger = {
-    keys() {
-        console.log('Object keys: ', Object.keys(this));
-    },
-    keysAndValues() {
-        // Object.keys(this).forEach(key =>{
-        //     console.log(`"${key}": ${this[key]}`);
-        // });
-        // const self = this;
-        Object.keys(this)
-            .forEach(function(key) {
-                console.log(`"${key}": ${this[key]}`);
-            }.bind(this));
-    },
-    withParams(top = false, between = false, bottom = false) {
-        if (top) {
-            console.log('----- Start -----');
-        }
-        Object.keys(this)
-            .forEach((key, index, array) => {
-                console.log(`"${key}": ${this[key]}`);
-                if (between && index !== array.length - 1) {
-                    console.log('---------------');
-                }
-            });
-        if (bottom) {
-            console.log('----- End -----');
-        }
-    },
-};
-// const bound = logger.keys.bind(person);
-// bound();
-// logger.keys.call(person);
-// logger.keysAndValues.call({a: 1, c: 2,});
-// logger.keysAndValues.call(person);
-// logger.withParams.call(person, true, true, true);
-logger.withParams.apply(person, [true, true, true]);
+// // Context
+// // person.info();
+// const logger = {
+//     keys() {
+//         console.log('Object keys: ', Object.keys(this));
+//     },
+//     keysAndValues() {
+//         // Object.keys(this).forEach(key =>{
+//         //     console.log(`"${key}": ${this[key]}`);
+//         // });
+//         // const self = this;
+//         Object.keys(this)
+//             .forEach(function(key) {
+//                 console.log(`"${key}": ${this[key]}`);
+//             }.bind(this));
+//     },
+//     withParams(top = false, between = false, bottom = false) {
+//         if (top) {
+//             console.log('----- Start -----');
+//         }
+//         Object.keys(this)
+//             .forEach((key, index, array) => {
+//                 console.log(`"${key}": ${this[key]}`);
+//                 if (between && index !== array.length - 1) {
+//                     console.log('---------------');
+//                 }
+//             });
+//         if (bottom) {
+//             console.log('----- End -----');
+//         }
+//     },
+// };
+// // const bound = logger.keys.bind(person);
+// // bound();
+// // logger.keys.call(person);
+// // logger.keysAndValues.call({a: 1, c: 2,});
+// // logger.keysAndValues.call(person);
+// // logger.withParams.call(person, true, true, true);
+// logger.withParams.apply(person, [true, true, true]);
+
+// Map
+// const obj = {
+//   name: 'Dmytro',
+//   age: 26,
+//   job: 'Frontend',
+// }
+//
+// const arrayArrays = [
+//   ['name', 'Dmytro',],
+//   ['age', 26,],
+//   ['job', 'Frontend',],
+// ]
+
+// // object => array
+// console.log(Object.entries(obj))
+// // array => object
+// console.log(Object.fromEntries(entries))
+
+// const map = new Map(arrayArrays)
+//
+// // console.log(map)
+// // console.log(map.get('job'))
+//
+// map.set('newKey', 'newValue')
+//     .set(obj, 'objValue')
+//     .set(NaN, 'Nan ??')
+// console.log(map.entries())
+// for (let entry of map.entries()) console.log(entry)
+// for (let val of map.values()) console.log(val)
+// for (let key of map.keys()) console.log(key)
+// map.forEach((val, key) => console.log(val, key))
+
+// // const newArray = [...map]
+// const newArray = Array.from(map)
+// // console.log(newArray)
+// const mapObj = Object.fromEntries(map.entries())
+// console.log(mapObj)
+
+// const users = [
+//   {name: 'Helen',},
+//   {name: 'Alex',},
+//   {name: 'Drew',},
+// ]
+//
+// const visits = new Map()
+//
+// visits
+//     .set(users[0], new Date())
+//     .set(users[1], new Date(new Date().getTime() + 1000 * 60))
+//     .set(users[1], new Date(new Date().getTime() + 5000 * 60))
+//
+// function lastVisit(user) {
+//   return visits.get(user)
+// }
+//
+// console.log(lastVisit(users[1]))
+
+// // Set
+// const setTed = new Set([1, 2, 3, 3, 3, 4, 5, 5, 6])
+//
+// setTed.add(10)
+// // console.log(setTed)
+//
+// function uniqValues(array) {
+//   // return [...new Set(array)]
+//   return Array.from(new Set(array))
+// }
+//
+// console.log(uniqValues([1, 1, 2, 2, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 6, 6, 6]))
+
+// // WeakMap
+// // let objEct = {name: 'weakMap'}
+// //
+// // const mAp = new WeakMap([[objEct, 'objEct data']])
+//
+// const cache = new WeakMap()
+//
+// function cacheUser(user) {
+//   if (!cache.has(user)) {
+//     cache.set(user, Date.now())
+//   }
+//   return cache.get(user)
+// }
+//
+// let alex = {name: 'Alex',}
+// let viktor = {name: 'Viktor',}
+//
+// cacheUser(alex)
+// cacheUser(viktor)
+//
+// console.log(cache.has(alex))
+// console.log(cache.get(viktor))
+//
+// alex = null
+//
+// console.log(cache.has(alex))
+
+// // WeakSet
+// const users = [
+//   {name: 'Alex',},
+//   {name: 'Viktor',},
+//   {name: 'Natalie',},
+// ]
+//
+// const visits = new WeakSet()
+//
+// visits.add(users[0]).add(users[1])
+//
+// users.splice(1, 1)
+//
+// console.log(visits.has(users[0]))
+// console.log(visits.has(users[1]))
+
+// _______________________________________________________________________
+// // Object.create getters, setters
+// const person = Object.create({}, {
+//   name: {
+//     value: 'Dmytro',
+//   },
+//   birthYear: {
+//     value: 1989,
+//   }
+// });
+//
+// for (let key in person) {
+//   console.log('Key', key)
+// }
+//
+// // console.log(person)

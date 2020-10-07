@@ -1,159 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>JavaScript ES6+ lessons</title>
-	<!--    <base href="/">-->
-	<link rel="stylesheet" href="css/style.css">
-	<!--    <script src="js/script.js" defer></script>-->
-	<!--    <script src="js/prototype.js" defer></script>-->
-	<!--    <script src="js/this_call_bind_apply.js" defer></script>-->
-	<!--    <script src="js/closure.js" defer></script>-->
-	<!--    <script src="js/async_eventloop_timeout0.js" defer></script>-->
-	<!--    <script src="js/promises.js" defer></script>-->
-	<!--    <script src="js/object-create_getters_setters.js" defer></script>-->
-	<!--    <script src="js/classes.js" defer></script>-->
-	<!--    <script src="js/async_await_fetch.js" defer></script>-->
-	<!--    <script src="js/proxy.js" defer></script>-->
-	<!--    <script src="js/generators_symbol-iterator_for-of.js" defer></script>-->
-	<!--    <script src="js/objects.js" defer></script>-->
-	<!--    <script src="js/bigint.js" defer></script>-->
-	<!--    <script src="js/functions.js" defer></script>-->
-	<!--    <script src="js/arrays.js" defer></script>-->
-	<!--    <script src="js/async.js" defer></script>-->
-	<script src="js/dom.js" defer></script>
-
-</head>
-<body>
-<!--
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript ES6+ lessons</title>
+    <!--    <base href="/">-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--    <script src="js/script.js" defer></script>-->
+    <!--    <script src="js/prototype.js" defer></script>-->
+    <!--    <script src="js/this_call_bind_apply.js" defer></script>-->
+    <!--    <script src="js/closure.js" defer></script>-->
+    <!--    <script src="js/async_eventloop_timeout0.js" defer></script>-->
+    <!--    <script src="js/promises.js" defer></script>-->
+    <!--    <script src="js/object-create_getters_setters.js" defer></script>-->
+    <!--    <script src="js/classes.js" defer></script>-->
+    <!--    <script src="js/async_await_fetch.js" defer></script>-->
+    <!--    <script src="js/proxy.js" defer></script>-->
+    <!--    <script src="js/generators_symbol-iterator_for-of.js" defer></script>-->
+    <!--    <script src="js/bigint.js" defer></script>-->
+    <!--    <script src="js/functions.js" defer></script>-->
+    <!--    <script src="js/arrays.js" defer></script>-->
+    <!--    <script src="js/async.js" defer></script>-->
+    <!--	<script src="js/dom.js" defer></script>-->
+    <!--  <script src="js/objects.js" defer></script>-->
+    <script src="js/loops.js" defer></script>
+  </head>
+  <body>
+    <!--
     <div id="box1"></div>
     <div id="box2"></div>
     <div id="circle1"></div>
 -->
 
-<!--<div id="out"></div>-->
+    <!--<div id="out"></div>-->
 
-<!--<div> 1 <p>first p</p> </div>-->
-<!--<div class="numb two"> 2 </div>-->
-<!--<div  class="numb three"> 3 </div>-->
-<!--<div id="four4"> 4 <p>second p</p> </div>-->
+    <!--<div> 1 <p>first p</p> </div>-->
+    <!--<div class="numb two"> 2 </div>-->
+    <!--<div  class="numb three"> 3 </div>-->
+    <!--<div id="four4"> 4 <p>second p</p> </div>-->
 
-<!--<div> 1-->
-<!--    <p>first p</p>-->
-<!--    <span>Span example</span>-->
-<!--    <a href="#" title="Link example">Link</a>-->
-<!--</div>-->
-<!--<div class="numb two"> 2 </div>-->
-<!--<div  class="numb three"> 3 </div>-->
-<!--<div id="four4"> 4-->
-<!--    <p>second p</p>-->
-<!--</div>-->
+    <!--<div> 1-->
+    <!--    <p>first p</p>-->
+    <!--    <span>Span example</span>-->
+    <!--    <a href="#" title="Link example">Link</a>-->
+    <!--</div>-->
+    <!--<div class="numb two"> 2 </div>-->
+    <!--<div  class="numb three"> 3 </div>-->
+    <!--<div id="four4"> 4-->
+    <!--    <p>second p</p>-->
+    <!--</div>-->
 
-<!--<p>Paragraph</p>-->
-<!--<ul>-->
-<!--    <li>-->
-<!--        <b>List element</b>-->
-<!--    </li>-->
-<!--</ul>-->
+    <!--<p>Paragraph</p>-->
+    <!--<ul>-->
+    <!--    <li>-->
+    <!--        <b>List element</b>-->
+    <!--    </li>-->
+    <!--</ul>-->
 
-<!--<table id="table_digs">-->
-<!--    <tr>-->
-<!--        <td>first cell</td>-->
-<!--        <td>second cell</td>-->
-<!--    </tr>-->
-<!--</table>-->
+    <!--<table id="table_digs">-->
+    <!--    <tr>-->
+    <!--        <td>first cell</td>-->
+    <!--        <td>second cell</td>-->
+    <!--    </tr>-->
+    <!--</table>-->
 
-<!--<div id="div_id">-->
-<!--    <p>-->
-<!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
-<!--    </p>-->
-<!--</div>-->
+    <!--<div id="div_id">-->
+    <!--    <p>-->
+    <!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+    <!--    </p>-->
+    <!--</div>-->
 
-<!--<p>Solar system objects:</p>-->
-<!--<ul>-->
-<!--    <li>Sun</li>-->
-<!--    <li>Mercury</li>-->
-<!--    <li>Venus</li>-->
-<!--    <li>Earth</li>-->
-<!--    <li>Mars</li>-->
-<!--</ul>-->
+    <!--<p>Solar system objects:</p>-->
+    <!--<ul>-->
+    <!--    <li>Sun</li>-->
+    <!--    <li>Mercury</li>-->
+    <!--    <li>Venus</li>-->
+    <!--    <li>Earth</li>-->
+    <!--    <li>Mars</li>-->
+    <!--</ul>-->
 
-<!--<p>Stars:</p>-->
-<!--<ol>-->
-<!--    <li>Sirius</li>-->
-<!--    <li>Aldebaran</li>-->
-<!--    <li>Capella</li>-->
-<!--    <li>Rigel</li>-->
-<!--</ol>-->
+    <!--<p>Stars:</p>-->
+    <!--<ol>-->
+    <!--    <li>Sirius</li>-->
+    <!--    <li>Aldebaran</li>-->
+    <!--    <li>Capella</li>-->
+    <!--    <li>Rigel</li>-->
+    <!--</ol>-->
 
-<!--<div class="content-table">-->
-<!--    <h1>About stars:</h1>-->
-<!--    <ul class="stars-list">-->
-<!--        <li class="star">Sirius</li>-->
-<!--        <li class="star">Aldebaran</li>-->
-<!--        <li class="contact">Feedback</li>-->
-<!--    </ul>-->
-<!--</div>-->
+    <!--<div class="content-table">-->
+    <!--    <h1>About stars:</h1>-->
+    <!--    <ul class="stars-list">-->
+    <!--        <li class="star">Sirius</li>-->
+    <!--        <li class="star">Aldebaran</li>-->
+    <!--        <li class="contact">Feedback</li>-->
+    <!--    </ul>-->
+    <!--</div>-->
 
-<!--<h1>Page title</h1>-->
-<!--<div id="comm" newID="beta">User message</div>-->
-<!--<input type="checkbox" id="input" checked />Checkbox-->
+    <!--<h1>Page title</h1>-->
+    <!--<div id="comm" newID="beta">User message</div>-->
+    <!--<input type="checkbox" id="input" checked />Checkbox-->
 
-<!--<table>-->
-<!--	<tr>-->
-<!--		<td data-cell-red="#CC0000">1</td>-->
-<!--		<td data-cell-red="#CC0000">2</td>-->
-<!--		<td data-cell-blue="#0000CC">3</td>-->
-<!--		<td data-cell-blue="#0000CC">4</td>-->
-<!--	</tr>-->
-<!--	<tr>-->
-<!--		<td data-cell-blue="#0000CC">5</td>-->
-<!--		<td data-cell-blue="#0000CC">6</td>-->
-<!--		<td data-cell-red="#CC0000">7</td>-->
-<!--		<td data-cell-red="#CC0000">8</td>-->
-<!--	</tr>-->
-<!--</table>-->
+    <!--<table>-->
+    <!--	<tr>-->
+    <!--		<td data-cell-red="#CC0000">1</td>-->
+    <!--		<td data-cell-red="#CC0000">2</td>-->
+    <!--		<td data-cell-blue="#0000CC">3</td>-->
+    <!--		<td data-cell-blue="#0000CC">4</td>-->
+    <!--	</tr>-->
+    <!--	<tr>-->
+    <!--		<td data-cell-blue="#0000CC">5</td>-->
+    <!--		<td data-cell-blue="#0000CC">6</td>-->
+    <!--		<td data-cell-red="#CC0000">7</td>-->
+    <!--		<td data-cell-red="#CC0000">8</td>-->
+    <!--	</tr>-->
+    <!--</table>-->
 
-<!--<div class="msg">-->
-<!--	Important information!-->
-<!--</div>-->
+    <!--<div class="msg">-->
+    <!--	Important information!-->
+    <!--</div>-->
 
-<h1>Solar system:</h1>
-<!--<ul class="list">-->
-<!--	<li>Sun</li>-->
-<!--	<li>Mercury</li>-->
-<!--	<li>Venus</li>-->
-<!--	<li>Earth</li>-->
-<!--</ul>-->
+    <!--<h1>Solar system:</h1>-->
+    <!--<ul class="list">-->
+    <!--	<li>Sun</li>-->
+    <!--	<li>Mercury</li>-->
+    <!--	<li>Venus</li>-->
+    <!--	<li>Earth</li>-->
+    <!--</ul>-->
 
-<!--<table border=1 cellpadding="10">-->
-<!--	<tr>-->
-<!--		<td>Sun</td>-->
-<!--		<td>Star</td>-->
-<!--	</tr>-->
-<!--	<tr>-->
-<!--		<td>Mercury</td>-->
-<!--		<td>Planet</td>-->
-<!--	</tr>-->
-<!--</table>-->
+    <!--<table border=1 cellpadding="10">-->
+    <!--	<tr>-->
+    <!--		<td>Sun</td>-->
+    <!--		<td>Star</td>-->
+    <!--	</tr>-->
+    <!--	<tr>-->
+    <!--		<td>Mercury</td>-->
+    <!--		<td>Planet</td>-->
+    <!--	</tr>-->
+    <!--</table>-->
 
-<!--<ul></ul>-->
+    <!--<ul></ul>-->
 
-<script>
-	// document.write('<p>String wrote the write method</p>')
-	setTimeout(function() {
-		document.write('<p>String wrote the write method</p>')
-	}, 500);
-</script>
-<ul class="list">
-	<li>Sun</li>
-	<li>Mercury</li>
-	<li>Venus</li>
-	<li>Earth</li>
-</ul>
+    <!--<script>-->
+    <!--  // document.write('<p>String wrote the write method</p>')-->
+    <!--  setTimeout(function () {-->
+    <!--    document.write('<p>String wrote the write method</p>')-->
+    <!--  }, 500);-->
+    <!--</script>-->
+    <!--<ul class="list">-->
+    <!--  <li>Sun</li>-->
+    <!--  <li>Mercury</li>-->
+    <!--  <li>Venus</li>-->
+    <!--  <li>Earth</li>-->
+    <!--</ul>-->
 
-<!--<script src="js/libs/lodash.js"></script>-->
-</body>
+    <!--<div class="one">One</div>-->
+    <!--<div class="one">Two</div>-->
+    <!--<div class="one">Three</div>-->
+
+    <!--<div><input name="rrr" type="radio" value="1" checked>Lorem.</input></div>-->
+    <!--<div><input name="rrr" type="radio" value="2">Lorem ipsum.</input></div>-->
+    <!--<div><input name="rrr" type="radio" value="3">Lorem ipsum dolor.</input></div>-->
+
+    <!--<button>Push</button>-->
+
+    <!--<div id="res"></div>-->
+
+    <!--<p>one</p>-->
+    <!--<p>two</p>-->
+    <!--<p>three</p>-->
+
+    <div class="out"></div>
+
+    <!--<script src="js/libs/lodash.js"></script>-->
+  </body>
 </html>
