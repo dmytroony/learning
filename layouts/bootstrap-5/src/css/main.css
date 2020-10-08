@@ -1,3 +1,11 @@
 /*.navbar-brand {*/
 /*  font-family: monospace !important;*/
 /*}*/
+
+.carousel-item {
+  height: 400px;
+}
+
+.carousel-item img {
+  height: 600px;
+}
