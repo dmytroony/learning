@@ -727,19 +727,94 @@
 // console.log(visits.has(users[0]))
 // console.log(visits.has(users[1]))
 
-// _______________________________________________________________________
-// // Object.create getters, setters
-// const person = Object.create({}, {
-//   name: {
-//     value: 'Dmytro',
-//   },
-//   birthYear: {
-//     value: 1989,
-//   }
-// });
+// let out = document.querySelector('.out')
 //
-// for (let key in person) {
-//   console.log('Key', key)
+// let myFriend = {
+//   "name": "Alex",
+//   "legs": 2,
+//   "friends": 2,
 // }
 //
+// // console.log(myFriend["name"])
+// console.log(myFriend.name)
+
+// let menu = {
+//   width: 400,
+//   height: 200,
+//   title: "Menu",
+// }
+//
+// for (let key in menu) console.log(`${key}: ${menu[key]}`)
+
+// let codes =  {
+//   "5": "PL",
+//   "12": "USA",
+//   "73": "UA",
+// }
+//
+// for (let prop in codes) {
+//   prop = +prop
+//   console.log(prop, typeof prop)
+// }
+
+// let user =  {
+//   name: "Dmytro",
+//   surname: "Onysko",
+// }
+//
+// user.age = 25
+//
+// for (let prop in user) {
+//   console.log(prop)
+// }
+
+// _______________________________________________________________________
+// // Object.create getters, setters
+// const person = Object.create(
+//     {
+//       calculateAge() {
+//         console.log('Age: ', new Date().getFullYear() - this.birthYear)
+//       }
+//     },
+//     {
+//       name: {
+//         value: 'Dmytro',
+//         enumerable: true,
+//         writable: true,
+//         configurable: true,
+//       },
+//       birthYear: {
+//         value: 1989,
+//         enumerable: false, // default
+//         writable: false, // default
+//         configurable: false, // default
+//       },
+//       age: {
+//         get() {
+//           return new Date().getFullYear() - this.birthYear
+//         },
+//         set(value) {
+//           console.log('Set age', value)
+//         }
+//       }
+//     });
+//
+// // person.parents = 'Mother'
+// //
 // // console.log(person)
+// //
+// // person.name = 'Ivan'
+// //
+// // delete person.name
+// //
+// // for (let prop in person) {
+// //   console.log('Prop', prop, person[prop])
+// // }
+// //
+// // console.log(person)
+//
+// for (let prop in person) {
+//   if (person.hasOwnProperty(prop)) console.log('Prop', prop, person[prop])
+// }
+//
+// console.log(person.age)

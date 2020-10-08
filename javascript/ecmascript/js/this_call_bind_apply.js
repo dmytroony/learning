@@ -36,19 +36,44 @@
 
 //
 
-const array = [1, 2, 3, 4, 5];
-
-// function multBy(arr, n) {
-//     return arr.map(function (i) {
+// const array = [1, 2, 3, 4, 5];
+//
+// // function multBy(arr, n) {
+// //     return arr.map(function (i) {
+// //         return i * n;
+// //     });
+// // }
+//
+// Array.prototype.multBy = function(n) {
+//     return this.map(function (i) {
 //         return i * n;
 //     });
+// };
+// console.log(array.multBy(2));
+//
+// // console.log(multBy(array, 5));
+
+// console.log(this)
+
+// document.querySelector('#h3').onclick = function (){
+//   console.log(this)
+//   this.style.background = 'yellow'
 // }
 
-Array.prototype.multBy = function(n) {
-    return this.map(function (i) {
-        return i * n;
-    });
-};
-console.log(array.multBy(2));
+function setBackground() {
+  console.log(this);
+  this.style.background = "lightgreen";
+}
 
-// console.log(multBy(array, 5));
+// let p = document.querySelectorAll('p')
+//
+// p.forEach(function (elem) {
+//   elem.onclick = setBackground
+// })
+
+// document.querySelector('p').addEventListener('click', setBackground)
+let p = document.querySelectorAll("p");
+
+p.forEach(function(elem) {
+  elem.addEventListener("click", setBackground);
+});

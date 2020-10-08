@@ -284,4 +284,25 @@
 // let ul = document.querySelector('ul');
 // ul.append(fr);
 
+// let element = document.getElementById('text-link')
+// element.href = 'https://google.com'
+// element.title = 'Googol'
 
+// let element = document.getElementById('block-1')
+// let link = document.createElement('a')
+// let br = document.createElement('br')
+//
+// function addLink() {
+//   link.innerHTML = 'Go to Google'
+//   link.href = 'https://google.com'
+//   element.appendChild(br)
+//   element.appendChild(link)
+// }
+//
+// function removeLink() {
+//   element.removeChild(br)
+//   element.removeChild(link)
+// }
+//
+// document.querySelector('.addBtn').onclick = () => addLink()
+// document.querySelector('.removeBtn').onclick = () => removeLink()
