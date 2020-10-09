@@ -120,13 +120,26 @@
 //
 // console.log(a); // global
 
-function person() {
-  let name = "Peter";
+// function person() {
+//   let name = "Peter";
+//
+//   return function displayName() {
+//     console.log(name);
+//   };
+// }
+//
+// let peter = person();
+// peter();
 
-  return function displayName() {
-    console.log(name);
+"use strict";
+function myFunc() {
+  const a = {
+    one: 1,
+    two: 2,
+    three: this
   };
+  console.log("from a object", a.three); // from a object
+  console.log("from myFunc function", this); // from myFunc function
 }
-
-let peter = person();
-peter();
+myFunc();
+console.log("Global", this); // Global
