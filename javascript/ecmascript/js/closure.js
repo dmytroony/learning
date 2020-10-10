@@ -130,16 +130,3 @@
 //
 // let peter = person();
 // peter();
-
-"use strict";
-function myFunc() {
-  const a = {
-    one: 1,
-    two: 2,
-    three: this
-  };
-  console.log("from a object", a.three); // from a object
-  console.log("from myFunc function", this); // from myFunc function
-}
-myFunc();
-console.log("Global", this); // Global
