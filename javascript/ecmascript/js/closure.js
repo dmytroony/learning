@@ -121,12 +121,120 @@
 // console.log(a); // global
 
 // function person() {
-//   let name = "Peter";
-//
-//   return function displayName() {
+//   return function displayName(name) {
 //     console.log(name);
 //   };
 // }
+// let personName = person()
 //
-// let peter = person();
-// peter();
+// personName('Natalie')
+// personName('Basil')
+
+// function getCounter() {
+//   let counter = 0;
+//   return function() {
+//     return counter++;
+//   }
+// }
+//
+// let count = getCounter();
+// console.log(count()) // 1
+// console.log(count()) // 2
+// console.log(count()) // 3
+
+// let a = 'Hello World!';
+// function first() {
+//   let b = 25;
+//   console.log('Inside first function');
+// }
+// first();
+// console.log('Inside global execution context');
+
+// function Person(name) {
+//   let secret = 'secret'
+//   this.name = name
+//
+//   this.setName = function (newName) {
+//     this.name = newName
+//   }
+//
+//   this.setNameToFoo = function () {
+//     this.name = foo
+//   }
+//
+//   this.getSecret = function () {
+//     return secret
+//   }
+// }
+//
+// let person = new Person('Max')
+//
+// console.log(person.name)
+//
+// person.setName('Oliver')
+//
+// console.log(person.name)
+//
+// // person.setNameToFoo()
+//
+// let foo = 'Foo'
+// person.setNameToFoo()
+// console.log(person.name)
+//
+// console.log(person.secret)
+// console.log(person.getSecret())
+
+// let incrementUntil = function (max) {
+//   if (num >= max) return num
+//   num++
+//   incrementUntil(max)
+// }
+//
+// let num = 0
+// incrementUntil(3)
+// // console.log(num);
+// // console.log(num);
+//
+// num = 0
+// let myFun = function () {
+//   incrementUntil(3)
+//   return num
+// }
+// myFun()
+// // console.log(num);
+//
+// num = 0
+// let myFun2 = function () {
+//   let num = -1
+//   incrementUntil(3)
+//   return num
+// }
+// console.log(myFun2());
+// console.log(num);
+
+// function one() {
+//   let a = 8
+//
+//   return a * 12
+// }
+//
+// console.log(one())
+
+// function t1() {
+//   let a = 0
+//
+//   return function() {
+//     a = a + 1
+//     return a
+//   }
+// }
+//
+// let b = t1()
+// console.log('b', b())
+// console.log('b', b())
+//
+// let c = t1()
+// console.log('c', c())
+// console.log('c', c())
+// console.log('c', c())
+// console.log('c', c())
