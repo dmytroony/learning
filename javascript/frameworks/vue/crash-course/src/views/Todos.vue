@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h2>Todo application</h2>
+    <h2>Todo list</h2>
     <router-link to="/">Home</router-link>
     <hr />
     <AddTodo @add-todo="addTodo" />
-    <hr />
+    <br />
     <Loader v-if="loading" />
     <TodoList
       v-else-if="todos.length"
