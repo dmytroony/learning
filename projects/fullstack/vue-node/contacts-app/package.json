@@ -1,0 +1,26 @@
+{
+  "name": "contacts-app",
+  "version": "1.0.0",
+  "description": "rest api fullstack(node, vue, express) app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "js",
+    "rest",
+    "api",
+    "node",
+    "vue",
+    "express"
+  ],
+  "author": "dmytroony",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
+}
