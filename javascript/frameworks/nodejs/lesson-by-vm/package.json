@@ -1,0 +1,21 @@
+{
+  "name": "lesson-by-vm",
+  "version": "1.0.0",
+  "description": "NodeJS crash-course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "nodejs"
+  ],
+  "author": "Dmytro Onysko <dmytroony@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
+}
