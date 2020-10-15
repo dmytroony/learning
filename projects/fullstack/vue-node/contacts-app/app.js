@@ -3,7 +3,7 @@ const path = require("path");
 const { v4 } = require("uuid"); // auto-generating id
 const app = express();
 
-const CONTACTS = [
+let CONTACTS = [
   { id: v4(), name: "Dmytro", value: "+380958052625", marked: false }
 ];
 
@@ -21,6 +21,19 @@ app.post("/api/contacts", (req, res) => {
   const contact = { ...req.body, id: v4(), marked: false };
   CONTACTS.push(contact);
   res.status(201).json(contact);
+});
+
+// DELETE
+app.delete("/api/contacts/:id", (req, res) => {
+  CONTACTS = CONTACTS.filter(c => c.id !== req.params.id);
+  res.status(200).json({ message: "The contact was deleted." });
+});
+
+// PUT
+app.put("/api/contacts/:id", (req, res) => {
+  const idx = CONTACTS.findIndex(c => c.id === req.params.id);
+  CONTACTS[idx] = req.body;
+  res.json(CONTACTS[idx]);
 });
 
 // Server side settings
