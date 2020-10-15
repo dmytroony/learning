@@ -7,6 +7,8 @@ const CONTACTS = [
   { id: v4(), name: "Dmytro", value: "+380958052625", marked: false }
 ];
 
+app.use(express.json());
+
 // GET
 app.get("/api/contacts", (req, res) => {
   setTimeout(() => {
@@ -15,7 +17,11 @@ app.get("/api/contacts", (req, res) => {
 });
 
 // POST
-app.post("/api/contacts", (req, res) => {});
+app.post("/api/contacts", (req, res) => {
+  const contact = { ...req.body, id: v4(), marked: false };
+  CONTACTS.push(contact);
+  res.status(201).json(contact);
+});
 
 // Server side settings
 app.use(express.static(path.resolve(__dirname, "client"))); // making the client folder as a static
