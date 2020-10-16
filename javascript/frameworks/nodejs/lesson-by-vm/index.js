@@ -88,6 +88,9 @@ const server = http.createServer((req, res) => {
   });
 });
 
+// Reading params from the console
+const PORT = process.env.PORT || 3000;
+
 server.listen(3000, () => {
-  console.log("Server(:3000) has been started...");
+  console.log(`Server has been started on Port:${PORT}...`);
 });
