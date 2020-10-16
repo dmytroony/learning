@@ -1,0 +1,29 @@
+{
+  "name": "todo-fullstack-app",
+  "version": "1.0.0",
+  "description": "The app uses nodeJS, vueJS, expressJS, mongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "vue",
+    "vuejs",
+    "express",
+    "expressjs",
+    "mongo",
+    "mongodb"
+  ],
+  "author": "dmytroony",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5"
+  }
+}
