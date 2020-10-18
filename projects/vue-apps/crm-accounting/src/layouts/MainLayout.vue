@@ -41,7 +41,7 @@
 
       <ul class="sidenav app-sidenav open">
         <li>
-          <a href="/home" class="waves-effect waves-orange pointer">Account</a>
+          <a href="/" class="waves-effect waves-orange pointer">Account</a>
         </li>
         <li>
           <a href="/history" class="waves-effect waves-orange pointer"
@@ -72,7 +72,7 @@
       </main>
 
       <div class="fixed-action-btn">
-        <a class="btn-floating btn-large blue" href="/record">
+        <a class="btn-floating btn-large blue" href="#">
           <i class="large material-icons">add</i>
         </a>
       </div>
