@@ -13,8 +13,6 @@ import MainLayout from "@/layouts/MainLayout";
 export default {
   computed: {
     layout() {
-      console.log();
-      // return 'empty-layout'
       return (this.$route.meta.layout || "empty") + "-layout";
     }
   },
