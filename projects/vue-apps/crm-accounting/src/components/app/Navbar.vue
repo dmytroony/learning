@@ -42,7 +42,9 @@
 <script>
 export default {
   data: () => ({
-    date: new Date()
+    date: new Date(),
+    interval: null,
+    dropdown: null
   }),
   methods: {
     logout() {
@@ -51,13 +53,19 @@ export default {
     }
   },
   mounted() {
-    setInterval(() => {
+    this.interval = setInterval(() => {
       this.date = new Date();
     }, 1000);
     // eslint-disable-next-line
-    M.Dropdown.init(this.$refs.dropdown, {
+    this.dropdown = M.Dropdown.init(this.$refs.dropdown, {
       constrainWidth: false
     });
+  },
+  beforeDestroy() {
+    clearInterval(this.interval);
+    if (this.dropdown && this.dropdown.destroy) {
+      this.dropdown.destroy();
+    }
   }
 };
 </script>
