@@ -90,6 +90,9 @@ export default {
       minLength: minLength(6)
     }
   },
+  mounted() {
+    // this.$message("Test");
+  },
   methods: {
     submitHandler() {
       if (this.$v.$invalid) {
