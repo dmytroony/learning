@@ -96,6 +96,11 @@ export default {
         this.$v.$touch();
         return;
       }
+      const formData = {
+        email: this.email,
+        password: this.password
+      };
+      console.log(formData);
       this.$router.push("/");
     }
   }
