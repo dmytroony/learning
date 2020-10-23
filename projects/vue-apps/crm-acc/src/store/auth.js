@@ -14,7 +14,7 @@ export default {
     async register({ dispatch, commit }, { email, password, name }) {
       try {
         await firebase.auth().createUserWithEmailAndPassword(email, password);
-        const uid = await dispatch("getUserId");
+        const uid = await dispatch("getUid");
         await firebase
           .database()
           .ref(`/users/${uid}/info`)
@@ -27,12 +27,14 @@ export default {
         throw e;
       }
     },
-    getUserId() {
+    getUid() {
       const user = firebase.auth().currentUser;
       return user ? user.uid : null;
     },
-    async logout() {
+    async logout({ commit }) {
+      // clean action when logout
       await firebase.auth().signOut();
+      commit("clearInfo");
     }
   }
 };
