@@ -123,10 +123,10 @@
   padding-top: 1.5rem;
 }
 .currency-line span {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 .bill-card {
-  height: 310px;
+  height: 100%;
 }
 .pointer {
   cursor: pointer;
