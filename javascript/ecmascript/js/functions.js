@@ -88,12 +88,51 @@
 // let mb = b.map(item => ({'num': item}))
 // console.log(mb);
 
-document.querySelector("#test-btn").addEventListener("click", () => {
-  fetch("./file.json")
-    .then(res => res.json())
-    .then(file => {
-      file.forEach(item => {
-        console.log(item.name);
-      });
-    });
-});
+// document.querySelector("#test-btn").addEventListener("click", () => {
+//   fetch("./file.json")
+//     .then(res => res.json())
+//     .then(file => {
+//       file.forEach(item => {
+//         console.log(item.name);
+//       });
+//     });
+// });
+
+// function getRandomBetween(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// }
+//
+// console.log(getRandomBetween(10, 42));
+
+// function logPerson(s, name, age) {
+//   if (age < 0) age = 'No born';
+//
+//   return `${s[0]}${name}${s[1]}${age}${s[2]}`;
+// }
+//
+// const personName = 'Andrew',
+//     personName2 = 'Louis',
+//     personAge = 25,
+//     personAge2 = -10,
+//     output = logPerson`Name: ${personName}, Age: ${personAge}!`;
+//     output2 = logPerson`Name: ${personName2}, Age: ${personAge2}!`;
+//
+// console.log(output);
+// console.log(output2);
+
+// let counter = 0;
+//
+// const interval = setInterval(() => {
+//   counter === 5 ? clearInterval(interval) : console.log(++counter);
+// }, 1000);
+
+function createMember(name) {
+  return function(lastName) {
+    console.log(name + lastName);
+  };
+}
+
+const logWithLastName = createMember("Name1");
+
+console.log(logWithLastName("lastName1"));
+console.log(logWithLastName("lastName2"));

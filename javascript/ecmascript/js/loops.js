@@ -138,3 +138,14 @@
 //   // out.innerHTML += '3*' + i + '=' + (i * 3) + '<br>'
 //   out.innerHTML += `3*${i}=${3*i}<br>`
 // }
+
+const cars = ["Mazda", "Mercedes", "Ford"];
+
+for (let i = 0; i < cars.length; i++) {
+  const car = cars[i];
+  console.log(car);
+}
+
+for (let car of cars) {
+  console.log(car);
+}
