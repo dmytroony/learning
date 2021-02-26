@@ -22,3 +22,16 @@ function sayMyName(name) {
   console.log(name);
 }
 sayMyName("Barbara");
+// Never
+function throwError(message) {
+  throw new Error(message);
+}
+function isFinite() {
+  while (true) {
+    console.log("Something");
+  }
+}
+var login = "admin";
+var id1 = 1234;
+var id2 = "1234";
+//# sourceMappingURL=types.js.map

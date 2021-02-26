@@ -1,0 +1,11 @@
+{
+  "name": "typescript_learn",
+  "version": "1.0.0",
+  "description": "learn project",
+  "main": "types.js",
+  "scripts": {
+    "test": "teststart"
+  },
+  "author": "dmytroony",
+  "license": "ISC"
+}
