@@ -918,18 +918,24 @@ const person = {
 // let price = menu[drink];
 // console.log(`${drink} costs: ${price};`);
 
-let car = {
-  color: "red",
-  wheels: 4,
-  engine: {
-    cylinders: 4,
-    size: 2.2
-  },
-  color: "green"
-};
+// let car = {
+//   color: "red",
+//   wheels: 4,
+//   engine: {
+//     cylinders: 4,
+//     size: 2.2
+//   },
+//   color: "green"
+// };
+//
+// let property = "color";
+// console.log(car[property]);
+//
+// property = "wheels";
+// console.log(car[property]);
 
-let property = "color";
-console.log(car[property]);
+for (let i = 0; i < 10; i++) {
+  if (i % 2 === 0) continue;
 
-property = "wheels";
-console.log(car[property]);
+  console.log(i);
+}
