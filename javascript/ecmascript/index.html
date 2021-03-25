@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>JavaScript ES6+ lessons</title>
     <!--    <base href="/">-->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css"/>
     <!--  <script src="js/script.js" defer></script>-->
     <!--  <script src="js/dragndrop.js" defer></script>-->
     <!--  <script src="js/recursion.js" defer></script>-->
@@ -34,252 +34,252 @@
     <!--  <script src="js/callstack_event-loop.js" defer></script>-->
 
     <style>
-      /*.block {*/
-      /*  width: 50px;*/
-      /*  height: 50px;*/
-      /*  border: 2px solid black;*/
-      /*  margin: 1rem;*/
-      /*  text-align: center;*/
-      /*  float: left;*/
-      /*}*/
-      /*hr {*/
-      /*  clear: both;*/
-      /*}*/
-      /*.block-1 {*/
-      /*  width: 250px;*/
-      /*  height: 250px;*/
-      /*  border: 3px solid black;*/
-      /*  margin: 1rem;*/
-      /*}*/
+        /*.block {*/
+        /*  width: 50px;*/
+        /*  height: 50px;*/
+        /*  border: 2px solid black;*/
+        /*  margin: 1rem;*/
+        /*  text-align: center;*/
+        /*  float: left;*/
+        /*}*/
+        /*hr {*/
+        /*  clear: both;*/
+        /*}*/
+        /*.block-1 {*/
+        /*  width: 250px;*/
+        /*  height: 250px;*/
+        /*  border: 3px solid black;*/
+        /*  margin: 1rem;*/
+        /*}*/
     </style>
-  </head>
-  <body>
-    <!--<body onload="console.log(' site loaded')">-->
+</head>
+<body>
+<!--<body onload="console.log(' site loaded')">-->
 
-    <!--<div class="zone zone-1"></div>-->
-    <!--<div class="zone zone-2">-->
-    <!--  <img-->
-    <!--          src="./img/ufo.png"-->
-    <!--          alt="UFO"-->
-    <!--          class="ufo"-->
-    <!--          id="ufo"-->
-    <!--          draggable="true"-->
-    <!--  >-->
-    <!--</div>-->
+<!--<div class="zone zone-1"></div>-->
+<!--<div class="zone zone-2">-->
+<!--  <img-->
+<!--          src="./img/ufo.png"-->
+<!--          alt="UFO"-->
+<!--          class="ufo"-->
+<!--          id="ufo"-->
+<!--          draggable="true"-->
+<!--  >-->
+<!--</div>-->
 
-    <!--    <button style="margin: 1rem; background: limegreen" id="test-btn">-->
-    <!--      BTN-->
-    <!--    </button>-->
+<!--    <button style="margin: 1rem; background: limegreen" id="test-btn">-->
+<!--      BTN-->
+<!--    </button>-->
 
-    <!--<div id="out1" style="margin: 1rem;"></div>-->
-    <!--<div id="out2"></div>-->
-    <!--<div id="out3"></div>-->
+<!--<div id="out1" style="margin: 1rem;"></div>-->
+<!--<div id="out2"></div>-->
+<!--<div id="out3"></div>-->
 
-    <!--<div class="block-div"></div>-->
-    <!--<div class="block-div"></div>-->
-    <!--<div class="block-div"></div>-->
-    <!--<div class="block-div"></div>-->
+<!--<div class="block-div"></div>-->
+<!--<div class="block-div"></div>-->
+<!--<div class="block-div"></div>-->
+<!--<div class="block-div"></div>-->
 
-    <!--<div id="block-1" class="block">First</div>-->
-    <!--<div id="block-2" class="block">Second</div>-->
-    <!--<input type="button" value="add" class="addBtn">-->
-    <!--<input type="button" value="remove" class="removeBtn">-->
+<!--<div id="block-1" class="block">First</div>-->
+<!--<div id="block-2" class="block">Second</div>-->
+<!--<input type="button" value="add" class="addBtn">-->
+<!--<input type="button" value="remove" class="removeBtn">-->
 
-    <!--<a href="./index.html" id="text-link">Google</a>-->
+<!--<a href="./index.html" id="text-link">Google</a>-->
 
-    <!--<div class="block-1"></div>-->
-    <!--<div class="out-1"></div>-->
-    <!--<div class="out-2"></div>-->
+<!--<div class="block-1"></div>-->
+<!--<div class="out-1"></div>-->
+<!--<div class="out-2"></div>-->
 
-    <!--<div>-->
-    <!--  <label>-->
-    <!--    <input type="text" class="i-1">-->
-    <!--  </label>-->
-    <!--</div>-->
+<!--<div>-->
+<!--  <label>-->
+<!--    <input type="text" class="i-1">-->
+<!--  </label>-->
+<!--</div>-->
 
-    <!--<div class="block one">one</div>-->
-    <!--<div class="block two">two</div>-->
-    <!--<hr>-->
-    <!--<div class="block three">three</div>-->
-    <!--<hr>-->
-    <!--<button id="minus">-</button>-->
-    <!--<progress value="10" max="100"></progress>-->
-    <!--<button id="plus">+</button>-->
-    <!--<br>-->
-    <!--<button type="submit" id="took">Take it</button>-->
-    <!--<p class="result"></p>-->
+<!--<div class="block one">one</div>-->
+<!--<div class="block two">two</div>-->
+<!--<hr>-->
+<!--<div class="block three">three</div>-->
+<!--<hr>-->
+<!--<button id="minus">-</button>-->
+<!--<progress value="10" max="100"></progress>-->
+<!--<button id="plus">+</button>-->
+<!--<br>-->
+<!--<button type="submit" id="took">Take it</button>-->
+<!--<p class="result"></p>-->
 
-    <!--<button onclick="console.log('click x 1')">Click x1</button>-->
-    <!--<button ondblclick="console.log('click x 2')">Click x2</button>-->
+<!--<button onclick="console.log('click x 1')">Click x1</button>-->
+<!--<button ondblclick="console.log('click x 2')">Click x2</button>-->
 
-    <!--<form onsubmit="return confirm('Submit?')">-->
-    <!--  <input-->
-    <!--          type="text"-->
-    <!--          onfocus="x = 1; console.log(x);"-->
-    <!--          onblur="x = 0; console.log(x);"-->
-    <!--          placeholder="focus me"-->
-    <!--  >-->
-    <!--  <input type="submit" value="Send">-->
-    <!--</form>-->
+<!--<form onsubmit="return confirm('Submit?')">-->
+<!--  <input-->
+<!--          type="text"-->
+<!--          onfocus="x = 1; console.log(x);"-->
+<!--          onblur="x = 0; console.log(x);"-->
+<!--          placeholder="focus me"-->
+<!--  >-->
+<!--  <input type="submit" value="Send">-->
+<!--</form>-->
 
-    <!--
+<!--
 <div id="box1"></div>
 <div id="box2"></div>
 <div id="circle1"></div>
 -->
 
-    <!--<div id="out"></div>-->
+<!--<div id="out"></div>-->
 
-    <!--<div> 1 <p>first p</p> </div>-->
-    <!--<div class="numb two"> 2 </div>-->
-    <!--<div  class="numb three"> 3 </div>-->
-    <!--<div id="four4"> 4 <p>second p</p> </div>-->
+<!--<div> 1 <p>first p</p> </div>-->
+<!--<div class="numb two"> 2 </div>-->
+<!--<div  class="numb three"> 3 </div>-->
+<!--<div id="four4"> 4 <p>second p</p> </div>-->
 
-    <!--<div> 1-->
-    <!--    <p>first p</p>-->
-    <!--    <span>Span example</span>-->
-    <!--    <a href="#" title="Link example">Link</a>-->
-    <!--</div>-->
-    <!--<div class="numb two"> 2 </div>-->
-    <!--<div  class="numb three"> 3 </div>-->
-    <!--<div id="four4"> 4-->
-    <!--    <p>second p</p>-->
-    <!--</div>-->
+<!--<div> 1-->
+<!--    <p>first p</p>-->
+<!--    <span>Span example</span>-->
+<!--    <a href="#" title="Link example">Link</a>-->
+<!--</div>-->
+<!--<div class="numb two"> 2 </div>-->
+<!--<div  class="numb three"> 3 </div>-->
+<!--<div id="four4"> 4-->
+<!--    <p>second p</p>-->
+<!--</div>-->
 
-    <!--<p>Paragraph</p>-->
-    <!--<ul>-->
-    <!--    <li>-->
-    <!--        <b>List element</b>-->
-    <!--    </li>-->
-    <!--</ul>-->
+<!--<p>Paragraph</p>-->
+<!--<ul>-->
+<!--    <li>-->
+<!--        <b>List element</b>-->
+<!--    </li>-->
+<!--</ul>-->
 
-    <!--<table id="table_digs">-->
-    <!--    <tr>-->
-    <!--        <td>first cell</td>-->
-    <!--        <td>second cell</td>-->
-    <!--    </tr>-->
-    <!--</table>-->
+<!--<table id="table_digs">-->
+<!--    <tr>-->
+<!--        <td>first cell</td>-->
+<!--        <td>second cell</td>-->
+<!--    </tr>-->
+<!--</table>-->
 
-    <!--<div id="div_id">-->
-    <!--    <p>-->
-    <!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
-    <!--    </p>-->
-    <!--</div>-->
+<!--<div id="div_id">-->
+<!--    <p>-->
+<!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+<!--    </p>-->
+<!--</div>-->
 
-    <!--<p>Solar system objects:</p>-->
-    <!--<ul>-->
-    <!--    <li>Sun</li>-->
-    <!--    <li>Mercury</li>-->
-    <!--    <li>Venus</li>-->
-    <!--    <li>Earth</li>-->
-    <!--    <li>Mars</li>-->
-    <!--</ul>-->
+<!--<p>Solar system objects:</p>-->
+<!--<ul>-->
+<!--    <li>Sun</li>-->
+<!--    <li>Mercury</li>-->
+<!--    <li>Venus</li>-->
+<!--    <li>Earth</li>-->
+<!--    <li>Mars</li>-->
+<!--</ul>-->
 
-    <!--<p>Stars:</p>-->
-    <!--<ol>-->
-    <!--    <li>Sirius</li>-->
-    <!--    <li>Aldebaran</li>-->
-    <!--    <li>Capella</li>-->
-    <!--    <li>Rigel</li>-->
-    <!--</ol>-->
+<!--<p>Stars:</p>-->
+<!--<ol>-->
+<!--    <li>Sirius</li>-->
+<!--    <li>Aldebaran</li>-->
+<!--    <li>Capella</li>-->
+<!--    <li>Rigel</li>-->
+<!--</ol>-->
 
-    <!--<div class="content-table">-->
-    <!--    <h1>About stars:</h1>-->
-    <!--    <ul class="stars-list">-->
-    <!--        <li class="star">Sirius</li>-->
-    <!--        <li class="star">Aldebaran</li>-->
-    <!--        <li class="contact">Feedback</li>-->
-    <!--    </ul>-->
-    <!--</div>-->
+<!--<div class="content-table">-->
+<!--    <h1>About stars:</h1>-->
+<!--    <ul class="stars-list">-->
+<!--        <li class="star">Sirius</li>-->
+<!--        <li class="star">Aldebaran</li>-->
+<!--        <li class="contact">Feedback</li>-->
+<!--    </ul>-->
+<!--</div>-->
 
-    <!--<h1>Page title</h1>-->
-    <!--<div id="comm" newID="beta">User message</div>-->
-    <!--<input type="checkbox" id="input" checked />Checkbox-->
+<!--<h1>Page title</h1>-->
+<!--<div id="comm" newID="beta">User message</div>-->
+<!--<input type="checkbox" id="input" checked />Checkbox-->
 
-    <!--<table>-->
-    <!--	<tr>-->
-    <!--		<td data-cell-red="#CC0000">1</td>-->
-    <!--		<td data-cell-red="#CC0000">2</td>-->
-    <!--		<td data-cell-blue="#0000CC">3</td>-->
-    <!--		<td data-cell-blue="#0000CC">4</td>-->
-    <!--	</tr>-->
-    <!--	<tr>-->
-    <!--		<td data-cell-blue="#0000CC">5</td>-->
-    <!--		<td data-cell-blue="#0000CC">6</td>-->
-    <!--		<td data-cell-red="#CC0000">7</td>-->
-    <!--		<td data-cell-red="#CC0000">8</td>-->
-    <!--	</tr>-->
-    <!--</table>-->
+<!--<table>-->
+<!--	<tr>-->
+<!--		<td data-cell-red="#CC0000">1</td>-->
+<!--		<td data-cell-red="#CC0000">2</td>-->
+<!--		<td data-cell-blue="#0000CC">3</td>-->
+<!--		<td data-cell-blue="#0000CC">4</td>-->
+<!--	</tr>-->
+<!--	<tr>-->
+<!--		<td data-cell-blue="#0000CC">5</td>-->
+<!--		<td data-cell-blue="#0000CC">6</td>-->
+<!--		<td data-cell-red="#CC0000">7</td>-->
+<!--		<td data-cell-red="#CC0000">8</td>-->
+<!--	</tr>-->
+<!--</table>-->
 
-    <!--<div class="msg">-->
-    <!--	Important information!-->
-    <!--</div>-->
+<!--<div class="msg">-->
+<!--	Important information!-->
+<!--</div>-->
 
-    <!--<h1>Solar system:</h1>-->
-    <!--<ul class="list">-->
-    <!--	<li>Sun</li>-->
-    <!--	<li>Mercury</li>-->
-    <!--	<li>Venus</li>-->
-    <!--	<li>Earth</li>-->
-    <!--</ul>-->
+<!--<h1>Solar system:</h1>-->
+<!--<ul class="list">-->
+<!--	<li>Sun</li>-->
+<!--	<li>Mercury</li>-->
+<!--	<li>Venus</li>-->
+<!--	<li>Earth</li>-->
+<!--</ul>-->
 
-    <!--<table border=1 cellpadding="10">-->
-    <!--	<tr>-->
-    <!--		<td>Sun</td>-->
-    <!--		<td>Star</td>-->
-    <!--	</tr>-->
-    <!--	<tr>-->
-    <!--		<td>Mercury</td>-->
-    <!--		<td>Planet</td>-->
-    <!--	</tr>-->
-    <!--</table>-->
+<!--<table border=1 cellpadding="10">-->
+<!--	<tr>-->
+<!--		<td>Sun</td>-->
+<!--		<td>Star</td>-->
+<!--	</tr>-->
+<!--	<tr>-->
+<!--		<td>Mercury</td>-->
+<!--		<td>Planet</td>-->
+<!--	</tr>-->
+<!--</table>-->
 
-    <!--<ul></ul>-->
+<!--<ul></ul>-->
 
-    <!--<script>-->
-    <!--  // document.write('<p>String wrote the write method</p>')-->
-    <!--  setTimeout(function () {-->
-    <!--    document.write('<p>String wrote the write method</p>')-->
-    <!--  }, 500);-->
-    <!--</script>-->
-    <!--<ul class="list">-->
-    <!--  <li>Sun</li>-->
-    <!--  <li>Mercury</li>-->
-    <!--  <li>Venus</li>-->
-    <!--  <li>Earth</li>-->
-    <!--</ul>-->
+<!--<script>-->
+<!--  // document.write('<p>String wrote the write method</p>')-->
+<!--  setTimeout(function () {-->
+<!--    document.write('<p>String wrote the write method</p>')-->
+<!--  }, 500);-->
+<!--</script>-->
+<!--<ul class="list">-->
+<!--  <li>Sun</li>-->
+<!--  <li>Mercury</li>-->
+<!--  <li>Venus</li>-->
+<!--  <li>Earth</li>-->
+<!--</ul>-->
 
-    <!--<div class="one">One</div>-->
-    <!--<div class="one">Two</div>-->
-    <!--<div class="one">Three</div>-->
+<!--<div class="one">One</div>-->
+<!--<div class="one">Two</div>-->
+<!--<div class="one">Three</div>-->
 
-    <!--<div><input name="rrr" type="radio" value="1" checked>Lorem.</input></div>-->
-    <!--<div><input name="rrr" type="radio" value="2">Lorem ipsum.</input></div>-->
-    <!--<div><input name="rrr" type="radio" value="3">Lorem ipsum dolor.</input></div>-->
+<!--<div><input name="rrr" type="radio" value="1" checked>Lorem.</input></div>-->
+<!--<div><input name="rrr" type="radio" value="2">Lorem ipsum.</input></div>-->
+<!--<div><input name="rrr" type="radio" value="3">Lorem ipsum dolor.</input></div>-->
 
-    <!--<button>Push</button>-->
+<!--<button>Push</button>-->
 
-    <!--<div id="res"></div>-->
+<!--<div id="res"></div>-->
 
-    <!--<p>one</p>-->
-    <!--<p>two</p>-->
-    <!--<p>three</p>-->
+<!--<p>one</p>-->
+<!--<p>two</p>-->
+<!--<p>three</p>-->
 
-    <!--<div class="choose-date" style="display:flex;">-->
-    <!--  <div class="wrapper-date" style="text-align: right">-->
-    <!--    <div><label for="start-date">From: </label><input type="date" id="start-date"></div>-->
-    <!--    <div><label for="end-date">To: </label><input type="date" id="end-date"></div>-->
-    <!--  </div>-->
-    <!--  <div style="margin: 1rem 0 1rem .5rem">-->
-    <!--    <button>Show</button>-->
-    <!--  </div>-->
-    <!--</div>-->
+<!--<div class="choose-date" style="display:flex;">-->
+<!--  <div class="wrapper-date" style="text-align: right">-->
+<!--    <div><label for="start-date">From: </label><input type="date" id="start-date"></div>-->
+<!--    <div><label for="end-date">To: </label><input type="date" id="end-date"></div>-->
+<!--  </div>-->
+<!--  <div style="margin: 1rem 0 1rem .5rem">-->
+<!--    <button>Show</button>-->
+<!--  </div>-->
+<!--</div>-->
 
-    <!--<div class="out">-->
-    <!--  <h3 id="h3">Hello H3!</h3>-->
-    <!--  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, numquam.</p>-->
-    <!--</div>-->
+<!--<div class="out">-->
+<!--  <h3 id="h3">Hello H3!</h3>-->
+<!--  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, numquam.</p>-->
+<!--</div>-->
 
-    <!--<script src="js/libs/lodash.js"></script>-->
-  </body>
+<!--<script src="js/libs/lodash.js"></script>-->
+</body>
 </html>

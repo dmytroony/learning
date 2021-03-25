@@ -633,3 +633,39 @@
 // const output2= logPerson`Name: ${personName2}, Age: ${personAge2}!`;
 // console.log(output);
 // console.log(output2);
+
+// // let a, b = null;
+// // let result = a ?? b;
+//
+// let a, b = 1;
+//
+// let result = (a !== null && a !== undefined) ? a : b;
+//
+// console.log(result);
+
+// // let user;
+// let user = 'Dmytro';
+//
+// console.log(user ?? 'Anon');
+
+// let firstName = null;
+// let lastName = null;
+// let nickName;
+// // let nickName = 'Super coder';
+//
+// console.log(firstName ?? lastName ?? nickName ?? 'Anonymous');
+
+// let height = 0;
+//
+// console.log('||', height || 100);
+// console.log('??', height ?? 100);
+
+let x = (1 && 2) ?? 3;
+console.log(x);
+
+// BDD - Mocha
+describe('pow', function () {
+    it('is reduced to the power n', function () {
+        assert.equal(pow(2, 3), 8);
+    });
+});
