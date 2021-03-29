@@ -13,6 +13,181 @@
 }
 
 .btn-outline-dark:hover {
-    color: #fff;
+    color: hsl(0, 2%, 12%);
     border-color: hsl(0, 2%, 12%);
+}
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed top center;
+    background-size: cover;
+    position: relative;
+}
+
+#hero::before {
+    content: "";
+    background: rgba(0,0,0, .6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hero .container {
+    position: relative;
+    padding-top: 75px;
+}
+
+#hero h1 {
+    margin: 0;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 64px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+
+#hero h2 {
+    color: #fff;
+    margin: 10px 0 0 0;
+    font-size: 24px;
+}
+
+#hero .icon-box h3 {
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+#hero .icon-box a {
+    color: #fff;
+}
+
+#hero .icon-box a:hover {
+    color: #ffc451;
+}
+
+.icon-box {
+    padding: 30px 20px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    height: 100%;
+    text-align: center;
+}
+
+.icon-box:hover {
+    border-color: #ffc451;
+}
+
+.about li {
+    list-style-type: none;
+}
+
+.cta {
+    background: linear-gradient(rgba(2,2,2, .5), rgba(2,2,2, .8)), url(https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) fixed center center;
+    padding: 80px 0;
+    color: #fff;
+}
+
+.cta h3 {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.cta-btn {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.cta-btn:hover {
+    background: #ffc451;
+    border-color: #ffc451;
+    color: #151515;
+}
+
+.carousel-indicators {
+    bottom: -80px;
+}
+
+.carousel-indicators li {
+    background-color: #000;
+}
+
+.team {
+    padding: 60px;
+}
+
+.team .member {
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0,0,0, .5);
+}
+
+.team .member .member-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.team .member .social {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    right: 0;
+    opacity: 0;
+    transition: ease-in-out .3s;
+}
+
+.team .member .social a {
+    transition: ease-in-out .3s;
+    color: #151515;
+    margin: 0 3px;
+    padding-top: 7px;
+    border-radius: 4px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255, .8);
+    display: inline-block;
+}
+
+.team .member .social a:hover {
+    background: #ffc451;
+}
+
+.team .member .member-info {
+    padding: 25px 15px;
+}
+
+.team .member .member-info h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.team .member .member-info span {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #aaa;
+}
+
+.team .member .member-info p {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 26px;
+    color: #777;
+}
+
+.team .member:hover .social {
+    opacity: 1;
+    bottom: 15px;
 }
