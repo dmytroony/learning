@@ -1,20 +1,25 @@
 
-$(document).ready(function(){
-    $('.modal').modal();
-    $('.parallax').parallax();
-    $('.sidenav').sidenav();
-    $('.slider').slider({
-        full_width: true,
-    });
-    $('.parallax').parallax();
-    $('.myreviews').carousel({
+$(document).ready(function () {
+    $(".sidenav").sidenav();
+    $(".slider").slider({ full_width: true });
+
+    $(".myreviews").carousel({
         numVisible: 7,
         shift: 55,
         padding: 55,
     });
+
+    $(".modal").modal();
+    $(".parallax").parallax();
+
+    $(".carousel.carousel-slider.myslider").carousel({
+        fullWidth: true,
+        indicators: true,
+    });
 });
 
 function toggleModal() {
-    var instance = M.Modal.getInstance($('#modal3'))
+    var instance = M.Modal.getInstance($("#modal3"));
+
     instance.open();
 }

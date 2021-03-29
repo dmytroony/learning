@@ -21,17 +21,17 @@
             <a href="#" class="brand-logo">CafeKing</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#" onclick="toggleModal();">Home</a></li>
-                <li><a href="#" onclick="toggleModal();">About</a></li>
-                <li><a href="#" onclick="toggleModal();">Coffee</a></li>
-                <li><a href="#" onclick="toggleModal();">Surprise!</a></li>
-                <li><a href="#" onclick="toggleModal();">Contact</a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#" onclick="toggleModal();" class="hrw-grow">About</a></li>
+                <li><a href="#" onclick="toggleModal();" class="hrw-grow">Coffee</a></li>
+                <li><a href="#" onclick="toggleModal();" class="hrw-grow">Surprise!</a></li>
+                <li><a href="#" onclick="toggleModal();" class="hrw-grow">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="#" onclick="toggleModal();">Home</a></li>
+        <li><a href="./index.html">Home</a></li>
         <li><a href="#" onclick="toggleModal();">About</a></li>
         <li><a href="#" onclick="toggleModal();">Coffee</a></li>
         <li><a href="#" onclick="toggleModal();">Surprise!</a></li>
@@ -46,7 +46,7 @@
                 <img src="./images/banner1.png" alt="first image">
                 <div class="caption center-align white-text">
                     <h3>CafeKing - Quality cafe</h3>
-                    <h5 class="light text-lighten-3">
+                    <h5 class="light white-text text-lighten-3">
                         We serve one of the best coffee around!
                     </h5>
                 </div>
@@ -55,7 +55,7 @@
                 <img src="./images/banner2.png" alt="second image">
                 <div class="caption center-align white-text">
                     <h3>CafeKing - Finest coffee</h3>
-                    <h5 class="light text-lighten-3">
+                    <h5 class="light white-text text-lighten-3">
                         We serve one of the best coffee around!
                     </h5>
                 </div>
@@ -141,24 +141,27 @@
             </div>
         </div>
     </div>
-</section>
-
-<section class="fparallax">
-    <div class="parallax-container">
-        <div class="parallax">
-            <img src="./images/caro2.png">
+    <div class="row center" style="margin-bottom: 50px;">
+        <div class="col s12">
+            <a href="javascript::void(0)" onclick="toggleModal();" class="waves-effect waves-light btn" style="background: #6f4037 !important;">Explore More &raquo;</a>
         </div>
     </div>
 </section>
+
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="./images/caro2.png">
+    </div>
+</div>
 
 <section class="fabout">
     <div class="section white center">
         <div class="row container">
             <h2 class="header">About Us</h2>
-            <p class="grey-text text-darken-3">
+            <p class="grey-text text-darken-3 lighten-3">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias, corporis dicta error exercitationem fuga incidunt inventore labore laborum, maiores, molestias nostrum numquam placeat praesentium similique vel veniam. Ab aut consectetur culpa doloremque ducimus eius explicabo in ipsum laborum, libero obcaecati officia optio porro possimus quisquam saepe sunt tempore temporibus unde ut velit, voluptate voluptates. Architecto harum iusto minima natus quaerat repellendus saepe sed sit. Deserunt fugiat impedit, magni minus possimus quaerat unde vel velit. Architecto aut autem blanditiis consectetur doloremque dolores earum eos in ipsum molestias natus, obcaecati, odio officiis omnis, possimus quaerat quam quia quibusdam sed sit suscipit!
             </p>
-            <a href="#" class="btn waves-effect waves-light" style="background: #6f4037 !important;">
+            <a href="javascript::void(0)" onclick="toggleModal();" class="btn waves-effect waves-light" style="background: #6f4037 !important;">
                 Read more
             </a>
         </div>
@@ -338,29 +341,31 @@
             <div class="row">
                 <div class="col l6 s12">
                     <h4 class="white-text">Contact Us</h4>
-                    <p class="grey-text">
+                    <p class="grey-text text-lighten-4">
                         ABC 58000, Chernivtsi, UA
                     </p>
-                    <p class="grey-text">
+                    <p class="grey-text text-lighten-4">
                         +9379992
                     </p>
                 </div>
                 <div class="col l6 s12">
                     <h4 class="white-text">Social Media</h4>
                     <ul>
-                        <li><a href="#" class="grey-text">Facebook</a></li>
-                        <li><a href="#" class="grey-text">Twitter</a></li>
-                        <li><a href="#" class="grey-text">Linkedin</a></li>
+                        <li><a href="javascript::void(0)" onclick="toggleModal();" class="grey-text text-lighten-4">Facebook</a></li>
+                        <li><a href="javascript::void(0)" onclick="toggleModal();" class="grey-text text-lighten-4">Twitter</a></li>
+                        <li><a href="javascript::void(0)" onclick="toggleModal();" class="grey-text text-lighten-4">Linkedin</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="row footer-two">
-            <div class="col l6 s12">
-                <p class="white-text">&copy; CafeKing</p>
-            </div>
-            <div class="col l6 s12">
-                <p class="white-text">Designed by LCO team</p>
+        <div class="footer-copyright footer-two">
+            <div class="row container white-text">
+                <div class="col s12 m6 l6">
+                    <span>&copy; CafeKing</span>
+                </div>
+                <div class="col s12 m6 l6">
+                    <span>Designed by LCO team</span>
+                </div>
             </div>
         </div>
     </footer>
