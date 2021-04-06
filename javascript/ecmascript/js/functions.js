@@ -126,13 +126,314 @@
 //   counter === 5 ? clearInterval(interval) : console.log(++counter);
 // }, 1000);
 
-function createMember(name) {
-  return function(lastName) {
-    console.log(name + lastName);
-  };
-}
+// function createMember(name) {
+//   return function(lastName) {
+//     console.log(name + lastName);
+//   };
+// }
+//
+// const logWithLastName = createMember("Name1");
+//
+// console.log(logWithLastName("lastName1"));
+// console.log(logWithLastName("lastName2"));
 
-const logWithLastName = createMember("Name1");
+// function checkAge(age) {
+//   age = +prompt('Enter your age here...', '18');
+//
+//   if (age > 18) {
+//     console.log(true);
+//   } else {
+//     return confirm('Did your parents give an access?');
+//   }
+// }
+//
+// checkAge();
 
-console.log(logWithLastName("lastName1"));
-console.log(logWithLastName("lastName2"));
+// function checkAge(age) {
+//   // return (age > 18) ? true : confirm('Did your parents give an access?');
+//
+//   return (age > 18) || confirm('Did your parents give an access?');
+// }
+//
+// console.log(checkAge(19));
+
+// function min(a, b) {
+//   return Math.min(a, b);
+// }
+//
+// console.log(min(2, 5)); // 2
+// console.log(min(3, -1)); // -1
+// console.log(min(1, 1)); // 1
+
+// function pow(x, n) {
+//   if (n >= 1) return x ** n;
+//   else return `${n} not supported. use a natural number please`;
+// }
+
+// function pow(x, n) {
+//   let result = x;
+//
+//   for (let i = 1; i < n; i++) {
+//     result = result * x;
+//   }
+//
+//   return result;
+// }
+//
+// // let x = prompt("x?", '');
+// // let n = prompt("n?", '');
+// //
+// // if (n < 1) {
+// //   console.log(`Степень ${n} не поддерживается, используйте натуральное число`);
+// // } else {
+// //   console.log( pow(x, n) );
+// // }
+//
+// console.log(pow(3, 2)); // 9
+// // console.log(pow(3, 3)); // 27
+// // console.log(pow(1, 100)); // 1
+
+// let sayHi = function () {
+//   console.log('Hello from sayHi');
+// }
+//
+// sayHi();
+//
+// let func = sayHi;
+//
+// func = function () {
+//   console.log('Hello from func');
+// }
+//
+// func();
+//
+// console.log(sayHi);
+// console.log(func);
+
+// function ask(question, yes, no) {
+//   if ( confirm(question) ) {
+//     yes();
+//   } else {
+//     no();
+//   }
+// }
+//
+// function showOk() {
+//   console.log('Confirm?');
+// }
+//
+// function showCancel() {
+//   console.log('Cancelled.');
+// }
+//
+// ask('Do you agree?', showOk(), showCancel());
+
+// function ask(question, yes, no) {
+//     if (confirm(question)) yes();
+//     else no();
+// }
+//
+// ask('Do you agree?',
+//     () => console.log('Confirmed.'),
+//     () => console.log('Cancelled.')
+// );
+
+// const globalObj =  {
+//     obj: {
+//         a: 1,
+//         b: 2,
+//         c: 3,
+//         globalThis: () => {
+//             console.log('Hello from arrowFn: ', this);
+//         },
+//     },
+//
+//     globalObjThis: function fn () {
+//         console.log('Hello from globalObj: ', this)
+//     },
+// }
+//
+// globalObj.obj.globalThis();
+// globalObj.globalObjThis();
+
+// (function f() {
+//     function f() {
+//         return 1;
+//     }
+//
+//     return f();
+//
+//     function f() {
+//         return 2;
+//     }
+// })();
+
+// var x = [];
+//
+// function createSomeNodes() {
+//     var div,
+//         i = 100,
+//         frag = document.createDocumentFragment();
+//     for (;i > 0; i--) {
+//         div = document.createElement("div");
+//         div.appendChild(document.createTextNode(i + " - "+ new Date().toTimeString()));
+//         frag.appendChild(div);
+//     }
+//     document.getElementById("nodes").appendChild(frag);
+// }
+// function grow() {
+//     x.push(new Array(1000000).join('x'));
+//     createSomeNodes();
+//     setTimeout(grow,1000);
+// }
+
+// var x = [];
+//
+// function grow() {
+//     for (var i = 0; i < 10000; i++) {
+//         document.body.appendChild(document.createElement('div'));
+//     }
+//     x.push(new Array(1000000).join('x'));
+// }
+//
+// document.getElementById('grow').addEventListener('click', grow);
+
+// function readThere () {
+//     return there
+// }
+//
+// let there = 'dragons';
+//
+// console.log(readThere());
+
+// function readThere () {
+//     return there
+// }
+// console.log(readThere())
+// // ReferenceError
+// let there = 'dragons'
+
+// {
+//     let b = 2;
+//     {
+//         const c = 3;
+//         {
+//             console.log(c);
+//             {
+//                 {
+//                     var a = 1;
+//                 }
+//             }
+//         }
+//     }
+// }
+//
+// console.log(a);
+// console.log(b);
+
+// var nested;
+//
+// {
+//     let _nested = 'secret';
+//
+//     nested = function () {
+//         return _nested;
+//     }
+// }
+//
+// console.log(nested());
+
+// there = 'there is...';
+// // ReferenceError
+// let there = 'dragons';
+
+// var foo = 'out';
+//
+// function bar () {
+//     foo = 'in';
+//     console.log(foo);
+//     var foo;
+// }
+//
+// bar();
+//
+// console.log(foo);
+
+// console.log('var a1(before): ', window.a1);
+//
+// var a1 = 1;
+//
+// {
+//     var a11 = 11;
+// }
+//
+// console.log('let b(before): ', window.b);
+//
+// let b = 2;
+//
+// console.log('let c(before): ', window.c);
+//
+// const c = 3;
+//
+// console.log('var a1(after): ', window.a1);
+// console.log('var a11: ', window.a11);
+// console.log('let b(after): ', window.b);
+// console.log('var c(after): ', window.c);
+
+
+// console.log(d);
+// console.log(window.d);
+// console.log(d === window.d);
+//
+// var d = 1;
+
+// for (var i = 0; i < 5; i++) {
+//     console.log(i);
+// }
+
+// for (var i = 0; i < 5; i++) {
+//     (function(num) {
+//         setTimeout(function() {
+//             console.log(num);
+//         }, 0);
+//     })(i);
+// }
+
+// var obj = {
+//     a: 1,
+// };
+//
+// console.log(window.obj.a);
+
+// let user = {
+//     name: 'John',
+// };
+//
+// let admin = user;
+//
+// user = null;
+//
+// console.log(Object.prototype.user);
+
+// function marry(man, woman) {
+//     woman.husband = man;
+//     man.wife = woman;
+//
+//     return {
+//         father: man,
+//         mother: woman
+//     }
+// }
+//
+// let family = marry({
+//     name: "John"
+// }, {
+//     name: "Ann"
+// });
+//
+// console.log(family);
+//
+// delete family.father;
+// delete family.mother.husband;
+//
+// console.log(family);

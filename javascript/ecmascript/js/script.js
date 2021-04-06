@@ -660,12 +660,128 @@
 // console.log('||', height || 100);
 // console.log('??', height ?? 100);
 
-let x = (1 && 2) ?? 3;
-console.log(x);
+// let x = (1 && 2) ?? 3;
+// console.log(x);
+//
+// // BDD - Mocha
+// describe('pow', function () {
+//     it('is reduced to the power n', function () {
+//         assert.equal(pow(2, 3), 8);
+//     });
+// });
 
-// BDD - Mocha
-describe('pow', function () {
-    it('is reduced to the power n', function () {
-        assert.equal(pow(2, 3), 8);
-    });
-});
+// let result = '';
+//
+// for (let i = 0; i < 8; i++) {
+//     if (i % 2) {
+//         result += ' ';
+//     } else {
+//         result += 'x';
+//     }
+// }
+//
+// console.log(result);
+
+// let n = 10;
+//
+// for (let i = 0; i <= n; ++i) {
+//     if (i % 2 === 1) {
+//         console.log(i);
+//     }
+// }
+
+
+// let n = 10;
+//
+// nextPrime:
+//     for (let i = 2; i <= n; i++) { // Для всех i...
+//
+//         for (let j = 2; j < i; j++) { // check on divide
+//             if (i % j === 0) continue nextPrime;
+//         }
+//
+//         console.log( i ); // a simple number
+//     }
+
+// let result = '';
+// for (let i = 1; i <= 9; i++) {
+//     for (let j = 1; j <= 3; j ++) {
+//         result += i;
+//     }
+// }
+// console.log(result); // 111222333444555666777888999
+
+// let result = '';
+// for (let i = 1; i <= 3; i++) {
+//     for (let j = 1; j <= 3; j++) {
+//         result += `${i}${j} `;
+//     }
+// }
+//
+// console.log(result); // 11 12 13 21 22 23 31 32 33
+
+// let result = '';
+//
+// for (let i = 0; i < 3; i++) {
+//     for (let j = 0; j < 3; j++) {
+//         result += '*';
+//     }
+//     result += '_';
+// }
+//
+// console.log(result); // ***_***_***_
+
+// let result = '';
+//
+// for (let i = 1; i <= 3; i++) {
+//
+//     result += `${i}\n`;
+//
+//     for (let j = 1; j <= 3; j++) {
+//         result += '*_';
+//
+//         if (j === 3) result += '\n';
+//     }
+//
+// }
+//
+// console.log(result);
+//
+// // 1
+// // *_*_*_
+// // 2
+// // *_*_*_
+// // 3
+// // *_*_*_
+
+// let result = '';
+//
+// for (let i = 0; i < 4; i++) {
+//     for (let j = 0; j < 3; j++) {
+//         result += '*_';
+//     }
+//     result += '\n';
+// }
+//
+// console.log(result);
+//
+// // *_*_*_
+// // *_*_*_
+// // *_*_*_
+// // *_*_*_
+
+// let a = 4;
+//
+// switch (a) {
+//     case 3:
+//         console.log( 'Less' );
+//         break;
+//     case 4:
+//         console.log( 'In the target!' );
+//         break;
+//     case 5:
+//         console.log( 'More' );
+//         break;
+//     default:
+//         console.log( "what is the value?" );
+// }
