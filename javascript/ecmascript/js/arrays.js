@@ -1842,22 +1842,641 @@
 // }, ['Alphabet']);
 // console.log(allBooks);
 
-let list1 = [
-  {firstName: 'Noah', lastName: 'M.', country: 'Switzerland', continent: 'Europe', age: 19, language: 'JavaScript'},
-  {firstName: 'Maia', lastName: 'S.', country: 'Tahiti', continent: 'Oceania', age: 28, language: 'JavaScript'},
-  {firstName: 'Shufen', lastName: 'L.', country: 'Taiwan', continent: 'Asia', age: 35, language: 'HTML'},
-  {firstName: 'Sumayah', lastName: 'M.', country: 'Tajikistan', continent: 'Asia', age: 30, language: 'CSS'}
-];
-let list2 = [
-  {firstName: 'Oliver', lastName: 'Q.', country: 'Australia', continent: 'Oceania', age: 19, language: 'HTML'},
-  {firstName: 'Lukas', lastName: 'R.', country: 'Austria', continent: 'Europe', age: 89, language: 'HTML'}
-];
+// const cb = (acc, currVal, i) => {
+//   console.log('test');
+// }
+// const result = arr.reduce(cb, initialValue);
 
-function countDevelopers(list1) {
-  return list1.filter(el => el.language === 'JavaScript' && el.continent === 'Europe').length;
-}
+// const numbers = [1, 2, 3, 4, 5,];
+// const total1 = numbers.reduce((acc, currVal) => acc + currVal, []);
+// const total2 = numbers.reduce((acc, currVal) => acc + currVal);
+// console.log(total1, typeof total1);
+// console.log(total2, typeof total2);
 
-let allNames = list1.reduce((prev, curr) => {
-  return [...prev, ...curr.firstName];
-}, ['Names:']);
-console.log(allNames);
+// const str = 'hello';
+// console.log([str]);
+// console.log([...str]);
+
+// const fruits = ['apple', 'apple', 'banana', 'banana', 'orange', 'pear', 'apple',];
+//
+// const tally = fruits.reduce((acc, fruit) => {
+//   // if (acc[fruit]) acc[fruit] = acc[fruit] + 1;
+//   // else acc[fruit] = 1;
+//
+//   acc[fruit] ? acc[fruit] = acc[fruit] + 1 : acc[fruit] = 1;
+//
+//   return acc;
+// }, {});
+// console.log(tally);
+
+// function sumInput() {
+//   let numbers = [];
+//
+//   while (true) {
+//     let answer = prompt('Enter a num...', 0);
+//
+//     if (answer === '' || answer === null || !isFinite(answer)) break;
+//
+//     numbers.push(+answer);
+//   }
+//
+//   return numbers.reduce((acc, val) => acc + val, 0);
+// }
+//
+// console.log(sumInput());
+
+// function getMaxSum(arr) {
+//   let maxSum = 0,
+//       partialSum = 0;
+//
+//   for (let el of arr) {
+//     partialSum += el;
+//     maxSum = Math.max(maxSum, partialSum);
+//
+//     if (partialSum < 0) partialSum = 0;
+//   }
+//
+//   return maxSum;
+// }
+//
+// console.log(getMaxSum([-1, 2, 3, -9,]));
+
+// let isAnimal = true;
+// const name = 'ehot';
+// console.log({
+//   age: 123,
+//   ...isAnimal && { name }
+// });
+//
+//
+// Object.prototype.isObject = function (value) {
+//   return (typeof value === 'object');
+// }
+//
+// console.log(Array.isObject(0));
+
+// const foo = {
+//   ...{
+//     id: ticket.id,
+//     line,
+//     margin,
+//   },
+//   ...multiline && {
+//     bars: {
+//       upper_bar: lines.up,
+//       lower_bar: lines.low,
+//     },
+//   },
+// }
+
+// const buildAndObjectFromAQuery1 = query => {
+//   const obj = {};
+//
+//   if (query.foo) obj.foo = query.foo;
+//   if (query.bar) obj.bar = query.bar;
+//
+//   return obj;
+// };
+//
+// const buildAnObjectFromAQuery2 = query => ({
+//   ...query.foo && { foo: query.foo },
+//   ...query.bar && { bar: query.bar },
+// });
+
+// let arr = [1, 2, 3, 4,];
+// arr.forEach(el => console.log(el));
+
+// let arr = [1, 0, false, 1, 'parrot',];
+// console.log(arr.includes('parrot'));
+
+// let users = [
+//   {id: 1, name: "John"},
+//   {id: 2, name: "Peter"},
+//   {id: 3, name: "Maria"}
+// ];
+// let user = users.find(el => el.id === 1);
+// console.log(user.name);
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
+// let obj = {one: 1, two: 2,};
+// Object.prototype.isObject = (val => typeof val === 'object');
+// // let res = arr.reduce((sum, el) => sum + el, 0);
+// // console.log(res);
+//
+// console.log(Array.isArray(arr));
+// console.log(Array.isArray(obj));
+// console.log(Object.isObject(obj));
+// console.log(arr);
+// arr.copyWithin(2, 3, 5);
+// console.log(arr);
+
+// let army = {
+//   minAge: 18,
+//   maxAge: 27,
+//   canJoin(user) {
+//     return user.age >= this.minAge && user.age < this.maxAge;
+//   },
+// };
+//
+// let users = [
+//   {age: 16},
+//   {age: 20},
+//   {age: 23},
+//   {age: 30},
+// ];
+//
+// let soldiers = users.filter(army.canJoin, army);
+//
+// console.log(soldiers, soldiers.length);
+// soldiers.forEach(el => console.log(el));
+
+// 1
+// function camelize(str) {
+//   let arr = str.split('');
+// }
+// // console.log(camelize("background-color"));
+// console.log(camelize("list-style-image"));
+// // console.log(camelize("-webkit-transition"));
+
+// 2
+// let arr = [5, 3, 8, 1,];
+// function filterRange(arr, a, b) {
+//   return arr.filter(el => (el > a && el < b));
+// }
+// let filtered = filterRange(arr, 1, 9);
+// console.log(filtered);
+
+// 3
+// let arr = [5, 3, 8, 1,];
+// function filterRangeInPlace(arr, a, b) {
+//  //
+// }
+// filterRangeInPlace(arr, 1, 4);
+// console.log(arr);
+
+// 4
+// let arr = [5, 2, 1, -10, 8,];
+// arr.sort((a, b) => b - a);
+// console.log(arr);
+
+// 5
+// let arr = ["HTML", "JavaScript", "CSS"];
+// function copySorted(arr) {
+//   return arr.slice().sort();
+// }
+// let sorted = copySorted(arr);
+// console.log(sorted);
+// console.log(arr);
+
+// 6
+// function Calculator() {
+//   this.methods = {
+//     '-': (a, b) => a - b,
+//     '+': (a, b) => a + b,
+//   };
+//
+//   this.calculate = function (str) {
+//     let splitted = str.split(' '),
+//         a = +splitted[0],
+//         b = +splitted[2],
+//         operator = splitted[1];
+//
+//     if (!this.methods[operator] || isNaN(a) || isNaN(b)) return NaN;
+//
+//     return this.methods[operator](a, b);
+//   }
+//
+//   this.addMethod = function(methodName, callbackFn) {
+//     this.methods[methodName] = callbackFn;
+//   }
+// }
+// let calc = new Calculator();
+// console.log(calc.calculate('3 - 7')); // -4
+// console.log(calc.calculate('3 + 7')); // 10
+//
+// let powerCalc = new Calculator;
+// powerCalc.addMethod('*', (a, b) => a * b );
+// powerCalc.addMethod('/', (a, b) => Number((a / b).toFixed(4)) );
+// powerCalc.addMethod('**', (a, b) => a ** b );
+// console.log(powerCalc.calculate('3 * 7'));
+// console.log(powerCalc.calculate('3 / 7'));
+// console.log(powerCalc.calculate('3 ** 7'));
+
+// 7
+// let john = { name: "John", age: 25 };
+// let peter = { name: "Peter", age: 30 };
+// let maria = { name: "Maria", age: 28 };
+//
+// let users = [
+//   john,
+//   peter,
+//   maria,
+// ];
+//
+// for (let user of users) {
+//   console.log(user.name);
+// }
+//
+// // let names = [];
+// // users.forEach(user => names.push(user.name));
+//
+// let names = users.map(user => user.name);
+//
+// console.log(names);
+
+// 8
+// let john = {name: "John", surname: 'Doe', id: 1,};
+// let peter = {name: "Peter", surname: 'Doer', id: 2,};
+// let maria = {name: "Maria", surname: 'Does', id: 3,};
+// let users = [john, peter, maria,];
+//
+// let usersMapped = users.map(user => ({
+//       fullName: `${user.name} ${user.surname}`,
+//       id: user.id,
+//     })
+// );
+// console.log(usersMapped);
+// console.log(usersMapped[0].id);
+// console.log(usersMapped[0].fullName);
+
+// 9
+// let john = { name: "John", age: 25 };
+// let peter = { name: "Peter", age: 30 };
+// let maria = { name: "Maria", age: 28 };
+// let arr = [john, peter, maria,];
+//
+// function sortByAge(users) {
+//   return users.sort((a, b) => a.age - b.age);
+// }
+//
+// console.log(sortByAge(arr));
+// console.log(arr[0].name);
+// console.log(arr[1].name);
+// console.log(arr[2].name);
+
+// let arr = [1, 2, 3,];
+//
+// function shuffle(array) {
+//   // return array.sort(() => Math.random() - 0.5);
+//
+//   for (let i = array.length - 1; i > 0; i--) {
+//     let j = Math.floor(Math.random() * (i + 1));
+//     [array[i], array[j]] = [array[j], array[i]];
+//   }
+//   return array;
+// }
+//
+// console.log(shuffle(arr));
+// console.log(shuffle(arr));
+// console.log(shuffle(arr));
+
+// 10
+// let john = {name: "John", age: 25};
+// let peter = {name: "Peter", age: 30};
+// let maria = {name: "Maria", age: 28};
+// let arr = [john, peter, maria,];
+//
+// function getAverageAge(users) {
+//   // return Math.ceil(array.map(user => user.age).reduce((acc, age) => acc + age, 0) / array.length);
+//   return Math.ceil(users.reduce((acc, user) => acc + user.age, 0) / users.length);
+// }
+// console.log(getAverageAge(arr));
+
+// 11
+// let strings = ["Lorem", "ipsum", "ipsum", "sit",
+//   "sit", "consectetur", "elit", "elit", ":-0"
+// ];
+//
+// function unique(arr) {
+//   let result = [];
+//
+//   for (const el of arr) {
+//     if (!result.includes(el)) result.push(el);
+//   }
+//
+//   return result;
+// }
+//
+// console.log(unique(strings));
+
+// // 1
+// function camelize(str) {
+//   return str
+//       .split('-')
+//       .map((el, i) => i === 0 ? el : el[0].toUpperCase() + el.slice(1))
+//       .join('');
+// }
+// console.log(camelize("list-style-image"));
+//
+// console.log(camelize("background-color"));
+// console.log(camelize("list-style-image"));
+// console.log(camelize("-webkit-transition"));
+
+// // 2
+// let arr = [5, 3, 8, 1, 2,];
+//
+// function filterRange(array, a, b) {
+//   return array.filter(el => el > a && el < b);
+// }
+//
+// let filtered = filterRange(arr, 1, 4);
+// console.log(filtered);
+
+// // 3
+// let arr = [5, 3, 8, 1];
+// console.log(arr);
+//
+// function filterRangeInPlace(numbers, a, b) {
+//
+//   numbers.forEach((el, i) => {
+//     if (el < a || el > b) {
+//       arr.splice(i, 1);
+//     }
+//   });
+//
+// }
+//
+// filterRangeInPlace(arr, 1, 4);
+// console.log(arr);
+
+// // 4
+// let arr = [5, 2, 1, -10, 8,];
+// console.log(arr.sort((a, b) => b - a));
+
+// // 5
+// let arr = ["HTML", "JavaScript", "CSS",];
+//
+// function copySorted(array) {
+//   return [...array].sort();
+// }
+// let sorted = copySorted(arr);
+//
+// console.log(arr);
+// console.log(sorted);
+
+// // 6
+// function Calculator() {
+//   this.methods = {
+//     '+': (a, b) => a + b,
+//     '-': (a, b) => a - b,
+//   };
+//   this.calculate = function calculate(str) {
+//     let splitT = str.split(' ');
+//     let operator = splitT[1],
+//         a = +splitT[0],
+//         b = +splitT[2];
+//
+//     if (!this.methods[operator] || isNaN(a) || isNaN(b)) return NaN;
+//
+//     return this.methods[operator](a, b);
+//   }
+//
+//   this.addMethod = function(name, func) {
+//     this.methods[name] = func;
+//   };
+// }
+//
+// let calc = new Calculator;
+// console.log(calc.calculate('3 + 7'));
+// console.log(calc.calculate('3 - 7'));
+//
+// let powerCalc = new Calculator;
+// powerCalc.addMethod("*", (a, b) => a * b);
+// powerCalc.addMethod("/", (a, b) => a / b);
+// powerCalc.addMethod("**", (a, b) => a ** b);
+// console.log(powerCalc.calculate('2 ** 3'));
+
+// // 7
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+// let users = [ vasya, petya, masha ];
+// let names = users.map(user => user.name);
+// console.log(names);
+
+// // 8
+// let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
+// let petya = { name: "Петя", surname: "Иванов", id: 2 };
+// let masha = { name: "Маша", surname: "Петрова", id: 3 };
+// let users = [ vasya, petya, masha ];
+// let usersMapped = users.map(user => ({
+//   fullName: `${user.name} ${user.surname}`,
+//   id: user.id,
+// }));
+// console.log(usersMapped);
+
+// // 9
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 28 };
+// let arr = [ vasya, petya, masha ];
+// console.log(arr);
+// function sortByAge(users) {
+//   users.sort((a, b) => a.age - b.age);
+// }
+// sortByAge(arr);
+//
+// console.log(arr[0].name);
+// console.log(arr[1].name);
+// console.log(arr[2].name);
+
+// // 10
+// let arr = [1, 2, 3,];
+//
+// function shuffle(numbers) {
+//   // console.log(numbers.sort(() => Math.random() - .5)); // v.1
+//
+//   for (let i = numbers.length - 1; i > 0; i--) {
+//     let j = Math.floor(Math.random() * (i + 1));
+//
+//     [arr[i], arr[j]] = [arr[j], arr[i]];
+//
+//     // let t = numbers[i];
+//     // numbers[i] = numbers[j];
+//     // numbers[j] = t;
+//   }
+//   console.log(numbers);
+// }
+//
+// shuffle(arr);
+// // shuffle(arr);
+// // shuffle(arr);
+
+// // 11
+// let vasya = { name: "Вася", age: 25 };
+// let petya = { name: "Петя", age: 30 };
+// let masha = { name: "Маша", age: 29 };
+// let arr = [ vasya, petya, masha ];
+//
+// function getAverageAge(users) {
+//   return users
+//       .map(user => user.age)
+//       .reduce((acc, age) => acc + age / users.length, 0);
+// }
+//
+// console.log(getAverageAge(arr));
+
+// // 12
+// let strings = ["кришна", "кришна", "харе", "харе",
+//   "харе", "харе", "кришна", "кришна", ":-O"
+// ];
+// function unique(arr) {
+//   let result = [];
+//   arr.forEach((el, i, arr) => {
+//     if (!result.includes(el)) result.push(el);
+//   });
+//   return result;
+// }
+//
+// console.log(unique(strings));
+
+// // Symbol.iterator
+// let range = {
+//   from: 1,
+//   to: 5,
+// };
+// range[Symbol.iterator] = function () {
+//   return {
+//     current: this.from,
+//     last: this.to,
+//     next() {
+//       if (this.current <= this.last) {
+//         return {done: false, value: this.current++};
+//       }
+//       else return { done: true, };
+//     }
+//   };
+// };
+//
+// for (const el of range) {
+//   console.log(el);
+// }
+
+// let str = 'hello world';
+// for (const strElement of str) {
+//   console.log(strElement);
+// }
+
+// let str = 'Hello';
+// let iterator = str[Symbol.iterator]();
+//
+// while (true) {
+//   let result = iterator.next();
+//
+//   if (result.done) break;
+//
+//   console.log(result.value);
+// }
+
+// let arrayLike = {
+//   0: 'Hello',
+//   1: 'World',
+//   length: 2,
+// };
+//
+// let arr1 = Array.from(arrayLike);
+// console.log(arr1);
+
+// let str = 'hello';
+// let arr1 = Array.from(str);
+// console.log(arr1);
+// let arr2 = [...str];
+// console.log(arr2);
+
+// let map = new Map();
+// console.log(map);
+// map.set('a', 1);
+// console.log(map);
+// map.set(1, 'num1');
+// console.log(map);
+// map.set(true, 'bool1');
+// map.set("1", "str1");
+// console.log(map);
+// console.log(map.get(1));
+// console.log(map.get("1"));
+// console.log(map.get(true));
+// console.log(map.size);
+//
+// for (const mapElement of map) {
+//   console.log(mapElement);
+// }
+
+// let john = {
+//   name: 'John',
+// };
+// let visitsCountMap = new Map();
+//
+// visitsCountMap.set(john, 23);
+// console.log(visitsCountMap.get(john));
+
+// let john = {
+//   name: 'John',
+// };
+// let visitsCountObj = {};
+// visitsCountObj[john] = 123;
+// console.log(visitsCountObj[john]);
+// console.log(visitsCountObj["[object Object]"]);
+// console.log(visitsCountObj);
+
+// let recipeMap = new Map([
+//     ['cucumber', 500],
+//     ['tomato', 340],
+//     ['onion', 50],
+// ]);
+// // for (const vegetable of recipeMap.keys()) {
+// //   console.log(vegetable);
+// // }
+// // for (const amount of recipeMap.values()) {
+// //   console.log(amount);
+// // }
+// // for (const entry of recipeMap) { // equal to map.entries()
+// //   console.log(entry);
+// // }
+//
+// recipeMap.forEach((value, key, map) => {
+//   console.log(`${key}: ${value}`);
+// });
+
+// let map = new Map([
+//     ['1', 'str1',],
+//     [1, 'num1',],
+//     [true, 'bool1',],
+// ]);
+// console.log(map.get('1'));
+
+// let obj = {
+//   name: "John",
+//   age: 30,
+// };
+//
+// let map = new Map(Object.entries(obj));
+// console.log(map);
+// map.set('name', 'Peter');
+// console.log(map, map.size);
+// // map.clear();
+// // console.log(map);
+// map.set('1', 'str1')
+//     .set(1, 'num1')
+//     .set(true, 'bool1');
+// console.log(map);
+// console.log(map.keys());
+// console.log(map.values());
+// console.log(map.entries());
+
+// let recipeMap = new Map([
+//   ['cucumber', 500,],
+//   ['tomato', 350,],
+//   ['onion', 50,],
+// ]);
+// // for (const vegetable of recipeMap.entries()) {
+// //   console.log(vegetable);
+// // }
+// let i = 1;
+// recipeMap.forEach((value, key, map) => console.log(`${i++}) ${key}: ${value};`));
+
+// let map = new Map([
+//     ['1', 'str1',],
+//     [1, 'num1',],
+//     [true, 'bool1',],
+// ]);
+// console.log(map.get('1'));
