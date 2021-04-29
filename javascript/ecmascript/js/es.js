@@ -2040,4 +2040,239 @@
 // };
 // extractCurrencyValue('$123');
 
+// let user = {
+//   name: 'John',
+//   age: 30,
+//   isAdmin: false,
+//   id_1: Symbol('id1'),
+// };
+// for (const userElement of Object.values(user)) {
+//   console.log(userElement);
+// }
+// for (const userKey in user) {
+//   console.log(userKey);
+// }
+// console.log(Object.entries(user));
+// let map = new Map(Object.entries(user));
+// console.log(map);
+// console.log(Object.getOwnPropertyNames(user));
+// console.log(Reflect.ownKeys(user));
 
+// for (const userElement of Object.values(user)) {
+//   console.log(userElement);
+// }
+
+// for (const userKey in user) {
+//   console.log(userKey);
+// }
+// console.log(Object.keys(user));
+// console.log(Object.values(user));
+// console.log(Object.entries(user));
+// console.log(Reflect.ownKeys(user));
+// console.log(Object.getOwnPropertySymbols(user));
+
+// let salaries = {
+//   "John": 100,
+//   "Pete": 300,
+//   "Mary": 250
+// };
+//
+// function totalSalary(value) {
+//   return Object.values(salaries).reduce((acc, el) => acc + el, 0 );
+// }
+//
+// console.log(totalSalary(salaries));
+
+// let user = {
+//   name: 'John',
+//   age: 30,
+// };
+//
+// function countProps(obj) {
+//   return Object.keys(obj).length;
+// }
+//
+// console.log(countProps(user));
+
+// let fullName = ['John', 'Doe',];
+// let [firstName, secondName] = fullName;
+// console.log(fullName);
+// console.log(firstName, secondName);
+
+// let [firstName, secondName] = 'John Doe'.split(' ');
+// console.log(firstName);
+// console.log(secondName);
+
+// let [firstName, , title] = ['Julius', 'Caesar', 'Consul', 'of the Roman Republic'];
+//
+// console.log(title);
+
+// let [a, b, c] = '123';
+// console.log(a, b, c);
+
+// let [one, two, three] = new Set([1, 2, 3]);
+// console.log(one, two, three);
+
+// let user = {};
+//
+// [user.name, user.surname] = 'John Doe'.split(' ');
+//
+// console.log(user.name);
+
+// let user = new Map();
+// user.set('name', 'John');
+// user.set('age', '30');
+//
+// for (const [key, value] of user) {
+//   console.log(`${key}: ${value}`);
+// }
+
+// let [name1, name2, ...rest] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+//
+// console.log(rest);
+// console.log(rest.length);
+
+// let [name = prompt('name?', 'John'), surname = prompt('surname?', 'Doe')] = ['Julius'];
+//
+// console.log(name);
+// console.log(surname);
+
+// let options = {
+//   title: "Menu",
+//   width: 100,
+//   height: 200
+// };
+//
+// // let {title, width, height} = options;
+// //
+// // console.log(title, width, height);
+//
+// let {width: w = 50, height: h = 100, title} = options
+// console.log(title, w, h);
+//
+// let { title, ...rest } = options;
+// console.log(title, rest);
+
+// let title, width, height;
+//
+// ({title, width, height} = {title: 'Menu', width: 200, height: 100})
+//
+// console.log(title);
+
+// let options = {
+//   size: {
+//     width: 100,
+//     height: 200,
+//   },
+//   items: ['Cake', 'Donut',],
+//   extra: true,
+// };
+//
+// let {
+//   size: {
+//     width,
+//     height,
+//   },
+//   items: [item1, item2],
+//   title = 'Menu',
+// } = options;
+//
+// console.log(title);
+// console.log(width);
+// console.log(item1);
+
+// function showMenu(title = "Untitled", width = 200, height = 100, items = []) {
+//   console.log(arguments);
+// }
+// showMenu("My Menu", undefined, undefined, ["Item1", "Item2"]);
+
+// let options = {
+//   title: "My menu",
+//   items: ["Item1", "Item2"]
+// };
+// function showMenu({title = "Untitled", width = 200, height = 100, items = []}) {
+//   //
+//   console.log(`${title}: ${width}x${height}`);
+//   console.log(items);
+// }
+// showMenu(options);
+
+// let options = {
+//   title: "My menu",
+//   items: ["Item1", "Item2"]
+// };
+//
+// function showMenu({
+//                     title = 'Untitled',
+//                     width: w = 100,
+//                     height: h = 200,
+//                     items: [item1, item2]
+//                   }) {
+//   console.log(`${title}: ${w}x${h}`);
+//   console.log(item1, item2);
+// }
+// showMenu(options);
+
+// let user = {
+//   name: "John",
+//   years: 30
+// };
+//
+// let { name, years: age, isAdmin = false } = user;
+// console.log(name, age, isAdmin);
+
+// let salaries = {
+//   "John": 100,
+//   "Pete": 300,
+//   "Mary": 250
+// };
+//
+// function topSalary(salaries) {
+//   let max = 0,
+//       maxName = null;
+//
+//   for (const [name, salary] of Object.entries(salaries)) {
+//     if (max < salary) {
+//       max = salary;
+//       maxName = name;
+//     }
+//   }
+//   return maxName;
+// }
+//
+// console.log(topSalary(salaries));
+
+// let arr = ['hello', 'world',];
+// let [str1, str2] = arr;
+// console.log(str1, str2);
+
+// let [a, b, c] = 'str';
+// console.log(a, b, c);
+
+// let user = {};
+// [user.name, user.surname] = 'John Doe'.split(' ');
+//
+// for (let [key, value] of Object.entries(user)) {
+//   console.log(`${key}: ${value}`);
+// }
+
+// let salaries = {
+//   "John": 100,
+//   "Pete": 300,
+//   "Mary": 250
+// };
+//
+// function topSalary(salaries) {
+//   let max = 0,
+//       maxName = null;
+//
+//   for (const [name, salary] of Object.entries(salaries)) {
+//     if (max < salary) {
+//       max = salary;
+//       maxName = name;
+//     }
+//   }
+//   return maxName;
+// }
+//
+// console.log(topSalary(salaries));
