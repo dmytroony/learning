@@ -2276,3 +2276,19 @@
 // }
 //
 // console.log(topSalary(salaries));
+
+// console.log(globalThis);
+// console.log(window);
+
+// window.console.log('hello');
+
+// window.currentUser = {
+//   name: 'John',
+// };
+// console.log(currentUser.name);
+// console.log(window.currentUser.name);
+
+// if (!window.Promise) console.log(`Your browser is too old`);
+// if (window.Promise) console.log(`Promise works`);
+
+
