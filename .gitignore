@@ -9,3 +9,5 @@ python/code-basics/.idea/
 .vs
 .vscode/
 *.swp
+python/code-basics/venv/
+*venv/
