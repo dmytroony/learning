@@ -437,3 +437,162 @@
 // delete family.mother.husband;
 //
 // console.log(family);
+
+// function sayHi() {
+//   console.log('hi!')
+// }
+// console.log(sayHi.name);
+
+// let sayHi = function () {
+//   console.log('Hi');
+// };
+// console.log(sayHi.name);
+
+// function fn(sayHi = function () {}) {
+//   console.log(sayHi.name);
+// }
+// fn();
+
+// function fn1(a) {}
+// function fn2(a, b) {}
+// function fn3(a, b, ...more) {}
+//
+// console.log(fn1.length);
+// console.log(fn2.length);
+// console.log(fn3.length);
+
+// function ask(question, ...handlers) {
+//   let isYes = confirm(question);
+//
+//   for (let handler of handlers) {
+//     if (handler.length === 0) {
+//       if (isYes) {
+//         handler();
+//       }
+//     } else {
+//       handler(isYes);
+//     }
+//   }
+// }
+//
+// ask('Question?',() =>
+//     alert('You answered Yes'), result => alert(result));
+
+// function sayHi() {
+//   console.log('Hi');
+//
+//   sayHi.counter++;
+// }
+// sayHi.counter = 0;
+// sayHi();
+// sayHi();
+// console.log(`${sayHi.name} called: ${sayHi.counter} times`);
+
+// function makeCounter() {
+//   function counter() {
+//     return counter.count++;
+//   }
+//
+//   counter.count = 0;
+//
+//   return counter;
+// }
+//
+// let counter = makeCounter();
+// console.log(counter());
+//
+// counter.count = 10;
+// console.log(counter());
+
+// NFE
+
+// let sayHi = function(who) {
+//   console.log(`Hello ${who}`);
+// };
+// sayHi('John');
+
+// let sayHi = function func(who) {
+//   console.log(`Hello ${who}`);
+// };
+// sayHi('John');
+// sayHi.func('John');
+
+// let sayHi = function func(who) {
+//   if (who) console.log(`Hello, ${who}`);
+//   else func('Guest');
+// }
+// sayHi('John');
+// sayHi();
+
+// function makeCounter() {
+//   function counter() {
+//     return counter.count++;
+//   }
+//
+//   counter.count = 0;
+//
+//   return counter;
+// }
+//
+// let counter = makeCounter();
+// console.log(counter());
+//
+// counter.count = 10;
+// console.log(counter());
+
+// function makeCounter() {
+//   let count = 0;
+//
+//   function counter() {
+//     return count++;
+//   }
+//
+//   counter.set = value => count = value;
+//   counter.decrease = () => count--;
+//
+//   return counter;
+// }
+//
+// let counter = makeCounter();
+// counter.set(10);
+// counter.decrease();
+//
+// console.log(counter());
+
+// function sum(a) {
+//   let currentSum = a;
+//
+//   function fn(b) {
+//     currentSum += b;
+//     return fn;
+//   }
+//
+//   // fn.toString = function() {
+//   //   return currentSum;
+//   // };
+//
+//   fn.toString = () => currentSum;
+//
+//   return fn;
+// }
+//
+// console.log(sum(2)(3)(5));
+
+// let sum = new Function('a', 'b', 'return a + b');
+//
+// console.log(sum(2, 3));
+
+// let sayHi = new Function('console.log("Hello!")');
+// sayHi();
+
+// function getFunc() {
+//   let value = 'test';
+//   // let func = new Function('console.log(value)');
+//   // let func = function () {
+//   //   console.log(value);
+//   // };
+//   let func = () => console.log(value);
+//
+//   return func;
+// }
+// getFunc()();

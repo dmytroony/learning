@@ -93,11 +93,83 @@
 //   console.log(e.code)
 // }
 
-function myTouch(event) {
-  console.log(event);
-  console.log("touched");
-  document.querySelector(".out-2").innerHTML = event;
-  document.querySelector(".out-1").innerHTML += "touched ";
-}
+// function myTouch(event) {
+//   console.log(event);
+//   console.log("touched");
+//   document.querySelector(".out-2").innerHTML = event;
+//   document.querySelector(".out-1").innerHTML += "touched ";
+// }
+//
+// document.querySelector(".block-1").addEventListener("touchstart", myTouch);
 
-document.querySelector(".block-1").addEventListener("touchstart", myTouch);
+// function sayHi() {
+//   console.log('Hello');
+// }
+// setTimeout(sayHi, 2000);
+
+// function sayHi(phrase, who) {
+//   console.log(`${phrase}, ${who}!`);
+// }
+// setTimeout(sayHi, 2000, 'Hello', 'John');
+
+// setTimeout('console.log("Hello!")', 2000);
+
+// setTimeout(() => console.log('Hello!'), 2000);
+
+// let timerId = setTimeout(() => console.log('nothing'), 2000);
+// console.log(timerId);
+//
+// clearTimeout(timerId);
+// console.log(timerId);
+
+// let timerId = setInterval(() => console.log('a sec...'), 1000);
+// setTimeout(() => {
+//   clearInterval(timerId);
+//   console.log('stop!');
+// }, 5000);
+
+// let timerId = setTimeout(function tick() {
+//   console.log('2sec');
+//   timerId = setTimeout(tick, 2000);
+// }, 2000);
+//
+// clearTimeout(timerId);
+
+// let delay = 5000;
+//
+// let timerId = setTimeout(function request() {
+//   // send a request
+//
+//   if ('error') {
+//     delay *= 2;
+//   }
+//
+//   timerId = setTimeout(request, delay);
+// }, delay);
+
+// let i = 1;
+// setInterval(function() {
+//   func(i);
+// }, 100);
+//
+// let j = 1;
+// setTimeout(function run() {
+//   func(i);
+//   setTimeout(run, 100);
+// }, 100);
+
+// setTimeout(() => console.log('World'));
+// console.log('Hello1');
+// console.log('Hello2');
+// console.log('Hello3');
+
+// let start = Date.now();
+// let times = [];
+//
+// setTimeout(function run() {
+//   times.push(Date.now() - start);
+//
+//   if (start + 100 < Date.now()) console.log(times);
+//   else setTimeout(run);
+// });
+

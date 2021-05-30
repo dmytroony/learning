@@ -2291,4 +2291,1332 @@
 // if (!window.Promise) console.log(`Your browser is too old`);
 // if (window.Promise) console.log(`Promise works`);
 
+// let range = {
+//   from: 1,
+//   to: 5,
+//   [Symbol.iterator]: function () {
+//     return {
+//       current: this.from,
+//       last: this.to,
+//       next() {
+//         if (this.current <= this.last) {
+//           return {
+//             done: false,
+//             value: this.current++,
+//           }
+//         } else {
+//           return {
+//             done: true,
+//           }
+//         }
+//       },
+//     }
+//   }
+// };
+//
+// for (const num of range) {
+//   console.log(num);
+// }
+
+// let str = 'strong';
+//
+// let iterator = str[Symbol.iterator]();
+//
+// while (true) {
+//   let result = iterator.next();
+//   if (result.done) break;
+//   console.log(result.value);
+// }
+
+// let arrayLike = {
+//   0: "Hello",
+//   1: "World",
+//   length: 2
+// };
+//
+// let arr1 = Array.from(arrayLike);
+// console.log(arr1);
+
+// let maap = new Map();
+// console.log(maap);
+// maap.set('one', 'two');
+// console.log(maap.get('one'));
+// console.log(maap.has('one'));
+// console.log(maap.size);
+
+// let john = { name: 'John', };
+//
+// let visitsCountMap = new Map();
+//
+// visitsCountMap.set(john, 123);
+//
+// console.log(visitsCountMap.get(john));
+
+// let recipeMap = new Map([
+//   ["огурец", 500],
+//   ["помидор", 350],
+//   ["лук",    50]
+// ]);
+//
+// console.log([...recipeMap.keys()]);
+
+// for (let vegetable of recipeMap.keys()) {
+//   console.log(vegetable);
+// }
+// for (let amount of recipeMap.values()) {
+//   console.log(amount);
+// }
+// for (let entry of recipeMap.entries()) {
+//   console.log(entry);
+// }
+// recipeMap.forEach((value, key, map) => {
+//   console.log(`${key}: ${value}`);
+// });
+
+// let recipeMap = new Map([
+//   ["огурец", 500],
+//   ["помидор", 350],
+//   ["лук",    50]
+// ]);
+//
+// let obj = Object.fromEntries(recipeMap.entries());
+// console.log(obj);
+//
+// let map = new Map(Object.entries(obj));
+// console.log(map);
+
+// let newSet = new Set(['hello', 'world',]);
+// console.log(newSet);
+// console.log(newSet.has('hello'));
+// console.log(newSet.size);
+
+// let set = new Set();
+// let john = {name: 'John'};
+// let pete = {name: 'Pete'};
+// let marry = {name: 'Marry'};
+// 
+// set.add(john).add(pete).add(marry);
+// console.log(set.size);
+// 
+// for (const user of set) {
+//   console.log(user.name);
+// }
+//
+// set.forEach(value => console.log(`value: ${value.name}`));
+
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+//   "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+//
+// function unique(arr) {
+//   return Array.from(new Set(arr));
+// }
+//
+// console.log(unique(values));
+
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+//
+// function aClean(arr) {
+//   let map = new Map();
+//
+//   for (let word of arr) {
+//     let sorted = word.toLowerCase().split('').sort().join('');
+//     map.set(sorted, word);
+//   }
+//
+//   console.log(map);
+//
+//   return Array.from(map.values());
+// }
+//
+// console.log(aClean(arr));
+
+// function aClean(arr) {
+//   let obj = {};
+//
+//   for (let i = 0; i < arr.length; i++) {
+//     let sorted = arr[i].toLowerCase().split('').sort().join('');
+//     obj[sorted] = arr[i];
+//   }
+//
+//   return Object.values(obj);
+// }
+// console.log(aClean(arr));
+
+// let arr = [1, 2, 3, 4, 5,];
+//
+// function duplicate(arr) {
+//   return [...arr, ...arr];
+// }
+//
+// console.log(duplicate(arr));
+
+// let map = new Map();
+//
+// map.set('name', 'John');
+// let keys = Array.from(map.keys());
+// keys.push('more');
+// console.log(keys);
+
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+//
+// function aClean(arr) {
+//   let map = new Map();
+//
+//   for (const word of arr) {
+//     const sorted = word.toLowerCase().split('').sort().join('');
+//     map.set(sorted, word);
+//   }
+//
+//   return Array.from(map.values());
+// }
+//
+// console.log(aClean(arr));
+
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+//
+// function aClean(arr) {
+//   let map = new Map();
+//
+//   for (const word of arr) {
+//     let sorted = word.toLowerCase().split('').sort().join('');
+//     map.set(sorted, word);
+//   }
+//
+//   return Array.from(map.values());
+// }
+//
+// console.log(aClean(arr));
+
+// Object iterator
+// let range = {
+//   from: 1,
+//   to: 5,
+//   [Symbol.iterator]: function () {
+//     return {
+//       current: this.from,
+//       last: this.to,
+//       next() {
+//         if (this.current <= this.last) {
+//           return { done: false, value: this.current++, };
+//         } else {
+//           return { done: true, };
+//         }
+//       },
+//     }
+//   },
+// };
+//
+// for (const number of range) {
+//   console.log(number);
+// }
+
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+//
+// function aClean(arr) {
+//   let map = new Map();
+//
+//   for (let word of arr) {
+//     let sorted = word.toLowerCase().split('').sort().join('');
+//     map.set(sorted, word);
+//   }
+//
+//   return Array.from(map.values());
+// }
+//
+// console.log(aClean(arr));
+
+// let weakMap = new WeakMap();
+// let obj = {};
+// weakMap.set(obj, 'ok');
+// console.log(weakMap.get(obj));
+
+// let visitsCountMap = new WeakMap();
+//
+// function countUser(user) {
+//   let count = visitsCountMap.get(user) || 0;
+//   visitsCountMap.set(user, ++count);
+//
+//   return count;
+// }
+//
+// let john = { name: 'John', };
+// console.log(countUser(john));
+// console.log(countUser(john));
+// console.log(countUser(john));
+// console.log(countUser(john));
+
+// let cache = new WeakMap();
+//
+// function process(obj) {
+//   if (!cache.has(obj)) {
+//     let result = Object.keys(obj);
+//     cache.set(obj, result);
+//   }
+//   return cache.get(obj);
+// }
+//
+// let obj = {name: 'John', age: 30,};
+// let result1 = process(obj);
+// console.log(result1);
+// obj.isAdmin = false;
+// let result2 = process(obj);
+// obj = null;
+// console.log(result2);
+
+// console.log([1, 2, 3,] + [3, 5, 6]);
+
+// let john = { name: 'John', };
+// let visitCountMap = new Map();
+//
+// visitCountMap.set(john, 123);
+//
+// console.log(visitCountMap.get(john));
+// console.log(Array.from(visitCountMap.keys()));
+// console.log(Array.from(visitCountMap.values()));
+// console.log(Array.from(visitCountMap.entries()));
+
+// let recipeMap = new Map([
+//   ["cucumber", 500],
+//   ["tomato", 350],
+//   ["onion",    50]
+// ]);
+
+// for (let key of recipeMap.keys()) console.log(key);
+// for (let value of recipeMap.values()) console.log(value);
+// for (let entry of recipeMap.entries()) console.log(entry);
+
+// recipeMap.forEach((key, value) => {
+//   console.log(`${value}: ${key}`);
+// });
+
+// recipeMap.forEach((value) => {
+//   console.log(`amount: ${value}`);
+// });
+
+// let map = new Map([
+//   ['1',  'str1'],
+//   [1,    'num1'],
+//   [true, 'bool1']
+// ]);
+//
+// console.log(map.get('1'));
+// console.log(map.get(1));
+// console.log(map.get(true));
+
+// let obj = {
+//   name: "John",
+//   age: 30
+// };
+//
+// let map = new Map(Object.entries(obj));
+//
+// let newObj = Object.fromEntries(map.entries());
+// console.log(newObj);
+
+// let values = ["Hare", "Krishna", "Hare", "Krishna",
+//   "Krishna", "Krishna", "Hare", "Hare", ":-O"
+// ];
+//
+// function unique(arr) {
+//   return Array.from(new Set(arr));
+// }
+// console.log(unique(values));
+
+// let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+//
+// function aClean(arr) {
+//   let map = new Map();
+//
+//   for (const word of arr) {
+//     let sorted = word.toLowerCase().split('').sort().join('');
+//     map.set(sorted, word);
+//   }
+//
+//   return Array.from(map.values());
+// }
+// console.log(aClean(arr));
+
+// let map = new Map();
+//
+// map.set("name", "John");
+//
+// let keys = Array.from(map.keys());
+//
+// keys.push("more");
+//
+// console.log(keys);
+
+// let john = {name: 'John',};
+//
+// console.log(john.name);
+//
+// john = null;
+//
+// console.log(john);
+
+// let weakMap = new WeakMap();
+//
+// let obj = {};
+//
+// weakMap.set(obj, 'ok');
+//
+// console.log(weakMap.get(obj));
+//
+// weakMap.set('test', 'whoops');
+
+// let john = { name: 'John', };
+//
+// let weakMap = new WeakMap();
+//
+// weakMap.set(john, '...');
+// console.log(weakMap.get(john));
+//
+// john = null;
+// console.log(weakMap.get(john));
+
+// let a = function example() {
+//   return typeof example;
+// }
+// console.log(a()); // function
+
+// let obj = {target: 'mafia',};
+//
+// let weakMap = new WeakMap();
+//
+// weakMap.set(obj, 'TOP SECRET');
+
+// let visitsCountMap = new WeakMap();
+//
+// function countUser(user) {
+//   let count = visitsCountMap.get(user) || 0;
+//
+//   visitsCountMap.set(user, count + 1);
+// }
+
+// let cache = new WeakMap();
+//
+// function process(obj) {
+//   if (!cache.has(obj)) {
+//     let result = Object.keys(obj); // doing something with the obj
+//
+//     cache.set(obj, result);
+//   }
+//   return cache.get(obj);
+// }
+//
+// let obj = {prop1: 'val1',};
+//
+// let result1 = process(obj);
+// let result2 = process(obj);
+//
+// obj = null;
+//
+// console.log(result1);
+// console.log(result2);
+//
+// console.log(cache.size);
+
+// let visitedSet = new WeakSet();
+// let john = { name: "John" };
+// let pete = { name: "Pete" };
+// let mary = { name: "Mary" };
+//
+// visitedSet.add(john);
+// visitedSet.add(pete);
+// visitedSet.add(john);
+//
+// console.log(visitedSet.has(john));
+// console.log(visitedSet.has(mary));
+
+// let messages = [
+//   {text: "Hello", from: "John"},
+//   {text: "How goes?", from: "John"},
+//   {text: "See you soon", from: "Alice"}
+// ];
+//
+// let readMessages = new WeakSet();
+// readMessages.add(messages[0]);
+// readMessages.add(messages[1]);
+// readMessages.add(messages[0]);
+// console.log(`Read message 0: ${readMessages.has(messages[0])}`);
+//
+// messages.shift();
+
+// let messages = [
+//   { text: "Hello", from: "John" },
+//   { text: "How goes?", from: "John" },
+//   { text: "See you soon", from: "Alice" }
+// ];
+//
+// let readMap = new WeakMap();
+// readMap.set(messages[0], new Date(2017, 1, 1));
+//
+// console.log(readMap);
+
+// let prices = {
+//   banana: 1,
+//   orange: 2,
+//   meat: 4,
+// };
+//
+// let doublePrices = Object.fromEntries(
+//     Object
+//         .entries(prices)
+//         .map(([key, value]) => [key, value * 2])
+// );
+// console.log(doublePrices.meat);
+
+// let salaries = {
+//   "John": 100,
+//   "Pete": 300,
+//   "Mary": 250
+// };
+//
+// function sumSalaries(val) {
+//   return Object.values(val)
+//       .reduce((acc, el) => acc + el, 0 );
+// }
+//
+// console.log(sumSalaries(salaries));
+
+// let user = {
+//   name: 'John',
+//   age: 30
+// };
+//
+// function count(obj) {
+//   return Object.keys(obj).length;
+// }
+//
+// console.log(count(user));
+
+// let arr = ['John', 'Doe',];
+//
+// let [firstName, secondName] = arr;
+//
+// console.log(secondName, firstName);
+
+// let [firstName, secondName] = 'John Doe'.split(' ');
+// console.log(secondName, firstName);
+
+// let arr = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+//
+// let [firstName, ,title] = arr;
+//
+// console.log(firstName, title);
+
+// let [a, b, c] = 'xyz';
+// console.log(a, b, c);
+
+// let [one, two, three] = new Set([1, 2, 3]);
+// console.log(three, two, one);
+
+// let user = {};
+//
+// [user.name, user.surname] = 'John Doe'.split(' ');
+//
+// console.log(user.name);
+
+// let user = {
+//   name: "John",
+//   age: 30
+// };
+//
+// for (const [key, value] of Object.entries(user)) {
+//   console.log(`${key}: ${value}`);
+// }
+
+// let user = new Map();
+//
+// user.set('name', 'John');
+// user.set('surname', 'Doe');
+//
+// for (let [key, value] of user) console.log(`${key}: ${value}`);
+
+// let options = {
+//   title: "Menu",
+//   width: 100,
+//   height: 200
+// };
+//
+// let {title, width, height} = options;
+// console.log(`${title} size: ${width}x${height}`);
+//
+// let {width: w, height: h, title: t} = options;
+// console.log(`${t} size: ${w}x${h}`);
+
+// let options = {
+//   title: "Menu",
+//   height: 200,
+//   width: 100,
+//   obj: {a: 2},
+// };
+//
+// // let {title, ...rest} = options;
+// //
+// // console.log(rest.height);
+// // console.log(rest.width);
+//
+// let {...rest} = options;
+// console.log(rest);
+//
+// console.log(rest.obj.a === options.obj.a);
+
+// let options = {
+//   size: {
+//     width: 100,
+//     height: 200
+//   },
+//   items: ["Cake", "Donut"],
+//   extra: true
+// };
+//
+// let {
+//   size: {
+//     width, height,
+//   },
+//   items: [item1, item2],
+//   title = 'Menu',
+// } = options;
+//
+// console.log(title, width, height, item1, item2);
+
+// let options = {
+//   title: "My menu",
+//   items: ["Item1", "Item2"]
+// };
+//
+// function showMenu({title: t = 'Untitled', width: w = 200, height: h = 100, items = []}) {
+//   console.log(`${t} size: ${w}x${h}`);
+//   console.log(items.join(', '));
+// }
+// showMenu(options);
+
+// let user = {
+//   name: "John",
+//   years: 30
+// };
+//
+// let {name, years: age, isAdmin = false} = user;
+//
+// console.log(name, age, isAdmin);
+
+// let salaries = {
+//   "John": 100,
+//   "Pete": 300,
+//   "Mary": 250,
+//   "Anna": 300,
+// };
+//
+// function topSalary(obj) {
+//   let max = 0;
+//   let maxName = null;
+//
+//   for (const [name, salary] of Object.entries(obj)) {
+//     if (max < salary) {
+//       max = salary;
+//       maxName = name;
+//     }
+//   }
+//
+//   return maxName;
+// }
+//
+// console.log(topSalary(salaries));
+
+// let now = new Date();
+// console.log(now);
+// console.log(Date.parse(now));
+// let now1 = Date.now();
+// console.log(now1);
+// console.log(new Date(now1));
+// console.log(new Date().getFullYear());
+// console.log(new Date().getMonth());
+// console.log(new Date().getDate());
+// console.log(new Date().getDay());
+// console.log(new Date().getTime());
+// console.log(new Date().getTimezoneOffset());
+
+// let start1 = new Date();
+// for (let i = 0; i < 100000000; i++) {
+//   let doSomething = i * i * i;
+// }
+// let end1 = new Date();
+// console.log(`${end1 - start1}ms`);
+
+
+// let start2 = Date.now();
+// for (let i = 0; i < 100000000; i++) {
+//   let doSomething = i * i * i;
+// }
+// let end2 = Date.now();
+// console.log(`${end2 - start2}ms`);
+// 
+// function diffSubtract(date1, date2) {
+//   return date2 - date1;
+// }
+// 
+// function diffGetTime(date1, date2) {
+//   return date2.getTime() - date1.getTime();
+// }
+// 
+// function bench(fn) {
+//   let date1 = new Date(0);
+//   let date2 = new Date();
+//   let start = Date.now();
+// 
+//   for (let i = 0; i < 100000; i++) fn(date1, date2);
+// 
+//   return Date.now() - start;
+// }
+// 
+// let time1 = 0;
+// let time2 = 0;
+// 
+// bench(diffSubtract);
+// bench(diffGetTime);
+// 
+// for (let i = 0; i < 10; i++) {
+//   time1 += bench(diffSubtract);
+//   time2 += bench(diffGetTime);
+// }
+// 
+// console.log(`Time diffSubtract: ${time1}ms`);
+// console.log(`Time diffGetTime: ${time2}ms`);
+
+// let date = new Date(2012, 0, 3);
+
+// function getWeekDay(date) {
+//   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat',];
+
+//   return days[date.getDay()];
+// }
+// console.log(getWeekDay(date));
+
+// function getLocalDay(date) {
+//   let day = date.getDay();
+
+//   if (day == 0) {
+//     day = 7;
+//   }
+
+//   return day;
+// }
+// console.log(getLocalDay(date));
+
+
+// let date = new Date(2015, 0, 2);
+
+// function getDateAgo(date, days) {
+//   let dateCopy = new Date(date);
+
+//   dateCopy.setDate(date.getDate() - days);
+//   return dateCopy.getDate();
+// }
+
+// console.log(getDateAgo(date, 1));
+// console.log(getDateAgo(date, 2));
+// console.log(getDateAgo(date, 365));
+
+
+// function getLastDayOfMonth(year, month) {
+//   return new Date(year, month + 1, 0).getDate();
+// }
+// console.log(getLastDayOfMonth(2012, 1));
+
+
+// function getSecondsToday() {
+//   let now = new Date();
+//   console.log(now);
+
+//   let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+//   let diff = now - today;
+
+//   return `sec: ${Math.round(diff / 1000)}`;
+// }
+
+// console.log(getSecondsToday());
+
+
+// function getSecondsToday() {
+//   let date = new Date();
+
+//   return date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds();
+// }
+
+// console.log(getSecondsToday());
+
+
+// function getSecondsToday() {
+//   let now = new Date(),
+//       today = new Date(now.getFullYear(), now.getMonth(), now.getDate()),
+//       diff = now - today;
+//   return Math.round(diff / 1000);
+// }
+// console.log(getSecondsToday());
+
+
+// function getSecondsToTomorrow() {
+//   let now = new Date();
+//   let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+//   let diff = tomorrow - now;
+//   return Math.round(diff / 1000);
+// }
+// console.log(getSecondsToTomorrow());
+
+// function formatDate(date) {
+//   let diff = new Date() - date;
+//   if (diff < 1000) return `just now`;
+
+//   let sec = Math.floor(diff / 1000);
+//   if (sec < 60) return `${sec} sec ago`;
+
+//   let min = Math.floor(diff / 60000);
+//   if (min < 60) return `${min} min ago`;
+
+//   let d = date;
+//   d = [
+//     '0' + d.getDate(),
+//     '0' + (d.getMonth() + 1),
+//     '' + d.getFullYear(),
+//     '0' + d.getHours(),
+//     '0' + d.getMinutes(),
+//   ].map(el => el.slice(-2));
+//   console.log(d);
+
+//   return d.slice(0, 3).join('.') + ' ' + d.slice(3).join(':');
+// }
+
+// console.log(formatDate(new Date(new Date - 1))); // just now
+// console.log(formatDate(new Date(new Date - 30 * 1000))); // 30 sec ago
+// console.log(formatDate(new Date(new Date - 5 * 60 * 1000))); // 5 mins ago
+// console.log(formatDate(new Date(new Date - 86400 * 1000))); // tomorrow date looks like 31.12.2016, 20:00
+
+
+// let user = {
+//   name: "John",
+//   age: 30,
+//   toString() {
+//     return `name: ${this.name}, age: ${this.age}`;
+//   },
+// };
+
+// // console.log(user.toString());
+// console.log(JSON.stringify(user));
+
+
+// let room = {
+//   number: 23,
+// };
+
+// let meetup = {
+//   title: "Conference",
+//   participants: ["john", "ann"],
+// };
+
+// meetup.place = room;
+// room.occupiedBy = meetup;
+
+// console.log(JSON.stringify(meetup, ['title', 'participants', 'number']));
+
+
+// let room = {
+//   number: 23
+// };
+
+// let meetup = {
+//   title: "Conference",
+//   participants: [{name: "John"}, {name: "Alice"}],
+//   place: room,
+// };
+
+// room.occupiedBy = meetup;
+
+// console.log(
+//   JSON.stringify(meetup, (key, value) => {
+//     return (key === 'occupiedBy') ? undefined : value
+//   }, 0)
+// );
+
+
+// let room = {
+//   number: 23,
+//   toJSON() {
+//     return this.number;
+//   },
+// };
+
+// let meetup = {
+//   title: 'Conference',
+//   room,
+// };
+
+// console.log(JSON.stringify(room));
+// console.log(JSON.stringify(meetup));
+
+
+// let numbers = '[1, 2, 3]';
+// numbers = JSON.parse(numbers);
+// console.log(numbers[0]);
+
+// let user = '{ "name": "John", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';
+// user = JSON.parse(user);
+// console.log(user.friends[1]);
+
+// let str = '{"title":"Conference","date":"2017-11-30T12:00:00.000Z"}';
+// // let meetup = JSON.parse(str);
+// // console.log(meetup.date.getDate());
+// let meetup = JSON.parse(
+//   str, (key, value) => {
+//     if (key === 'date') return new Date(value);
+//     return value;
+//   }
+// );
+// console.log(meetup.date.getDate());
+
+// let schedule = `{
+//   "meetups": [
+//     {"title":"Conference","date":"2017-11-30T12:00:00.000Z"},
+//     {"title":"Birthday","date":"2017-04-18T12:00:00.000Z"}
+//   ]
+// }`;
+
+// schedule = JSON.parse(
+//   schedule, (key, value) => {
+//     if (key === 'date') return new Date();
+//     return value;
+//   }
+// );
+// console.log(schedule.meetups[1].date.getDate());
+
+
+// let user = {
+//   name: "John Doe",
+//   age: 35,
+// };
+// console.log(JSON.stringify(user));
+// console.log(JSON.parse(JSON.stringify(user)));
+
+
+// let room = {
+//   number: 23
+// },
+//   meetup = {
+//   title: "Conference",
+//   occupiedBy: [{name: "Doe"}, {name: "Williams"}],
+//   place: room
+// };
+// room.occupiedBy = meetup;
+// meetup.self = meetup;
+
+// console.log(
+//   JSON.stringify(
+//     meetup, (key, value) => {
+//       return (key !== '' && value === meetup) ? undefined : value;
+//     }
+//   )
+// );
+
+
+// function pow(x, n) {
+//   if (n === 1) return x;
+//   return x * pow(x, n - 1);
+// }
+// console.log(pow(2, 3));
+
+// function pow2(x, n) {
+//   let result = 1;
+//   for (let i = 0; i < n; i++) result *= x;
+//   return result;
+// }
+// console.log(pow2(2, 3));
+
+
+// let company = {
+//   sales: [{
+//     name: 'John',
+//     salary: 1000
+//   }, {
+//     name: 'Alice',
+//     salary: 600
+//   }],
+
+//   development: {
+//     sites: [{
+//       name: 'Peter',
+//       salary: 2000
+//     }, {
+//       name: 'Alex',
+//       salary: 1800
+//     }],
+
+//     internals: [{
+//       name: 'Jack',
+//       salary: 1300
+//     }]
+//   }
+// };
+
+// function sumSalaries(department) {
+//   if (Array.isArray(department)) {
+//     return department.reduce((prev, current) => {
+//       return prev + current.salary;
+//     }, 0);
+//   } else {
+//     let sum = 0;
+//     for (let subDep of Object.values(department)) {
+//       sum += sumSalaries(subDep);
+//     }
+//     return sum;
+//   }
+// }
+// console.log(sumSalaries(company));
+
+
+// function powRecursive(x, n) {
+//   if (n === 1) return x;
+//   return x * powRecursive(x, n - 1);
+// }
+// console.log(powRecursive(2, 3));
+
+// function powLoop(x, n) {
+//   let result = 1;
+//   for (let i = 0; i < n; i++) result *= x;
+//   return result;
+// }
+// console.log(powLoop(2, 3));
+
+
+
+// let company = {
+//   sales: [{
+//     name: 'John',
+//     salary: 1000
+//   }, {
+//     name: 'Alice',
+//     salary: 600
+//   }],
+
+//   development: {
+//     sites: [{
+//       name: 'Peter',
+//       salary: 2000
+//     }, {
+//       name: 'Alex',
+//       salary: 1800
+//     }],
+
+//     internals: [{
+//       name: 'Jack',
+//       salary: 1300
+//     }]
+//   }
+// };
+
+// function sumSalaries(department) {
+
+//   if (Array.isArray(department)) {
+//     return department.reduce((prev, current) => {
+//       return prev + current.salary;
+//     }, 0);
+//   } else {
+//     let sum = 0;
+    
+//     for (let subDep of Object.values(department)) {
+//       sum += sumSalaries(subDep);
+//     }
+    
+//     return sum;
+//   }
+
+// }
+
+// console.log(sumSalaries(company));
+
+
+// let company = {
+//   sales: [{name: 'John', salary: 1000}, {name: 'Alice', salary: 600 }],
+//   development: {
+//     sites: [{name: 'Peter', salary: 2000}, {name: 'Alex', salary: 1800 }],
+//     internals: [{name: 'Jack', salary: 1300}]
+//   }
+// };
+
+// function sumSalary(department) {
+//   if (Array.isArray(department)) {
+//     return department.reduce((prev, current) => {
+//       return prev + current.salary;
+//     }, 0);
+//   } else {
+//     let sum = 0;
+//     for (let subDep of Object.values(department)) {
+//       sum += sumSalary(subDep);
+//     }
+//     return sum;
+//   }
+// }
+
+// console.log(sumSalary(company));
+
+
+
+// let list1 = {
+//   value: 1,
+//   next: {
+//     value: 2,
+//     next: {
+//       value: 3,
+//       next: {
+//         value: 4,
+//         next: null,
+//       }
+//     }
+//   }
+// };
+
+// let list2 = list1.next.next;
+// console.log(list2);
+
+// list1.next.next = list2;
+// console.log(list1.next.next);
+
+
+
+// let list = {value: 1,};
+// list.next = {value: 2,};
+// list.next.next = {value: 3,};
+// list.next.next.next = {value: 4,};
+
+// list = {value: 'new item', next: list};
+// console.log(list);
+
+
+// function sumTo(n) {
+//   let sum = 0;
+//   for (let i = 0; i <= n; i++) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+
+// function sumTo(n) {
+//   if (n === 1) return n;
+//   return n + sumTo(n - 1);
+// }
+
+// function sumTo(n) {
+//   return n * (n + 1) / 2;
+// }
+
+// console.log(sumTo(1));
+// console.log(sumTo(2));
+// console.log(sumTo(3));
+// console.log(sumTo(4));
+// console.log(sumTo(100));
+
+
+
+// function factorial(n) {
+//   if (n === 1) return n;
+//   return n * factorial(n - 1);
+// }
+// console.log(factorial(1));
+// console.log(factorial(2));
+// console.log(factorial(3));
+// console.log(factorial(4));
+
+
+
+// function fib(n) {
+//   // return (n <= 1) ? n : fib(n - 1) + fib(n - 2);
+//   let a = 1, b = 1;
+
+//   for (let i = 3; i <= n; i++) {
+//     let c = a + b;
+    
+//     a = b;
+//     b = c;
+//   }
+
+//   return b;
+// }
+// console.log(fib(3));
+// console.log(fib(7));
+// console.log(fib(77));
+
+
+
+// function fib(n) {
+//     // return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+//     let a = 1, b = 1;
+//     for (let i = 3; i <= n; i++) {
+//         let c = a + b;
+//         a = b;
+//         b = c;
+//     }
+//     return b;
+// }
+// console.log(fib(3));
+// console.log(fib(7));
+// console.log(fib(77));
+
+
+// let list = { value: 1, next: { value: 2, next: { value: 3, next: { value: 4, next: null } } } };
+
+// function printList(list) {
+//   console.log(list.value);
+
+//   if (list.next) {
+//     printList(list.next);
+//   }
+// }
+
+// printList(list);
+
+
+
+// let sum = addTo(10);
+// console.log(sum);
+// function addTo(n) {
+//   return n === 0 ? n : n + addTo(n - 1);
+// }
+
+// function sumTo(n) {
+//   let sum = 0;
+//   for (let i = 0; i <= n; i++) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+// console.log(sumTo(4));
+
+
+// function fib(n) {
+//   // if (n <= 1) return n;
+//   // return fib(n - 1) + fib(n - 2);
+
+//   let a = 1, b = 1;
+
+//   for (let i = 3; i <= n; i++) {
+//     let c = a + b;
+//     a = b;
+//     b = c;
+//   }
+
+//   return b;
+// }
+
+// console.log(fib(77));
+
+
+
+// function factorial(n) {
+//   if(n === 1) return n;
+//   return n * factorial(n - 1);
+// }
+// console.log(factorial(3));
+
+// function fact(n) {
+//   let res = 1;
+//   for(let i = 2; i <= n; i++) {
+//     res *= i;
+//   }
+//   return res;
+// }
+// console.log(fact(3));
+
+
+
+// function fact(n) {
+//   if (n < 1) return 0;
+//   if (n === 1) return 1;
+
+//   return n * fact(n - 1);
+// }
+// console.log(fact(4));
+
+
+
+// let count = 0;
+
+// function recurse() {
+//   if (count === 11) return 'done';
+//   count++;
+
+//   return recurse();
+// }
+// console.log(recurse());
+// console.log(count);
+
+
+
+// function pow(x, n) {
+//   if (n === 1) return n;
+
+//   return x * pow(x, n - 1);
+// }
+// console.log(pow(3, 3));
+
+
+// const sumOfDigits = num => num / 10 < 1 ? 1 : 1 + sumOfDigits(num / 10);
+
+// function sumOfDigits(num) {
+//   return (num / 10 < 1) ? 1 : 1 + sumOfDigits(num / 10);
+// }
+// console.log(sumOfDigits(55));
+
+
+// let counter = 0;
+// // 
+// function callStackSize() {
+//   counter++;
+//   callStackSize();
+// }
+// //
+// try{
+//   callStackSize();
+// } catch(e) {
+//   console.log(counter);
+// }
+
+
+
+// function fact(n) {
+//   const stack = [[n, 1,],];
+
+//   while(stack.length > 0) {
+//     const [curr, result] = stack.pop();
+
+//     if (curr === 0 || curr === 1) return result;
+//     stack.push( [curr - 1, result * curr] );
+//   }
+// }
+// console.log(fact(3), fact(4), fact(5));
+
+
+
+// function fibo(n) {
+//   let a = 1, b = 1;
+
+//   for (let i = 3; i <= n; i++) {
+//     let c = a + b;
+//     a = b;
+//     b = c;
+//   }
+
+//   return b;
+// }
+// console.log(fibo(3), fibo(7), fibo(13));
+
+
+// let str = 'hello';
+
+// function reverse(str) {
+//   if (str.length === 0) return '';
+//   // return str[-1] + reverse(str[:-1]); // [:-1]
+// }
+// console.log(reverse(str));
+
 
