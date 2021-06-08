@@ -57,3 +57,15 @@
 #         break
 # else:
 #     print('here is no "a" letter')
+
+
+x = 7; y = 3
+
+print(x % y)
+print(-x)
+print(abs(x))
+print(divmod(x, y))
+print(pow(x, y))
+print(20 / 3)
+print(3 ** 150)
+print(~x, ~y)  # 7 = -8; 3 = -4

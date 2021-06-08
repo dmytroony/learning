@@ -3289,7 +3289,6 @@
 // console.log(powLoop(2, 3));
 
 
-
 // let company = {
 //   sales: [{
 //     name: 'John',
@@ -3323,11 +3322,11 @@
 //     }, 0);
 //   } else {
 //     let sum = 0;
-    
+
 //     for (let subDep of Object.values(department)) {
 //       sum += sumSalaries(subDep);
 //     }
-    
+
 //     return sum;
 //   }
 
@@ -3361,7 +3360,6 @@
 // console.log(sumSalary(company));
 
 
-
 // let list1 = {
 //   value: 1,
 //   next: {
@@ -3381,7 +3379,6 @@
 
 // list1.next.next = list2;
 // console.log(list1.next.next);
-
 
 
 // let list = {value: 1,};
@@ -3417,7 +3414,6 @@
 // console.log(sumTo(100));
 
 
-
 // function factorial(n) {
 //   if (n === 1) return n;
 //   return n * factorial(n - 1);
@@ -3428,14 +3424,13 @@
 // console.log(factorial(4));
 
 
-
 // function fib(n) {
 //   // return (n <= 1) ? n : fib(n - 1) + fib(n - 2);
 //   let a = 1, b = 1;
 
 //   for (let i = 3; i <= n; i++) {
 //     let c = a + b;
-    
+
 //     a = b;
 //     b = c;
 //   }
@@ -3445,7 +3440,6 @@
 // console.log(fib(3));
 // console.log(fib(7));
 // console.log(fib(77));
-
 
 
 // function fib(n) {
@@ -3474,7 +3468,6 @@
 // }
 
 // printList(list);
-
 
 
 // let sum = addTo(10);
@@ -3511,7 +3504,6 @@
 // console.log(fib(77));
 
 
-
 // function factorial(n) {
 //   if(n === 1) return n;
 //   return n * factorial(n - 1);
@@ -3528,7 +3520,6 @@
 // console.log(fact(3));
 
 
-
 // function fact(n) {
 //   if (n < 1) return 0;
 //   if (n === 1) return 1;
@@ -3536,7 +3527,6 @@
 //   return n * fact(n - 1);
 // }
 // console.log(fact(4));
-
 
 
 // let count = 0;
@@ -3549,7 +3539,6 @@
 // }
 // console.log(recurse());
 // console.log(count);
-
 
 
 // function pow(x, n) {
@@ -3582,7 +3571,6 @@
 // }
 
 
-
 // function fact(n) {
 //   const stack = [[n, 1,],];
 
@@ -3594,7 +3582,6 @@
 //   }
 // }
 // console.log(fact(3), fact(4), fact(5));
-
 
 
 // function fibo(n) {
@@ -3620,3 +3607,672 @@
 // console.log(reverse(str));
 
 
+// function countWays(n) {
+//   if (n < 0) return 0;
+//   if (n === 0) return 1;
+
+//   return countWays(n - 1) + countWays(n - 2) + countWays(n - 3);
+// }
+
+// console.log(countWays(4));
+// console.log(countWays(3));
+// console.log(countWays(2));
+// console.log(countWays(1));
+
+
+// let hit = 0, miss = 0;
+
+// function countWays(n, cache = []) {
+//   if (n < 0) {
+//     miss++;
+//     return 0;
+//   }
+
+//   if (!cache[n]) {
+//     miss++;
+//     if (n === 0) cache[n] = 1;
+//     else cache[n] = countWays(n - 1, cache) + countWays(n - 2, cache) + countWays(n - 3, cache);
+//   } else {
+//     hit++;
+//     return cache[n];
+//   }
+
+//   return cache[n];
+// }
+// console.log(countWays(33), `=== misses: ${miss}; hits: ${hit} ===`);
+
+
+// Memoization
+// function countWays(n, cache = []) {
+//   if (n < 0) return 0;
+
+//   if (!cache[n]) {
+//     if (n === 0) cache[n] = 1;
+//     else cache[n] = countWays(n - 1, cache) + countWays(n - 2, cache) + countWays(n - 3, cache);
+//   } else {
+//     return cache[n];
+//   }
+
+//   return cache[n];
+// }
+// console.log(countWays(4));
+
+
+// function fibo(n) {
+//   if (n === 0) return 0;
+//   if (n === 1) return 1;
+
+//   return fibo(n - 1) + fibo(n - 2);
+// }
+// console.log(fibo(8));
+// console.log(fibo(7));
+
+
+// function factorial(n) {
+//   if (n === 1) return 1;
+//   return n * factorial(n - 1);
+// }
+// console.log(factorial(3));
+
+
+// function sumTo(n) {
+//   if (n == 1) return 1;
+//   return n + sumTo(n - 1);
+// }
+
+// function sumTo(n) {
+//   let sum = 0;
+//   for (let i = 0; i <= n; i++) sum += i;
+//   return sum;
+// }
+// console.log(sumTo(4));
+
+
+// function toN(n) {
+//   // for (let i = 1; i <= n; i++) console.log(i);
+
+//   if (n === 1) return n;
+//   return n + ", " + toN(n - 1);
+// }
+// console.log(toN(10));
+
+
+// function aTOb(a, b) {
+//   if (a > b) {
+//     if (a === b) return a;
+//     return a + " " + aTOb(a - 1, b);
+//   } else {
+//     if (a === b) return a;
+//     return a + " " + aTOb(a + 1, b);
+//   }
+// }
+// console.log(aTOb(3, 7));
+// console.log(aTOb(7, 3));
+
+
+// function fromAtoB(a, b) {
+//   if (a > b) {
+//     if(a === b) return b;
+//     return a + ' ' + fromAtoB(a - 1, b);
+//   } else {
+//     if(a === b) return b;
+//     return a + ' ' + fromAtoB(a + 1, b);
+//   }
+// }
+// console.log(fromAtoB(3, 7));
+// console.log(fromAtoB(7, 3));
+
+
+// function fibo(n) {
+//   if (n === 0 || n === 1) return n;
+//   return fibo(n - 1) + fibo(n - 2);
+// }
+// console.log(fibo(7));
+
+
+// // TODO (reverse arr)
+// let arr = [1, 2, 3, 4, 5, 6,];
+//
+// function swap(arr, left, right) {
+//   let temp = arr[left];
+//   arr[left] = arr[right];
+//   arr[right] = temp;
+// }
+//
+// function revert(arr, left, right) {
+//   if (left === right) return arr;
+//   if (left > right) return arr;
+//
+//   swap(arr, left, right);
+//   return revert(arr, left + 1, right - 1);
+// }
+//
+// console.log(revert(arr, 0, arr.length - 1));
+
+
+// // TODO (get max in arr)
+// let arr = [1, 2, 8, 3, 4, 5, 9, 6, 7,];
+//
+// function findMax(arr, start, end) {
+//   if (start === end) return arr[start];
+//
+//   let middle = (start + end) / 2;
+//   let leftMax = findMax(arr, start, middle);
+//   let rightMax = findMax(arr, middle + 1, end);
+//
+//   return (leftMax > rightMax) ? leftMax : rightMax;
+// }
+//
+// console.log(findMax(arr, 0, arr.length - 1));
+
+
+// function pow(x, n) {
+//   console.log('exp: ', n);
+//   if (n === 0) return 1;
+//
+//   let res = x * pow(x, n - 1);
+//
+//   console.log('res: ', res);
+//
+//   return res;
+// }
+//
+// console.log(pow(2, 3));
+
+
+// function pow(x, n) {
+//   let res = 1;
+//
+//   for (let i = 0; i < n; i++) {
+//     res *= x;
+//   }
+//
+//   return res;
+// }
+//
+// console.log(pow(2, 3));
+
+// const getMaxCallStackSize = i => {
+//   try {
+//     return getMaxCallStackSize(++i);
+//   } catch (e) {
+//     return i;
+//   }
+// };
+// console.log(getMaxCallStackSize(0));
+
+
+// function f(x) {
+//   return g(x);
+// }
+//
+// function g(x) {
+//   return f(x);
+// }
+//
+// console.log(f(0));
+
+
+// function pow(x, n) {
+//   if (n === 0) return 1;
+//
+//   return x * pow(x, n - 1);
+// }
+//
+// console.log(pow(2, 3));
+
+
+// function factorial(n) {
+//   if (n === 0) return 1;
+//
+//   return n * factorial(n - 1);
+// }
+//
+// console.log(factorial(4));
+
+
+// function fibo(n) {
+//   if (n <= 2) return 1;
+//
+//   return fibo(n - 1) + fibo(n - 2);
+// }
+//
+// console.log(fibo(10));
+
+
+// // TODO (own reduce)
+// const reduce = (fn, acc, [cur, ...rest]) => (
+//     cur === undefined ?
+//         acc : reduce(fn, fn(acc, cur), rest)
+// );
+//
+// const res = reduce(
+//     (a, b) =>
+//         a + b,
+//     0,
+//     [1, 2, 3, 4, 5, 6, 7, 8, 9,]
+// );
+//
+// console.log({ res });
+
+// // TODO (tail recursion)
+//
+// const add = (n, acc = 0) => {
+//   if (n === 0) return acc;
+//   return add(n - 1, acc + n);
+// };
+// console.log(add(3));
+//
+// const tail = (n, acc = 0) => {
+//   while (true) {
+//     if (n === 0) return acc;
+//     acc += n;
+//     n -= 1;
+//   }
+// };
+// console.log(tail(3));
+
+
+// const fibo = n => {
+//   let a = 1, b = 0, c = 0, counter = n;
+//
+//   while (n > 0) {
+//     c = a + b;
+//     b = a;
+//     a = c;
+//     n--;
+//   }
+//
+//   return b;
+// }
+// console.log(fibo(10));
+
+
+// function toN(n) {
+//
+//   if (n === 1) return n;
+//
+//   return toN(n - 1) + ' ' + n;
+// }
+//
+// console.log(toN(5));
+
+
+// function fromAtoB(a, b) {
+//   if (a >= b) {
+//     if (a === b) return a;
+//     return a + ' ' + fromAtoB(a - 1, b);
+//   }
+//   if (a <= b) {
+//     if (a === b) return a;
+//     return a + ' ' + fromAtoB(a + 1, b);
+//   }
+// }
+//
+// console.log(fromAtoB(2, 5));
+// console.log(fromAtoB(5, 2));
+
+
+// // TODO (Akkerman function)
+// function akkerman(m, n) {
+//   if (m === 0) {
+//     return n + 1;
+//   } else if (n === 0 && m > 0) {
+//     return akkerman(m - 1, 1);
+//   } else {
+//     return akkerman(m - 1, akkerman(m, n - 1));
+//   }
+// }
+//
+// console.log(akkerman(2, 3));
+// console.log(akkerman(3, 2));
+
+
+// function theSamePowN(n) {
+//   if (n === 1) return n;
+//   else if (n > 1 && n < 2) return 0;
+//   else return theSamePowN(n / 2);
+// }
+//
+// function theN() {
+//   let n = 64; // Yes
+//   // n = 65; // No
+//
+//   if (theSamePowN(n) === 1) return 'Yes';
+//   else return 'No';
+// }
+//
+// console.log(theN());
+
+// console.log(1_000_000); // 1000000
+
+// TODO (sum of digits)
+// function sumOfDigits(num) {
+//   if (num < 10) return num;
+//   return num % 10 + Math.floor(sumOfDigits(num / 10));
+// }
+//
+// console.log(sumOfDigits(1234567890));
+
+
+// function printDigitsFromRightToLeft(n) {
+//   if (n < 10) return n;
+//
+//   return Math.floor(n % 10) + ' ' + printDigitsFromRightToLeft((n / 10));
+// }
+//
+// console.log(printDigitsFromRightToLeft(12345));
+
+
+// function printDigitsFromLeftToRight(n) {
+//   if (n < 10) return n;
+//
+//   return printDigitsFromLeftToRight(n / 10) + ' ' + Math.floor(n % 10);
+// }
+//
+// console.log(printDigitsFromLeftToRight(12345));
+
+
+// function sumTo(n) {
+//   // if (n === 0) return 0;
+//   // return n + sumTo(n - 1);
+//
+//   let sum = 0;
+//   for (let i = 0; i <= n; i++) sum += i;
+//   return sum;
+// }
+// console.log(sumTo(5));
+
+
+// function fibo(n) {
+//   if (n <= 1) return n;
+//   return fibo(n - 1) + fibo(n - 2);
+// }
+//
+// console.log(fibo(7));
+
+
+// let list = {
+//   value: 1,
+//   next: {
+//     value: 2,
+//     next: {
+//       value: 3,
+//       next: {
+//         value: 4,
+//         next: null
+//       }
+//     }
+//   }
+// };
+
+// function printList(list) {
+//   let tmp = list;
+//   while (tmp) {
+//     console.log(tmp.value);
+//     tmp = tmp.next;
+//   }
+// }
+// printList(list);
+
+// function printList(list) {
+//   // console.log(list.value);
+//
+//   if (list.next) printList(list.next);
+//   console.log(list.value); // reversed
+// }
+// printList(list);
+
+// function printList(list) { // reversed
+//   let arr = [], tmp = list;
+//
+//   while (tmp) {
+//     arr.push(tmp.value);
+//     tmp = tmp.next;
+//   }
+//
+//   for (let i = arr.length - 1; i >= 0; i--) console.log(arr[i]);
+// }
+// printList(list);
+
+
+// let arr = [1, 2, 3, 4, 5,];
+// console.log(Math.max(...arr));
+
+
+// function Counter() {
+//   let count = 0;
+//
+//   this.up = function() {
+//     return ++count;
+//   };
+//   this.down = function() {
+//     return --count;
+//   };
+// }
+//
+// let counter = new Counter();
+//
+// console.log( counter.up() ); // 1
+// console.log( counter.up() ); // 2
+// console.log( counter.down() ); // 1
+
+// "use strict";
+// let phrase = "Hello";
+//
+// if (true) {
+//   let user = "John";
+//
+//   function sayHi() {
+//     console.log(`${phrase}, ${user}`);
+//   }
+// }
+//
+// sayHi();
+
+
+// function sum(a) {
+//   return function (b) {
+//     return a + b;
+//   }
+// }
+//
+// console.log(sum(2)(3));
+
+
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+//
+// function inBetween(a, b) {
+//   return function (x) {
+//     return x >= a && x <= b;
+//   };
+// }
+//
+// function inArray(strArr) {
+//   return function (x) {
+//     return strArr.includes(x);
+//   }
+// }
+//
+// console.log(arr.filter(inBetween(3, 6)));
+// console.log(arr.filter(inArray([1, 2, 10])));
+
+
+// let users = [
+//   { name: "John", age: 20, surname: "Johnson" },
+//   { name: "Pete", age: 18, surname: "Peterson" },
+//   { name: "Ann", age: 19, surname: "Hathaway" }
+// ];
+//
+// function byField(field) {
+//   return (a, b) => a[field] > b[field] ? 1 : -1;
+// }
+//
+// console.log(users.sort(byField('name')));
+// console.log(users.sort(byField('age')));
+
+
+// let sortedByName = users.sort((a, b) => a.name > b.name ? 1 : -1);
+// let sortedByAge = users.sort((a, b) => a.age > b.age ? 1 : -1);
+//
+// console.log(sortedByName);
+// console.log(sortedByAge);
+
+
+// function makeArmy() {
+//   let shooters = [];
+//
+//   let i = 0;
+//   while (i < 10) {
+//     let j = i;
+//     let shooter = function() {
+//       console.log( j );
+//     };
+//     shooters.push(shooter);
+//     i++;
+//   }
+//
+//   return shooters;
+// }
+//
+// let army = makeArmy();
+//
+// console.log(army[2]());
+
+
+// function createFn() {
+//   const message = 'hello world'
+//
+//   function greeting() {
+//     console.log(message);
+//   }
+//
+//   return greeting;
+// }
+//
+// const helloWorld = createFn();
+// // console.log(helloWorld);
+// helloWorld();
+
+
+// function createGreeting() {
+//   const message = 'hello';
+//
+//   function greeting(str) {
+//     console.log(message, str);
+//   }
+//
+//   return greeting;
+// }
+//
+// const helloWorld = createGreeting();
+// helloWorld('world');
+// helloWorld('John');
+
+
+// function Counter() {
+//   let count = 1;
+//
+//   return function () {
+//     return ++count;
+//   }
+// }
+//
+// let count1 = new Counter();
+// let count2 = new Counter();
+//
+// count1();
+// console.log(count1());
+//
+// console.log(count2());
+
+
+// function once(fn) {
+//   let hasBeenCalled = false;
+//   let cachedResult;
+//
+//   return function (...args) {
+//     if (hasBeenCalled) return cachedResult;
+//     hasBeenCalled = true;
+//     cachedResult = fn(...args);
+//
+//     return cachedResult;
+//   }
+// }
+//
+// const addByTwo = once(num => num + 2);
+//
+// console.log(addByTwo(2));
+// console.log(addByTwo(5));
+// console.log(addByTwo(7));
+
+
+// let arr = [1, 2, 3, 4, 5];
+//
+// function sumOfElements(arr) {
+//  return arr.reduce((acc, el) => acc + el, 0);
+// }
+//
+// console.log(sumOfElements(arr));
+
+// let matrix = [
+//   [1, 2, 3,],
+//   [4, 5, 6,],
+//   [7, 8, 9,],
+// ];
+// let max = matrix[0][0];
+// for (let i = 0; i < matrix.length; i++) {
+//
+//   for (let j = 0; j < matrix[i].length; j++) {
+//     if (matrix[i][j] > max) {
+//       max = matrix[i][j];
+//     }
+//   }
+// }
+//
+// console.log(max);
+
+// let arrA = [1, 2, 3, 4, 5,];
+// let arrB = [1, 2, 3, 4, 5,];
+//
+// function printPairs(arrA, arrB) {
+//   for (let i = 0; i < arrA.length; i++) {
+//     for (let j = 0; j < arrB.length; j++) {
+//       if (arrA[i] < arrB[j]) {
+//         console.log(`${arrA[i]}, ${arrB[j]}`);
+//       }
+//     }
+//   }
+// }
+//
+// printPairs(arrA, arrB);
+
+
+// function foo() {
+//   const a = { b: { c: 2,}, };
+//
+//   for (let i = 0; i < 10; i++) {
+//     // const handler = () => console.log(i);
+//     // setTimeout(handler, 1000);
+//     let value = a.b;
+//     setTimeout(() => console.log(++value.c), 1000);
+//   }
+// }
+//
+// foo();
+
+
+
+function hanoi(disks, i, k) {
+  let tmp;
+
+  if (disks === 1) console.log( `Disk (${disks}): pin_${i} -> pin_${k}` );
+  else {
+    tmp = 6 - i - k;
+    hanoi(disks - 1, i, tmp);
+    console.log( `-Disk (${disks}): pin_${i} -> pin_${k}` );
+    hanoi(disks - 1, tmp, k);
+  }
+}
+
+hanoi(5, 1, 2);

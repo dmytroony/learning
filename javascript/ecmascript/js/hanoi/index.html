@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <title>Hanoi's Tower</title>
+</head>
+
+<body>
+
+  <div id="arena">
+    <div id="youwin"></div>
+    <div id="stat">
+      steps: <span id="stepCount">0</span>
+      time: <span id="timeCount">0:00</span>
+    </div>
+    <div id="pyrs">
+      <div class="pyr" id="pyr1"></div>
+      <div class="pyr" id="pyr2"></div>
+      <div class="pyr" id="pyr3"></div>
+    </div>
+    <div id="sticks">
+      <div class="stick win"></div>
+      <div class="stick"></div>
+      <div class="stick"></div>
+    </div>
+  </div>
+
+  <p class="help">
+    You need to move a pyramid step by step to every free pin (red color).
+    <span class="wrong">You can't put a bigger size on a smaller disk</span>.
+  </p>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</body>
+
+</html>
