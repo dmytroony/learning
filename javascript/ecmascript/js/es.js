@@ -4262,17 +4262,824 @@
 // foo();
 
 
+// // TODO (recursive hanoi tower)
+// function hanoi(disks, i, k) {
+//   let tmp;
 
-function hanoi(disks, i, k) {
-  let tmp;
+//   if (disks === 1) console.log( `Disk (${disks}): pin_${i} -> pin_${k}` );
+//   else {
+//     tmp = 6 - i - k;
+//     hanoi(disks - 1, i, tmp);
+//     console.log( `-Disk (${disks}): pin_${i} -> pin_${k}` );
+//     hanoi(disks - 1, tmp, k);
+//   }
+// }
 
-  if (disks === 1) console.log( `Disk (${disks}): pin_${i} -> pin_${k}` );
-  else {
-    tmp = 6 - i - k;
-    hanoi(disks - 1, i, tmp);
-    console.log( `-Disk (${disks}): pin_${i} -> pin_${k}` );
-    hanoi(disks - 1, tmp, k);
-  }
-}
+// hanoi(5, 1, 2);
 
-hanoi(5, 1, 2);
+
+// let name = "John";
+
+// function sayHi() {
+//   alert("Hi, " + name);
+// }
+
+// name = "Pete";
+
+// sayHi();
+
+
+// function makeWorker() {
+//   let name = "Pete";
+
+//   return function() {
+//     console.log(name);
+//   };
+// }
+
+// let name = "John";
+
+// // create a function
+// let work = makeWorker();
+
+// // call it
+// work();
+
+
+// function sayHiBye(fName, lName) {
+//   function getFullName() {
+//     return `${fName} ${lName}`; 
+//   }
+
+//   console.log(`Hello, ${getFullName()}`);
+//   console.log(`Bye, ${getFullName()}`);
+// }
+
+// sayHiBye('John', 'Doe');
+
+
+// let user = {
+//   name: 'John',
+//   age: 30,
+// };
+
+// console.log(user?.surname);
+
+// // user = null;
+
+// console.log(user?.name);
+
+
+// let a = null, b = undefined, c = 3;
+// console.log(a ?? b ?? c);
+
+
+// function closure() {
+//   sum = 2;
+
+//   return num => sum += num;
+// }
+
+// let summer = closure();
+
+// console.log(summer(2));
+
+
+// function User(name) {
+//   this.sayHi = function() {
+//     return name;
+//   };
+// }
+// let user = new User('John');
+
+// console.log(user.sayHi());
+
+
+// function f() {
+//   let value = Math.random();
+
+//   function g() {
+//     debugger;
+//   }
+
+//   return g;
+// }
+
+// let g = f();
+// g();
+
+
+// let value = "Surprise!";
+
+// function f() {
+//   let value = "a near value";
+
+//   // function g() {
+//   //   return value
+//   //   // debugger;
+//   // }
+// debugger;
+//   return value;
+// }
+
+// let g = f();
+// g();
+
+
+// 'use strict';
+
+// let phrase = "Hello";
+
+// if (true) {
+//   let user = "John";
+
+//   function sayHi() {
+//     alert(`${phrase}, ${user}`);
+//   }
+// }
+
+// sayHi();
+
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7];
+
+// function inBetween(a, b) {
+//   return function (x) {
+//     return x >= a && x <= b;
+//   }
+// }
+
+// function inArray(arr) {
+//   return function(x) {
+//     return arr.includes(x);
+//   }
+// }
+
+
+// console.log( numbers.filter(inBetween(3, 6)) ); // 3,4,5,6
+// console.log( numbers.filter(inArray([1, 2, 10])) ); // 1,2
+
+
+// let users = [
+//   { name: "John", age: 20, surname: "Johnson" },
+//   { name: "Pete", age: 18, surname: "Peterson" },
+//   { name: "Ann", age: 19, surname: "Hathaway" }
+// ];
+
+
+// function byField(field) {
+//   return (a, b) => a[field] > b[field] ? 1 : - 1;
+// }
+
+// console.log(users.sort(byField('name')));
+// console.log(users.sort(byField('age')));
+
+
+// function makeArmy() {
+//   let shooters = [];
+
+//   for (let i = 0; i < 10; i++) {
+//     let shooter = function() {
+//       console.log( i );
+//     };
+//     shooters.push(shooter);
+//   }
+//   console.log(shooters.length);
+//   return shooters;
+// }
+
+// let army = makeArmy();
+
+// army[0]();
+// army[5]();
+
+
+// console.log(window);
+// console.log(globalThis);
+// console.log(window === globalThis);
+
+// globalThis.superUser = 'admin';
+
+// console.log(window.superUser);
+// console.log(this.superUser);
+
+
+// if (!window.Promise) console.log('Your browser is too old!');
+// else console.log('supported promises');
+
+// console.log(window.innerHeight);
+// console.log(window.innerWidth);
+
+
+// function fn() {
+//   return `fn.name: ${fn.name}`;
+// }
+// console.log(fn());
+
+
+// let fn = function() {
+//   return 'hello';
+// };
+// console.log(fn.name);
+
+
+// function fn(prop1, sayHi = function() {}) {
+//   return sayHi.name;
+// }
+// console.log(fn());
+// console.log(fn.name);
+// console.log(fn.length);
+
+
+// function ask(question, ...handlers) {
+//   let isYes = confirm(question);
+
+//   console.log(question);
+
+//   for (let handler of handlers) {
+//     if (handler.length === 0) {
+//       if (isYes) handler();
+//     } else {
+//       handler(isYes);
+//     }
+//   }
+// }
+
+// ask(
+//   "Ask?", () => console.log('You said "yes"'), 
+//   result => console.log(result)
+// );
+
+
+// function makeCounter() {
+//   function counter() {
+//     return counter.count++;
+//   }
+
+//   counter.count = 0;
+
+//   return counter;
+// }
+
+// let counter = makeCounter();
+
+// console.log(counter());
+// console.log(counter());
+
+
+// let sayHi = function whoIs(who) {
+//   console.log(whoIs.name);
+//   console.log(`Hello, ${who}`);
+// }
+
+// sayHi('John');
+
+
+// function hello(p1, p2) {
+//   return [...hello.arguments];
+// }
+// console.log(hello(1, 2));
+
+
+// function makeCounter() {
+//   let count = 0;
+
+//   function cCounter() {
+//     return ++count;
+//   }
+
+
+//   cCounter.set = value => count = value;
+
+//   cCounter.decrease = () => --count;
+
+//   return cCounter;
+// }
+
+// let counter = makeCounter();
+
+// counter.set(2);
+// console.log(counter());
+// console.log(counter());
+// console.log(counter.decrease());
+// console.log(counter.decrease());
+
+
+// function sum(a) {
+//   let currentSum = a;
+
+//   function fn(b) {
+//     currentSum += b;
+//     return fn;
+//   }
+
+//   fn.toString = function() {
+//     return currentSum;
+//   };
+
+//   return fn;
+// }
+// console.log(sum(1)(2)(3)(4)); // typeof fn
+// console.log(+sum(1)(2)(3)(4)(5)); //typeof num
+
+
+// let obj = {
+//   name: 'John',
+//   age: 30,
+//   toString() {
+//     return `${this.name}, ${this.age}`; 
+//   },
+// };
+
+// console.log(String(obj));
+
+
+// let user = {
+//   name: "John",
+//   money: 1000,
+//   [Symbol.toPrimitive](hint) {
+//     console.log(`hing: ${hint}`);
+//     return hint === 'string' ? `{name: "${this.name}"}` : this.money;
+//   },
+// };
+
+// // console.log(+user);
+// // console.log(user + 500);
+
+// // console.log(user * 2);
+// console.log(user + 'Doe');
+
+
+// let obj = {
+//   toString() {
+//     return "2";
+//   }
+// };
+
+// console.log(obj * 2);
+// console.log((+obj) ** 3);
+
+
+// let sum = new Function('a', 'b', 'return a + b');
+// console.log(sum(2, 3));
+
+
+// setTimeout(() => console.log('hello'), 2000);
+
+// {
+//   let count = 0;
+//   setInterval(() => {
+//     while (count <= 9) {
+//       clearInterval();
+//       console.log(count++);
+//       return;
+//     }
+//   }, 1000);
+// };
+
+
+// {
+//   let count = 0;
+//   let timerId = setTimeout(function tick() {
+//     console.log(count++);
+//     timerId = setTimeout(tick, 1000);
+//   }, 1000);
+// };
+
+
+// let error, delay = 5000;
+
+// let timerId = setTimeout(
+//   function request() {
+//     // get data
+
+//     if(error) delay *= 2;
+
+//     timerId = setTimeout(request, delay);
+//   }
+// );
+
+
+// setTimeout(() => console.log('world'));
+// console.log('doing something');
+// console.log('doing something');
+// console.log('doing something');
+// console.log('doing something');
+// console.log('doing something');
+// console.log('hello');
+
+
+// let start = Date.now();
+// let times = [];
+
+// setTimeout(function run() {
+//   times.push(Date.now() - start);
+//   if (start + 100 < Date.now()) console.log(times);
+//   else setTimeout(run);
+// })
+
+
+// let count = 0;
+// let timerId = setTimeout(function tick() {
+//   console.log('tick', count++);
+//   timerId = setTimeout(tick, 2000);
+// }, 2000);
+
+
+// function printNumbers(from, to) {
+//   let current = from;
+//   let timerId = setInterval(() => {
+//     console.log(current);
+//     if (current === to) clearInterval(timerId);
+//     current++;
+//   }, 1000);
+// }
+// printNumbers(1, 5);
+
+
+// function printNumbers(from, to) {
+//   let current = from;
+//   setTimeout(function run() {
+//     console.log(current);
+//     if (current < to) setTimeout(run, 1000);
+//     current++;
+//   }, 1000);
+// }
+// printNumbers(1, 5);
+
+
+// let i = 0;
+// setTimeout(() => console.log(i), 100); // 1000000000
+// for(let j = 0; j < 100_000_000; j++) {
+//   i++;
+// }
+
+
+// TODO (caching decorator)
+
+// function slow(x) {
+//   console.log(`Called with ${x}`);
+//   return x;
+// }
+
+// function cachingDecorator(func) {
+//   let cache = new Map();
+
+//   return function(x) {
+//     if (cache.has(x)) return cache.get(x);
+
+//     let result = func(x);
+//     cache.set(x, result);
+
+//     return result;
+//   };
+// }
+
+// slow = cachingDecorator(slow);
+
+
+// console.log(slow(1));
+// console.log(`Again called with 1:`, slow(1));
+
+// console.log(slow(2));
+// console.log(`Again called with 2:`, slow(2));
+
+
+// function sayHi() {
+//   console.log(this.name);
+// }
+// let user1 = { name: 'John', };
+// let user2 = { name: 'Bob', };
+// sayHi.call(user1);
+// sayHi.call(user2);
+
+
+// function say(phrase) {
+//   console.log(this.name + ': ' + phrase);
+// }
+// let user = {name: 'John',};
+// say.call(user, 'Hello');
+
+
+// let worker = {
+//   someMethod() {
+//     return 1;
+//   },
+//   slow(x) {
+//     console.log(`Called with:`, x);
+//     return x * this.someMethod();
+//   }
+// };
+//
+// function cachingDecorator(func) {
+//   let cache = new Map();
+//
+//   return function(x) {
+//     if (cache.has(x)) return cache.get(x);
+//
+//     let result = func.call(this, x);
+//     cache.set(x, result);
+//
+//     return result;
+//   };
+//
+// }
+//
+// worker.slow = cachingDecorator(worker.slow);
+//
+// console.log(worker.slow(2));
+// console.log(worker.slow(2));
+
+
+// let worker = {
+//   slow(min, max) {
+//     console.log(`Called with ${min} - ${max}`);
+//     return min + max;
+//   }
+// };
+//
+// function cachingDecorator(func, hash) {
+//   let cache = new Map();
+//
+//   return function() {
+//     let key = hash(arguments);
+//
+//     if (cache.has(key)) return cache.get(key);
+//
+//     let result = func.call(this, ...arguments);
+//
+//     cache.set(key, result);
+//
+//     console.log(cache);
+//     return result;
+//   };
+// }
+//
+// function hash(args) {
+//   return args[0] + ',' + args[1];
+// }
+//
+// worker.slow = cachingDecorator(worker.slow, hash);
+//
+// console.log(worker.slow(3, 5));
+// console.log(worker.slow(3, 5));
+
+// let obj = {
+//   name: 'John',
+// };
+//
+// let args = {1: 1, 2: 2, 3: 3, 4: 4,};
+//
+// let argums = function (a, b) {
+//   return arguments;
+// }
+//
+// console.log(argums.call(obj, 1, 2));
+
+
+// let worker = {
+//   slow() {
+//     return [...arguments].reduce((acc, curr) => acc + curr, 0);
+//   }
+// };
+//
+// function cachingDecorator(func, hash) {
+//   let cache = new Map();
+//
+//   return function() {
+//     let key = hash(arguments);
+//
+//     if (cache.has(key)) return cache.get(key);
+//
+//     let result = func.call(this, ...arguments);
+//
+//     cache.set(key, result);
+//
+//     console.log(cache);
+//     return result;
+//   };
+// }
+//
+// function hash() {
+//   return [].join.call(arguments);
+// }
+//
+// worker.slow = cachingDecorator(worker.slow, hash);
+//
+// console.log(worker.slow(3, 5, 7));
+// console.log(worker.slow(3, 5, 7));
+
+
+// function work(a, b) {
+//   console.log(a + b);
+// }
+//
+// function spy(fn) {
+//   function wrapper(...args) {
+//     wrapper.calls.push(args);
+//
+//     return fn.apply(this, arguments);
+//   }
+//
+//   wrapper.calls = [];
+//
+//   return wrapper;
+// }
+//
+// work = spy(work);
+//
+// work(1, 2);
+// work(4, 5);
+//
+// for (let args of work.calls) console.log(`call: ${args.join()}`);
+
+
+// function f(x) {
+//   console.log(x);
+// }
+//
+// function delay(f, ms) {
+//   return function() {
+//     setTimeout(() => f.apply(this, arguments), ms);
+//   };
+// }
+//
+// let f1000 = delay(f, 1000);
+// let f1500 = delay(f, 1500);
+//
+// f1000('test1');
+// f1500('test2');
+
+// function slow(x) {
+//   console.log(`Called with: ${x}`);
+//   return x;
+// }
+//
+// function cachingDecorator(fn) {
+//   let cache = new Map();
+//
+//   return function(x) {
+//     if (cache.has(x)) return cache.get(x);
+//
+//     let result = fn(x);
+//
+//     cache.set(x, result);
+//
+//     return result;
+//   };
+// }
+//
+// slow = cachingDecorator(slow);
+//
+// console.log(slow(1));
+// console.log('Again: ', slow(1));
+
+// function slow(x) {
+//   console.log(`Called with ${x}`);
+//   return x;
+// }
+//
+// function cachingDecorator(fn) {
+//   let cache = new Map();
+//
+//   return function(x) {
+//     if (cache.has(x)) return cache.get(x);
+//     let result = fn(x);
+//     cache.set(x, result);
+//     return result;
+//   };
+// }
+//
+// slow = cachingDecorator(slow);
+//
+// console.log(slow(2));
+// console.log('Again', slow(2));
+
+
+// let worker = {
+//   someMethod() {
+//     return 1;
+//   },
+//   slow(x) {
+//     console.log(`Called with ${x}`);
+//     return x * this.someMethod();
+//   },
+// };
+//
+// function cachingDecorator(fn) {
+//   let cache = new Map();
+//   return function(x) {
+//     if (cache.has(x)) return cache.get(x);
+//     let result = fn.call(this, x);
+//     cache.set(x, result);
+//     return result;
+//   };
+// }
+//
+// console.log(worker.slow(1));
+// worker.slow = cachingDecorator(worker.slow);
+// console.log(worker.slow(2));
+
+
+// let worker = {
+//   sum(...args) {
+//     console.log(`Called with ${[...args]}`);
+//     return [...args].reduce((acc, curr) => {
+//       return acc + curr;
+//     }, 0);
+//   },
+// };
+
+// function cachingDecorator(fn, hash) {
+//   let cache = new Map();
+//   return function() {
+//     let key = hash(arguments);
+//     if (cache.has(key)) return cache.get(key);
+//     let result = fn.apply(this, arguments);
+//     cache.set(key, result);
+//     return result;
+//   };
+// }
+
+// function hash(args) {
+//   // return [...args].join();
+//   return [].join.call(arguments); // "borrowing" the join method from arrays
+// }
+
+// worker.sum = cachingDecorator(worker.sum, hash);
+
+// console.log(worker.sum(3, 5, 7));
+// console.log('Again', worker.sum(3, 5, 7));
+
+
+
+// function sum(a, b) {
+//   console.log(a + b);
+// }
+
+// function spy(fn) {
+//   function wrapper(...args) {
+//     wrapper.calls.push(args);
+//     // console.log(wrapper.calls);
+//     return fn.apply(this, arguments);
+//   }
+//   wrapper.calls = [];
+//   return wrapper;
+// }
+
+// sum = spy(sum);
+
+// sum(1, 2);
+// sum(4, 5);
+
+// for (const args of sum.calls) {
+//   console.log(`call: ${args.join()}`);
+// }
+
+
+
+
+// function f(x) {
+//   console.log(x);
+// }
+
+// function delay(fn, ms) {
+//   return function() {
+//     return setTimeout(() => {
+//       return fn.apply(this, arguments)
+//     }, ms);
+//   };
+// }
+
+// let f1000 = delay(f, 1000);
+// let f1500 = delay(f, 1500);
+
+// f1000('test'); // "test" after 1000ms
+// f1500('test'); // "test" after 1500ms
+
+
+
+// function func(x) {
+//   console.log(`x is: ${x}`);
+//   return x;
+// }
+
+// function cachingDecorator(fn) {
+//   let cache = new Map();
+
+//   return function(x) {
+//     if (cache.has(x)) return cache.get(x);
+//     let result = fn(x);
+//     cache.set(x, result);
+//     return result;
+//   }
+// }
+
+// func = cachingDecorator(func);
+
+// console.log(func(2));
+// console.log('Again', func(2));
+
+
+
+
