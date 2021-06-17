@@ -565,7 +565,7 @@
 // const fruits = ["apple", "orange", "plum",];
 //
 // function isFruitInFruits (fruit) {
-//  
+//
 //     let result = `${fruit} not found`;
 //
 //     for (let i = 0; i < fruits.length; i++) {
@@ -635,7 +635,7 @@
 // // replica instanceof
 // function instanceOf(object, constructor) {
 //     object = object.__proto__;
-// 
+//
 //     while(object != null) {
 //         if (object == constructor.prototype) {
 //             return true;
@@ -643,7 +643,7 @@
 //         if (typeof object == 'xml') {
 //             return constructor.prototype == XMLDocument.prototype;
 //         }
-// 
+//
 //         object = object.__proto__;
 //     }
 //     return false;
@@ -655,7 +655,7 @@
 //     this.dept = dept || 'general';
 //     this.id = idCounter++;
 // }
-// 
+//
 // let victoria = new Employee('Viva, Victoria', 'pubs',);
 // let harry = new Employee('John, Diego', 'sales');
 // console.log(victoria.id);
@@ -687,7 +687,7 @@
 // function Employee(name, dept) {
 //     this.name = name || '';
 //     this.dept = dept || 'general';
-// 
+//
 //     if (name) {
 //         this.id = idCounter++;
 //     }
@@ -696,7 +696,7 @@
 // function Hobbyist(hobby) {
 //     this.hobby = hobby || 'scuba';
 // }
-// 
+//
 // function Engineer(name, projs, mach, hobby) {
 //     this.base1 = WorkerBee;
 //     this.base1(name, 'engingeering', projs);
@@ -704,9 +704,9 @@
 //     this.machine = mach || '';
 // }
 // Engineer.prototype = new WorkerBee;
-// 
+//
 // let dennis = new Engineer('Doe, Dennis', ['collabra'], 'hugo');
-// 
+//
 // Hobbyist.prototype.equipment = ['mask', 'fins', 'regulator', 'bcd',];
 
 // console.log(undefined == null);
@@ -714,15 +714,15 @@
 // let obj = {
 //     a: 1,
 // };
-// 
+//
 // console.log();
-// 
+//
 // let a = ['yo', 'whadup', '?',];
-// 
+//
 // function fn() {
 //     return 2;
 // }
-// 
+//
 // console.log(Array.prototype.hasOwnProperty('forEach'));
 // console.log(Function.prototype.hasOwnProperty('call'));
 
@@ -730,28 +730,28 @@
 //     this.vertexes = [];
 //     this.edges = [];
 // }
-// 
+//
 // Graph.prototype = {
 //     addVertex: function (v) {
 //         this.vertexes.push(v);
 //     }
 // }
-// 
+//
 // let g = new Graph();
-// 
+//
 // console.log( g.addVertex(1) );
-// 
+//
 // console.log(g.edges);
 // console.log(g.vertexes);
 
 // let a = {a: 1,};
-// 
+//
 // let b = Object.create(a);
-// 
+//
 // let c = Object.create(b);
-// 
+//
 // let d = Object.create(null);
-// 
+//
 // console.log(d.hasOwnProperty);
 
 // class Polygon {
@@ -760,7 +760,7 @@
 //         this.width = width;
 //     }
 // }
-// 
+//
 // class Square extends Polygon {
 //     constructor(sideLength) {
 //         super(sideLength, sideLength);
@@ -773,25 +773,25 @@
 //         this.width = newLength;
 //     }
 // }
-// 
+//
 // let square = new Square(2);
-// 
+//
 // console.log(square.area);
 
 // function A(a) {
 //     this.varA = a;
 // }
-// 
+//
 // A.prototype = {
 //     varA: null,
 //     doSomething: function() {
 //         console.log(varA);
 //     }
 // }
-// 
+//
 // // a1.[[Prototype]] = A.prototype;
-// 
-// 
+//
+//
 // function B(a, b) {
 //     A.call(this, a);
 //     this.varB = b;
@@ -813,33 +813,33 @@
 // },
 // );
 // B.prototype.constructor = B;
-// 
+//
 // let b = new B();
 // B.doSomething();
 
 // function Foo() {
 //     console.log('hello');
 // }
-// 
+//
 // // let obj = new Foo();
-// 
+//
 // let obj = new Object();
 // obj.prototype = Foo.prototype;
 // Foo.call(obj);
-// 
+//
 // console.log(obj);
-// 
+//
 // console.log(Object.getPrototypeOf(obj));
 
 // let animal = {
 //     eats: true,
 // };
-// 
+//
 // let rabbit = Object.create(animal);
 // console.log(rabbit.eats);
 // console.log(Object.getPrototypeOf(rabbit) === animal);
 // Object.setPrototypeOf(rabbit, {});
-// 
+//
 // let rabbit = Object.create(animal, {
 //     jumps: {
 //         value: true,
@@ -849,7 +849,7 @@
 
 // // deep clone
 // let clone = Object.create(
-//     Object.getPrototypeOf(obj), 
+//     Object.getPrototypeOf(obj),
 //     Object.getOwnPropertyDescriptor(obj)
 // );
 
@@ -874,7 +874,7 @@
 // console.log(obj);
 
 // let obj1 = {
-//         a: 1, 
+//         a: 1,
 //     },
 //     obj2 = {
 //         b: 2,
@@ -894,19 +894,19 @@
 //         },
 //     },
 // });
-// 
+//
 // dictionary.apple = 'Apple';
 // dictionary.__proto__ = 'test';
-// 
+//
 // for (let key in dictionary) {
 //     console.log(key);
 // }
-// 
+//
 // console.log(dictionary.toString());
 
 // let obj1 = {a:1};
 // let obj2 = new Object(obj1);
-// 
+//
 // console.log(obj2.a);
 // obj2.a = 2;
 // console.log(obj2.a);
@@ -935,8 +935,8 @@
 // ];
 // for (let i = 0; i < types.length; i++) {
 //     types[i].constructor = Type;
-//     types[i] = [types[i].constructor, 
-//         types[i] instanceof Type, 
+//     types[i] = [types[i].constructor,
+//         types[i] instanceof Type,
 //         types[i].toString()];
 // }
 // console.log(types.join('\n\n'));
@@ -1052,7 +1052,7 @@
 //     },
 // }
 // user.sayHi();
-// 
+//
 // let admin = user;
 // user = null;
 // // user.sayHi();
@@ -1153,8 +1153,8 @@
 //         return this.a * this.b;
 //     },
 // };
-// 
-// calculator.read(); // asks 2 values 
+//
+// calculator.read(); // asks 2 values
 // // + save them as the properties of object
 // console.log(calculator.sum()); // summary of 2 values
 // console.log(calculator.mul()); // multiply of 2 values
@@ -1303,7 +1303,7 @@
 // };
 
 // Encapsulation
-// 
+//
 // v1 using Classes
 // class MyObj1 {
 //   constructor(initVal) {
@@ -1336,7 +1336,7 @@
 // console.log(x);
 // x.myVal = 3;
 // console.log(x);
-// 
+//
 // v3 without "this". as + is the private fields
 // const MyObj3 = initVal => {
 //   let myVal = initVal;
@@ -1361,19 +1361,19 @@
 // state container definition
 // const useState = initVal => {
 //   let val = initVal;
-// 
+//
 //   const get = () => val;
 //   const set = x => (val = x);
-// 
+//
 //   return Object.freeze( { get, set } );
 // };
 //make a counter by using the state container
 // const makeCounter = () => {
 //   const { get, set } = useState(0);
-// 
+//
 //   const inc = () => set(get() + 1);
 //   const dec = () => set(get() - 1);
-// 
+//
 //   return Object.freeze( { get, inc, dec } );
 // };
 // create the counter object
@@ -1389,20 +1389,20 @@
 
 // const doubleAllImperative = data => {
 //   const doubled = [];
-// 
+//
 //   for (let i = 0, length = data.length; i < length; i++) {
 //     doubled[i] = data[i] * 2;
 //   }
-// 
+//
 //   return doubled;
 // };
-// 
+//
 // const doubleAllInterface = data => data.map(x => x * 2);
 // const box = value => ({
 //   map: f => box( f(value) ),
 //   toString: () => `box(${value})`,
 // });
-// 
+//
 // console.log(
 //   doubleAllInterface( [2, 3,] ),
 //   doubleAllInterface( box(2) ).toString(),
@@ -1514,7 +1514,7 @@
 //   return { name: 'Godzilla' };
 // };
 // console.log(new BigUser().name);
-// 
+//
 // function SmallUser() {
 //   this.name = 'John';
 //   return 'Bobby';
@@ -2394,10 +2394,10 @@
 // let john = {name: 'John'};
 // let pete = {name: 'Pete'};
 // let marry = {name: 'Marry'};
-// 
+//
 // set.add(john).add(pete).add(marry);
 // console.log(set.size);
-// 
+//
 // for (const user of set) {
 //   console.log(user.name);
 // }
@@ -2952,36 +2952,36 @@
 // }
 // let end2 = Date.now();
 // console.log(`${end2 - start2}ms`);
-// 
+//
 // function diffSubtract(date1, date2) {
 //   return date2 - date1;
 // }
-// 
+//
 // function diffGetTime(date1, date2) {
 //   return date2.getTime() - date1.getTime();
 // }
-// 
+//
 // function bench(fn) {
 //   let date1 = new Date(0);
 //   let date2 = new Date();
 //   let start = Date.now();
-// 
+//
 //   for (let i = 0; i < 100000; i++) fn(date1, date2);
-// 
+//
 //   return Date.now() - start;
 // }
-// 
+//
 // let time1 = 0;
 // let time2 = 0;
-// 
+//
 // bench(diffSubtract);
 // bench(diffGetTime);
-// 
+//
 // for (let i = 0; i < 10; i++) {
 //   time1 += bench(diffSubtract);
 //   time2 += bench(diffGetTime);
 // }
-// 
+//
 // console.log(`Time diffSubtract: ${time1}ms`);
 // console.log(`Time diffGetTime: ${time2}ms`);
 
@@ -3558,7 +3558,7 @@
 
 
 // let counter = 0;
-// // 
+// //
 // function callStackSize() {
 //   counter++;
 //   callStackSize();
@@ -4308,7 +4308,7 @@
 
 // function sayHiBye(fName, lName) {
 //   function getFullName() {
-//     return `${fName} ${lName}`; 
+//     return `${fName} ${lName}`;
 //   }
 
 //   console.log(`Hello, ${getFullName()}`);
@@ -4506,7 +4506,7 @@
 // }
 
 // ask(
-//   "Ask?", () => console.log('You said "yes"'), 
+//   "Ask?", () => console.log('You said "yes"'),
 //   result => console.log(result)
 // );
 
@@ -4587,7 +4587,7 @@
 //   name: 'John',
 //   age: 30,
 //   toString() {
-//     return `${this.name}, ${this.age}`; 
+//     return `${this.name}, ${this.age}`;
 //   },
 // };
 
@@ -5082,4 +5082,142 @@
 
 
 
+// let worker = {
+//   someMethod() {
+//     return 1;
+//   },
+
+//   slow(x) {
+//     console.log("Called with:", x);
+//     return x * this.someMethod();
+//   }
+// };
+
+// function cachingDecorator(func) {
+//   let cache = new Map();
+//   return function(x) {
+//     if (cache.has(x)) return cache.get(x);
+//     let result = func.call(this, x);
+//     cache.set(x, result);
+//     return result;
+//   };
+// }
+
+// console.log(worker.slow(1));
+// worker.slow = cachingDecorator(worker.slow);
+// console.log(worker.slow(2));
+// console.log('Again', worker.slow(2));
+
+
+
+
+// let worker = {
+//   name: 'Name',
+//   slow(min, max) {
+//     console.log(`Called with: ${min}, ${max}`);
+//     return `${min}, ${max}`;
+//   },
+// };
+
+// function cachingDecorator(func, hash) {
+//   let cache = new Map();
+//   return function() {
+//     let key = hash(arguments);
+//     if(cache.has(key)) return cache.get(key);
+//     let result = func.call(this, ...arguments);
+//     cache.set(key, result);
+//     return result;
+//   }
+// }
+
+// function hash(args) {
+//   return args[0] + ',' + args[1];
+// }
+
+// worker.slow = cachingDecorator(worker.slow, hash);
+
+// console.log(worker.slow(3, 5));
+// console.log('Again:', worker.slow(3, 5));
+
+
+
+// console.log(Object.getOwnPropertyDescriptor(worker, 'slow'));
+
+// 'use strict';
+// let obj = {
+//   prop1: 1,
+//   prop2: 2,
+// };
+
+// Object.defineProperty(obj, 'prop1', {
+//   writable: false
+// });
+
+// // let descriptor = Object.getOwnPropertyDescriptor(
+// //   obj, 'prop1'
+// // );
+// // console.log(descriptor);
+// // obj.prop1 = 3;
+// // console.log(obj.prop1);
+// // console.log(descriptor);
+
+// Object.defineProperty(obj, 'prop2', {
+//   enumerable: false
+// });
+// console.log(Object.keys(obj));
+
+
+
+//let obj = {
+//  prop1: 1,
+//  prop2: 2,
+//};
+//
+// Object.defineProperty(obj, 'prop3', {
+//  value: 3,
+//  writable: false,
+//  enumerable: true,
+//  configurable: false,
+// });
+//
+// let descriptor = Object.getOwnPropertyDescriptor(
+//    obj, 'prop3'
+// );
+//
+// console.log(descriptor);
+//
+// Object.defineProperty(obj, 'prop3', {
+//  writable: true,
+// });
+//
+// console.log(descriptor);
+
+//let obj = {
+//	name: "Vim",
+//	getName: () => {
+//		console.log(`Hello, ${this.name}`);
+//	}, 
+//};
+//
+//obj.getName();
+
+function slow(x) {
+    console.log(`Called with ${x}`);
+    return x;
+}
+
+function cachingDecorator(fn) {
+    let cache = new Map();
+    return function(x) {
+        if(cache.has(x)) return cache.get(x);
+        let result = fn(x);
+        cache.set(x, result);
+        return result;
+    }
+}
+
+slow = cachingDecorator(slow);
+
+console.log(slow(1));
+console.log(`Again: ${slow(1)}`);
 
