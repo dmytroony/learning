@@ -5012,7 +5012,6 @@
 // console.log('Again', worker.sum(3, 5, 7));
 
 
-
 // function sum(a, b) {
 //   console.log(a + b);
 // }
@@ -5037,8 +5036,6 @@
 // }
 
 
-
-
 // function f(x) {
 //   console.log(x);
 // }
@@ -5056,7 +5053,6 @@
 
 // f1000('test'); // "test" after 1000ms
 // f1500('test'); // "test" after 1500ms
-
 
 
 // function func(x) {
@@ -5079,7 +5075,6 @@
 
 // console.log(func(2));
 // console.log('Again', func(2));
-
 
 
 // let worker = {
@@ -5107,8 +5102,6 @@
 // worker.slow = cachingDecorator(worker.slow);
 // console.log(worker.slow(2));
 // console.log('Again', worker.slow(2));
-
-
 
 
 // let worker = {
@@ -5140,7 +5133,6 @@
 // console.log('Again:', worker.slow(3, 5));
 
 
-
 // console.log(Object.getOwnPropertyDescriptor(worker, 'slow'));
 
 // 'use strict';
@@ -5165,7 +5157,6 @@
 //   enumerable: false
 // });
 // console.log(Object.keys(obj));
-
 
 
 //let obj = {
@@ -5201,23 +5192,128 @@
 //
 //obj.getName();
 
-function slow(x) {
-    console.log(`Called with ${x}`);
-    return x;
+
+// let worker = {
+//     double() {
+//         return 2;
+//     },
+//     slow(x) {
+//         console.log(`Called with ${x}`);
+//         return x * this.double();
+//     },
+// }
+
+// function cachingDecorator(fn) {
+//     let cache = new Map();
+//     return function(x) {
+//         if(cache.has(x)) return cache.get(x);
+//         let result = fn.call(this, x);
+//         cache.set(x, result);
+//         return result;
+//     }
+// }
+
+// worker.slow = cachingDecorator(worker.slow);
+
+// console.log(worker.slow(2));
+// console.log(`Again: ${worker.slow(2)}`);
+
+
+// function sayHi(name) {
+//     this.name = name;
+//     console.log(this.name);
+// }
+
+// let user = {
+//     name: 'John',
+// };
+
+// sayHi.call(user, 'Pete');
+// console.log(user.name);
+
+
+// function slow(x) {
+//   console.log(`Called with ${x}`);
+//   return x;
+// }
+//
+// function cacheDecorator(fn) {
+//   let cache = new Map();
+//   return function(x) {
+//     if(cache.has(x)) return cache.get(x);
+//     let result = fn(x);
+//     cache.set(x, result);
+//     return result;
+//   }
+// }
+//
+// slow = cacheDecorator(slow);
+//
+// console.log(slow(2));
+// console.log(`Again: ${slow(2)}`);
+
+// let worker = {
+//     sum(x, y) {
+//         console.log(`Called with ${x},${y}`);
+//         return x + y;
+//     },
+// };
+//
+// function cacheDecorator(fn, hash) {
+//     let cache = new Map();
+//     return function () {
+//         let key = hash(arguments);
+//         if (cache.has(key)) return cache.get(key);
+//         let result = fn.apply(this, arguments);
+//         cache.set(key, result);
+//         return result;
+//     };
+// }
+//
+// function hash() {
+//     return [].join.call(arguments);
+// }
+//
+// worker.sum = cacheDecorator(worker.sum, hash);
+// console.log(worker.sum(2, 3));
+// console.log('Again', worker.sum(2, 3));
+
+
+// function work(a, b) {
+//     console.log(a + b);
+// }
+//
+// function spy(fn) {
+//     function wrapper(...args) {
+//         wrapper.calls.push(args);
+//         return fn.apply(this, arguments);
+//     }
+//     wrapper.calls = [];
+//     return wrapper;
+// }
+//
+// work = spy(work);
+//
+// work(1, 2);
+// work(4, 5);
+//
+// for (let args of work.calls) {
+//     console.log(`call: ${args.join()}`);
+// }
+
+
+function f(x) {
+    console.log(x);
 }
 
-function cachingDecorator(fn) {
-    let cache = new Map();
-    return function(x) {
-        if(cache.has(x)) return cache.get(x);
-        let result = fn(x);
-        cache.set(x, result);
-        return result;
+function delay(f, ms) {
+    return function () {
+        setTimeout(() => f.apply(this, arguments), ms);
     }
 }
 
-slow = cachingDecorator(slow);
+let f1000 = delay(f, 1000);
+let f1500 = delay(f, 1500);
 
-console.log(slow(1));
-console.log(`Again: ${slow(1)}`);
-
+f1000('1000ms');
+f1500('1500ms');
