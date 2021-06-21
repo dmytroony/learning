@@ -1,0 +1,19 @@
+{
+  "name": "postman-vanilla_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bootstrap": "^5.0.1"
+  },
+  "devDependencies": {
+    "snowpack": "^3.5.9"
+  }
+}
