@@ -18,4 +18,7 @@
 > `npm i --save-dev snowpack`
 >
 > `npm i bootstrap`
-
+>
+> `npm i @popperjs/core`
+> 
+> `npm start`
