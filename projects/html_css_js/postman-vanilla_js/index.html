@@ -6,15 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="./js/script.js" type="module"></script>
-    <title>Document</title>
+    <title>API client</title>
 </head>
 <body>
 
 <div class="p-4">
-    <form action="#">
+    <form action="#" data-form>
         <!--Method selection field-->
         <div class="input-group mb-4">
-            <select name="sel1" id="s1" class="form-select flex-grow-0 w-auto">
+            <select name="sel1" id="s1" class="form-select flex-grow-0 w-auto" data-method>
                 <option value="GET" selected>GET</option>
                 <option value="POST">POST</option>
                 <option value="PUT">PUT</option>
@@ -22,6 +22,7 @@
                 <option value="DELETE">DELETE</option>
             </select>
             <input
+                    data-url
                     type="url"
                     placeholder="https://example.com"
                     class="form-control"
