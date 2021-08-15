@@ -12,6 +12,7 @@
   * [bootstrap](https://www.npmjs.com/package/bootstrap)
   * [snowpack](https://www.npmjs.com/package/snowpack)
   * [pretty-bytes](https://www.npmjs.com/package/pretty-bytes)
+  * [codemirror](https://www.npmjs.com/package/codemirror)
 
 <br>
 
@@ -30,3 +31,5 @@
 `npm start`
 
 `npm i pretty-bytes`
+
+`npm i @codemirror/basic-setup @codemirror/view @codemirror/commands @codemirror/lang-json`
