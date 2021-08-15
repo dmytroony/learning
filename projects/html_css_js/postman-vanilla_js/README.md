@@ -11,6 +11,7 @@
   * [axios](https://www.npmjs.com/package/axios)
   * [bootstrap](https://www.npmjs.com/package/bootstrap)
   * [snowpack](https://www.npmjs.com/package/snowpack)
+  * [pretty-bytes](https://www.npmjs.com/package/pretty-bytes)
 
 <br>
 
@@ -27,3 +28,5 @@
 `npm i @popperjs/core`
 
 `npm start`
+
+`npm i pretty-bytes`
