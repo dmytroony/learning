@@ -11,3 +11,4 @@ python/code-basics/.idea/
 *.swp
 python/code-basics/venv/
 *venv/
+*cmake-build-debug/
