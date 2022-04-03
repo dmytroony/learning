@@ -18,18 +18,18 @@
 
 >#### Commands used:
 
-`npm init`
+* `npm init`
 
-`npm i axios`
+* `npm i axios`
 
-`npm i --save-dev snowpack`
+* `npm i --save-dev snowpack`
 
-`npm i bootstrap`
+* `npm i bootstrap`
 
-`npm i @popperjs/core`
+* `npm i @popperjs/core`
 
-`npm start`
+* `npm start`
 
-`npm i pretty-bytes`
+* `npm i pretty-bytes`
 
-`npm i @codemirror/basic-setup @codemirror/view @codemirror/commands @codemirror/lang-json`
+* `npm i @codemirror/basic-setup @codemirror/view @codemirror/commands @codemirror/lang-json`
