@@ -1,0 +1,19 @@
+#display, button {
+	font: 32px Impact;
+	color: white;
+	border: 1px solid #006994;
+	width: 100px;
+	padding: 10px;
+	margin: 10px;
+}
+
+#display {
+	width: 450px;
+	text-align: right;
+	color: #006994;
+}
+
+button {
+	background-color: #285561;
+	border-radius: 5px;
+}
