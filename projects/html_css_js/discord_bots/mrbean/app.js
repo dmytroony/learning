@@ -44,14 +44,14 @@ const T = new Twit({
   timeout_ms: 60 * 1000,
 });
 
-const dest = '960280278297874552';
-const stream = T.stream('statuses/filter', {
-  follow: '32771325', // @stupidcounter
-  // follow: '158331222', // @mrbean
-});
-
-stream.on('tweet', (tweet) => {
-  const twitterMessage = `Read the latest tweet by ${tweet.user.name} (@${tweet.user.screen_name}) here: https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`;
-  client.channels.cache.get(dest).send(twitterMessage);
-  return;
-});
+// const dest = '960280278297874552';
+// const stream = T.stream('statuses/filter', {
+//   follow: '32771325', // @stupidcounter
+//   // follow: '158331222', // @mrbean
+// });
+//
+// stream.on('tweet', (tweet) => {
+//   const twitterMessage = `Read the latest tweet by ${tweet.user.name} (@${tweet.user.screen_name}) here: https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`;
+//   client.channels.cache.get(dest).send(twitterMessage);
+//   return;
+// });
