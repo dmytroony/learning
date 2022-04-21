@@ -35,14 +35,14 @@ client.on('message', msg => {
   if (msg.content === 'hello!') msg.reply('bello!');
 });
 
-const T = new Twit({
-  consumer_key: process.env.API_TOKEN,
-  consumer_secret: process.env.API_SECRET,
-  access_token: process.env.ACCESS_KEY,
-  access_token_secret: process.env.ACCESS_SECRET,
-  bearer_token: process.env.BEARER_TOKEN,
-  timeout_ms: 60 * 1000,
-});
+// const T = new Twit({
+//   consumer_key: process.env.API_TOKEN,
+//   consumer_secret: process.env.API_SECRET,
+//   access_token: process.env.ACCESS_KEY,
+//   access_token_secret: process.env.ACCESS_SECRET,
+//   bearer_token: process.env.BEARER_TOKEN,
+//   timeout_ms: 60 * 1000,
+// });
 
 // const dest = '960280278297874552';
 // const stream = T.stream('statuses/filter', {
