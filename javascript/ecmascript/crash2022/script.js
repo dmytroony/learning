@@ -1,9 +1,9 @@
 
-const person = {
-  firstName: "Name",
-  lastName: "SecondName",
-  age: 111,
-};
+// const person = {
+//   firstName: "Name",
+//   lastName: "SecondName",
+//   age: 111,
+// };
 // console.log(person.lastName);
 
 // console.log(typeof parseInt(3.14).toString());
@@ -62,21 +62,32 @@ const person = {
 
 // console.log(sum(2, 3, 5));
 
-function sum(a, b, c) {
-  return a + b + c;
-}
+// function sum(a, b, c) {
+//   return a + b + c;
+// }
 
-function curry(fn) {
-  return function (a) {
-    console.log(a);
-    return function (b) {
-      return function (c) {
-        return fn(a, b, c);
-      }
-    }
-  }
-}
+// function curry(fn) {
+//   return function (a) {
+//     console.log(a);
+//     return function (b) {
+//       return function (c) {
+//         return fn(a, b, c);
+//       }
+//     }
+//   }
+// }
 
-const curriedSum = curry(sum);
+// const curriedSum = curry(sum);
 
-curriedSum(2)(3)(5);
+// curriedSum(2)(3)(5);
+
+
+// PL error, null != object
+// console.log(typeof null) // object
+
+// let id = Symbol("id");
+// console.log(id.toString() + " hello");
+
+// [] + []; // ""
+
+console.log(Array(16));
