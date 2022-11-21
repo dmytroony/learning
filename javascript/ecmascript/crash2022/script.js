@@ -1,4 +1,3 @@
-
 // const person = {
 //   firstName: "Name",
 //   lastName: "SecondName",
@@ -81,7 +80,6 @@
 
 // curriedSum(2)(3)(5);
 
-
 // PL error, null != object
 // console.log(typeof null) // object
 
@@ -90,4 +88,30 @@
 
 // [] + []; // ""
 
-console.log(Array(16));
+// console.log(Array(16));
+
+// const color = 'orange';
+
+// switch (color) {
+//   case 'red':
+//     console.log('Color is red');
+//     break;
+//   case 'green':
+//     console.log('Color is green');
+//     break;
+//   case 'blue':
+//     console.log('Color is blue');
+//     break;
+//   default:
+//     console.log('Unknowing color...');
+// }
+
+// for (let i = 1; i <= 5; i++)
+//   console.log('Iteration number: ' + i);
+
+function sayHi(name) {
+  const age = 10;
+}
+
+const age = 12;
+const things = ['cool', 'double!!!'];
