@@ -695,14 +695,209 @@
 // console.log(circle.area);
 
 
-function getNames() {
-    let fName = 'John',
-        sName = 'Deer';
-    // return [fName, sName,];
-    return {
-        'firstName': fName,
-        'secondName': sName,
-    };
-}
+// function getNames() {
+//     let fName = 'John',
+//         sName = 'Deer';
+//     // return [fName, sName,];
+//     return {
+//         'firstName': fName,
+//         'secondName': sName,
+//     };
+// }
+// let names = getNames();
+// console.log(names);
+// console.log(getNames.name);
 
-let names = getNames();
+
+// class Animal {
+//     constructor(pows, color) {
+//         this.pows = pows;
+//         this.color = color;
+//     }
+//     getAnimalInfo() {
+//         return (`This animal has ${this.pows} pows and it color is ${this.color}`);
+//     }
+// };
+// const cat = new Animal(4, 'rude');
+// console.log(cat.getAnimalInfo());
+
+
+// let Animal = class {
+//   constructor (pows, color) {
+//     this.pows = pows;
+//     this.color = color;
+//   }
+//   getAnimalInfo () {
+//     return (`This animal has ${this.pows} pows and it color is ${this.color}`);  }
+// };
+// const strauss = new Animal(2, "white-black");
+// console.log(strauss.getAnimalInfo());
+
+
+// class Rectangle {
+//   constructor(height, width) {
+//     this.height = height;
+//     this.width = width;
+//   }
+//   get area() {
+//     return this.calcArea();
+//   }
+//   calcArea() {
+//     return this.height * this.width;
+//   }
+// }
+// const square = new Rectangle(4, 5);
+// console.log(square.area);
+
+
+// class Polygon {
+//   constructor(...sides) {
+//     this.sides = sides;
+//   }
+//   *getSides() {
+//     for (const side of this.sides) {
+//       yield side;
+//     }
+//   }
+// }
+// const pentagon = new Polygon(1, 2, 3, 4, 5);
+// console.log([...pentagon.getSides()]);
+
+
+// const obj = {
+//   name: "ss",
+//   getName() {
+//     console.log(this.name);
+//   }
+// };
+// // obj.getName();
+// var name="ssg";
+// const getName = obj.getName;
+// getName();
+
+
+// function* foo(index) {
+//   while(index < 3) {
+//     yield index;
+//     index++;
+//   }
+// }
+// const iterator = foo(0);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+
+
+// function* countAppleSales() {
+//   const saleList = [3, 7, 5];
+//   for (let i = 0; i < saleList.length; i++) {
+//     yield saleList[i];
+//   }
+// }
+// const appleStore = countAppleSales();
+// console.log(appleStore.next());
+// console.log(appleStore.next());
+// console.log(appleStore.next());
+// console.log(appleStore.next());
+
+
+// function* counter(value) {
+//     let step = 0;
+//     while (true) {
+//         step = yield value++;
+//         if (step) {
+//             value += step;
+//         }
+//     }
+// }
+// const generatorFunc = counter(0);
+// console.log(generatorFunc.next().value);
+// console.log(generatorFunc.next().value);
+// console.log(generatorFunc.next().value);
+// console.log(generatorFunc.next(10).value);
+// console.log(generatorFunc.next().value);
+
+
+// function* generateSequence() {
+//     yield 1;
+//     yield 2;
+//     // return 3;
+//     yield 3;
+// }
+// // let generator = generateSequence();
+// // // let one = generator.next();
+// // // console.log(JSON.stringify(one));
+// // // let two = generator.next();
+// // // console.log(JSON.stringify(two));
+// // // let three = generator.next();
+// // // console.log(JSON.stringify(three));
+// // for(let val of generator) console.log(val);
+// let sequence = [0, ...generateSequence()];
+// console.log(sequence);
+
+
+// let range = {
+//     from: 1,
+//     to: 5,
+//     *[Symbol.iterator]() {
+//         for(let val = this.from; val <= this.to; val++) {
+//             yield val;
+//         }
+//     },
+//     // [Symbol.iterator]() {
+//     //     return {
+//     //         current: this.from,
+//     //         last: this.to,
+//     //         next() {
+//     //             if (this.current <= this.last) {
+//     //                 return { done: false, value: this.current++, };
+//     //             } else {
+//     //                 return { done: true, };
+//     //             } 
+//     //         },
+//     //     };
+//     // },
+// };
+// console.log([...range]);
+
+
+// function* generateSequence (start, end) {
+//     for (let i = start; i <= end; i++) yield i;
+// }
+// // console.log(generateSequence(1, 3).next());
+// function* generatePasswordCodes() {
+//     yield* generateSequence(48, 57);
+//     yield* generateSequence(65, 90);
+//     yield* generateSequence(97, 122);
+// }
+// let str = '';
+// //
+// for(let code of generatePasswordCodes()) {
+//     str += String.fromCharCode(code);
+// }
+// console.log(str);
+
+
+// function* gen() {
+//     let res = yield "2 + 2 = ?";
+//     return res;
+// }
+// let generator = gen();
+// console.log(generator.next().value);
+// setTimeout(() => console.log(generator.next(4).value), 2000);
+
+
+function* gen() {
+    let ask1 = yield "2 + 2 = ?";
+    console.log(ask1);
+    let ask2 = yield "3 * 3 = ?";
+    console.log(ask2);
+}
+let generator = gen();
+console.log(generator.next());
+generator.next(4).value;
+generator.next(9).value;
+console.log(generator.next());
+console.log(generator.next());
+
