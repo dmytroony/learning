@@ -888,16 +888,89 @@
 // setTimeout(() => console.log(generator.next(4).value), 2000);
 
 
-function* gen() {
-    let ask1 = yield "2 + 2 = ?";
-    console.log(ask1);
-    let ask2 = yield "3 * 3 = ?";
-    console.log(ask2);
-}
-let generator = gen();
-console.log(generator.next());
-generator.next(4).value;
-generator.next(9).value;
-console.log(generator.next());
-console.log(generator.next());
+// function* gen() {
+//     let ask1 = yield "2 + 2 = ?";
+//     console.log(ask1);
+//     let ask2 = yield "3 * 3 = ?";
+//     console.log(ask2);
+// }
+// let generator = gen();
+// console.log(generator.next());
+// generator.next(4).value;
+// generator.next(9).value;
+// console.log(generator.next());
+// console.log(generator.next());
 
+
+// function* gen() {
+//     try {
+//         let res = yield "2 + 2 = ?";
+//         console.log("Thrown error here");
+//     } catch(e) {
+//         console.log(e);
+//     }
+// }
+// let generator = gen();
+// let ask = generator.next().value;
+// generator.throw(new Error("No have answer in the DB!"));
+
+
+// function* generate() {
+//     let res = yield "2 + 2 = ?";
+// }
+// let generator = generate();
+// let ask = generator.next().value;
+// try {
+//     generator.throw(new Error("No have answers in the DB!"));
+// } catch(e) {
+//     console.log(e);
+// }
+
+
+// function* gen() {
+//     yield 1;
+//     yield 2;
+//     yield 3;
+// }
+// const generator = gen();
+// console.log(generator.next());
+// console.log(generator.return('foo'));
+// console.log(generator.return('moo'));
+// console.log(generator.next());
+
+
+// let range = {
+//     from: 1,
+//     to: 5,
+//     [Symbol.iterator]() {
+//         return {
+//             current: this.from,
+//             last: this.to,
+//             next() {
+//                 if (this.current <= this.last) {
+//                     return { done: false, value: this.current++, };
+//                 } else {
+//                     return { done: true, };
+//                 }
+//             },
+//         };
+//     },
+// };
+// for (let value of range) console.log(value);
+
+
+// 0
+
+
+// for (const char of "test") {
+//     console.log(char);
+// }
+
+
+let str = "Hello, World!";
+let iterator = str[Symbol.iterator]();
+while (true) {
+    let result = iterator.next();
+    if (result.done) break;
+    console.log(result.value);
+}
