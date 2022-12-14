@@ -967,10 +967,31 @@
 // }
 
 
-let str = "Hello, World!";
-let iterator = str[Symbol.iterator]();
-while (true) {
-    let result = iterator.next();
-    if (result.done) break;
-    console.log(result.value);
-}
+// let str = "Hello";
+// let iterator = str[Symbol.iterator]();
+// // while (true) {
+// //     let result = iterator.next();
+// //     if (result.done) break;
+// //     console.log(result.value);
+// // }
+// // console.log(iterator);
+// // for (const char of str) {
+// for (const char in str) {
+//     console.log(char);
+// }
+
+
+// let arrLike = {
+//     0: "Hello",
+//     1: "World",
+//     length: 2,
+// };
+// let arr = Array.from(arrLike);
+// console.log(arr.pop());
+// console.log(arr);
+// let str = Array.from(arr[0]);
+// console.log(str);
+
+let str = "123456";
+let arr = Array.from(str, num => num*num);
+console.log(arr);
