@@ -992,6 +992,49 @@
 // let str = Array.from(arr[0]);
 // console.log(str);
 
-let str = "123456";
-let arr = Array.from(str, num => num*num);
-console.log(arr);
+// let str = "123456";
+// let arr = Array.from(str, num => num*num);
+// console.log(arr);
+
+
+// const foo = function* () {
+//     yield 'a';
+//     yield 'b';
+//     yield 'c';
+// };
+// let str = '';
+// for (const val of foo()) {
+//     str = str + val;
+// }
+// console.log(typeof str, str);
+
+
+// const number = 123456789;
+// const f = Intl.NumberFormat("en-us", {
+//     currency: "USD",
+//     style: "currency",
+//     notation: "compact",
+// });
+// console.log(f.format(number));
+
+
+// function* generator() {
+//     yield 1;
+//     yield 2;
+//     yield 3;
+// }
+// const gen = generator();
+// console.log(gen.next().value);
+// console.log(gen.next().value);
+// console.log(gen.next().value);
+// console.log(gen.next().value);
+
+
+function* infinite() {
+    let i = 0;
+    while (true) yield i++;
+}
+const generator = infinite();
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
