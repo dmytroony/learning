@@ -1030,11 +1030,183 @@
 // console.log(gen.next().value);
 
 
-function* infinite() {
-    let i = 0;
-    while (true) yield i++;
-}
-const generator = infinite();
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
+// function* infinite() {
+//     let i = 0;
+//     while (true) yield i++;
+// }
+// const generator = infinite();
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+
+
+// function* generator(i) {
+//     yield i;
+//     yield i + 10;
+// }
+// const gen = generator(10);
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+
+// function* idMaker() {
+//     let index = 0;
+//     while (true) yield index++;
+// }
+// const gen = idMaker();
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+
+// function* anotherGenerator(i) {
+//     yield i + 1;
+//     yield i + 2;
+//     yield i + 3;
+// }
+// function* generator(i) {
+//     yield i;
+//     yield* anotherGenerator(i);
+//     yield i + 10;
+// }
+// const gen = generator(10);
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+
+// function* logGenerator() {
+//     let i = 0;
+//     console.log(i);
+//     console.log(++i, yield);
+//     console.log(++i, yield);
+//     console.log(++i, yield);
+// }
+// const gen = logGenerator();
+// gen.next();
+// gen.next("arrow");
+// gen.next("california");
+// gen.next("mayonnaise");
+
+
+// function* yieldAndReturn() {
+//     yield "Y";
+//     return "R";
+//     yield "unreachable";
+// }
+// const gen = yieldAndReturn();
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+
+// const someObj = {
+//     *generator() {
+//         yield "a";
+//         yield "b";
+//         return "z";
+//     },
+// };
+// const gen = someObj.generator();
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+
+// class Foo {
+//     *generator() {
+//         yield 1;
+//         yield 2;
+//         yield 3;
+//     }
+// }
+// const f = new Foo();
+// const gen = f.generator();
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+
+
+// class Foo {
+//     *[Symbol.iterator]() {
+//         yield 1;
+//         yield 2;
+//     }
+// }
+// const someObj = {
+//     *[Symbol.iterator]() {
+//         yield "a";
+//         yield "b";
+//     },
+// };
+// console.log(Array.from(new Foo()));
+// console.log(Array.from(someObj));
+
+
+// function* powers(n) {
+//     for (let current = n; ; current *=n) yield current;
+// }
+// for (const power of powers(2)) {
+//     if (power > 32) break;
+//     console.log(power);
+// }
+
+
+// function factorial(n) {
+//     return (n <= 1) ? n : factorial(n - 1) * n;
+// }
+// console.log([1, 2, 3, 4, 5].map(factorial));
+
+
+// let factored = [1, 2, 3, 4, 5,].map(function(n) {
+//     return n <= 1 ? 1 : arguments.callee(n - 1) * n;
+// });
+// console.log(factored);
+
+
+// const global1 = this;
+// const sillyFn = function(recursed) {
+//     if (this !== global1) {
+//         console.log(`This is: ${this}`);
+//     }
+//     else {
+//         console.log(`This is the global`);
+//     }
+//     if (!recursed) {
+//         return arguments.callee(true);
+//     }
+// }
+// sillyFn();
+
+
+// // The Y-combinator: a utility function!
+// const Y = hof => (x => x(x))(x => hof(y => x(x)(y)));
+// console.log(
+//   [1, 2, 3, 4, 5].map(
+//     Y(factorial => n => (n <= 1 ? 1 : factorial(n - 1) * n))
+//   )
+// );
+
+
+// function create() {
+//     return function(n) {
+//         if (n <= 1) return 1;
+//         return n * arguments.callee(n - 1);
+//     };
+// }
+// const result = create()(5);
+// console.log(result);
+
+
+// 5!
+// function factorial(n) {
+//     return n <= 1 ? 1 : factorial(n - 1) * n;
+// }
+// console.log(factorial(4));
+// console.log(factorial(5));
