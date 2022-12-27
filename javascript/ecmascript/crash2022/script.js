@@ -1210,3 +1210,79 @@
 // }
 // console.log(factorial(4));
 // console.log(factorial(5));
+
+// "use strict";
+// function whoIsCaller() {
+//     console.log(
+//       `arguments.callee: `,arguments.callee
+//     );
+//     console.log(
+//       `Function[Symbol.hasInstance](arguments.callee.caller): `,
+//       Function[Symbol.hasInstance](arguments.callee.caller)
+//     );
+//     console.log(
+//       `Object[Symbol.hasInstance](arguments.callee.caller): `,
+//       Object[Symbol.hasInstance](arguments.callee.caller)
+//     );
+//     console.log(
+//       `arguments.callee.caller: `, arguments.callee.caller
+//     );
+// }
+// console.log(
+//   `whoIsCaller.caller: `, whoIsCaller.caller
+// );
+// whoIsCaller();
+
+
+// function f() {
+//     if (Object.hasOwn(f, "caller")) {
+//         console.log(
+//           "caller is an own property with descriptor",
+//           Object.getOwnPropertyDescriptor(f, "caller")
+//         );
+//     } else {
+//         console.log(
+//           "f doesn't have an own property named caller. Trying to get f.[[Prototype]].caller"
+//         );
+//         console.log(
+//           Object.getOwnPropertyDescriptor(
+//             Object.getPrototypeOf(f),
+//             "caller"
+//           ).get.call(f)
+//         );
+//     }
+// })();
+
+
+// function myFn() {
+//     return (myFn.caller === null)
+//       ? `The function was called from the top`
+//       : `This function's caller was ${myFn.caller}`;
+// }
+// console.log(myFn());
+
+
+// function f(n) {
+//     g(n - 1);
+// }
+// function stop() {
+//     console.log(`stopped`);
+// }
+// function g(n) {
+//     if (n > 0) {
+//         f(n);
+//     } else {
+//         stop();
+//     }
+// }
+// f(3);
+
+
+function foo() {
+    function bar() {
+        console.trace();
+    }
+    bar();
+}
+
+foo();
