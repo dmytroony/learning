@@ -126,7 +126,6 @@
 // }
 // outer();
 
-
 // function outer() {
 //   let counter = 0;
 //   function inner() {
@@ -138,7 +137,6 @@
 // const fn = outer();
 // fn();
 // fn();
-
 
 // function sum(a, b) {
 //   return a + b;
@@ -155,7 +153,6 @@
 // const curriedSum = curry(sum);
 // console.log(curriedSum(1)(2));
 
-
 // function multi (a, b, c) {
 //   return a * b * c;
 // }
@@ -170,7 +167,6 @@
 //
 // let curriedFn = curry(multi);
 // console.log(curriedFn(2)(3, 4));
-
 
 // function curry(func) {
 //   return function curried(...args) {
@@ -192,7 +188,6 @@
 //
 // console.log(curriedSum(1, 2)(3));
 
-
 // function volume(l) {
 //     return (w, h) => {
 //         return l * w * h
@@ -205,7 +200,6 @@
 // console.log(hV(120, 123));
 //
 // console.log(volume(70)(90, 30));
-
 
 // function discount(price, discount) {
 //     return price * discount;
@@ -223,14 +217,11 @@
 // console.log(tenPercentDiscount(500));
 // console.log(twentyPercentDiscount(500));
 
-
-
 // function sayMyName(name) {
 //     console.log(`My name is ${name}!`);
 // }
 //
 // sayMyName('Boris');
-
 
 // const person = {
 //     name: 'Brian',
@@ -267,7 +258,6 @@
 // const p2 = new Person('Ethan');
 //
 // console.log(`${p1.name} and ${p2.name}`);
-
 
 // let pokemon1 = {
 //     firstName: 'Pika',
@@ -317,7 +307,6 @@
 // person.full();
 // person.personTwo.full();
 
-
 // function Car (make, model) {
 //     this.make = make;
 //     this.model = model;
@@ -326,7 +315,6 @@
 // let myCar = new Car('Ford', 'Escape');
 //
 // console.log(myCar);
-
 
 // function add(c, d) {
 //     console.log(this.a + this.b + c + d);
@@ -345,7 +333,6 @@
 //
 // add.call(digits1, 3, 4);
 
-
 // let obj1 = {
 //     a: 123,
 //     getThis1: function () {
@@ -360,7 +347,6 @@
 // console.log(obj1.getThis2());
 // console.log(this);
 
-
 // function greet (gender, age, name) {
 //     let salutation = gender === "male" ? "Mr. " : "Ms. ";
 //
@@ -374,7 +360,6 @@
 // console.log(greetAnAdultMale("John Horton"));
 // console.log(greetAYoungster("Alex"));
 // console.log(greetAYoungster("Emma Waterloo"));
-
 
 // let avgScore = "global avgScore";
 // function avg (arrayOfScores) {
@@ -401,7 +386,6 @@
 // console.log (window.avgScore);
 // console.log (gameController.avgScore);
 
-
 // const array1 = [1, 2, 3, 4],
 //     initialValue = 0,
 //     sumWithInitial =
@@ -410,7 +394,6 @@
 // );
 //
 // console.log(sumWithInitial);
-
 
 // let anArrayLikeObj =
 //     {0:"Martin", 1:78, 2:67, 3:["Letta", "Marieta", "Pauline"], length:4 };
@@ -427,15 +410,12 @@
 // console.log (Array.prototype.push.call (anArrayLikeObj, "Jackie"));
 // console.log (anArrayLikeObj);
 
-
 // function func(...args) {
 //     console.log(arguments);
 // }
 // func('A', 'B', 'C');
 
-
 // let newArr = Array.prototype.slice.call();
-
 
 // class User1 {
 //     constructor(name) {
@@ -472,7 +452,6 @@
 // const Gatsby = newNew(User2,'Gatsby');
 // Gatsby.sayHi();
 
-
 // function Person(fName, sName) {
 //     this.fName = fName;
 //     this.sName = sName;
@@ -486,7 +465,6 @@
 // }
 // console.log(person1.getFullName());
 // console.log(person2.getFullName());
-
 
 // function Person(fName, sName) {
 //     this.fName = fName;
@@ -509,7 +487,6 @@
 // const batman = new SuperHero('Bruce', 'Wayne');
 // SuperHero.prototype.constructor = SuperHero;
 // console.log(batman.getFullName());
-
 
 // class Person {
 //     constructor(fName, sName) {
@@ -536,7 +513,6 @@
 //
 // const batman = new SuperHero('Bruce', 'Wayne');
 // console.log(batman.sayMyName());
-
 
 // class Polygon {
 //     constructor(h, w) {
@@ -567,7 +543,6 @@
 //     greenPolygon.whichArea(), greenPolygon.polyColor()
 // );
 
-
 // let Rectangle = class {
 //     constructor(a, b) {
 //         this.a = a;
@@ -580,7 +555,6 @@
 //
 // console.log(new Rectangle(4, 5).mult());
 
-
 // class ClassWithStaticInitializationBlock {
 //     static staticProperty1 = 'Property 1';
 //     static staticProperty2;
@@ -591,7 +565,6 @@
 //
 // console.log(ClassWithStaticInitializationBlock.staticProperty1);
 // console.log(ClassWithStaticInitializationBlock.staticProperty2);
-
 
 // let y = 'Outer y';
 //
@@ -604,7 +577,6 @@
 //
 // console.log(y);
 
-
 // class MyClass {
 //     static field1 = console.log('field1 called');
 //     static {
@@ -616,14 +588,12 @@
 //     }
 // }
 
-
 // class A {
 //     static field = 'A static field';
 //     static {
 //         console.log(this.field);
 //     }
 // }
-
 
 // class A {
 //     static fieldA = 'A.fieldA';
@@ -633,7 +603,6 @@
 //         console.log(super.fieldA);
 //     }
 // }
-
 
 // let getDPrivateField;
 //
@@ -647,7 +616,6 @@
 //     }
 // }
 // console.log(getDPrivateField(new D('private')));
-
 
 // class Circle {
 //     #radius;
@@ -681,7 +649,6 @@
 //
 // console.log('Cylinder:', new Cylinder(4).area);
 
-
 // class Circle {
 //     #radius;
 //     constructor(value) {
@@ -693,7 +660,6 @@
 // }
 // let circle = new Circle(10);
 // console.log(circle.area);
-
 
 // function getNames() {
 //     let fName = 'John',
@@ -708,7 +674,6 @@
 // console.log(names);
 // console.log(getNames.name);
 
-
 // class Animal {
 //     constructor(pows, color) {
 //         this.pows = pows;
@@ -721,7 +686,6 @@
 // const cat = new Animal(4, 'rude');
 // console.log(cat.getAnimalInfo());
 
-
 // let Animal = class {
 //   constructor (pows, color) {
 //     this.pows = pows;
@@ -732,7 +696,6 @@
 // };
 // const strauss = new Animal(2, "white-black");
 // console.log(strauss.getAnimalInfo());
-
 
 // class Rectangle {
 //   constructor(height, width) {
@@ -749,7 +712,6 @@
 // const square = new Rectangle(4, 5);
 // console.log(square.area);
 
-
 // class Polygon {
 //   constructor(...sides) {
 //     this.sides = sides;
@@ -763,7 +725,6 @@
 // const pentagon = new Polygon(1, 2, 3, 4, 5);
 // console.log([...pentagon.getSides()]);
 
-
 // const obj = {
 //   name: "ss",
 //   getName() {
@@ -774,7 +735,6 @@
 // var name="ssg";
 // const getName = obj.getName;
 // getName();
-
 
 // function* foo(index) {
 //   while(index < 3) {
@@ -788,7 +748,6 @@
 // console.log(iterator.next().value);
 // console.log(iterator.next().value);
 
-
 // function* countAppleSales() {
 //   const saleList = [3, 7, 5];
 //   for (let i = 0; i < saleList.length; i++) {
@@ -800,7 +759,6 @@
 // console.log(appleStore.next());
 // console.log(appleStore.next());
 // console.log(appleStore.next());
-
 
 // function* counter(value) {
 //     let step = 0;
@@ -817,7 +775,6 @@
 // console.log(generatorFunc.next().value);
 // console.log(generatorFunc.next(10).value);
 // console.log(generatorFunc.next().value);
-
 
 // function* generateSequence() {
 //     yield 1;
@@ -836,7 +793,6 @@
 // let sequence = [0, ...generateSequence()];
 // console.log(sequence);
 
-
 // let range = {
 //     from: 1,
 //     to: 5,
@@ -854,13 +810,12 @@
 //     //                 return { done: false, value: this.current++, };
 //     //             } else {
 //     //                 return { done: true, };
-//     //             } 
+//     //             }
 //     //         },
 //     //     };
 //     // },
 // };
 // console.log([...range]);
-
 
 // function* generateSequence (start, end) {
 //     for (let i = start; i <= end; i++) yield i;
@@ -878,7 +833,6 @@
 // }
 // console.log(str);
 
-
 // function* gen() {
 //     let res = yield "2 + 2 = ?";
 //     return res;
@@ -886,7 +840,6 @@
 // let generator = gen();
 // console.log(generator.next().value);
 // setTimeout(() => console.log(generator.next(4).value), 2000);
-
 
 // function* gen() {
 //     let ask1 = yield "2 + 2 = ?";
@@ -901,7 +854,6 @@
 // console.log(generator.next());
 // console.log(generator.next());
 
-
 // function* gen() {
 //     try {
 //         let res = yield "2 + 2 = ?";
@@ -914,7 +866,6 @@
 // let ask = generator.next().value;
 // generator.throw(new Error("No have answer in the DB!"));
 
-
 // function* generate() {
 //     let res = yield "2 + 2 = ?";
 // }
@@ -926,7 +877,6 @@
 //     console.log(e);
 // }
 
-
 // function* gen() {
 //     yield 1;
 //     yield 2;
@@ -937,7 +887,6 @@
 // console.log(generator.return('foo'));
 // console.log(generator.return('moo'));
 // console.log(generator.next());
-
 
 // let range = {
 //     from: 1,
@@ -958,14 +907,11 @@
 // };
 // for (let value of range) console.log(value);
 
-
 // 0
-
 
 // for (const char of "test") {
 //     console.log(char);
 // }
-
 
 // let str = "Hello";
 // let iterator = str[Symbol.iterator]();
@@ -979,7 +925,6 @@
 // for (const char in str) {
 //     console.log(char);
 // }
-
 
 // let arrLike = {
 //     0: "Hello",
@@ -996,7 +941,6 @@
 // let arr = Array.from(str, num => num*num);
 // console.log(arr);
 
-
 // const foo = function* () {
 //     yield 'a';
 //     yield 'b';
@@ -1008,7 +952,6 @@
 // }
 // console.log(typeof str, str);
 
-
 // const number = 123456789;
 // const f = Intl.NumberFormat("en-us", {
 //     currency: "USD",
@@ -1016,7 +959,6 @@
 //     notation: "compact",
 // });
 // console.log(f.format(number));
-
 
 // function* generator() {
 //     yield 1;
@@ -1029,7 +971,6 @@
 // console.log(gen.next().value);
 // console.log(gen.next().value);
 
-
 // function* infinite() {
 //     let i = 0;
 //     while (true) yield i++;
@@ -1038,7 +979,6 @@
 // console.log(generator.next());
 // console.log(generator.next());
 // console.log(generator.next());
-
 
 // function* generator(i) {
 //     yield i;
@@ -1049,7 +989,6 @@
 // console.log(gen.next());
 // console.log(gen.next());
 
-
 // function* idMaker() {
 //     let index = 0;
 //     while (true) yield index++;
@@ -1058,7 +997,6 @@
 // console.log(gen.next());
 // console.log(gen.next());
 // console.log(gen.next());
-
 
 // function* anotherGenerator(i) {
 //     yield i + 1;
@@ -1078,7 +1016,6 @@
 // console.log(gen.next());
 // console.log(gen.next());
 
-
 // function* logGenerator() {
 //     let i = 0;
 //     console.log(i);
@@ -1092,7 +1029,6 @@
 // gen.next("california");
 // gen.next("mayonnaise");
 
-
 // function* yieldAndReturn() {
 //     yield "Y";
 //     return "R";
@@ -1102,7 +1038,6 @@
 // console.log(gen.next());
 // console.log(gen.next());
 // console.log(gen.next());
-
 
 // const someObj = {
 //     *generator() {
@@ -1117,7 +1052,6 @@
 // console.log(gen.next());
 // console.log(gen.next());
 
-
 // class Foo {
 //     *generator() {
 //         yield 1;
@@ -1131,7 +1065,6 @@
 // console.log(gen.next());
 // console.log(gen.next());
 // console.log(gen.next());
-
 
 // class Foo {
 //     *[Symbol.iterator]() {
@@ -1148,7 +1081,6 @@
 // console.log(Array.from(new Foo()));
 // console.log(Array.from(someObj));
 
-
 // function* powers(n) {
 //     for (let current = n; ; current *=n) yield current;
 // }
@@ -1157,18 +1089,15 @@
 //     console.log(power);
 // }
 
-
 // function factorial(n) {
 //     return (n <= 1) ? n : factorial(n - 1) * n;
 // }
 // console.log([1, 2, 3, 4, 5].map(factorial));
 
-
 // let factored = [1, 2, 3, 4, 5,].map(function(n) {
 //     return n <= 1 ? 1 : arguments.callee(n - 1) * n;
 // });
 // console.log(factored);
-
 
 // const global1 = this;
 // const sillyFn = function(recursed) {
@@ -1184,7 +1113,6 @@
 // }
 // sillyFn();
 
-
 // // The Y-combinator: a utility function!
 // const Y = hof => (x => x(x))(x => hof(y => x(x)(y)));
 // console.log(
@@ -1192,7 +1120,6 @@
 //     Y(factorial => n => (n <= 1 ? 1 : factorial(n - 1) * n))
 //   )
 // );
-
 
 // function create() {
 //     return function(n) {
@@ -1202,7 +1129,6 @@
 // }
 // const result = create()(5);
 // console.log(result);
-
 
 // 5!
 // function factorial(n) {
@@ -1233,7 +1159,6 @@
 // );
 // whoIsCaller();
 
-
 // function f() {
 //     if (Object.hasOwn(f, "caller")) {
 //         console.log(
@@ -1253,14 +1178,12 @@
 //     }
 // })();
 
-
 // function myFn() {
 //     return (myFn.caller === null)
 //       ? `The function was called from the top`
 //       : `This function's caller was ${myFn.caller}`;
 // }
 // console.log(myFn());
-
 
 // function f(n) {
 //     g(n - 1);
@@ -1277,12 +1200,31 @@
 // }
 // f(3);
 
+// function foo() {
+//     function bar() {
+//         console.trace();
+//     }
+//     bar();
+// }
+// foo();
 
-function foo() {
-    function bar() {
-        console.trace();
-    }
-    bar();
+function callerFunc() {
+  calleeFunc();
 }
 
-foo();
+function strictCallerFunc() {
+  // "use strict";
+  calleeFunc();
+}
+
+function calleeFunc() {
+  console.log(calleeFunc.caller);
+}
+
+(function () {
+  callerFunc();
+})();
+
+(function () {
+  strictCallerFunc();
+})();
