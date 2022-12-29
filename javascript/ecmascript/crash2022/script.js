@@ -1208,23 +1208,29 @@
 // }
 // foo();
 
-function callerFunc() {
-  calleeFunc();
-}
+// function callerFunc() {
+//   calleeFunc();
+// }
+//
+// function strictCallerFunc() {
+//   "use strict";
+//   calleeFunc();
+// }
+//
+// function calleeFunc() {
+//   console.log(calleeFunc.caller);
+// }
+//
+// (function () {
+//   callerFunc();
+// })();
+//
+// (function () {
+//   strictCallerFunc();
+// })();
 
-function strictCallerFunc() {
-  // "use strict";
-  calleeFunc();
-}
-
-function calleeFunc() {
-  console.log(calleeFunc.caller);
-}
-
-(function () {
-  callerFunc();
-})();
-
-(function () {
-  strictCallerFunc();
-})();
+// function makeHello() {
+//   console.log(arguments.callee.caller);
+//   console.log(makeHello.caller);
+// }
+// makeHello();
