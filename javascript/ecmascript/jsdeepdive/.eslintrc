@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "airbnb"
+  ],
+  "rules": {
+    "no-unused-vars": 0,
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"]
+  }
+}
