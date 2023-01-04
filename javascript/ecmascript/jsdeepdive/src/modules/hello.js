@@ -1,3 +1,3 @@
 let hello = "Hello from script";
 
-export { hello };
+export { hello, };
