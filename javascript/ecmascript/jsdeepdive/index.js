@@ -95,3 +95,23 @@
 // console.log(structuredClone({fn: () => {}}));
 // console.log(structuredClone({ el: document.body }));
 // console.log(structuredClone({get foo() {return 'bar'}}));
+
+// TRANSFERABLE OBJECTS
+
+// const uInt8Array = new Uint8Array(1024 * 1024 * 8).map((v, i) => i);
+// console.log(uInt8Array.byteLength);
+// worker.postMessage(uInt8Array, [uInt8Array.buffer]);
+// console.log(uInt8Array.byteLength);
+
+
+const original = new Uint8Array(1024);
+const clone = structuredClone(original);
+console.log(original.byteLength);
+console.log(clone.byteLength);
+original[0] = 1;
+console.log(original[0]);
+console.log(clone[0]);
+const transferred = structuredClone(original, { transfer: original.buffer });
+console.log(transferred.byteLength);
+console.log(transferred[0]);
+console.log(original.byteLength);
