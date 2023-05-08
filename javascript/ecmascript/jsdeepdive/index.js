@@ -103,15 +103,47 @@
 // worker.postMessage(uInt8Array, [uInt8Array.buffer]);
 // console.log(uInt8Array.byteLength);
 
+// const original = new Uint8Array(1024);
+// const clone = structuredClone(original);
+// console.log(original.byteLength);
+// console.log(clone.byteLength);
+// original[0] = 1;
+// console.log(original[0]);
+// console.log(clone[0]);
+// const transferred = structuredClone(original, { transfer: original.buffer });
+// console.log(transferred.byteLength);
+// console.log(transferred[0]);
+// console.log(original.byteLength);
 
-const original = new Uint8Array(1024);
-const clone = structuredClone(original);
-console.log(original.byteLength);
-console.log(clone.byteLength);
-original[0] = 1;
-console.log(original[0]);
-console.log(clone[0]);
-const transferred = structuredClone(original, { transfer: original.buffer });
-console.log(transferred.byteLength);
-console.log(transferred[0]);
-console.log(original.byteLength);
+
+// OBJECT CLONING METHODS
+
+const obj1 = { name: "John", age: 30, address: { city: "New York", state: "NY", }, };
+const obj2 = { ...obj1 };
+const obj3 = new Object(obj1);
+const obj4 = Object.assign(obj1);
+const obj5 = JSON.parse(JSON.stringify(obj1));
+const obj6 = structuredClone(obj1);
+
+console.log(obj1);
+console.log(obj2);
+console.log(obj3);
+console.log(obj4);
+console.log(obj5);
+console.log(obj6);
+
+// import _ from 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js';
+// const obj6 = _.cloneDeep(obj1);
+// console.log(obj6);
+
+function deepClone(obj) {
+    if (obj === null || typeof obj !== "object") {
+        return obj;
+    }
+    const clone = {};
+    for (const key in obj) {
+        clone[key] = deepClone(obj[key]);
+    }
+    return clone;
+}
+console.log(deepClone(obj1));
