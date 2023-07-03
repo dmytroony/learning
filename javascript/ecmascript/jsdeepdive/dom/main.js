@@ -107,21 +107,70 @@
 // }, true);
 // document.querySelector('button').addEventListener('click', e => e.stopPropagation, true);
 // Bubbling
-window.addEventListener('click', () => console.log('window'), false);
-document.addEventListener('click', () => console.log('document'), false);
-document.querySelector('.div2').addEventListener('click', (e) => {
-  // e.stopPropagation();
-  console.log('div2');
-}, {once: true});
-document.querySelector('.div1').addEventListener('click', () => console.log('div1'), false);
-document.querySelector('button').addEventListener('click', (e) => {
-  // e.stopPropagation();
-  console.log(e.target);
-  e.target.innerText = 'button clicked';
-}, false);
-document.querySelector('.btn').addEventListener('click', (e) => {
-  // e.stopPropagation();
-  e.preventDefault();
-  console.log(e.target);
-  e.target.innerText = 'link clicked';
-}, false);
+// window.addEventListener('click', () => console.log('window'), false);
+// document.addEventListener('click', () => console.log('document'), false);
+// document.querySelector('.div2').addEventListener('click', (e) => {
+//   // e.stopPropagation();
+//   console.log('div2');
+// }, {once: true});
+// document.querySelector('.div1').addEventListener('click', () => console.log('div1'), false);
+// document.querySelector('button').addEventListener('click', (e) => {
+//   // e.stopPropagation();
+//   console.log(e.target);
+//   e.target.innerText = 'button clicked';
+// }, false);
+// document.querySelector('.btn').addEventListener('click', (e) => {
+//   // e.stopPropagation();
+//   e.preventDefault();
+//   console.log(e.target);
+//   e.target.innerText = 'link clicked';
+// }, false);
+//
+// Event Delegation
+// standard
+// document.querySelector('#football').addEventListener('click', (e) => {
+//   console.log(`football is clicked`);
+//   const target = e.target;
+//   if (target.matches('li')) {
+//     target.style.backgroundColor = 'lightgrey';
+//   }
+// });
+// document.querySelector('#basketball').addEventListener('click', (e) => {
+//   console.log(`basketball is clicked`);
+//   const target = e.target;
+//   if (target.matches('li')) {
+//     target.style.backgroundColor = 'lightgrey';
+//   }
+// });
+// document.querySelector('#boxing').addEventListener('click', (e) => {
+//   console.log(`boxing is clicked`);
+//   const target = e.target;
+//   if (target.matches('li')) {
+//     target.style.backgroundColor = 'lightgrey';
+//   }
+// });
+// document.querySelector('#tennis').addEventListener('click', (e) => {
+//   console.log(`tennis is clicked`);
+//   const target = e.target;
+//   if (target.matches('li')) {
+//     target.style.backgroundColor = 'lightgrey';
+//   }
+// });
+// document.querySelector('#golf').addEventListener('click', (e) => {
+//   console.log(`golf is clicked`);
+//   const target = e.target;
+//   if (target.matches('li')) {
+//     target.style.backgroundColor = 'lightgrey';
+//   }
+// });
+// delegation
+const sports = document.querySelector("#sports"), 
+  newSport = document.querySelector('li');
+sports.addEventListener('click', e => {
+  const target = e.target;
+  console.log(`${target.getAttribute('id')} is clicked`);
+  if (target.matches('li')) target.style.backgroundColor = "lightgrey";
+});
+newSport.innerText = 'Rugby';
+newSport.setAttribute('id', 'rugby');
+sports.appendChild(newSport);
