@@ -66,4 +66,62 @@
 // console.log(uL.nextElementSibling);
 
 // Event Listeners
+// const buttonTwo = document.querySelector('.btn-2');
+// function logFrom2Btn() {
+//   console.log('Hello from btn-2');
+// }
+// buttonTwo.addEventListener('click', logFrom2Btn);
+// const btn3d = document.querySelector('.btn-3');
+// function logFrom3d() {
+//   console.log(`Hello from btn-3`);
+// }
+// btn3d.addEventListener('mouseover', logFrom3d);
 
+// const revealBtn = document.querySelector('.reveal-btn');
+// const hiddenContent = document.querySelector('.hidden-content');
+// function revealContent() {
+//   if(hiddenContent.classList.contains('reveal-btn')) {
+//     hiddenContent.classList.remove('reveal-btn');
+//   } else {
+//     hiddenContent.classList.add('reveal-btn');
+//   }
+// }
+// // revealBtn.addEventListener('click', () => {
+// //   // revealBtn.nextElementSibling.style.visibility = 'visible';
+// //   revealBtn.nextElementSibling.style.display = 'block';
+// // });
+// revealBtn.addEventListener('click', revealContent);
+
+// Capturing -> Target -> Bubbling
+// Capturing
+// window.addEventListener('click', () => console.log('window'), true);
+// document.addEventListener('click', () => console.log('document'), true);
+// document.querySelector('.div2').addEventListener('click', (e) => {
+//   // e.stopPropagation();
+//   console.log('div2');
+// }, true);
+// document.querySelector('.div1').addEventListener('click', () => console.log('div1'), true);
+// document.querySelector('button').addEventListener('click', (e) => {
+//   console.log(e.target);
+//   e.target.innerText = 'clicked';
+// }, true);
+// document.querySelector('button').addEventListener('click', e => e.stopPropagation, true);
+// Bubbling
+window.addEventListener('click', () => console.log('window'), false);
+document.addEventListener('click', () => console.log('document'), false);
+document.querySelector('.div2').addEventListener('click', (e) => {
+  // e.stopPropagation();
+  console.log('div2');
+}, {once: true});
+document.querySelector('.div1').addEventListener('click', () => console.log('div1'), false);
+document.querySelector('button').addEventListener('click', (e) => {
+  // e.stopPropagation();
+  console.log(e.target);
+  e.target.innerText = 'button clicked';
+}, false);
+document.querySelector('.btn').addEventListener('click', (e) => {
+  // e.stopPropagation();
+  e.preventDefault();
+  console.log(e.target);
+  e.target.innerText = 'link clicked';
+}, false);
