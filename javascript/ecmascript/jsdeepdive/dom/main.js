@@ -164,13 +164,13 @@
 //   }
 // });
 // delegation
-const sports = document.querySelector("#sports"), 
-  newSport = document.querySelector('li');
-sports.addEventListener('click', e => {
-  const target = e.target;
-  console.log(`${target.getAttribute('id')} is clicked`);
-  if (target.matches('li')) target.style.backgroundColor = "lightgrey";
-});
-newSport.innerText = 'Rugby';
-newSport.setAttribute('id', 'rugby');
-sports.appendChild(newSport);
+// const sports = document.querySelector("#sports"), 
+//   newSport = document.querySelector('li');
+// sports.addEventListener('click', e => {
+//   const target = e.target;
+//   console.log(`${target.getAttribute('id')} is clicked`);
+//   if (target.matches('li')) target.style.backgroundColor = "lightgrey";
+// });
+// newSport.innerText = 'Rugby';
+// newSport.setAttribute('id', 'rugby');
+// sports.appendChild(newSport);
