@@ -1348,32 +1348,83 @@
 // for (const el of map) console.log(el);
 
 // custom iterator for objects
-let obj1 = {
-  prop1: 123,
-  prop2: 234,
-  prop3: 345,
-};
-obj1[Symbol.iterator] = function() {
-  let counter = -1;
-  return {
-    next: function() {
-      counter++;
-      switch (counter) {
-        case 0: return { value: obj1.prop3, done: false, };
-          break;
-        case 1: return { value: obj1.prop2, done: false, };
-          break;
-        case 2: return { value: obj1.prop1, done: false, };
-          break;
-        default: return { value: undefined, done: true, };
-          break;
-      }
-    },
-  };
-}
-let iter = obj1[Symbol.iterator]();
-for (const prop of obj1) console.log(prop);
-console.log(iter.next());
-console.log(iter.next());
-console.log(iter.next());
-console.log(iter.next()); 
+// let obj1 = {
+//   prop1: 123,
+//   prop2: 234,
+//   prop3: 345,
+// };
+// obj1[Symbol.iterator] = function() {
+//   let counter = -1;
+//   return {
+//     next: function() {
+//       counter++;
+//       switch (counter) {
+//         case 0: return { value: obj1.prop3, done: false, };
+//           break;
+//         case 1: return { value: obj1.prop2, done: false, };
+//           break;
+//         case 2: return { value: obj1.prop1, done: false, };
+//           break;
+//         default: return { value: undefined, done: true, };
+//           break;
+//       }
+//     },
+//   };
+// }
+// let iter = obj1[Symbol.iterator]();
+// for (const prop of obj1) console.log(prop);
+// console.log(iter.next());
+// console.log(iter.next());
+// console.log(iter.next());
+// console.log(iter.next());
+
+
+// const str1 = eval(new String("one + 1"));
+// const str2 = new String("two + 2");
+// console.log(str1);
+// console.log(str2);
+
+// const str = "Hello, Mars!";
+// const john = "John";
+// const abc = "abc";
+// console.log(str.substring(3, 9));
+// console.log(str);
+// console.log(str.substr(3, 8));
+// console.log(str);
+// console.log(str.slice(3, 7));
+// console.log(str);
+// console.log(str.split(" ", 5));
+// console.log(str);
+// console.log(str.indexOf("M"));
+// console.log(str);
+// console.log(str.lastIndexOf("l"));
+// console.log(str);
+// const greeting = "".concat(str, " ", "I am ", john, "!");
+// console.log(greeting, greeting.length);
+// console.log(str.charAt(5));
+// console.log(str.startsWith("HelLo"));
+// console.log(str.endsWith("s!"));
+// console.log(str.repeat(3));
+// console.log("abc: ", abc.repeat(0));
+// const spacedStr = "  " + str + "  ";
+// console.log(spacedStr, spacedStr.length);
+// console.log(spacedStr.trimStart());
+// console.log(spacedStr.trimEnd());
+// const trimmedStr = spacedStr.trim();
+// console.log(trimmedStr, trimmedStr.length);
+// console.log(str.padStart(20));
+// console.log(str.padStart(20, "123bc"));
+// console.log(str.padEnd(20, "123bc"));
+// console.log("a".localeCompare("a"));
+// console.log("a".localeCompare("b"));
+// console.log("b".localeCompare("a"));
+
+const text = "The rain in SPAIN stays mainly in the plain";
+// console.log(str.search("ain"));
+// console.log(str.search(/ain/));
+// console.log(str.match("ain"));
+// console.log(str.match(/ain/));
+// let res = text.matchAll('ain');
+// console.log(res);
+let resG = text.matchAll(/ain/g);
+console.log(resG);
