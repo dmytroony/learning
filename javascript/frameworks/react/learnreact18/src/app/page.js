@@ -1,26 +1,11 @@
 import Gallery from "@/app/components/Gallery";
-import Author from "@/app/components/Author";
+import Bio from "@/app/components/Bio";
 import styles from './page.module.css';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Author />
-          </a>
-        </div>
-      </div>
+      <Bio />
 
       <div className={styles.center}>
         <Gallery />

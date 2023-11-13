@@ -6,6 +6,7 @@ export default function Avatar({ person, size }) {
       className="avatar"
       src={getImageUrl(person)}
       alt={person.name}
+      width={size}
       height={size}
     />
   );
