@@ -1,0 +1,22 @@
+{
+  "name": "bmac",
+  "version": "1.0.0",
+  "description": "1. Setting up a NodeJS and ExpressJS environment. 2. Implementation MongoDB database. 3. Integrating Cryptomus Payment Gateway for cryptocurrency transactions. 4. Deploying the application to a clowd platform for global accessibility.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "dmytroony",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.0.3"
+  }
+}
