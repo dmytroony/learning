@@ -1,3 +1,4 @@
+### Shortbrief:
 1. Setting up a NodeJS and ExpressJS environment.
 2. Implementation MongoDB database.
 3. Integrating Cryptomus Payment Gateway for cryptocurrency transactions.
