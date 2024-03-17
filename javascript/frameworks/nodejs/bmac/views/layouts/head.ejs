@@ -16,6 +16,11 @@
   type="image/svg+xml" 
 />
 
+<!-- 
+  allow loading images from any external domain / or concrete https://link.com instead of * 
+-->
+<meta http-equiv="Content-Security-Policy" content="img-src 'self' *">
+
 <!-- google font link --> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
