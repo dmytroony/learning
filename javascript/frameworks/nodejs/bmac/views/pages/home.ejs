@@ -49,7 +49,7 @@
       <!-- contribute -->
       <section class="card elevated contribute">
         <h2 class="title-medium">
-          Show your love to BMC!
+          Show your love to BMaC!
         </h2>
         <form class="contribute-form" data-contribute-form>
           <div class="counter-wrapper">
@@ -69,7 +69,17 @@
               <div class="text-field-wrapper counter-field">
                 <input type="number" name="amount" value="1" min="1" max="99999999" required class="text-field outlined body-large" data-counter-field data-form-field>
               </div>
+              <button type="button" class="icon-btn filled" data-increment-btn>
+                <span class="material-symbols-rounded">
+                  add
+                </span>
+                <div class="state-layer"></div>
+              </button>
             </div>
+          </div>
+          <div class="text-field-wrapper">
+            <label for="name" class="text-field-label body-large">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name or @yourTwitter (optional)" class="text-field outlined body-large">
           </div>
         </form>
       </section>
