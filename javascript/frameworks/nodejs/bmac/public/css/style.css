@@ -483,7 +483,7 @@ textarea {
   color: var(--on-primary);
   --state-layer-bg: var(--on-primary);
 }
-k
+
 .button[disabled] {
   background-color: var(--on-surface-disabled-bg);
   color: var(--on-surface-disabled-text);
