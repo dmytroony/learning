@@ -79,8 +79,34 @@
           </div>
           <div class="text-field-wrapper">
             <label for="name" class="text-field-label body-large">Name</label>
-            <input type="text" name="name" id="name" placeholder="Name or @yourTwitter (optional)" class="text-field outlined body-large">
+            <input type="text" 
+              name="name" 
+              id="name" 
+              placeholder="Name or @yourTwitter (optional)" 
+              class="text-field outlined body-large"
+              data-form-field
+            >
           </div>
+          <div class="text-field-wrapper">
+            <label for="email" class="text-field-label body-large">Email*</label>
+            <input type="email" 
+              name="email" 
+              id="email" 
+              placeholder="Your email here" 
+              class="text-field outlined body-large"
+              data-form-field
+              required
+            >
+          </div>
+          <div class="text-field-wrapper">
+            <label for="message" class="text-field-label body-large">Message</label>
+            <textarea name="message" id="message" placeholder="Say sth (optional)" 
+              class="text-field outlined body-large" data-form-field></textarea>
+          </div>
+          <button type="submit" class="button filled label-large" data-submit-btn disabled>
+            Contribute $<span data-total>1</span>
+            <div class="state-layer"></div>
+          </button>
         </form>
       </section>
     </div>
