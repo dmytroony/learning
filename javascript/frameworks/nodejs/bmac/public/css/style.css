@@ -394,6 +394,12 @@ textarea {
   background-color: var(--surface-container-low);
   box-shadow: var(--shadow-1);
 }
+
+.car.outlined {
+  border: 1px solid var(--outline);
+}
+
+
 /**
  * Icon button
  */
@@ -566,6 +572,12 @@ textarea {
   opacity: .12;
 };
 
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
 
 /*-----------------------------------*\
   #HERO
@@ -655,7 +667,11 @@ textarea {
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
-
+.social-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
 
 
 
