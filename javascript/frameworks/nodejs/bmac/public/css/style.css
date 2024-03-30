@@ -394,12 +394,12 @@ textarea {
   margin-block-end: var(--space-4);
 }
 
-.card .elevated {
+.card.elevated {
   background-color: var(--surface-container-low);
   box-shadow: var(--shadow-1);
 }
 
-.car.outlined {
+.card.outlined {
   border: 1px solid var(--outline);
 }
 
@@ -735,7 +735,11 @@ textarea {
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
-
+.footer {
+  padding-block: var(--space-4);
+  text-align: center;
+  border-block-start: 1px solid var(--outline-variant);
+}
 
 
 
