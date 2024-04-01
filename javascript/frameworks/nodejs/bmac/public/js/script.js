@@ -29,4 +29,21 @@
 
   $counterField.addEventListener('input', updateTotal.bind($counterField));
 
+
+  // submit contribute form
+  const contributeForm = document.querySelector('[data-contribute-form]');
+  const submitBtn = document.querySelector('[data-submit-btn]');
+
+  contributeForm.addEventListener('submit', async function (event) {
+    event.preventDefault();
+    try {
+      submitBtn.setAttribute('disabled', '');
+    } catch (error) {
+      console.error(error);
+      throw error;
+    } finally {
+      submitBtn.removeAttribute('disabled', '');
+    }
+  });
+
 })();

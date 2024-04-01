@@ -7,6 +7,7 @@ require('dotenv').config();
 
 // custom modules
 const home = require('./src/routes/home.route');
+const checkout = require('./src/routes/checkout.route');
 
 // initial express app
 const app = express();
@@ -22,6 +23,11 @@ app.use(helmet());
 
 // home page
 app.use('/', home);
+
+
+// checkout
+app.use('/checkout', checkout);
+
 
 // Port listening
 app.listen(process.env.PORT, () => {
