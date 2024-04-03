@@ -16,4 +16,4 @@
 3. `npm install nodemon dotenv --save-dev`
 4. `npm install helmet`
 5. `npm run dev`
-6. 
+6. `npm install axios crypto`
