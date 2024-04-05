@@ -1,0 +1,19 @@
+{
+  "name": "bunqstart",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf dist && echo 'Done!",
+    "start": "bun run index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.0.12",
+    "@types/figlet": "^1.5.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "figlet": "^1.7.0"
+  }
+}
