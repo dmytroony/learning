@@ -49,15 +49,37 @@
 // console.log(foundBook?.length);
 
 
-// ## Challenge 2
-let discount: number | string = 20;
-console.log(discount);
-discount = '20%';
-console.log(discount);
-// discount = true;
+// // ## Challenge 2
+// let discount: number | string = 20;
 // console.log(discount);
+// discount = '20%';
+// console.log(discount);
+// // discount = true;
+// // console.log(discount);
+//
+// let orderStatus: 'processing' | 'shipped' | 'delivered' = 'processing';
+// orderStatus = 'shipped';
+// orderStatus = 'delivered';
+// console.log(orderStatus);
 
-let orderStatus: 'processing' | 'shipped' | 'delivered' = 'processing';
-orderStatus = 'shipped';
-orderStatus = 'delivered';
-console.log(orderStatus);
+
+// let prices: number[] = [100, 75, 42];
+// let fruits: string[] = ['apple', 'orange', 'banana'];
+// // let randomValues: [] = []; // always empty array
+// // let emptyValues = []; // array with anything
+// let emptyValues: number[] = [];
+// let names: string[] = ['peter', 'susan', 'andrew'];
+// // let names = ['peter', 'susan', 'andrew', 12];
+// console.log(names[2]);
+// let array:(string | boolean)[] = ['apple', true, 'banana', false];
+
+let temperatures: number[] = [20, 25, 30];
+temperatures.push(35);
+console.log(temperatures);
+
+let colors: string[] = ['red', 'green', 'blue'];
+colors.push('violet');
+
+let mixedArr: (number | string)[] = [1, 'two', 3];
+mixedArr.push('four');
+console.log(mixedArr);
