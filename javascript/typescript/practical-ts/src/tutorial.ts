@@ -72,14 +72,57 @@
 // // let names = ['peter', 'susan', 'andrew', 12];
 // console.log(names[2]);
 // let array:(string | boolean)[] = ['apple', true, 'banana', false];
+//
+// let temperatures: number[] = [20, 25, 30];
+// temperatures.push(35);
+// console.log(temperatures);
+//
+// let colors: string[] = ['red', 'green', 'blue'];
+// colors.push('violet');
+//
+// let mixedArr: (number | string)[] = [1, 'two', 3];
+// mixedArr.push('four');
+// console.log(mixedArr);
 
-let temperatures: number[] = [20, 25, 30];
-temperatures.push(35);
-console.log(temperatures);
 
-let colors: string[] = ['red', 'green', 'blue'];
-colors.push('violet');
-
-let mixedArr: (number | string)[] = [1, 'two', 3];
-mixedArr.push('four');
-console.log(mixedArr);
+// pt.2. Object & Functions
+// OBJECTS
+// let car: { brand:string; year: number } =
+//   { brand: 'toyota', year: 2020 };
+//
+// interface Car {
+//   brand:string,
+//   year: number
+// }
+//
+// const toyota: Car = {
+//   brand: 'toyota',
+//   year: 2020
+// };
+//
+// console.log(toyota.brand);
+//
+// let book = { title: 'book', cost: 20 };
+// let pen = { title: 'pen', cost: 10 };
+// let notebook = { title: 'notebook'};
+//
+// let items: { readonly title: string; const?: number }[] =
+//   [ book, pen, notebook ];
+//
+// console.log(items[2].title = 'sketchbook'); // readonly !
+//
+// let bike: { brand: string; year: number } =
+//   { brand: 'yamaha', year: 2010 };
+//
+// let laptop: { brand: string; year: number } =
+//   { brand: 'dell', year: 2013 };
+//
+// let product1 = { title: 'shirt', price: 20 };
+// let product2 = { title: 'pants' };
+//
+// let products: { title: string; price?: number }[] =
+//   [product1, product2];
+// products.push({title: 'shoes'});
+// console.log(products);
+//
+// FUNCTIONS
