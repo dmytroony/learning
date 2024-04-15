@@ -126,3 +126,42 @@
 // console.log(products);
 //
 // FUNCTIONS
+// function sayHi(name: string) {
+//   console.log(`Hello there ${name.toUpperCase()}`);
+// }
+// sayHi('john');
+//
+// function calculateDiscount(price: number): number {
+//   const hasDiscount:boolean = true;
+//   if (hasDiscount) {
+//     return price;
+//     // return 'Discount applied.';
+//   }
+//   return price * 0.9;
+// }
+// const finalPrice = calculateDiscount(200);
+// console.log(finalPrice);
+//
+// function addThree(number: any) {
+//   let anotherNumber: number = 3;
+//   return number + anotherNumber;
+// }
+//
+// const result = addThree(3);
+// console.log(result);
+
+
+// ## Challenge 3
+const names: string[] = ['john', 'merry', 'dilan'];
+
+function isNameInList(name: string): boolean {
+  return names.includes(name);
+}
+
+let nameToCheck: string = 'john';
+
+if (isNameInList(nameToCheck)) {
+  console.log(`${nameToCheck.toUpperCase()} is in the list.`);
+} else {
+  console.log(`${nameToCheck} is not in the list!`);
+}

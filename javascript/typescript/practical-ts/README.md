@@ -13,3 +13,8 @@
 ## Challenge 2
 - Create a variable orderStatus of type 'processing' | 'shipped' | 'delivered' and assign it the value 'processing'. Then, try to assign it the values 'shipped' and 'delivered'.
 - Create a variable discount of type number | string and assign it the value 20. Then, try to assign it the value '20%'.
+
+## Challenge 3
+- Create a new array of names.
+- Write a new function that checks if a name is in your array. This function should take a name as a parameter and return a boolean.
+- Use this function to check if various names are in your array and log the results.
