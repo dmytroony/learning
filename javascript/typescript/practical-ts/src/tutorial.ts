@@ -151,17 +151,59 @@
 // console.log(result);
 
 
-// ## Challenge 3
-const names: string[] = ['john', 'merry', 'dilan'];
-
-function isNameInList(name: string): boolean {
-  return names.includes(name);
-}
-
-let nameToCheck: string = 'john';
-
-if (isNameInList(nameToCheck)) {
-  console.log(`${nameToCheck.toUpperCase()} is in the list.`);
-} else {
-  console.log(`${nameToCheck} is not in the list!`);
-}
+// // ## Challenge 3
+// const names: string[] = ['john', 'merry', 'dilan'];
+//
+// function isNameInList(name: string): boolean {
+//   return names.includes(name);
+// }
+//
+// let nameToCheck: string = 'john';
+//
+// if (isNameInList(nameToCheck)) {
+//   console.log(`${nameToCheck.toUpperCase()} is in the list.`);
+// } else {
+//   console.log(`${nameToCheck} is not in the list!`);
+// }
+//
+//
+// function calculatePrice(price: number, discount?: number): number {
+//   return price - ( discount || 0 );
+// }
+// // console.log(calculatePrice(15, 3));
+// // console.log(calculatePrice(15));
+// //
+// function calculateScore(initialScore: number, penaltyPoints: number = 0): number {
+//   return initialScore - penaltyPoints;
+// }
+// console.log(calculateScore(23, 7));
+// console.log(calculateScore(23));
+//
+// function sum(message: string, ...numbers: number[]): string {
+//   const doubled = numbers.map( (num) => num * 2);
+//   console.log(doubled);
+//
+//   let total =
+//     numbers.reduce((previous, current) => {
+//       return previous + current;
+//     }, 0);
+//   return `${message}${total}`;
+// }
+//
+// let result: string = sum(`The total is: `, 1, 2, 3, 4, 5);
+// console.log(result);
+//
+// function logMessage(message: string): void {
+//   console.log(message);
+//   // return `Hello, World!`;
+// }
+// logMessage(`Hello, TS!`);
+//
+// ## Challenge 4
+// function processInput(input: string | number) {
+//   return typeof input === 'number' ? input * 2 : input.toUpperCase();
+// }
+// const numResult = processInput(23);
+// const textResult = processInput("hello john");
+// console.log(numResult);
+// console.log(textResult);
