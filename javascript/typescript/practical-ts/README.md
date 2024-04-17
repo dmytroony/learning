@@ -22,4 +22,13 @@
 ## Challenge 4
 - Create a function named processInput that accepts a parameter of a union type string | number. The function should behave as follows:
   - If the input is of type number, the function should multiply the number by 2 and log the result to the console.
-  - If the input is of type string, the function should convert the string to uppercase and log the result to the console.
+  - If the input is n object with a reverse of type string, the function should convert the string to uppercase and log the result to the console.
+
+## Challenge 5
+- Create a function named processData that accepts two parameters:
+  - The first parameter, input, should be a union type that can be either a string or a number.
+  - The second parameter, config, should be an object with a reverse property of type boolean, by default it "reverse" should be false.
+- The function should behave as follows:
+  - If input is of type number, the function should return the square of the number.
+  - If input is of type string, the function should return the string in uppercase.
+  - If the reverse property on the config object is true, and input is a string, the function should return the reversed string in uppercase.

@@ -207,3 +207,41 @@
 // const textResult = processInput("hello john");
 // console.log(numResult);
 // console.log(textResult);
+//
+// function createEmployee({ id }:{ id: number }): { id: number; isActive: boolean } {
+//   return { id, isActive: id % 2 === 0 };
+// }
+//
+// console.log(createEmployee({ id: 1 }));
+// console.log(createEmployee({ id: 2 }));
+//
+// function createStudent(student: { id: number; name: string; email: string }): void {
+//   console.log(`Welcome to the course ${student.name}!`);
+// }
+// const andrew = {
+//   id: 21,
+//   name: 'Andrew',
+//   email: "andrew@mail.com"
+// };
+// createStudent(andrew);
+// createStudent({
+//   id: 13,
+//   name: "Kate",
+//   email: "kate@mail.com"
+// });
+//
+
+// ## Challenge 5
+function processData(
+  input: string | number,
+  config: { reverse: boolean } = { reverse: false }
+  ): string | number {
+
+  if (typeof input === "number") return input ** 2;
+  return config.reverse ?
+    input.split("").reverse().join("").toUpperCase() : input.toUpperCase();
+}
+
+console.log(processData(5));
+console.log(processData("hello"));
+console.log(processData("hello", {reverse: true}));
