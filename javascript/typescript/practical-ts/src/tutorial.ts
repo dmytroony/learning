@@ -230,18 +230,77 @@
 //   email: "kate@mail.com"
 // });
 //
-
+//
 // ## Challenge 5
-function processData(
-  input: string | number,
-  config: { reverse: boolean } = { reverse: false }
-  ): string | number {
+// function processData(
+//   input: string | number,
+//   config: { reverse: boolean } = { reverse: false }
+//   ): string | number {
+//
+//   if (typeof input === "number") return input ** 2;
+//   return config.reverse ?
+//     input.split("").reverse().join("").toUpperCase() : input.toUpperCase();
+// }
+//
+// console.log(processData(5));
+// console.log(processData("hello"));
+// console.log(processData("hello", {reverse: true}));
 
-  if (typeof input === "number") return input ** 2;
-  return config.reverse ?
-    input.split("").reverse().join("").toUpperCase() : input.toUpperCase();
+
+// // ALIAS and INTERFACE
+// type User = { id: number; name: string; isActive: boolean };
+// const john: User = { id: 1, name: "John", isActive: true };
+// const susan: User = { id: 1, name: "Susan", isActive: false };
+//
+// function createUser(user: User): User {
+//   console.log(`Hello there ${user.name.toUpperCase()} !!!`);
+//   return user;
+// }
+// createUser(john);
+// createUser(susan);
+//
+// type StringOrNumber = string | number;
+// let value: StringOrNumber;
+// value = 'hello';
+// console.log(value);
+// value = 123;
+// console.log(value);
+//
+// type Theme = 'light' | 'dark';
+// let theme: Theme;
+// theme = 'dark';
+// theme = 'light';
+// function setTheme(t: Theme) {
+//   theme = t;
+// }
+// setTheme("dark");
+//
+// ## Challenge 6
+type Employee = {
+  id: number;
+  name: string;
+  department: string;
+};
+type Manager = {
+  id: number;
+  name: string;
+  employees: Employee[];
+};
+
+type Staff = Employee | Manager;
+function printStaffDetails(staff: Staff): void {
+  staff?.employees
+    ?
+    console.log(`${staff.name} is a Manager`)
+    :
+    console.log(`${staff.name} is an Employee belonging to ${staff.department}`)
 }
 
-console.log(processData(5));
-console.log(processData("hello"));
-console.log(processData("hello", {reverse: true}));
+const alice: Employee = { id: 1, name: "alice", department: "Sales" };
+const steve: Employee = { id: 1, name: "steve", department: "HR" };
+const bob: Manager = { id: 1, name: "bob", employees: [alice, steve] };
+
+
+printStaffDetails(alice);
+printStaffDetails(bob);
+printStaffDetails(steve);

@@ -32,3 +32,12 @@
   - If input is of type number, the function should return the square of the number.
   - If input is of type string, the function should return the string in uppercase.
   - If the reverse property on the config object is true, and input is a string, the function should return the reversed string in uppercase.
+
+## Challenge 6
+- Define the Employee type: Create a type Employee with properties id(number), name(string), and department(string).
+- Define the Manager type: Create a type Manager with properties id(number), name(string), and employees(an array of Employee).
+- Create a Union Type: Define a type Staff that is a union of Employee and Manager.
+- Create the printStaffDetails function: This function should accept a parameter of type Staff.
+  - Inside the function, use a type guard to check if the 'employees' property exists in the passed object.
+  - If it does print a message indicating that the person is a manager and the number of employees they manage.
+  - If it doesn't print a message indicating that the person is an employee and the department they belong to.
