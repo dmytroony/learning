@@ -248,6 +248,9 @@
 
 
 // // ALIAS and INTERFACE
+//
+// Type Alias
+//
 // type User = { id: number; name: string; isActive: boolean };
 // const john: User = { id: 1, name: "John", isActive: true };
 // const susan: User = { id: 1, name: "Susan", isActive: false };
@@ -275,32 +278,119 @@
 // }
 // setTheme("dark");
 //
-// ## Challenge 6
-type Employee = {
-  id: number;
-  name: string;
-  department: string;
-};
-type Manager = {
-  id: number;
-  name: string;
-  employees: Employee[];
-};
-
-type Staff = Employee | Manager;
-function printStaffDetails(staff: Staff): void {
-  staff?.employees
-    ?
-    console.log(`${staff.name} is a Manager`)
-    :
-    console.log(`${staff.name} is an Employee belonging to ${staff.department}`)
+// // ## Challenge 6
+// type Employee = {
+//   id: number;
+//   name: string;
+//   department: string;
+// };
+// type Manager = {
+//   id: number;
+//   name: string;
+//   employees: Employee[];
+// };
+// type Staff = Employee | Manager;
+// const alice: Employee = { id: 1, name: "alice", department: "Sales" };
+// const steve: Employee = { id: 1, name: "steve", department: "HR" };
+// const bob: Manager = { id: 1, name: "bob", employees: [alice, steve] };
+//
+// function printStaffDetails(staff: Staff): void {
+//   staff?.employees
+//     ?
+//     console.log(`${staff.name} is a Manager`)
+//     :
+//     console.log(`${staff.name} is an Employee belonging to ${staff.department}`)
+// }
+//
+// printStaffDetails(alice);
+// printStaffDetails(bob);
+// printStaffDetails(steve);
+//
+//
+// type Book = { id: number, name: string, price: number };
+// type DiscountedBook = Book & { discount: number };
+// const book1: Book = {
+//   id: 1,
+//   name: "how to cook a dragon",
+//   price: 15
+// };
+// const book2: Book = {
+//   id: 1,
+//   name: "the secret life of unicorns",
+//   price: 18
+// };
+// const discountedBook: DiscountedBook = {
+//   id: 3,
+//   name: "Gnomes vs. Goblins: The Ultimate Guide",
+//   price: 25,
+//   discount: 0.25
+// };
+//
+// const propName = 'age';
+// type Animal = {
+//   [propName]: number
+// };
+// let tiger: Animal = { [propName]: 5 };
+// console.log(tiger);
+//
+//
+// // Interface
+// interface Book {
+//   readonly isbn: number;
+//   title: string;
+//   author: string;
+//   genre?: string;
+//
+//   printAuthor(): void;
+//
+//   printTitle(message: string): string;
+//
+//   printSth: (someValue: number) => number;
+// }
+//
+// const deepWork: Book = {
+//   isbn: 911113813,
+//   title: "Deep work",
+//   author: "Cal Newport",
+//   genre: "Self-help",
+//   printAuthor() {
+//     console.log(this.author);
+//   },
+//   printTitle(message) {
+//     return `${message} ${this.title}`;
+//   },
+//   // printSth: function(someValue) { // 1st option
+//   //   return someValue;
+//   // },
+//   // printSth: someValue => { // 2nd option
+//   //   return someValue;
+//   // },
+//   printSth(someValue) { // 3rd option
+//     return someValue;
+//   }
+// }
+//
+// deepWork.printAuthor();
+// console.log(deepWork.printTitle("Let\'s dive into the"));
+// console.log(deepWork.printSth(32));
+//
+//
+// ## Challenge 7
+interface Computer {
+  readonly id: number;
+  brand: string;
+  ram: number;
+  storage?: number;
+  upgradeRam(increase: number): number;
 }
-
-const alice: Employee = { id: 1, name: "alice", department: "Sales" };
-const steve: Employee = { id: 1, name: "steve", department: "HR" };
-const bob: Manager = { id: 1, name: "bob", employees: [alice, steve] };
-
-
-printStaffDetails(alice);
-printStaffDetails(bob);
-printStaffDetails(steve);
+const dellE6320: Computer = {
+  id: 3123,
+  brand: "dell",
+  ram: 8,
+  upgradeRam(increase) {
+    const upgradedRam = increase + this.ram;
+    console.log(`RAM was upgraded from ${this.ram}GB to ${upgradedRam}GB`);
+    return upgradedRam;
+  }
+};
+console.log(dellE6320.upgradeRam(8));
