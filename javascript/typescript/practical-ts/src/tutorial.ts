@@ -375,22 +375,82 @@
 // console.log(deepWork.printSth(32));
 //
 //
-// ## Challenge 7
-interface Computer {
-  readonly id: number;
-  brand: string;
-  ram: number;
-  storage?: number;
-  upgradeRam(increase: number): number;
-}
-const dellE6320: Computer = {
-  id: 3123,
-  brand: "dell",
-  ram: 8,
-  upgradeRam(increase) {
-    const upgradedRam = increase + this.ram;
-    console.log(`RAM was upgraded from ${this.ram}GB to ${upgradedRam}GB`);
-    return upgradedRam;
-  }
-};
-console.log(dellE6320.upgradeRam(8));
+// // ## Challenge 7
+// interface Computer {
+//   readonly id: number;
+//   brand: string;
+//   ram: number;
+//   storage?: number;
+//   upgradeRam(increase: number): number;
+// }
+// const dellE6320: Computer = {
+//   id: 3123,
+//   brand: "dell",
+//   ram: 8,
+//   upgradeRam(increase) {
+//     const upgradedRam = increase + this.ram;
+//     console.log(`RAM was upgraded from ${this.ram}GB to ${upgradedRam}GB`);
+//     return upgradedRam;
+//   }
+// };
+// console.log(dellE6320.upgradeRam(8));
+//
+//
+// interface Person {
+//   name: string;
+//   getDetails(): string;
+// }
+// interface DogOwner {
+//   dogName: string;
+//   getDogDetails(): string;
+// }
+// interface Person { // extending Person
+//   age: number;
+// }
+//
+// const person: Person = {
+//   name: "John",
+//   age: 31,
+//   getDetails() {
+//     return `Name: ${this.name}, Age: ${this.age}`;
+//   }
+// };
+//
+// interface Employee extends Person {
+//   employeeId: number;
+// }
+//
+// const employee: Employee = {
+//   name: "Jane",
+//   age: 28,
+//   employeeId: 34,
+//   getDetails() {
+//     return `Name: ${this.name}, Age: ${this.age}, employeeID: ${this.employeeId}`;
+//   }
+// };
+//
+// interface Manager extends Person, DogOwner {
+//   managePeople(): void;
+// }
+//
+// const manager: Manager = {
+//   name: "Bob",
+//   age: 35,
+//   dogName: "Rex",
+//   getDetails() {
+//     return `Name: ${this.name}, Age: ${this.age}`;
+//   },
+//   getDogDetails() {
+//     return `Name: ${this.dogName}`;
+//   },
+//   managePeople() {
+//     console.log("Managing people...");
+//   },
+// };
+//
+// console.log(person.getDetails());
+// console.log(employee.getDetails());
+// manager.managePeople();
+//
+//
+// Challenge 8, pt. 1

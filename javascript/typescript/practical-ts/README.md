@@ -50,3 +50,10 @@
 - Also inside the interface, define any methods that the object should have. In this case, we have upgradeRam, which is a function that takes a number and returns a number.
 - Now that we have our interface, we can create an object that adheres to this interface. This object should have all the properties defined in the interface(except for optional ones, which are... optional), and the methods should be implemented.
 - Finally, we can use our object. We can call its upgradeRam method to increase its RAM.
+
+## Challenge 8, pt. 1
+- Define the Person interface Start by defining a Person interface with a name property of type string.
+- Define the DogOwner interface Next, define a DogOwner interface that extends Person and adds a dogName property of type string.
+- Define the Manager interface Then, define a Manager interface that extends Person and adds methods: managePeople and delegateTasks. Both methods should have a return type of void.
+- Define the getEmployee function Now, define a function called getEmployee that returns a Person, DogOwner, or Manager. Inside this function, generate a random number and use it to decide which type of object to return. If the number is less than 0.33, return a Person. If it's less than 0.66, return a DogOwner. Otherwise, return a Manager.
+- Finally, create a variable called employee that can be a Person, DogOwner, or Manager, and assign it the return value of getEmployee. Then, log employee to the console.
