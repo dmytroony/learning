@@ -454,6 +454,22 @@
 //
 //
 // Challenge 8, pt. 1
+//
+function getEmployee(): Person | DogOwner | Manager {
+  const randomNum: number = Math.random();
+  if (randomNum < 0.33) return { name: "John" };
+  if (randomNum < 0.66) return { name: "Sarah", dogName: "Rex" };
+  return {
+    name: "Bob",
+    managePeople() {
+      console.log("Managing people...");
+    },
+    delegateTasks() {
+      console.log("Delegating tasks...");
+    }
+  };
+}
+
 interface Person {
   name: string;
 }
@@ -461,16 +477,8 @@ interface DogOwner extends Person {
   dogName: string;
 }
 interface Manager extends Person {
-  managePeople: void;
-  delegatePeople: void;
+  managePeople(): void;
+  delegateTasks(): void;
 }
-
-function getEmployee(): string {
-  const randomNum: number = Number((Math.random()).toFixed(2));
-  if (randomNum < 0.33) return "Person";
-  if (randomNum < 0.66) return "DogOwner";
-  return "Manager";
-};
-  
-// const employee: Person | DogOwner | Manager = getEmployee();
-console.log(getEmployee());
+const employee: Person | DogOwner | Manager = getEmployee();
+console.log(employee);
