@@ -454,3 +454,23 @@
 //
 //
 // Challenge 8, pt. 1
+interface Person {
+  name: string;
+}
+interface DogOwner extends Person {
+  dogName: string;
+}
+interface Manager extends Person {
+  managePeople: void;
+  delegatePeople: void;
+}
+
+function getEmployee(): string {
+  const randomNum: number = Number((Math.random()).toFixed(2));
+  if (randomNum < 0.33) return "Person";
+  if (randomNum < 0.66) return "DogOwner";
+  return "Manager";
+};
+  
+// const employee: Person | DogOwner | Manager = getEmployee();
+console.log(getEmployee());
