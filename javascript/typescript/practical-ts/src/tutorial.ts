@@ -482,3 +482,12 @@ interface Manager extends Person {
 }
 const employee: Person | DogOwner | Manager = getEmployee();
 console.log(employee);
+
+// function isManager(obj: Person | DogOwner | Manager): boolean {
+function isManager(obj: Person | DogOwner | Manager): obj is Manager {
+  return "managePeople" in obj && "delegateTasks" in obj;
+}
+
+if (isManager(employee)) {
+  employee.delegateTasks();
+}
