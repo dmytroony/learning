@@ -1,5 +1,6 @@
 import http from 'http';
-const PORT = 5237;
+// const PORT = 5237;
+const PORT = process.env.PORT;
 
 const server = http.createServer((req, res) => {
   // res.write("Hello, NodeJS!");
@@ -16,5 +17,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`); // getting PORT from .env
 });
