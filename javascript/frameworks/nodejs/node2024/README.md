@@ -1,7 +1,9 @@
 # NodeJS Crash Course 2024 by Brad Traversy
 
 ## Used commands:
- - ```npm init```
+ - ```npm init```start
+ - ```npm start```
+ - ```npm i -D nodemon``` -D for dev purposes only, not for prod
 
 ### Notes:
 - Modules using CommonJS built-in features:
