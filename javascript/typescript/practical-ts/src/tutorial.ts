@@ -453,41 +453,46 @@
 // manager.managePeople();
 //
 //
-// Challenge 8, pt. 1
+// // Challenge 8, pt. 1
+// //
+// function getEmployee(): Person | DogOwner | Manager {
+//   const randomNum: number = Math.random();
+//   if (randomNum < 0.33) return { name: "John" };
+//   if (randomNum < 0.66) return { name: "Sarah", dogName: "Rex" };
+//   return {
+//     name: "Bob",
+//     managePeople() {
+//       console.log("Managing people...");
+//     },
+//     delegateTasks() {
+//       console.log("Delegating tasks...");
+//     }
+//   };
+// }
 //
-function getEmployee(): Person | DogOwner | Manager {
-  const randomNum: number = Math.random();
-  if (randomNum < 0.33) return { name: "John" };
-  if (randomNum < 0.66) return { name: "Sarah", dogName: "Rex" };
-  return {
-    name: "Bob",
-    managePeople() {
-      console.log("Managing people...");
-    },
-    delegateTasks() {
-      console.log("Delegating tasks...");
-    }
-  };
-}
-
-interface Person {
-  name: string;
-}
-interface DogOwner extends Person {
-  dogName: string;
-}
-interface Manager extends Person {
-  managePeople(): void;
-  delegateTasks(): void;
-}
-const employee: Person | DogOwner | Manager = getEmployee();
-console.log(employee);
-
-// function isManager(obj: Person | DogOwner | Manager): boolean {
-function isManager(obj: Person | DogOwner | Manager): obj is Manager {
-  return "managePeople" in obj && "delegateTasks" in obj;
-}
-
-if (isManager(employee)) {
-  employee.delegateTasks();
-}
+// interface Person {
+//   name: string;
+// }
+// interface DogOwner extends Person {
+//   dogName: string;
+// }
+// interface Manager extends Person {
+//   managePeople(): void;
+//   delegateTasks(): void;
+// }
+// const employee: Person | DogOwner | Manager = getEmployee();
+// console.log(employee);
+//
+// // function isManager(obj: Person | DogOwner | Manager): boolean {
+// function isManager(obj: Person | DogOwner | Manager): obj is Manager {
+//   return "managePeople" in obj && "delegateTasks" in obj;
+// }
+//
+// if (isManager(employee)) {
+//   employee.delegateTasks();
+// }
+//
+//
+// ? Tuples and Enums
+//
+let person: [string, number] = ["john", 25];
