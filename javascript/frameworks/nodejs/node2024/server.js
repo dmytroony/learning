@@ -1,8 +1,16 @@
 import http from 'http';
+import fs from 'fs/promises';
+import url from 'url';
+import path from 'path';
+
 // const PORT = 5237;
 const PORT = process.env.PORT;
 
-const server = http.createServer((req, res) => {
+// get current path
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const server = http.createServer(async (req, res) => {
   // res.write("Hello, NodeJS!");
   // res.end("Hello, NodeJS!");
   // res.setHeader('Content-Type', 'text/plain');
@@ -17,16 +25,27 @@ const server = http.createServer((req, res) => {
   // simple routing
   try {
     if(req.method === 'GET') {  //check if GET
+      let filePath;
+
       if (req.url === '/') {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.end('<h1>Homepage</h1>');
+        // res.writeHead(200, { 'Content-Type': 'text/html' });
+        // res.end('<h1>Homepage</h1>');
+        filePath = path.join(__dirname, 'public', 'index.html');
       } else if (req.url === '/about') {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.end('<h1>About Us</h1>');
+        // res.writeHead(200, { 'Content-Type': 'text/html' });
+        // res.end('<h1>About Us</h1>');
+        filePath = path.join(__dirname, 'public', 'about.html');
       } else {
-        res.writeHead(404, { 'Content-Type': 'text/html' });
-        res.end('<h1>404</h1><h2>Not found</h2>');
+        // res.writeHead(404, { 'Content-Type': 'text/html' });
+        // res.end('<h1>404</h1><h2>Not found</h2>');
+        throw new Error("404: Not found");
       }
+
+      const data = await fs.readFile(filePath);
+      res.setHeader('Content-Type', 'text/html');
+      res.write(data);
+      res.end();
+
     } else {
       throw new Error("Method not allowed!");
     }
