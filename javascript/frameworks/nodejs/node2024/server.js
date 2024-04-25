@@ -12,6 +12,9 @@ const server = http.createServer((req, res) => {
   // res.writeHead(500, { 'Content-Type': 'application/json' });
   // res.end(JSON.stringify( { message: 'Server Error' }, null, 2));
 
+  console.log(req.url);
+  console.log(req.method);
+
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.end('<h1>Hello NodeJS!</h1>');
 });
