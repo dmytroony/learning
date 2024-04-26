@@ -39,7 +39,7 @@
 - Create a Union Type: Define a type Staff that is a union of Employee and Manager.
 - Create the printStaffDetails function: This function should accept a parameter of type Staff.
   - Inside the function, use a type guard to check if the 'employees' property exists in the passed object.
-  - If it does print a message indicating that the person is a manager and the number of employees they manage.
+  - If it does print a message indicating thnumberat the person is a manager and the number of employees they manage.
   - If it doesn't print a message indicating that the person is an employee and the department they belong to.
 
 ## Challenge 7
@@ -57,3 +57,9 @@
 - Define the Manager interface. Then, define a Manager interface that extends Person and adds methods: managePeople and delegateTasks. Both methods should have a return type of void.
 - Define the getEmployee function. Now, define a function called getEmployee that returns a Person, DogOwner, or Manager. Inside this function, generate a random number and use it to decide which type of object to return. If the number is less than 0.33, return a Person. If it's less than 0.66, return a DogOwner. Otherwise, return a Manager.
 - Finally, create a variable called employee that can be a Person, DogOwner, or Manager, and assign it the return value of getEmployee. Then, log employee to the console.
+
+## Challenge 9
+- Define an enum named UserRole with members Admin, Manager, and Employee.
+- Define a type alias named User with properties is (number), name (string), role (UserRole), and contact (a tuple with two elements: email as string and phone as string).
+- Define a function named createUser that takes a User object as its parameter and returns a User object.
+- Call the createUser function with an object that matches the User type, store the result in a variable, and log the variable to the console.
