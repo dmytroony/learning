@@ -494,18 +494,45 @@
 //
 //
 // ? Tuples and Enums
-let john: [string, number] = ["john", 25];
-let date: readonly [number, number, number] = [12, 17, 2001];
-// console.log(date);
-// date.push(34);
-// console.log(date);
-
-function getPerson(whoIs: [string, number]): [string, number] {
-  return whoIs;
+// Tuples
+// let john: [string, number] = ["john", 25];
+// let date: readonly [number, number, number] = [12, 17, 2001];
+// // console.log(date);
+// // date.push(34);
+// // console.log(date);
+//
+// function getPerson(whoIs: [string, number]): [string, number] {
+//   return whoIs;
+// }
+//
+// let randomPerson: [string, number] = getPerson(john);
+// console.log(randomPerson[0]);
+// console.log(randomPerson[1]);
+//
+// let susan: [string, number?] = ["susan"];
+//
+// Enums
+enum ServerResponseStatus {
+  Success = 200,
+  // Error = 'Error',
+  Error = 500,
 }
 
-let randomPerson: [string, number] = getPerson(john);
-console.log(randomPerson[0]);
-console.log(randomPerson[1]);
-//
-let susan: [string, number?] = ["susan"];
+Object.values(ServerResponseStatus).forEach(value => {
+  if (typeof value === 'number') console.log(value);
+});
+
+interface ServerResponse {
+  result: ServerResponseStatus;
+  data: string;
+}
+
+function getServerResponse(): ServerResponse {
+  return {
+    result: ServerResponseStatus.Success,
+    data: ["1st item", "2nd item", "3rd item"],
+  };
+}
+
+const response: ServerResponse = getServerResponse();
+console.log(response);
