@@ -512,27 +512,29 @@
 // let susan: [string, number?] = ["susan"];
 //
 // Enums
-enum ServerResponseStatus {
-  Success = 200,
-  // Error = 'Error',
-  Error = 500,
-}
-
-Object.values(ServerResponseStatus).forEach(value => {
-  if (typeof value === 'number') console.log(value);
-});
-
-interface ServerResponse {
-  result: ServerResponseStatus;
-  data: string;
-}
-
-function getServerResponse(): ServerResponse {
-  return {
-    result: ServerResponseStatus.Success,
-    data: ["1st item", "2nd item", "3rd item"],
-  };
-}
-
-const response: ServerResponse = getServerResponse();
-console.log(response);
+// enum ServerResponseStatus {
+//   Success = 200,
+//   // Error = 'Error',
+//   Error = 500,
+// }
+//
+// Object.values(ServerResponseStatus).forEach(value => {
+//   if (typeof value === 'number') console.log(value);
+// });
+//
+// interface ServerResponse {
+//   result: ServerResponseStatus;
+//   data: string;
+// }
+//
+// function getServerResponse(): ServerResponse {
+//   return {
+//     result: ServerResponseStatus.Success,
+//     data: ["1st item", "2nd item", "3rd item"],
+//   };
+// }
+//
+// const response: ServerResponse = getServerResponse();
+// console.log(response);
+//
+// ## Challenge 9
