@@ -19,6 +19,34 @@ const jsonMiddleware = (req, res, next) => {
   next();
 };
 
+// route handler for GET /api/users
+const getUsersHandler = (req, res) => {
+  res.write(JSON.stringify(users));
+  res.end();
+};
+
+// route handler for GET /api/users/:id
+const getUserByIdHandler = (req, res) => {
+  const id = req.url.split('/')[3];
+  const user = users.find((user) => user.id === parseInt(id));
+
+  if (user) {
+    res.write(JSON.stringify(user));
+  } else {
+    res.statusCode = 404;
+    res.write(JSON.stringify({ message: "User not found!" }));
+  }
+  res.end();
+};
+
+// not found handler
+const notFoundHandler = (req, res) => {
+  res.statusCode = 404;
+  res.write(JSON.stringify({ message: "Route not found!" }));
+  res.end();
+};
+
+// the SERVER
 const server = createServer((req, res) => {
   // wrapping in the callback and getting access to the req-res objects
   logger(req, res, () => {
