@@ -13,6 +13,12 @@ const logger = (req, res, next) => {
   next();
 };
 
+// JSON middleware
+const jsonMiddleware = (req, res, next) => {
+  res.setHeader('Content-Type', 'application/json');
+  next();
+};
+
 const server = createServer((req, res) => {
   // wrapping in the callback and getting access to the req-res objects
   logger(req, res, () => {
