@@ -1,1 +1,2 @@
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus sequi debitis rem suscipit officiis reiciendis iusto iure vitae quasi.
+Hello from writeFile function
+Hello from appendFile func
