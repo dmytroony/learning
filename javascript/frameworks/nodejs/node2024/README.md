@@ -1,4 +1,4 @@
-# NodeJS Crash Course 2024 by Brad Traversy
+# [NodeJS Crash Course 2024 by Brad Traversy](https://www.youtube.com/watch?v=32M1al-Y6Ag)
 
 ## Used commands:
  - ```npm init```start
