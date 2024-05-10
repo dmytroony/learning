@@ -20,3 +20,12 @@
 ### CMD
 - The instruction that is to be executed when a Docker container starts
 - There can only be one "CMD" instruction in a Dockerfile
+
+## Build
+
+```docker build -t node19-server:1.0 .```
+```docker scout quickview```
+
+## Notes:
+- Each instruction in Dockerfile creates one layer
+- These layers are stacked & each oe is a delta of the changes from the previous layer
