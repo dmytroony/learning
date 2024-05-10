@@ -35,6 +35,7 @@
 ## Docker Network without Compose
 ```docker network create nameOfNetwork```
 ```docker network ls```
+```docker network rm mongo-network``` - removing our network
 1) mongo container
 ```
 docker run -d \
@@ -79,9 +80,11 @@ mongo-express
       environment:
         - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
         - ME_CONFIG_MONGODB_ADMINPASSWORD=supersecret
+        - ME_CONFIG_MONGODB_SERVER: mongodb
 
   ```
 Configuration
+- Be careful with the indentations
 - Use a single YAML file to configure and maintain your application's services
 - With a single command, create and start all the services from your configuration
 - Declarative definition
@@ -90,6 +93,6 @@ Configuration
 - Provides a higher-level, more human-readable configuration format
 - Code that defines how your services should run
 - Code can be versioned
-- By defaukt, Compose sets up a single network for an app
+- By default, Compose sets up a single network for an app
 - Communication via container name
 - But option to specify your own networks with the top-level "networks" key
