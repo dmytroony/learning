@@ -538,3 +538,27 @@
 // console.log(response);
 //
 // ## Challenge 9
+enum UserRole {
+  Admin,
+  Manager,
+  Employee
+}
+type User = {
+  id:number;
+  name:string;
+  role:UserRole;
+  contact:[string, string];
+}
+
+function createUser(user:User): User {
+  return user;
+}
+
+const user:User = createUser({
+  id:1,
+  name: "John Doe",
+  role:UserRole.Admin,
+  contact:['johndoe@gmail.com', '123-456-789']
+});
+
+console.log(user);
