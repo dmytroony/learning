@@ -32,7 +32,7 @@
 
 # 2. [Docker Compose](https://www.youtube.com/watch?v=SXwC9fSwct8)
 
-## Docker Network
+## Docker Network without Compose
 ```docker network create nameOfNetwork```
 ```docker network ls```
 1) mongo container
@@ -56,6 +56,40 @@ docker run -d \
 --name mongo-express \
 mongo-express
 ```
-3) http://localhost:8081
+3) http://localhost:8081 -> ```admin:pass```
 ```docker logs mongo-expressProcessName```
-```admin:pass```
+
+## Docker Compose
+- compose.yaml is a YAML file
+  ```
+  version: '3.1' - version of docker-compose
+  services: - list of all containers you want to run
+    mongodb: - container name(name as you want)
+      image: mongo:5.6
+      ports:
+        - 27017:27017 - host:container
+      environment:
+        - MONGO_INITDB_ROOT_USERNAME=admin
+        - MONGO_INITDB_ROOT_PASSWORD=supersecret
+
+    mongo-express: - container name(name as you want)
+      image: mongo-express
+      ports:
+        - 8081:8081 - host:container
+      environment:
+        - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+        - ME_CONFIG_MONGODB_ADMINPASSWORD=supersecret
+
+  ```
+Configuration
+- Use a single YAML file to configure and maintain your application's services
+- With a single command, create and start all the services from your configuration
+- Declarative definition
+- More structured
+- Abstracts away the low-level commands
+- Provides a higher-level, more human-readable configuration format
+- Code that defines how your services should run
+- Code can be versioned
+- By defaukt, Compose sets up a single network for an app
+- Communication via container name
+- But option to specify your own networks with the top-level "networks" key
