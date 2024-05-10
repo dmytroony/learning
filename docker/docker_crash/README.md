@@ -1,4 +1,4 @@
-# This is an accompaying demo project for a "[Docker crash course" on YouTube](https://www.youtube.com/watch?v=pg19Z8LL06w)
+# 1. Demo project for a "[Docker crash course" on YouTube](https://www.youtube.com/watch?v=pg19Z8LL06w)
 
 ## Structure of Dockerfile
 - Dockerfiles start from a parent image or "base image"
@@ -29,3 +29,33 @@
 ## Notes:
 - Each instruction in Dockerfile creates one layer
 - These layers are stacked & each oe is a delta of the changes from the previous layer
+
+# 2. [Docker Compose](https://www.youtube.com/watch?v=SXwC9fSwct8)
+
+## Docker Network
+```docker network create nameOfNetwork```
+```docker network ls```
+1) mongo container
+```
+docker run -d \
+-p 27017:27017 \
+-e MONGO_INITDB_ROOT_USERNAME=admin \
+-e MONGO_INITDB_ROOT_PASSWORD=supersecret \
+--network mongo-network \
+--name mongodb \
+mongo
+```
+2) mongo-express container
+```
+docker run -d \
+-p 8081:8081 \
+-e ME_CONFIG_MONGODB_ADMINUSERNAME=admin \
+-e ME_CONFIG_MONGODB_ADMINPASSWORD=supersecret \
+-e ME_CONFIG_MONGODB_SERVER=mongodb \
+--network mongo-network \
+--name mongo-express \
+mongo-express
+```
+3) http://localhost:8081
+```docker logs mongo-expressProcessName```
+```admin:pass```
