@@ -81,6 +81,8 @@ mongo-express
         - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
         - ME_CONFIG_MONGODB_ADMINPASSWORD=supersecret
         - ME_CONFIG_MONGODB_SERVER: mongodb
+      depends_on: - our dependencies which should be ran before this container
+      - "mongodb"
 
   ```
 Configuration
@@ -101,3 +103,19 @@ Configuration
 docker-compose -f mongo-services.yaml up
 ```
 // mongo-services.yaml - path to the compose.yaml file
+```
+docker-compose -f mongo-services.yaml up -d
+```
+// detach mode
+```
+docker-compose -f mongo-services.yaml down
+```
+// stop and remove all containers and the network. helps clean up the entire state
+```
+docker-compose -f mongo-services.yaml stop
+```
+// stops containers
+```
+docker-compose -f mongo-services.yaml start
+```
+// starts containers
