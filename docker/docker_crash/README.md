@@ -96,3 +96,8 @@ Configuration
 - By default, Compose sets up a single network for an app
 - Communication via container name
 - But option to specify your own networks with the top-level "networks" key
+
+```
+docker-compose -f mongo-services.yaml up
+```
+// mongo-services.yaml - path to the compose.yaml file
