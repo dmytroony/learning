@@ -70,3 +70,10 @@
 - If value is not a string, use another if statement to check if value  is of type number. If it is, log value formatted to two decimal places and then return from the function.
 - If value is neither a string nor a number, it must be a boolean. Log the string "boolean: " followed by the boolean value.
 - Finally, call the checkValue function with value as the argument.
+
+## Challenge 11
+- Define a function named makeSound that takes one parameter animal of type Animal.
+- Inside the function, use an if statement to check if animal.type is 'dog'.
+- If animal.type is 'dog', TypeScript knows that animal is a Dog in this block. In this case, call the bark method of animal.
+- If animal.type is not 'dog', TypeScript knows that animal is a Cat in the else block. In this case, call the meow method of animal.
+- Now you can call the makeSound function with an Animal as the argument. The function will call the appropriate method (bark or meow) depending on the type of the animal.
