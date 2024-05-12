@@ -18,7 +18,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "allowJs": true // ++ if you want to work with js files
+//    "allowJs": true // ++ if you want to work with js files
   },
   "include": ["src"]
 }

@@ -676,17 +676,26 @@
 // const susan = 'susan';
 //
 //
-import newStudent, { sayHello, person, type Student } from "./actions";
-
-sayHello('TypeScript');
-console.log(newStudent.name);
-console.log(person);
-
-const anotherStudent:Student = {
-  name: 'bob',
-  age: 31,
-};
-console.log(anotherStudent.name);
-
-import {someValue} from './example.js'; // allowJs should be added to tsconfig.json
-console.log(someValue);
+// import newStudent, { sayHello, person, type Student } from "./actions";
+//
+// sayHello('TypeScript');
+// console.log(newStudent.name);
+// console.log(person);
+//
+// const anotherStudent:Student = {
+//   name: 'bob',
+//   age: 31,
+// };
+// console.log(anotherStudent.name);
+//
+// import {someValue} from './example.js'; // allowJs should be added to tsconfig.json
+// console.log(someValue);
+//
+//
+// // Type Guarding
+// typeof "guard"
+type ValueType = string | number | boolean;
+let value:ValueType;
+const random = Math.random();
+value = random < .33 ? 'Hello' : random < .66 ? 123.456 : true;
+console.log(value);
