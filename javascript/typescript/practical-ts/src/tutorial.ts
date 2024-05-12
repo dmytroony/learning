@@ -537,28 +537,156 @@
 // const response: ServerResponse = getServerResponse();
 // console.log(response);
 //
-// ## Challenge 9
-enum UserRole {
-  Admin,
-  Manager,
-  Employee
-}
-type User = {
-  id:number;
-  name:string;
-  role:UserRole;
-  contact:[string, string];
-}
+// // ## Challenge 9
+// enum UserRole {
+//   Admin,
+//   Manager,
+//   Employee
+// }
+// type User = {
+//   id:number;
+//   name:string;
+//   role:UserRole;
+//   contact:[string, string];
+// }
 
-function createUser(user:User): User {
-  return user;
-}
+// function createUser(user:User): User {
+//   return user;
+// }
 
-const user:User = createUser({
-  id:1,
-  name: "John Doe",
-  role:UserRole.Admin,
-  contact:['johndoe@gmail.com', '123-456-789']
-});
+// const user:User = createUser({
+//   id:1,
+//   name: "John Doe",
+//   role:UserRole.Admin,
+//   contact:['johndoe@gmail.com', '123-456-789']
+// });
 
-console.log(user);
+// console.log(user);
+// 
+// let someBValue:any = 'this is a string';
+// let strLength:number = (someBValue as string).length;
+// // console.log(strLength);
+
+// type Bird = {
+//   name:string;
+// }
+
+// let birdString = '{ "name": "Eagle" }';
+// let dogString = '{ "breed": "Poodle" }';
+// let birdObject = JSON.parse(birdString);
+// let dogObject = JSON.parse(dogString);
+// let bird = birdObject as Bird;
+// let dog = dogObject as Bird;
+
+// console.log(bird.name);
+// console.log(dog.name);
+
+// enum Status {
+//   Pending = 'pending',
+//   Declined = 'declined',
+// }
+
+// type User = {
+//   name:string;
+//   status:Status;
+// }
+
+// const statusValue = 'pending';
+// const user:User = {
+//   name: 'John',
+//   status: statusValue as Status
+// };
+// 
+// 
+// // Type - 'unknown'
+// let unknownValue:unknown;
+
+// unknownValue = 'hello world';
+// console.log(unknownValue);
+
+// unknownValue = [1, 2, 3];
+// console.log(unknownValue);
+
+// unknownValue = 45.33576;
+// console.log(unknownValue);
+
+// if (typeof unknownValue === 'number')
+//   console.log(unknownValue.toFixed(2));
+
+// function runSomeCode() {
+//   const random = Math.random();
+//   if (random < .5) throw new Error('sth went wrong...');
+//   else throw 'some error';
+// }
+
+// try {
+//   runSomeCode();
+// } catch (error) {
+//   if (error instanceof Error) console.log(error.message);
+//   else console.log(error);
+// }
+// 
+// // Type - 'never'
+// // let someValue:never = 0; // can't assign any value to type 'never'
+// let someValue:never;
+//
+// type Theme = 'light' | 'dark';
+//
+// function checkTheme(theme:Theme):void {
+//   if (theme === 'light') {
+//     console.log('light theme');
+//     return;
+//   }
+//   if (theme === 'dark') {
+//     console.log('dark theme');
+//     return;
+//   }
+//   theme;
+// }
+// // checkTheme('dark');
+// enum Color {
+//   Red,
+//   Blue,
+//   Green,
+// }
+//
+// function getColorName(color:Color) {
+//   switch (color) {
+//     case Color.Red:
+//       return 'red color';
+//     case Color.Blue:
+//       return 'blue color';
+//     case Color.Green:
+//       return 'green color';
+//     default:
+//       // at buildtime
+//       let unexpectedColor:never = color;
+//
+//       // at runtime
+//       throw new Error(`Unexpected color value ${color}`);
+//   }
+// }export
+// console.log(getColorName(Color.Red));
+// console.log(getColorName(Color.Blue));
+// console.log(getColorName(Color.Green));
+//
+//
+// // import { sth } from './actions';
+// const name = '';
+// const susan = 'susan';
+//
+//
+import newStudent, { sayHello, person, type Student } from "./actions";
+
+sayHello('TypeScript');
+console.log(newStudent.name);
+console.log(person);
+
+const anotherStudent:Student = {
+  name: 'bob',
+  age: 31,
+};
+console.log(anotherStudent.name);
+
+import {someValue} from './example.js'; // allowJs should be added to tsconfig.json
+console.log(someValue);
