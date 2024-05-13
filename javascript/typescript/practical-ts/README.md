@@ -77,3 +77,10 @@
 - If animal.type is 'dog', TypeScript knows that animal is a Dog in this block. In this case, call the bark method of animal.
 - If animal.type is not 'dog', TypeScript knows that animal is a Cat in the else block. In this case, call the meow method of animal.
 - Now you can call the makeSound function with an Animal as the argument. The function will call the appropriate method (bark or meow) depending on the type of the animal.
+
+## Challenge 12
+- Define a function named printLength that takes one parameter str which can be of type string, null or undefined.
+- Inside the function, use an if statement to check if str if truthy.
+- If str is truthy, it means it's a string (since null and undefined are falsy). In this case, log the length of str using the length property of the string.
+- If str is not truthy (i.e., it's either null or undefined), log the string 'No string provided'.
+- Call the printLength with a string, null, or undefined as the argument. 
