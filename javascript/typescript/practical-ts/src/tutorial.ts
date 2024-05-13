@@ -730,3 +730,9 @@
 // }
 // //
 // Challenge 12. "Truthy"/"Falsy" guard
+function printLength(str: string | null | undefined) {
+  str? console.log(str.length) : console.log('No string provided.');
+}
+printLength('hello');
+printLength(null);
+printLength(undefined);
