@@ -671,7 +671,7 @@
 // console.log(getColorName(Color.Green));
 //
 //
-// // import { sth } from './actions';
+// // import { sth, person } from './actions';
 // const name = '';
 // const susan = 'susan';
 //
@@ -729,10 +729,63 @@
 //   else animal.meow();
 // }
 // //
-// Challenge 12. "Truthy"/"Falsy" guard
-function printLength(str: string | null | undefined) {
-  str? console.log(str.length) : console.log('No string provided.');
+// // Challenge 12. "Truthy"/"Falsy" guard
+// function printLength(str: string | null | undefined) {
+//   str? console.log(str.length) : console.log('No string provided.');
+// }
+// printLength('hello');
+// printLength(null);
+// printLength(undefined);
+// printLength('');
+// printLength();
+// 
+// 
+// try {
+//   throw new Error('This is an error.');
+// } catch (error) {
+//   error instanceof Error ? 
+//     console.log(`Caught an Error Object: ${error.message} `) :
+//     console.log('unknown error...')
+// }
+// 
+// 
+// function checkInput(input: Date | string):string {
+//   if (input instanceof Date) return input.getFullYear().toString();
+//   return input;
+// }
+
+// const year = checkInput(new Date());
+// const random = checkInput('2020-05-05');
+
+// console.log(year);
+// console.log(random);
+// 
+// 
+// Type Predicate
+type Student = {
+  name:string;
+  study:() => void;
 }
-printLength('hello');
-printLength(null);
-printLength(undefined);
+type User = {
+  name:string;
+  login:() => void;
+}
+
+type Person = Student | User;
+
+const randomPerson = ():Person => {
+  return Math.random() > .5 ?
+  { name: 'John', study:() => console.log('Studying...') } :
+  { name: 'Mary', login:() => console.log('Logging in...') }
+}
+
+const person = randomPerson();
+console.log(person.name);
+
+function isStudent(person:Person):person is Student {
+  // return 'study' in person
+  return (person as Student).study !== undefined;
+}
+
+if (isStudent(person)) person.study();
+else person.login();
