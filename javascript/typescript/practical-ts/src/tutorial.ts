@@ -779,8 +779,12 @@ const randomPerson = ():Person => {
   { name: 'Mary', login:() => console.log('Logging in...') }
 }
 
-const person = randomPerson();
-console.log(person.name);
+// const person = randomPerson();
+// console.log(person.name);
+const person:Person = {
+  name: 'Anna',
+  study: () => console.log('study...'),
+};
 
 function isStudent(person:Person):person is Student {
   // return 'study' in person
