@@ -761,35 +761,75 @@
 // console.log(random);
 // 
 // 
-// Type Predicate
-type Student = {
-  name:string;
-  study:() => void;
+// // Type Predicate
+// type Student = {
+//   name:string;
+//   study:() => void;
+// }
+// type User = {
+//   name:string;
+//   login:() => void;
+// }
+
+// type Person = Student | User;
+
+// const randomPerson = ():Person => {
+//   return Math.random() > .5 ?
+//   { name: 'John', study:() => console.log('Studying...') } :
+//   { name: 'Mary', login:() => console.log('Logging in...') }
+// }
+
+// // const person = randomPerson();
+// // console.log(person.name);
+// const person:Person = {
+//   name: 'Anna',
+//   // study: () => console.log('study...'),
+//   login: () => console.log('logging in...'),
+// };
+
+// function isStudent(person:Person):person is Student {
+//   // return 'study' in person
+//   return (person as Student).study !== undefined;
+// }
+
+// if (isStudent(person)) person.study();
+// else person.login();
+// 
+
+// Discriminated Unions and exhaustive check using the never type
+type IncrementAction = {
+  type:'increment',
+  amount:number;
+  timestamp:number;
+  user:string;
 }
-type User = {
-  name:string;
-  login:() => void;
+
+type DecrementAction = {
+  type:'decrement',
+  amount:number;
+  timestamp:number;
+  user:string;
 }
 
-type Person = Student | User;
+type Action = IncrementAction | DecrementAction;
 
-const randomPerson = ():Person => {
-  return Math.random() > .5 ?
-  { name: 'John', study:() => console.log('Studying...') } :
-  { name: 'Mary', login:() => console.log('Logging in...') }
+function reducer (state:number, action:Action) {
+  switch(action.type) {
+    case 'increment':
+      return state + action.amount;
+    case 'decrement':
+      return state - action.amount;
+    default:
+      const unexpectedAction:never = action;
+      throw new Error(`Unexpected action: ${unexpectedAction}`);
+  }
 }
 
-// const person = randomPerson();
-// console.log(person.name);
-const person:Person = {
-  name: 'Anna',
-  study: () => console.log('study...'),
-};
+const newState = reducer(15, {
+  type: 'increment',
+  user: "John",
+  amount: 5,
+  timestamp: 123456
+});
 
-function isStudent(person:Person):person is Student {
-  // return 'study' in person
-  return (person as Student).study !== undefined;
-}
 
-if (isStudent(person)) person.study();
-else person.login();
