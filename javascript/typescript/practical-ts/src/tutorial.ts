@@ -834,7 +834,27 @@
 
 
 // GENERICS
-let arr1:string[] = ['Apple', 'Banana', 'Mango'];
-let arr2:number[] = [1, 2, 3];
-let arr3:boolean[] = [true, false, true];
+// let arr1:string[] = ['Apple', 'Banana', 'Mango'];
+// let arr2:number[] = [1, 2, 3];
+// let arr3:boolean[] = [true, false, true];
 
+// let arr1:Array<string> = ['Apple', 'Banana', 'Mango'];
+
+// function createStr(arg:string):string {
+//   return arg;
+// }
+// console.log(createStr("Hello"));
+
+// function createNum(arg:number):number {
+//   return arg;
+// }
+// console.log(createNum(45));
+
+function genericFunc<T>(arg:T):T {
+  return arg;
+}
+
+const someStringValue = genericFunc<string>("Hello, World!");
+console.log(someStringValue);
+const someNumberValue = genericFunc<number>(45);
+console.log(someNumberValue);
