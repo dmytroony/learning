@@ -75,15 +75,31 @@
 // vid2
 
 // ARRAY DS
-const students = ["Alex", "James", "Emma", "Louis", "Brian",];
+// const students = ["Alex", "James", "Emma", "Louis", "Brian",];
 
-function findStudent(allStudents, studentName) {
-	for (let index = 0; index < allStudents.length; index++) {
-		if (allStudents[index] === studentName) {
-			console.log(`Found ${studentName}`);
-		}
+// function findStudent(allStudents, studentName) {
+// 	for (let index = 0; index < allStudents.length; index++) {
+// 		if (allStudents[index] === studentName) {
+// 			console.log(`Found ${studentName}`);
+// 		}
+// 	}
+// 	console.log(allStudents.find(student => student === studentName));
+// }
+// findStudent(students, "Emma");
+
+// O(n)
+const groceries = ["milk", "bread", "eggs", "flour", "cheese", "sugar",];
+
+const searchForItem = el => {
+	for (let i = 0; i < groceries.length; i++) {
+		groceries[i] === el ? console.log(`Found: ${el} on index: ${i}`) : console.log(`${el} not found on index: ${i}`);
 	}
-	console.log(allStudents.find(student => student === studentName));
-}
 
-findStudent(students, "Emma");
+	for (let j = 0; j < groceries.length; j++) {
+		groceries[j] === el ? console.log(`Found_2: ${el} on index: ${j}`) : console.log(`${el} 2_not found on index: ${j}`);
+	}
+
+	// n + n = 2n ==> O(2n)
+	// Drop the constant so it becomes O(n)
+};
+searchForItem("cheese");
