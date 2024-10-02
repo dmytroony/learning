@@ -105,7 +105,22 @@
 // searchForItem("cheese");
 
 // O(1)
-const numbers = [1, 2, 3, 4, 5,];
-const getElement = (arr, index) => console.log(arr[index]);
+// const numbers = [1, 2, 3, 4, 5,];
+// const getElement = (arr, index) => console.log(arr[index]);
 
-getElement(numbers, 0);
+// getElement(numbers, 0);
+
+// O(n^2)
+const numbers = [1, 2, 3, 4, 5,];
+function findPairs(arr) {
+	for (let i = 0; i < arr.length; i++) {
+		for (let j = 0; j < arr.length; j++) {
+			console.log(`Pair: ${arr[i]}, ${arr[j]}`);
+		}
+	}
+
+	for (let k = 0; k < 5; k++) {
+		console.log(`------- ${k}`);
+	}
+}
+findPairs(numbers);
