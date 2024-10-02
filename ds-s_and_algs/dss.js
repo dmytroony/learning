@@ -111,16 +111,42 @@
 // getElement(numbers, 0);
 
 // O(n^2)
-const numbers = [1, 2, 3, 4, 5,];
-function findPairs(arr) {
-	for (let i = 0; i < arr.length; i++) {
-		for (let j = 0; j < arr.length; j++) {
-			console.log(`Pair: ${arr[i]}, ${arr[j]}`);
-		}
-	}
+// const numbers = [1, 2, 3, 4, 5,];
+// function findPairs(arr) {
+// 	for (let i = 0; i < arr.length; i++) {
+// 		for (let j = 0; j < arr.length; j++) {
+// 			console.log(`Pair: ${arr[i]}, ${arr[j]}`);
+// 		}
+// 	}
 
-	for (let k = 0; k < 5; k++) {
-		console.log(`------- ${k}`);
+// 	for (let k = 0; k < 5; k++) {
+// 		console.log(`------- ${k}`);
+// 	}
+// }
+// findPairs(numbers);
+
+// DS ARRAY
+const stringArr = ["a", "b", "c", "d", "e",];
+const numArr = [1, 2, 3, 4, 5,];
+const boolArr = [true, false];
+const mixed = ["a", 1, true, "b", 2, false,];
+// console.log(mixed);
+
+class MyArray {
+	constructor() {
+		this.length = 0;
+		this.data = {};
+	}
+	push(item) {
+		this.data[this.length] = item;
+		console.log("-------", this.data[this.length]);
+		this.length++;
+		return this.length;
 	}
 }
-findPairs(numbers);
+
+const myNewArr = new MyArray();
+console.log(myNewArr.push("apple"));
+console.log(myNewArr.push("orange"));
+console.log(myNewArr.push("mango"));
+console.log(myNewArr);
