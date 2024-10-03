@@ -146,11 +146,20 @@ class MyArray {
 	get(index) {
 		return this.data[index];
 	}
+	pop() {
+		const lastItem = this.data[this.length - 1];
+		delete this.data[this.length - 1];
+		this.length--;
+		return lastItem;
+	}
 }
 
 const myNewArr = new MyArray();
-myNewArr.push("apple");
+myNewArr.push("apple");k
 myNewArr.push("orange");
 myNewArr.push("mango");
 // console.log(myNewArr);
-console.log(myNewArr.get(2));
+// console.log(myNewArr.get(2));
+const mango = myNewArr.pop();
+console.log(mango);
+console.log(myNewArr);
