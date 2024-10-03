@@ -139,14 +139,18 @@ class MyArray {
 	}
 	push(item) {
 		this.data[this.length] = item;
-		console.log("-------", this.data[this.length]);
+		// console.log(this.length, this.data[this.length]);
 		this.length++;
 		return this.length;
+	}
+	get(index) {
+		return this.data[index];
 	}
 }
 
 const myNewArr = new MyArray();
-console.log(myNewArr.push("apple"));
-console.log(myNewArr.push("orange"));
-console.log(myNewArr.push("mango"));
-console.log(myNewArr);
+myNewArr.push("apple");
+myNewArr.push("orange");
+myNewArr.push("mango");
+// console.log(myNewArr);
+console.log(myNewArr.get(2));
