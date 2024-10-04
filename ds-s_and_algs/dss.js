@@ -161,6 +161,15 @@ class MyArray {
 		this.length--;
 		return firstItem;
 	}
+	delete(index) {
+		const item = this.data[index];
+		for (let i = index; i < this.length; i++) {
+			this.data[i] = this.data[i + 1];
+		}
+		delete this.data[this.length - 1];
+		this.length--;
+		return item;
+	}
 }
 
 const myNewArr = new MyArray();
@@ -174,4 +183,6 @@ myNewArr.push("mango");
 // console.log(myNewArr);
 const apple = myNewArr.shift();
 console.log(apple);
+console.log(myNewArr);
+myNewArr.delete(0);
 console.log(myNewArr);
