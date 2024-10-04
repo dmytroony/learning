@@ -152,14 +152,26 @@ class MyArray {
 		this.length--;
 		return lastItem;
 	}
+	shift() {
+		const firstItem = this.data[0];
+		for (let i = 0; i < this.length; i++) {
+			this.data[i] = this.data[i + 1];
+		}
+		delete this.data[this.length - 1];
+		this.length--;
+		return firstItem;
+	}
 }
 
 const myNewArr = new MyArray();
-myNewArr.push("apple");k
+myNewArr.push("apple");
 myNewArr.push("orange");
 myNewArr.push("mango");
 // console.log(myNewArr);
 // console.log(myNewArr.get(2));
-const mango = myNewArr.pop();
-console.log(mango);
+// const mango = myNewArr.pop();
+// console.log(mango);
+// console.log(myNewArr);
+const apple = myNewArr.shift();
+console.log(apple);
 console.log(myNewArr);
