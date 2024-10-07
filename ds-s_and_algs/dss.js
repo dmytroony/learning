@@ -125,64 +125,72 @@
 // }
 // findPairs(numbers);
 
-// DS ARRAY
-const stringArr = ["a", "b", "c", "d", "e",];
-const numArr = [1, 2, 3, 4, 5,];
-const boolArr = [true, false];
-const mixed = ["a", 1, true, "b", 2, false,];
-// console.log(mixed);
+// * DS ARRAY
+// const stringArr = ["a", "b", "c", "d", "e",];
+// const numArr = [1, 2, 3, 4, 5,];
+// const boolArr = [true, false];
+// const mixed = ["a", 1, true, "b", 2, false,];
+// // console.log(mixed);
 
-class MyArray {
-	constructor() {
-		this.length = 0;
-		this.data = {};
-	}
-	push(item) {
-		this.data[this.length] = item;
-		// console.log(this.length, this.data[this.length]);
-		this.length++;
-		return this.length;
-	}
-	get(index) {
-		return this.data[index];
-	}
-	pop() {
-		const lastItem = this.data[this.length - 1];
-		delete this.data[this.length - 1];
-		this.length--;
-		return lastItem;
-	}
-	shift() {
-		const firstItem = this.data[0];
-		for (let i = 0; i < this.length; i++) {
-			this.data[i] = this.data[i + 1];
-		}
-		delete this.data[this.length - 1];
-		this.length--;
-		return firstItem;
-	}
-	delete(index) {
-		const item = this.data[index];
-		for (let i = index; i < this.length; i++) {
-			this.data[i] = this.data[i + 1];
-		}
-		delete this.data[this.length - 1];
-		this.length--;
-		return item;
-	}
-}
+// class MyArray {
+// 	constructor() {
+// 		this.length = 0;
+// 		this.data = {};
+// 	}
+// 	push(item) {
+// 		this.data[this.length] = item;
+// 		// console.log(this.length, this.data[this.length]);
+// 		this.length++;
+// 		return this.length;
+// 	}
+// 	get(index) {
+// 		return this.data[index];
+// 	}
+// 	pop() {
+// 		const lastItem = this.data[this.length - 1];
+// 		delete this.data[this.length - 1];
+// 		this.length--;
+// 		return lastItem;
+// 	}
+// 	shift() {
+// 		const firstItem = this.data[0];
+// 		for (let i = 0; i < this.length; i++) {
+// 			this.data[i] = this.data[i + 1];
+// 		}
+// 		delete this.data[this.length - 1];
+// 		this.length--;
+// 		return firstItem;
+// 	}
+// 	delete(index) {
+// 		const item = this.data[index];
+// 		for (let i = index; i < this.length; i++) {
+// 			this.data[i] = this.data[i + 1];
+// 		}
+// 		delete this.data[this.length - 1];
+// 		this.length--;
+// 		return item;
+// 	}
+// }
 
-const myNewArr = new MyArray();
-myNewArr.push("apple");
-myNewArr.push("orange");
-myNewArr.push("mango");
+// const myNewArr = new MyArray();
+// myNewArr.push("apple");
+// myNewArr.push("orange");
+// myNewArr.push("mango");
+// // console.log(myNewArr);
+// // console.log(myNewArr.get(2));
+// // const mango = myNewArr.pop();
+// // console.log(mango);
+// // console.log(myNewArr);
+// const apple = myNewArr.shift();
+// console.log(apple);
 // console.log(myNewArr);
-// console.log(myNewArr.get(2));
-// const mango = myNewArr.pop();
-// console.log(mango);
+// myNewArr.delete(0);
 // console.log(myNewArr);
-const apple = myNewArr.shift();
-console.log(apple);
-console.log(myNewArr);
-myNewArr.delete(0);
-console.log(myNewArr);
+
+
+// * Reversing
+
+const hello = "Hello";
+const reverseStr = str => hello.split("").reverse().join("");
+console.log(hello);
+console.log(reverseStr(hello));
