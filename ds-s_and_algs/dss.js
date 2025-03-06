@@ -74,7 +74,7 @@
 
 // vid2
 
-// ARRAY DS
+// * ARRAY DS
 // const students = ["Alex", "James", "Emma", "Louis", "Brian",];
 
 // function findStudent(allStudents, studentName) {
@@ -87,7 +87,7 @@
 // }
 // findStudent(students, "Emma");
 
-// O(n)
+// * O(n)
 // const groceries = ["milk", "bread", "eggs", "flour", "cheese", "sugar",];
 
 // const searchForItem = el => {
@@ -104,7 +104,7 @@
 // };
 // searchForItem("cheese");
 
-// O(1)
+// * O(1)
 // const numbers = [1, 2, 3, 4, 5,];
 // const getElement = (arr, index) => console.log(arr[index]);
 
@@ -190,7 +190,10 @@
 
 // * Reversing
 
-const hello = "Hello";
-const reverseStr = str => hello.split("").reverse().join("");
-console.log(hello);
-console.log(reverseStr(hello));
+// const hello = "Hello";
+// const reverseStr = str => hello.split("").reverse().join("");
+// console.log(hello);
+// console.log(reverseStr(hello));
+
+
+// * Palindromes
