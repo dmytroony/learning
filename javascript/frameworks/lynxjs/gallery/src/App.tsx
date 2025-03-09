@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from '@lynx-js/react'
 
 import './App.css'
+import './index.css';
 import arrow from './assets/arrow.png'
 import lynxLogo from './assets/lynx-logo.png'
 import reactLynxLogo from './assets/react-logo.png'
@@ -27,8 +28,8 @@ export function App() {
               ? <image src={reactLynxLogo} className='Logo--react' />
               : <image src={lynxLogo} className='Logo--lynx' />}
           </view>
-          <text className='Title'>React</text>
-          <text className='Subtitle'>on Lynx</text>
+          <text className='Title'>Hello World!</text>
+          <text className='Subtitle'>by @dmytr00ny</text>
         </view>
         <view className='Content'>
           <image src={arrow} className='Arrow' />
