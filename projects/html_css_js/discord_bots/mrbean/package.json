@@ -14,7 +14,7 @@
   "dependencies": {
     "discord.js": "^12.5.1",
     "dotenv": "^16.0.0",
-    "nodemon": "^2.0.15",
+    "nodemon": "^2.0.20",
     "twit": "^2.2.11"
   },
   "devDependencies": {},
