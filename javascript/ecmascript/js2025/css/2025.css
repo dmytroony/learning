@@ -1,0 +1,67 @@
+:root {
+    --scale: 2;
+    color-scheme: light dark;
+
+    /* :has */
+    :has(input:checked) {
+        color-scheme: light;
+    }
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    /* light-dark */
+    background-color: light-dark(#d8e3ff, #22345a);
+    height: 100vh;
+}
+
+/*PopOver Api*/
+#my-popover {
+    button {
+        background: none;
+        border: none;
+        float: right;
+        cursor: pointer;
+    }
+    /*Backdrop*/
+    &::backdrop {
+        background: #0009;
+    }
+}
+
+/*Relative color syntax*/
+.wrap {
+    height: 100vh;
+    background-color: rgb(from red calc(r / 2) g b); /* 255 0 0 */
+
+    /* CV: content visibility: auto */
+    content-visibility: auto;
+    /*reserve space to avoid layout jumps before first reveal*/
+    contain-intrinsic-size: auto 700px;
+
+    /* Align content on block layout(vertically) */
+    align-content: center;
+}
+
+/* contenteditable "plaintext-only" */
+/*https://web.dev/blog/contenteditable-plaintext-only-baseline*/
+
+/* @property */
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/@property*/
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_properties_and_values_API/Houdini*/
+
+/* backdrop-filter */
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter*/
+
+/*::target-text*/
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/::target-text*/
+
+/*scrollbar-gutter & scrollbar-width*/
+/*
+https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-gutter
+https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width
+ */
