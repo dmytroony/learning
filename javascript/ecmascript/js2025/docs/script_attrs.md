@@ -93,3 +93,29 @@ The following table provides a side-by-side comparison of the three methods.
 * `====` \= Script Executing  
 * `....` \= Idle
 
+
+# **Script Tag Deep Dive & Common Pitfalls**
+
+## Deep Dive
+
+### Script Execution and Event Timing
+
+- **defer scripts** are executed in order after the HTML is parsed but before `DOMContentLoaded`.
+- **async scripts** execute as soon as they are downloaded, regardless of parsing, and may run before or after `DOMContentLoaded`.
+
+### Module Scripts
+
+- `<script type="module" src="...">` always behaves as if `defer` is set, loading in order and after parsing.
+
+### SEO Considerations
+
+- Critical metadata and structured data scripts should remain synchronous to guarantee they're available to crawlers.
+
+## Pitfalls
+
+- **Inline scripts:** `async` and `defer` do not work without a `src` attribute.
+- **Script dependencies:** Only use `defer` or default for dependent scripts—never `async`.
+- **DOM manipulation:** With `async`, scripts may run before DOM elements exist.
+- **Legacy browsers:** Support for `defer` and `async` is not universal in very old browsers.
+- **Attribute precedence:** If both `async` and `defer` are present, `async` wins.
+- **Third-party scripts:** Some may block rendering even if loaded with `async`.
