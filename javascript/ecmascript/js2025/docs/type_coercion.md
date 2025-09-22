@@ -209,3 +209,54 @@ customObj + ''     // 'default'
 - If `Symbol.toPrimitive` is not defined, JavaScript falls back to using `valueOf()` and `toString()` methods.
 
 This feature allows for fine-grained control over how objects behave during type coercion.
+
+## Implicit Coercion with Logical Operators: `&&`, `||`, and `!`
+
+Logical operators in JavaScript perform implicit coercion to boolean to determine control flow, but the value they return is not always a boolean.
+
+#### `&&` (Logical AND)
+- Returns the first falsy operand, or the last operand if all are truthy.
+- Each operand is coerced to boolean for the check, but the returned value is the original operand (not coerced).
+
+**Examples:**
+```javascript
+false && 'hello';    // false (false is falsy)
+0 && 42;             // 0 (0 is falsy)
+'' && 'world';       // '' (empty string is falsy)
+'foo' && 123;        // 123 ('foo' is truthy, returns 123)
+[] && 'bar';         // 'bar' ([] is truthy)
+```
+
+#### `||` (Logical OR)
+- Returns the first truthy operand, or the last operand if all are falsy.
+- Each operand is coerced to boolean for the check, but the returned value is the original operand (not coerced).
+
+**Examples:**
+```javascript
+false || 'hello';    // 'hello' (false is falsy)
+0 || 42;             // 42 (0 is falsy)
+'' || 'world';       // 'world' ('' is falsy)
+'foo' || 123;        // 'foo' ('foo' is truthy)
+null || undefined;   // undefined (null is falsy, undefined is falsy)
+```
+
+#### `!` (Logical NOT)
+- Always returns a boolean: `true` if the operand is falsy, `false` if truthy.
+- The operand is always coerced to boolean.
+
+**Examples:**
+```javascript
+!false;      // true
+!0;          // true
+!'';         // true
+!null;       // true
+!undefined;  // true
+!NaN;        // true
+![];         // false ([] is truthy)
+!{};         // false ({} is truthy)
+!'foo';      // false
+```
+
+**Summary:**
+- `&&` and `||` use implicit coercion to boolean for control flow, but return the original operand.
+- `!` always returns a boolean, coercing its operand.
