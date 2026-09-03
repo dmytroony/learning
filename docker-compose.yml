@@ -1,7 +1,6 @@
-version: '3.8'
 services:
-    learning-env:
-      build: .
-      container_name: learning-env
-      volumes:
-        - .:/workspace:rw
+  learning-env:
+    build: .
+    container_name: learning-env
+    volumes:
+      - .:/workspace:rw
