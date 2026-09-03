@@ -19,4 +19,8 @@ Books read:
 
 # learning C
 
-1. frozen.
+1. frozen
+
+# DOCKER instructions:
+``docker-compose up -d --build``
+``docker exec -it learning-env bash``
