@@ -12,6 +12,8 @@ python/code-basics/.idea/
 python/code-basics/venv/
 *venv/
 *cmake-build-debug/
+.claude/
+
 # Vim artifacts
 *~
 .*.sw[a-p]
