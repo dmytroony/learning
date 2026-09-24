@@ -18,3 +18,32 @@ python/code-basics/venv/
 *~
 .*.sw[a-p]
 .*.un~
+
+# Dependencies
+node_modules/
+
+# Environment files (commit .env.example instead)
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Build output
+out/
+dist/
+build/
+csharp/**/bin/
+csharp/**/obj/
+*.exe
+*.o
+*.obj
+*.pdb
+*.class
+
+# Extensionless compiled binaries
+clang/c_hello/hello
+cpp/firstprogram
+cpp/myfirstprogram
