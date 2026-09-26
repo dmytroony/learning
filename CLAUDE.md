@@ -2,6 +2,11 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+Use short answers only, no code - key information only.
+
+Before refactoring and work with code read the file @spec.md everytime.
+
+
 ## What this repository is
 
 This is a personal, multi-language learning/sandbox monorepo (`learning`), not a single application. Each top-level directory is an independent language or framework track (courses, books, tutorial-along-the-way code), and many subdirectories inside those are themselves standalone, unrelated projects (different tutorials, challenges, or scaffolded apps). There is **no root-level build, lint, or test command** — tooling is per-project, scoped to whichever subdirectory you're working in.
