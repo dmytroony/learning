@@ -5,6 +5,12 @@ const exphbs = require("express-handlebars");
 const todoRoutes = require("./routes/todos");
 
 const PORT = process.env.PORT || 3000;
+const MONGODB_URI = process.env.MONGODB_URI;
+
+if (!MONGODB_URI) {
+  console.error("MONGODB_URI is not set. Copy .env.example to .env and fill it in.");
+  process.exit(1);
+}
 
 const app = express();
 const hbs = exphbs.create({
@@ -25,9 +31,7 @@ app.use(todoRoutes);
 async function start() {
   try {
     // Connect DB
-    await mongoose.connect(
-      "mongodb+srv://dmytroony:2XMmNQpF975s3n5@cluster0.ot80v.mongodb.net/todos",
-      {
+    await mongoose.connect(MONGODB_URI, {
         useNewUrlParser: true,
         useFindAndModify: false,
         useUnifiedTopology: true

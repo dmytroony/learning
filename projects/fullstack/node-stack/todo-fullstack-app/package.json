@@ -4,8 +4,11 @@
   "description": "The app uses nodeJS, expressJS, mongoDB, handlebars, materializeCSS",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
-    "dev": "nodemon index"
+    "start": "node --env-file=.env index",
+    "dev": "nodemon --exec \"node --env-file=.env\" index"
+  },
+  "engines": {
+    "node": ">=20.6"
   },
   "keywords": [
     "node",
