@@ -237,6 +237,8 @@ Older projects pin tooling that clashes with modern Node:
 | 8 | Mixed folder naming (`ds-s_and_algs`, `exampesite1`, `survery_form`, `cl_app_cerate.iml`) | various | Leave as is (renaming breaks history and links) unless it is part of a planned cleanup |
 | 9 | `java/` track and `csharp/untitled` (actually C++) are missing from `CLAUDE.md` | `CLAUDE.md` | Update the docs |
 | 10 | `javascript/frameworks/react/ttt` lists `react-scripts` in both deps (`^5`) and devDeps (`1.0.0`), and has a nested `src/package.json` | `ttt/` | Clean up the manifest |
+| 11 | **TODO** GitHub secret scanning alert #3 (MongoDB Atlas URI with credentials) still open. Credentials are already dead: password changed in Atlas 2026-09-27, old host `cluster0.ot80v` no longer resolves, URI moved to `.env` (`942b044`). | `projects/fullstack/node-stack/todo-fullstack-app/index.js` (git history) | Close alert #3 as "revoked" on GitHub → Security → Secret scanning |
+| 12 | **TODO** GitHub secret scanning alerts #1 and #2 (Google API keys, Firebase web config) still open | `projects/React/superchat/src/App.js:13`, `projects/vue-apps/crm-acc/src/main.js:21` | In Google Cloud Console → Credentials: restrict each key (HTTP referrers + only the needed Firebase APIs), or delete it if the Firebase project is unused. Then close the alerts as "revoked" (deleted) or "used in tests"/"false positive" (restricted public web key). |
 
 ---
 
