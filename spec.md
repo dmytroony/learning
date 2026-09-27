@@ -228,7 +228,7 @@ Older projects pin tooling that clashes with modern Node:
 | # | Issue | Location | Suggested action |
 |---|---|---|---|
 | 1 | `node_modules/` committed (~4,100 files) | `projects/JavaScript30/geolocation/` | `git rm -r --cached` it and add `node_modules/` to `.gitignore` |
-| 2 | `.env` with an API key (`VUE_APP_FIXER`) is tracked | `projects/vue-apps/crm-acc/.env` | Rotate the key, untrack the file, add `.env.example` |
+| 2 | ~~`.env` with an API key (`VUE_APP_FIXER`) is tracked~~ **Resolved 2026-09-27** | `projects/vue-apps/crm-acc/.env` | Done: file untracked, `.env.example` added, old key revoked and new key regenerated on fixer.io. The new key lives only in the fixer.io dashboard (not in the repo); copy it into the local untracked `.env` when needed. |
 | 3 | Build artifacts tracked | `cpp/*.exe`, `cpp/*.o`, `clang/c_hello/hello`, `java/*/out/`, `csharp/*/.vs`, `python/**/__pycache__` | Untrack them and extend `.gitignore` |
 | 4 | No root rule for `node_modules/`, `__pycache__/`, `*.pyc`, `out/`, `dist/`, `build/`, `.env` | `.gitignore` | Add the global patterns |
 | 5 | Python projects have no dependency manifest | `python/*` | Add `requirements.txt` per project |
