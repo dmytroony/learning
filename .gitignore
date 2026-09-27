@@ -12,7 +12,10 @@ python/code-basics/.idea/
 python/code-basics/venv/
 *venv/
 *cmake-build-debug/
-.claude/
+# Claude Code: share agents and skills, keep local settings/state ignored
+.claude/*
+!.claude/agents/
+!.claude/skills/
 
 # Vim artifacts
 *~
