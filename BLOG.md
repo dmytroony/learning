@@ -8,7 +8,7 @@ Notes on what has been built and learned in this repo. Newest posts on top, olde
 ---
 
 ## 2026-09 — The state of the repo: an FAQ
-*663 commits · 2026-09-27 ← 2019-01-03*
+*666 commits · 2026-09-27 ← 2019-01-03*
 
 ### What changed most recently?
 In September 2026 the repo got tooling, documentation, and — at the end of the month — a security pass, not new exercises:
@@ -20,16 +20,16 @@ In September 2026 the repo got tooling, documentation, and — at the end of the
   - Secret scanning and push protection were enabled on the repo (previously disabled, despite the repo being public).
   - Secret scanning flagged a hardcoded MongoDB Atlas connection string in [projects/fullstack/node-stack/todo-fullstack-app/](projects/fullstack/node-stack/todo-fullstack-app/), present in the commit history since 2020 (`942b044`). The credentials were rotated in Atlas and the old cluster host (`cluster0.ot80v`) no longer resolves, so the leaked ones are dead either way; the app now reads `MONGODB_URI` from an untracked `.env` (`.env.example` committed instead).
   - The fixer.io key issue from `spec.md §6` was closed out the same way (`f954c9d`): new key regenerated, old one revoked.
-  - Two Google API key alerts (Firebase web config in [projects/React/superchat/](projects/React/superchat/) and [projects/vue-apps/crm-acc/](projects/vue-apps/crm-acc/)) are still open, pending restriction in Google Cloud Console.
-  - ~2,900 open Dependabot alerts across 31 npm projects were reviewed. The critical ones — Next.js RCE and middleware auth-bypass in [javascript/frameworks/react/learnreact18/](javascript/frameworks/react/learnreact18/) — were fixed by upgrading Next.js 14.0.1 → 15.5.26 and React 18 → 19 (`e2ab88d`). The rest were dismissed as tolerable risk: learning/sandbox projects, run locally only, never deployed.
+  - ~2,900 open Dependabot alerts across 31 npm projects were reviewed. The critical ones — Next.js RCE and middleware auth-bypass in [javascript/frameworks/react/learnreact18/](javascript/frameworks/react/learnreact18/) — were fixed by upgrading Next.js 14.0.1 → 15.5.26 and React 18 → 19 (`e2ab88d`). The rest were dismissed as tolerable risk: learning/sandbox projects, run locally only, never deployed. All ~2,900 alerts are now closed — zero open.
+  - **Follow-up (`eec59e0`, `0f307dc`):** the two Google API key alerts were resolved. The [projects/React/superchat/](projects/React/superchat/) key was already invalid (its Firebase project is gone), so alert #1 was closed as "revoked". The [projects/vue-apps/crm-acc/](projects/vue-apps/crm-acc/) key was restricted in Google Cloud Console to its own Firebase referrers and to only the Identity Toolkit / Token Service / Realtime Database APIs, with other referrers verified blocked, so alert #2 was closed as "won't fix"; the crm-acc Realtime Database turned out to be already deactivated by Firebase. Secret scanning alert #3 (MongoDB) was closed as "revoked" too. `spec.md` issues #11 and #12 are now marked solved — zero open secret scanning alerts.
 
 ### What's still open?
-The technical-debt table in [spec.md §6](spec.md) lists most of it: outdated stacks, versions that aren't pinned, Python projects with no requirements files, and some folder names that don't match the rest. On top of that, from the September 27 security review: the two open Google API key alerts (Firebase configs in `superchat` and `crm-acc`) still need restricting in Google Cloud Console, and the bulk of the Dependabot backlog is knowingly left unfixed since these are local-only exercise projects.
+The technical-debt table in [spec.md §6](spec.md) lists most of what remains: outdated stacks, versions that aren't pinned, Python projects with no requirements files, and some folder names that don't match the rest. The September 27 security review closed out everything else — secret scanning alerts and Dependabot alerts are both at zero open.
 
 ### How did the work move over the years?
 | Year | Commits | Main focus |
 |---|---|---|
-| 2026 | 20 | C#/C++ exercises, Python touch-ups, a dev container, AI-agent docs, a September security cleanup |
+| 2026 | 23 | C#/C++ exercises, Python touch-ups, a dev container, AI-agent docs, a September security cleanup |
 | 2025 | 16 | JS frameworks (Vue 3 + Vite, Lynx), ECMAScript |
 | 2024 | 110 | *Super Pirate World* (pygame), frameworks, TypeScript + Vite, Docker crash course, data structures |
 | 2023 | 31 | JS frameworks and ECMAScript |
