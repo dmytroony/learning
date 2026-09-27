@@ -6,6 +6,8 @@ Use short answers only, no code - key information only.
 
 Before refactoring and work with code read the file @spec.md everytime.
 
+BLOG.md rule: all updates go on top — newest post first, oldest at the bottom. Never append new posts at the end.
+
 
 ## What this repository is
 
