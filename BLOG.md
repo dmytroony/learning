@@ -8,7 +8,7 @@ Notes on what has been built and learned in this repo. Newest posts on top, olde
 ---
 
 ## 2026-09 — The state of the repo: an FAQ
-*666 commits · 2026-09-27 ← 2019-01-03*
+*668 commits · 2026-09-27 ← 2019-01-03*
 
 ### What changed most recently?
 In September 2026 the repo got tooling, documentation, and — at the end of the month — a security pass, not new exercises:
@@ -22,6 +22,9 @@ In September 2026 the repo got tooling, documentation, and — at the end of the
   - The fixer.io key issue from `spec.md §6` was closed out the same way (`f954c9d`): new key regenerated, old one revoked.
   - ~2,900 open Dependabot alerts across 31 npm projects were reviewed. The critical ones — Next.js RCE and middleware auth-bypass in [javascript/frameworks/react/learnreact18/](javascript/frameworks/react/learnreact18/) — were fixed by upgrading Next.js 14.0.1 → 15.5.26 and React 18 → 19 (`e2ab88d`). The rest were dismissed as tolerable risk: learning/sandbox projects, run locally only, never deployed. All ~2,900 alerts are now closed — zero open.
   - **Follow-up (`eec59e0`, `0f307dc`):** the two Google API key alerts were resolved. The [projects/React/superchat/](projects/React/superchat/) key was already invalid (its Firebase project is gone), so alert #1 was closed as "revoked". The [projects/vue-apps/crm-acc/](projects/vue-apps/crm-acc/) key was restricted in Google Cloud Console to its own Firebase referrers and to only the Identity Toolkit / Token Service / Realtime Database APIs, with other referrers verified blocked, so alert #2 was closed as "won't fix"; the crm-acc Realtime Database turned out to be already deactivated by Firebase. Secret scanning alert #3 (MongoDB) was closed as "revoked" too. `spec.md` issues #11 and #12 are now marked solved — zero open secret scanning alerts.
+- **Later on 2026-09-27 — agent tooling and a dev-container memory bump:**
+  - `b4510b7` starts tracking Claude Code agents and skills in git: `.gitignore` switched from blanket-ignoring `.claude/` to `.claude/*` with exceptions for `agents/` and `skills/`, and a `code-faq` agent plus a matching `/code-faq` skill (the one that writes this file) were added, while local `.claude/settings*` stay untracked.
+  - [docker-compose.yml](docker-compose.yml) and [spec.md §4.1](spec.md) raise the dev container's `mem_limit`/`memswap_limit` from 2 GB to 6 GB (still no swap), after `npm install` for a new Next.js scaffold died with exit 137 under the old 2 GB cap. A first attempt to scaffold a Next.js e-commerce starter (TypeScript, Tailwind, Better Auth, Drizzle, Neon) under `llms/atelier-store/` was killed by the same limit and fully reverted — the folder is empty again, to be retried once the higher memory cap lands.
 
 ### What's still open?
 The technical-debt table in [spec.md §6](spec.md) lists most of what remains: outdated stacks, versions that aren't pinned, Python projects with no requirements files, and some folder names that don't match the rest. The September 27 security review closed out everything else — secret scanning alerts and Dependabot alerts are both at zero open.

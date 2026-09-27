@@ -174,8 +174,8 @@ services:
   learning-env:
     build: .                       # Dockerfile: FROM local-ubuntu-base:24.04
     container_name: learning-env
-    mem_limit: 2g                  # hard cap: leaking processes are OOM-killed
-    memswap_limit: 2g              # equal to mem_limit, so no swap
+    mem_limit: 6g                  # hard cap: leaking processes are OOM-killed
+    memswap_limit: 6g              # equal to mem_limit, so no swap
     volumes: [ ".:/workspace:rw" ]
 ```
 - The base image `local-ubuntu-base:24.04` is **not pulled from a registry**. It must already exist on the host.
