@@ -8,7 +8,7 @@ Notes on what has been built and learned in this repo. Newest posts on top, olde
 ---
 
 ## 2026-09 — The state of the repo: an FAQ
-*670 commits · 2026-09-28 ← 2019-01-03*
+*672 commits · 2026-09-28 ← 2019-01-03*
 
 ### What changed most recently?
 In September 2026 the repo got tooling, documentation, and — at the end of the month — a security pass, not new exercises:
@@ -26,6 +26,7 @@ In September 2026 the repo got tooling, documentation, and — at the end of the
   - `b4510b7` starts tracking Claude Code agents and skills in git: `.gitignore` switched from blanket-ignoring `.claude/` to `.claude/*` with exceptions for `agents/` and `skills/`, and a `code-faq` agent plus a matching `/code-faq` skill (the one that writes this file) were added, while local `.claude/settings*` stay untracked.
   - [docker-compose.yml](docker-compose.yml) and [spec.md §4.1](spec.md) raise the dev container's `mem_limit`/`memswap_limit` from 2 GB to 6 GB (still no swap), after `npm install` for a new Next.js scaffold died with exit 137 under the old 2 GB cap. A first attempt to scaffold a Next.js e-commerce starter (TypeScript, Tailwind, Better Auth, Drizzle, Neon) under `llms/atelier-store/` was killed by the same limit and fully reverted — the folder is empty again, to be retried once the higher memory cap lands.
   - **2026-09-28 — container file ownership fixed (`bf58094`):** [docker-compose.yml](docker-compose.yml) now sets `user: "1000:1000"` on the `learning-env` service, so files created from inside the container land on the host owned by the regular user instead of root.
+  - **2026-09-28 — VS Code Dev Containers support (`a593fc7`):** a new [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) reuses the existing `docker-compose.yml`'s `learning-env` service (workspace folder `/workspace`, remote user `ubuntu`, `shutdownAction: stopCompose`), so VS Code (or any devcontainer-aware client) can "Reopen in Container" instead of running `docker-compose up` and `docker exec` by hand. No `postCreateCommand` or extension list was added, since the repo spans too many independent language tracks for one generic toolchain bootstrap to make sense.
 
 ### What's still open?
 The technical-debt table in [spec.md §6](spec.md) lists most of what remains: outdated stacks, versions that aren't pinned, Python projects with no requirements files, and some folder names that don't match the rest. The September 27 security review closed out everything else — secret scanning alerts and Dependabot alerts are both at zero open.
@@ -33,7 +34,7 @@ The technical-debt table in [spec.md §6](spec.md) lists most of what remains: o
 ### How did the work move over the years?
 | Year | Commits | Main focus |
 |---|---|---|
-| 2026 | 27 | C#/C++ exercises, Python touch-ups, a dev container, AI-agent docs, a September security cleanup and container fix |
+| 2026 | 29 | C#/C++ exercises, Python touch-ups, a dev container, AI-agent docs, a September security cleanup, container file-ownership fix, and VS Code Dev Containers support |
 | 2025 | 16 | JS frameworks (Vue 3 + Vite, Lynx), ECMAScript |
 | 2024 | 110 | *Super Pirate World* (pygame), frameworks, TypeScript + Vite, Docker crash course, data structures |
 | 2023 | 31 | JS frameworks and ECMAScript |
