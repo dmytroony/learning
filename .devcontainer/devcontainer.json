@@ -1,0 +1,8 @@
+{
+  "name": "learning",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "learning-env",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "ubuntu",
+  "shutdownAction": "stopCompose"
+}
