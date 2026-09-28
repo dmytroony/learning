@@ -2,6 +2,7 @@ services:
   learning-env:
     build: .
     container_name: learning-env
+    user: "1000:1000"
     mem_limit: 6g
     memswap_limit: 6g
     volumes:
