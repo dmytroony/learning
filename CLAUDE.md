@@ -16,7 +16,7 @@ This is a personal, multi-language learning/sandbox monorepo (`learning`), not a
 Top-level areas:
 - `javascript/`, `js/`, `ds-s_and_algs/` — vanilla JS, ECMAScript course code, TypeScript exercises (`javascript/typescript_learn/`, `javascript/typescript/`), and framework playgrounds under `javascript/frameworks/` (bun, deno, express, lynxjs, nodejs, react, vue)
 - `python/` — separate scripts/projects: `python/code-basics/`, `python/hackingchallenge/`, `python/Super-Pirate-World/` (a pygame project with its own `code/`, `graphics/`, `audio/`, `data/`)
-- `cpp/`, `clang/`, `csharp/`, `dart/` — small compiled-language exercises, several with their own `CMakeLists.txt` or `.sln`
+- `cpp/`, `clang/`, `csharp/`, `dart/`, `java/` — small compiled-language exercises, several with their own `CMakeLists.txt` or `.sln`. Note: `csharp/untitled` is actually a CMake C++17 project (CLion), not C#, despite the folder's location. `java/` holds IntelliJ console apps (`cl_app`, `clapp_bdate`, `clapp_contacts`, `clapp_translator`) built with `javac`/`java` by hand — no Maven/Gradle.
 - `flutter/` — two independent Flutter apps (`helloworld/`, `myapp/`), each with a standard Flutter project layout (`lib/`, `android/`, `ios/`, `web/`, `pubspec.yaml`)
 - `css/`, `sass/`, `scss/`, `layouts/`, `php/` — static styling/markup exercises
 - `projects/` — larger, self-contained project folders: `JavaScript30/` (30 independent daily projects), `React/` (several separate CRA/React apps: `bug-tracker`, `gh-jobs-api-app`, `superchat`, `blog1_gatsby`), `vue-apps/crm-acc/`, `fullstack/` (`node-stack/`, `vue-node/`), `Bootstrap4/`, `bootstrap5/`, `html_css_js/`, `materialize-css-v1/`
@@ -39,3 +39,5 @@ docker exec -it learning-env bash
 ```
 
 This mounts the whole repo at `/workspace` read-write inside the container; it's a generic shell environment for working across any of the project folders, not a runner for a specific app.
+
+VS Code (or any devcontainer-aware client) can instead use `.devcontainer/devcontainer.json`, which reuses the same `docker-compose.yml` service ("Reopen in Container") instead of running the two commands above by hand.
