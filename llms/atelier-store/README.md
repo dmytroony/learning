@@ -2,6 +2,12 @@
 
 Next.js e-commerce app scaffold — TypeScript, Tailwind CSS, Drizzle ORM on Neon Postgres, Better Auth. This is initial project structure and configuration only: no storefront UI, no schema/tables, no auth flows, no payments, no deployment setup yet.
 
+## Beginning Prompt
+
+Set up a new next.js ecommerce app in this folder using ts, tailwind, better auth, drizzle orm, and postgres via neon. 
+Only create the initial project structure, dependencies, configuration, env example and minimal integrations. 
+Do not build ecommerce features, full auth flows, schemas, ui, payments or deployment.
+
 ## Start plan
 
 The order this scaffold was built and verified in:
