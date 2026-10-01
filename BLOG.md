@@ -8,7 +8,7 @@ Notes on what has been built and learned in this repo. Newest posts on top, olde
 ---
 
 ## 2026-09 — The state of the repo: an FAQ
-*672 commits · 2026-09-28 ← 2019-01-03*
+*679 commits · 2026-09-30 ← 2019-01-03*
 
 ### What changed most recently?
 In September 2026 the repo got tooling, documentation, and — at the end of the month — a security pass, not new exercises:
@@ -27,6 +27,11 @@ In September 2026 the repo got tooling, documentation, and — at the end of the
   - [docker-compose.yml](docker-compose.yml) and [spec.md §4.1](spec.md) raise the dev container's `mem_limit`/`memswap_limit` from 2 GB to 6 GB (still no swap), after `npm install` for a new Next.js scaffold died with exit 137 under the old 2 GB cap. A first attempt to scaffold a Next.js e-commerce starter (TypeScript, Tailwind, Better Auth, Drizzle, Neon) under `llms/atelier-store/` was killed by the same limit and fully reverted — the folder is empty again, to be retried once the higher memory cap lands.
   - **2026-09-28 — container file ownership fixed (`bf58094`):** [docker-compose.yml](docker-compose.yml) now sets `user: "1000:1000"` on the `learning-env` service, so files created from inside the container land on the host owned by the regular user instead of root.
   - **2026-09-28 — VS Code Dev Containers support (`a593fc7`):** a new [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json) reuses the existing `docker-compose.yml`'s `learning-env` service (workspace folder `/workspace`, remote user `ubuntu`, `shutdownAction: stopCompose`), so VS Code (or any devcontainer-aware client) can "Reopen in Container" instead of running `docker-compose up` and `docker exec` by hand. No `postCreateCommand` or extension list was added, since the repo spans too many independent language tracks for one generic toolchain bootstrap to make sense.
+- **2026-09-29 — container npm permissions and leaner docs:**
+  - `8850707` and `94b1806` fix the same root-cause twice: the base image's global npm `node_modules` were owned by `root`, so `npm`/Claude Code self-update failed inside the container with no `sudo` available. The [Dockerfile](Dockerfile) first `chown`s just the installed Node version's `node_modules`, then a follow-up commit widens it to `chown -R 1000:1000 /usr/local/nvm/versions/node/*` (the whole nvm-managed Node prefix) to cover `npm`'s own files too.
+  - `8850707` also fixes [CLAUDE.md](CLAUDE.md): it was missing the `java/` track and mislabeled `csharp/untitled` (actually a CMake C++ project), and it documents the new devcontainer.json workflow.
+  - `847177f` stops [CLAUDE.md](CLAUDE.md) from eager-loading all of `spec.md` into every session (it used Claude Code's `@spec.md` import syntax instead of the intended "read on demand before refactoring" instruction), trims a directory listing and build-command mapping that's now derivable from `spec.md`, and moves the Docker dev-environment steps into a lazily-loaded `docker-dev-env` skill.
+- **2026-09-30 — a second, successful attempt at the `llms/atelier-store/` scaffold** (`5bc1b40`, `0936e88`, `c6b37bb`), now that the dev container's memory cap is 6 GB: a Next.js 16 app (TypeScript, Tailwind v4, App Router, Turbopack) wired end-to-end to Drizzle ORM + Neon serverless Postgres and a bare Better Auth instance (no auth methods enabled, no schema tables, no storefront UI, no payments, no deployment config). The [README](llms/atelier-store/README.md) documents the architecture, the 12-step build/verify plan, and the "not yet built" scope; a `.env.example` lists the required `DATABASE_URL`/`BETTER_AUTH_SECRET`/`BETTER_AUTH_URL` vars.
 
 ### What's still open?
 The technical-debt table in [spec.md §6](spec.md) lists most of what remains: outdated stacks, versions that aren't pinned, Python projects with no requirements files, and some folder names that don't match the rest. The September 27 security review closed out everything else — secret scanning alerts and Dependabot alerts are both at zero open.
@@ -34,7 +39,7 @@ The technical-debt table in [spec.md §6](spec.md) lists most of what remains: o
 ### How did the work move over the years?
 | Year | Commits | Main focus |
 |---|---|---|
-| 2026 | 29 | C#/C++ exercises, Python touch-ups, a dev container, AI-agent docs, a September security cleanup, container file-ownership fix, and VS Code Dev Containers support |
+| 2026 | 36 | C#/C++ exercises, Python touch-ups, a dev container, AI-agent docs, a September security cleanup, container file-ownership and npm-permissions fixes, VS Code Dev Containers support, leaner docs, and a first `llms/` scaffold (Next.js + Drizzle + Neon + Better Auth) |
 | 2025 | 16 | JS frameworks (Vue 3 + Vite, Lynx), ECMAScript |
 | 2024 | 110 | *Super Pirate World* (pygame), frameworks, TypeScript + Vite, Docker crash course, data structures |
 | 2023 | 31 | JS frameworks and ECMAScript |
@@ -59,6 +64,7 @@ According to the learning log in [README.md](README.md), newest first:
 - **Other languages** — C, C++, C#, Java, Dart and two Flutter apps: [clang/](clang/), [cpp/](cpp/), [csharp/](csharp/), [java/](java/), [dart/](dart/), [flutter/](flutter/)
 - **Styling / markup** — CSS, Sass/SCSS and layout exercises: [css/](css/), [scss/](scss/), [layouts/](layouts/)
 - **Docker** — a crash-course exercise with Node + MongoDB: [docker/docker_crash/](docker/docker_crash/)
+- **LLM/agent-built apps** — `llms/atelier-store/`, a Next.js + Drizzle + Neon + Better Auth ecommerce scaffold built with Claude Code: [llms/atelier-store/](llms/atelier-store/)
 
 ### Can I run everything from the root?
 No. `cd` into a project folder and use its own manifest (`package.json`, `CMakeLists.txt`, `pubspec.yaml`, …). Older stacks (CRA 3, Vue CLI 4, Gatsby 2, node-sass) need an older Node version or `NODE_OPTIONS=--openssl-legacy-provider`.
