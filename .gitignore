@@ -50,3 +50,6 @@ csharp/**/obj/
 clang/c_hello/hello
 cpp/firstprogram
 cpp/myfirstprogram
+
+# Claude files
+.claude/worktrees/
