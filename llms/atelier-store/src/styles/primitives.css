@@ -1,0 +1,115 @@
+/* Layout primitives — registered as utilities so they accept variants (md:, lg:, …). */
+
+@utility page-shell {
+  width: 100%;
+  padding-inline: var(--gutter);
+}
+
+@utility page-content {
+  width: 100%;
+  max-width: var(--container-content);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+@utility page-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+@utility page-prose {
+  width: 100%;
+  max-width: var(--container-prose);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+@utility section-y {
+  padding-block: var(--section-y);
+}
+
+@utility bleed {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+}
+
+@utility grid-products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--grid-gap);
+  row-gap: 2rem;
+
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 3rem;
+  }
+
+  @media (width >= 80rem) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@utility grid-editorial {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: var(--gutter);
+
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+
+@utility scroll-row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 72%;
+  gap: var(--grid-gap);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & > * {
+    scroll-snap-align: start;
+  }
+
+  @media (width >= 48rem) {
+    grid-auto-columns: calc((100% - 2 * var(--grid-gap)) / 3);
+  }
+
+  @media (width >= 80rem) {
+    grid-auto-columns: calc((100% - 3 * var(--grid-gap)) / 4);
+  }
+}
+
+@utility media {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-surface);
+
+  & > img,
+  & > video,
+  & > picture > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@utility scrim {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(to top, var(--color-scrim), transparent 55%);
+  }
+}

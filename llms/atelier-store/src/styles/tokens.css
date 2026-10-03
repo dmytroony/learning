@@ -1,0 +1,110 @@
+/* Design tokens — every value Tailwind exposes as a utility lives here. */
+
+:root {
+  --gutter: 1rem;
+  --section-y: 3rem;
+  --header-height: 3.5rem;
+  --grid-gap: 0.25rem;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --gutter: 1.5rem;
+    --section-y: 4.5rem;
+    --grid-gap: 0.5rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  :root {
+    --gutter: 2.5rem;
+    --section-y: 6rem;
+    --header-height: 4.5rem;
+  }
+}
+
+@theme {
+  /* Neutral, image-first palette. Accent is used sparingly (sale, focus, badges). */
+  --color-ink: #111111;
+  --color-ink-soft: #3a3a3a;
+  --color-muted: #75716b;
+  --color-subtle: #a8a49e;
+  --color-line: #e3e0db;
+  --color-line-strong: #c9c5be;
+  --color-surface: #f5f4f1;
+  --color-surface-strong: #ebe9e4;
+  --color-paper: #ffffff;
+  --color-accent: #2c4a3e;
+  --color-accent-soft: #e4ebe7;
+  --color-danger: #9b2c2c;
+  --color-success: #2f5d3a;
+  --color-scrim: rgb(0 0 0 / 0.35);
+
+  /* Type scale: small tracked uppercase UI, quiet body, oversized serif display. */
+  --text-micro: 0.6875rem;
+  --text-micro--line-height: 1rem;
+  --text-micro--letter-spacing: 0.12em;
+
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.125rem;
+  --text-caption--letter-spacing: 0.06em;
+
+  --text-body: 0.875rem;
+  --text-body--line-height: 1.5rem;
+  --text-body--letter-spacing: 0.01em;
+
+  --text-lead: 1rem;
+  --text-lead--line-height: 1.625rem;
+
+  --text-h4: 1.125rem;
+  --text-h4--line-height: 1.5rem;
+
+  --text-h3: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem);
+  --text-h3--line-height: 1.2;
+
+  --text-h2: clamp(1.75rem, 1.4rem + 1.4vw, 2.75rem);
+  --text-h2--line-height: 1.1;
+
+  --text-h1: clamp(2.25rem, 1.6rem + 2.6vw, 4.5rem);
+  --text-h1--line-height: 1.02;
+  --text-h1--letter-spacing: -0.01em;
+
+  --text-display: clamp(3rem, 1.8rem + 5vw, 8rem);
+  --text-display--line-height: 0.95;
+  --text-display--letter-spacing: -0.02em;
+
+  --tracking-label: 0.12em;
+  --tracking-nav: 0.08em;
+
+  /* Layout */
+  --container-prose: 40rem;
+  --container-narrow: 60rem;
+  --container-content: 90rem;
+  --container-wide: 120rem;
+
+  --breakpoint-3xl: 120rem;
+
+  --aspect-product: 4 / 5;
+  --aspect-portrait: 3 / 4;
+  --aspect-hero: 16 / 9;
+  --aspect-hero-mobile: 4 / 5;
+
+  /* Square corners by default; pill reserved for tags/swatches. */
+  --radius-none: 0;
+  --radius-pill: 999px;
+
+  --ease-luxe: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 600ms;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans-ui), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: var(--font-serif-display), "Times New Roman", serif;
+
+  --spacing-gutter: var(--gutter);
+  --spacing-section: var(--section-y);
+  --spacing-header: var(--header-height);
+  --spacing-grid: var(--grid-gap);
+}
