@@ -3,7 +3,24 @@
 Notes on what has been built and learned in this repo. Newest posts on top, oldest at the bottom.
 
 ## Contents
+- [2026-10 — Housekeeping: ignoring Claude's own clutter, plus a skills plugin](#2026-10--housekeeping-ignoring-claudes-own-clutter-plus-a-skills-plugin)
 - [2026-09 — The state of the repo: an FAQ](#2026-09--the-state-of-the-repo-an-faq)
+
+---
+
+## 2026-10 — Housekeeping: ignoring Claude's own clutter, plus a skills plugin
+*5 commits · tracks: docs, config, llms*
+
+October opened with small follow-ups to September's dev-container and agent-tooling work, then added a third-party Claude Code skills plugin to the `llms/atelier-store/` scaffold.
+
+- **2026-10-01 — npm auto-update fix notes archived (`857f219`):** [instructions/npm-auto-update_fix.md](instructions/npm-auto-update_fix.md) records the session that diagnosed September's npm permission failures (`8850707`/`94b1806`): `@anthropic-ai/claude-code`'s files under the nvm-managed `node_modules` were owned by `root` from the base image build, while the container runs as `ubuntu` (uid 1000) with no `sudo`, so `claude doctor` warned that auto-update had no write permission. The note documents the root cause, the decision to fix ownership in this repo's own `Dockerfile` rather than the external base image, and a caveat that `~/.claude/projects/*.jsonl` session transcripts live on the container's writable layer (not the bind-mounted `/workspace`) and are lost on rebuild — hence writing the plan to a tracked file.
+- **2026-10-01 — ignore Claude Code worktrees (`ee4bed4`):** `.gitignore` gained `.claude/worktrees/`.
+- **2026-10-02 — ignore local CLAUDE overrides (`81c17d2`):** `.gitignore` (root and `llms/atelier-store/.gitignore`) now also excludes `CLAUDE.local.md`, alongside the existing `.claude/worktrees/` rule.
+- **2026-10-03 — JavaScript-Mastery-Pro skills plugin added to `llms/atelier-store/` (`e77a980`):** nine Claude Code skills (`architect`, `audit`, `check`, `debug`, `develop`, `document`, `scope`, `sync`, `test`) were pulled in from the `JavaScript-Mastery-Pro/skills` GitHub repo under [llms/atelier-store/.claude/skills/](llms/atelier-store/.claude/skills/), each with its own `SKILL.md`, agent prompts, and mode/pattern reference docs, plus a `skills-lock.json` pinning each skill's source and content hash. These are process skills for spec-driven development (architecture decisions, codebase audits, review/verify gates, debugging, build checklists, docs templates, scope planning, skill-sync, and test setup) rather than application code — nothing in the storefront itself changed.
+
+**Notable commits:** `857f219` docs: archive npm auto-update fix session notes, `ee4bed4` claude worktrees ignoring, `81c17d2` local claude.md setts ignoring, `e77a980` Add JavaScript-Mastery-Pro skills plugin and lockfile
+
+**Finished:** none — this month was tooling/config only, no README learning-log entries closed.
 
 ---
 
