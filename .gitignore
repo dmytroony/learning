@@ -54,3 +54,6 @@ cpp/myfirstprogram
 # Claude files
 .claude/worktrees/
 CLAUDE.local.md
+
+# pnpm store
+.pnpm-store/
