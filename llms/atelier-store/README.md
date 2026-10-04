@@ -34,7 +34,7 @@ A single Next.js 16 App Router application — no separate backend service. Serv
 3. `src/app/api/auth/[...all]/route.ts` exposes the `auth` instance's endpoints (sign-in, sign-out, session, etc.) as a Next.js catch-all route under `/api/auth/*`, via `toNextJsHandler(auth)`.
 4. `src/app/layout.tsx` / `page.tsx` are still the unmodified `create-next-app` scaffold (Geist fonts, Tailwind demo page) — nothing on the client reads auth state or queries the database yet.
 
-The chain (client → `/api/auth/*` → Better Auth → Drizzle → Neon) is wired end-to-end but unexercised: `schema.ts` is empty, so it has no tables (including Better Auth's own) until `npx @better-auth/cli generate` is run and merged in, then migrated.
+The chain (client → `/api/auth/*` → Better Auth → Drizzle → Neon) is wired end-to-end but unexercised: `schema.ts` is empty, so it has no tables (including Better Auth's own) until `pnpm dlx @better-auth/cli generate` is run and merged in, then migrated.
 
 ## Beginning Prompt
 
@@ -49,7 +49,7 @@ The order this scaffold was built and verified in:
 1. **Preflight** — confirmed `llms/atelier-store/` was empty, checked Node / npm available.
 2. **Scaffold** — `create-next-app` with TypeScript, Tailwind, App Router, ESLint, `src/` dir, `@/*` import alias.
 3. **Fix `.gitignore`** — generated `.env*` pattern would've also ignored `.env.example`; narrowed it to `.env` + `.env*.local`.
-4. **Base install** — `npm install` for the Next.js deps.
+4. **Base install** — `npm install` for the Next.js deps (project later switched to pnpm; `pnpm-lock.yaml` is the lockfile).
 5. **Add the stack** — installed `drizzle-orm`, `@neondatabase/serverless`, `better-auth` (deps); `drizzle-kit`, `dotenv` (devDeps).
 6. **Check integration points** — confirmed `better-auth`'s `next-js` and `adapters/drizzle` subpath exports exist before wiring anything to them.
 7. **Drizzle config + client** — `drizzle.config.ts`, `src/db/schema.ts` (empty placeholder), `src/db/index.ts` (Neon HTTP driver).
@@ -62,16 +62,17 @@ The order this scaffold was built and verified in:
 ## Prerequisites
 
 - Node.js ≥ 20 (developed against v24)
+- [pnpm](https://pnpm.io) (package manager; do not use npm/yarn — the lockfile is `pnpm-lock.yaml`)
 - A [Neon](https://neon.tech) Postgres database
 
 ## Setup
 
 ```bash
 cp .env.example .env
-# fill in DATABASE_URL (from Neon) and BETTER_AUTH_SECRET (npx @better-auth/cli secret)
+# fill in DATABASE_URL (from Neon) and BETTER_AUTH_SECRET (pnpm dlx @better-auth/cli secret)
 
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
@@ -80,12 +81,12 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Command | What it does |
 |---|---|
-| `npm run dev` | Dev server with hot reload (Turbopack by default in Next.js 16). |
-| `npm run build` | Production build to `.next/`. |
-| `npm run start` | Serves the build made by `npm run build`. Run build first. |
-| `npm run lint` | ESLint over the project. |
+| `pnpm dev` | Dev server with hot reload (Turbopack by default in Next.js 16). |
+| `pnpm build` | Production build to `.next/`. |
+| `pnpm start` | Serves the build made by `pnpm build`. Run build first. |
+| `pnpm lint` | ESLint over the project. |
 
-Useful options (pass after `--`, e.g. `npm run dev -- -p 3100`):
+Useful options (pass directly, e.g. `pnpm dev -p 3100`):
 
 - `-p, --port <port>` — port to listen on (default `3000`, or `$PORT`)
 - `-H, --hostname <hostname>` — hostname to bind (default `0.0.0.0`)
@@ -105,13 +106,13 @@ Useful options (pass after `--`, e.g. `npm run dev -- -p 3100`):
 
 ## Database
 
-No tables exist yet. Once you add tables to `src/db/schema.ts` (including Better Auth's required tables — generate a starting point with `npx @better-auth/cli generate`):
+No tables exist yet. Once you add tables to `src/db/schema.ts` (including Better Auth's required tables — generate a starting point with `pnpm dlx @better-auth/cli generate`):
 
 ```bash
-npm run db:generate   # generate SQL migrations from schema.ts
-npm run db:migrate    # apply migrations to the database
-npm run db:push       # or: push schema directly, for prototyping
-npm run db:studio     # browse the database
+pnpm db:generate   # generate SQL migrations from schema.ts
+pnpm db:migrate    # apply migrations to the database
+pnpm db:push       # or: push schema directly, for prototyping
+pnpm db:studio     # browse the database
 ```
 
 ## Not yet built
