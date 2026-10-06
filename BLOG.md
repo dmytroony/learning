@@ -9,10 +9,12 @@ Notes on what has been built and learned in this repo. Newest posts on top, olde
 ---
 
 ## 2026-10 — Housekeeping: ignoring Claude's own clutter, plus a skills plugin
-*8 commits · tracks: docs, config, llms*
+*9 commits (excluding blog-only commits) · tracks: docs, config, llms*
 
-October opened with small follow-ups to September's dev-container and agent-tooling work, then added a third-party Claude Code skills plugin to the `llms/atelier-store/` scaffold, gave it a global design system, and moved it to pnpm.
+October opened with small follow-ups to September's dev-container and agent-tooling work, then added a third-party Claude Code skills plugin to the `llms/atelier-store/` scaffold, gave it a global design system, moved it to pnpm, and added a second skill at the repo root.
 
+- **2026-10-04 — brag-slim skill added (`5807f13`):** a `/brag-slim` skill (turns a project directory or website URL into a short launch video with music and share copy) was added as [.agents/skills/brag-slim/SKILL.md](.agents/skills/brag-slim/SKILL.md), symlinked from `.claude/skills/brag-slim`, with a new root `skills-lock.json` entry.
+- **2026-10-04 — atelier-store docs follow pnpm (`60d74e9`):** [llms/atelier-store/README.md](llms/atelier-store/README.md) was switched to pnpm instructions, and a new [llms/atelier-store/AGENTS.md](llms/atelier-store/AGENTS.md) gained a Conventions section (pnpm only, `pnpm dlx` instead of `npx`, setup lives in the README) under the Next.js agent-rules block.
 - **2026-10-04 — ignore pnpm store (`505111f`):** root `.gitignore` gained three lines for the pnpm store.
 - **2026-10-04 — atelier-store switched from npm to pnpm (`186246f`):** `package-lock.json` replaced by `pnpm-lock.yaml`, a new `pnpm-workspace.yaml` approves the `esbuild` and `unrs-resolver` build scripts, and [llms/atelier-store/.claude/settings.json](llms/atelier-store/.claude/settings.json) points Claude permissions at pnpm.
 - **2026-10-03 — global design system for `llms/atelier-store/` (`2e7564c`):** Tailwind v4 tokens, base styles, layout primitives and component classes (buttons, links, header, hero, product card) were split into [llms/atelier-store/src/styles/](llms/atelier-store/src/styles/) (`tokens.css`, `base.css`, `primitives.css`, `components.css`) and imported from `globals.css`; the Geist fonts were swapped for Inter Tight and Cormorant Garamond in `layout.tsx`.
@@ -21,7 +23,7 @@ October opened with small follow-ups to September's dev-container and agent-tool
 - **2026-10-01 — ignore Claude Code worktrees (`ee4bed4`):** `.gitignore` gained `.claude/worktrees/`.
 - **2026-10-01 — npm auto-update fix notes archived (`857f219`):** [instructions/npm-auto-update_fix.md](instructions/npm-auto-update_fix.md) records the session that diagnosed September's npm permission failures (`8850707`/`94b1806`): `@anthropic-ai/claude-code`'s files under the nvm-managed `node_modules` were owned by `root` from the base image build, while the container runs as `ubuntu` (uid 1000) with no `sudo`, so `claude doctor` warned that auto-update had no write permission. The note documents the root cause, the decision to fix ownership in this repo's own `Dockerfile` rather than the external base image, and a caveat that `~/.claude/projects/*.jsonl` session transcripts live on the container's writable layer (not the bind-mounted `/workspace`) and are lost on rebuild — hence writing the plan to a tracked file.
 
-**Notable commits:** `505111f` chore: ignore pnpm store, `186246f` chore(atelier-store): switch from npm to pnpm, `2e7564c` feat(atelier-store): add global design system, `857f219` docs: archive npm auto-update fix session notes, `ee4bed4` claude worktrees ignoring, `81c17d2` local claude.md setts ignoring, `e77a980` Add JavaScript-Mastery-Pro skills plugin and lockfile
+**Notable commits:** `5807f13` chore: add brag-slim skill and lockfile, `60d74e9` docs(atelier-store): switch README to pnpm and add AGENTS.md conventions, `505111f` chore: ignore pnpm store, `186246f` chore(atelier-store): switch from npm to pnpm, `2e7564c` feat(atelier-store): add global design system, `857f219` docs: archive npm auto-update fix session notes, `ee4bed4` claude worktrees ignoring, `81c17d2` local claude.md setts ignoring, `e77a980` Add JavaScript-Mastery-Pro skills plugin and lockfile
 
 **Finished:** none — this month was tooling/config and scaffold styling only, no README learning-log entries closed.
 
