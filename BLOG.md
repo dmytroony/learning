@@ -9,10 +9,11 @@ Notes on what has been built and learned in this repo. Newest posts on top, olde
 ---
 
 ## 2026-10 — Housekeeping: ignoring Claude's own clutter, plus a skills plugin
-*9 commits (excluding blog-only commits) · tracks: docs, config, llms*
+*10 commits (excluding blog-only commits) · tracks: docs, config, llms*
 
-October opened with small follow-ups to September's dev-container and agent-tooling work, then added a third-party Claude Code skills plugin to the `llms/atelier-store/` scaffold, gave it a global design system, moved it to pnpm, and added a second skill at the repo root.
+October opened with small follow-ups to September's dev-container and agent-tooling work, then added a third-party Claude Code skills plugin to the `llms/atelier-store/` scaffold, gave it a global design system, moved it to pnpm, added a second skill at the repo root, and finally built the first real storefront pages.
 
+- **2026-10-06 — storefront homepage and product detail page (`19f2244`):** [llms/atelier-store/](llms/atelier-store/) got its first real pages: a rewritten homepage (`src/app/page.tsx`), a dynamic [product detail route](llms/atelier-store/src/app/products/[slug]/page.tsx), a `not-found.tsx`, shared `site-header`, `site-footer` and `product-card` components, and a typed sample catalog in `src/data/catalog.ts` (to be swapped for Drizzle queries once a product schema exists). `layout.tsx` and `next.config.ts` were adjusted. Spec `0001-product-detail-page` and its `verify.md` under [llms/atelier-store/docs/specs/](llms/atelier-store/docs/specs/0001-product-detail-page/index.md) record the assumptions, e.g. stock derived per size (sold out, low stock at 1-3, in stock).
 - **2026-10-04 — brag-slim skill added (`5807f13`):** a `/brag-slim` skill (turns a project directory or website URL into a short launch video with music and share copy) was added as [.agents/skills/brag-slim/SKILL.md](.agents/skills/brag-slim/SKILL.md), symlinked from `.claude/skills/brag-slim`, with a new root `skills-lock.json` entry.
 - **2026-10-04 — atelier-store docs follow pnpm (`60d74e9`):** [llms/atelier-store/README.md](llms/atelier-store/README.md) was switched to pnpm instructions, and a new [llms/atelier-store/AGENTS.md](llms/atelier-store/AGENTS.md) gained a Conventions section (pnpm only, `pnpm dlx` instead of `npx`, setup lives in the README) under the Next.js agent-rules block.
 - **2026-10-04 — ignore pnpm store (`505111f`):** root `.gitignore` gained three lines for the pnpm store.
@@ -23,9 +24,9 @@ October opened with small follow-ups to September's dev-container and agent-tool
 - **2026-10-01 — ignore Claude Code worktrees (`ee4bed4`):** `.gitignore` gained `.claude/worktrees/`.
 - **2026-10-01 — npm auto-update fix notes archived (`857f219`):** [instructions/npm-auto-update_fix.md](instructions/npm-auto-update_fix.md) records the session that diagnosed September's npm permission failures (`8850707`/`94b1806`): `@anthropic-ai/claude-code`'s files under the nvm-managed `node_modules` were owned by `root` from the base image build, while the container runs as `ubuntu` (uid 1000) with no `sudo`, so `claude doctor` warned that auto-update had no write permission. The note documents the root cause, the decision to fix ownership in this repo's own `Dockerfile` rather than the external base image, and a caveat that `~/.claude/projects/*.jsonl` session transcripts live on the container's writable layer (not the bind-mounted `/workspace`) and are lost on rebuild — hence writing the plan to a tracked file.
 
-**Notable commits:** `5807f13` chore: add brag-slim skill and lockfile, `60d74e9` docs(atelier-store): switch README to pnpm and add AGENTS.md conventions, `505111f` chore: ignore pnpm store, `186246f` chore(atelier-store): switch from npm to pnpm, `2e7564c` feat(atelier-store): add global design system, `857f219` docs: archive npm auto-update fix session notes, `ee4bed4` claude worktrees ignoring, `81c17d2` local claude.md setts ignoring, `e77a980` Add JavaScript-Mastery-Pro skills plugin and lockfile
+**Notable commits:** `19f2244` feat(atelier-store): add storefront homepage and product detail page, `5807f13` chore: add brag-slim skill and lockfile, `60d74e9` docs(atelier-store): switch README to pnpm and add AGENTS.md conventions, `505111f` chore: ignore pnpm store, `186246f` chore(atelier-store): switch from npm to pnpm, `2e7564c` feat(atelier-store): add global design system, `857f219` docs: archive npm auto-update fix session notes, `ee4bed4` claude worktrees ignoring, `81c17d2` local claude.md setts ignoring, `e77a980` Add JavaScript-Mastery-Pro skills plugin and lockfile
 
-**Finished:** none — this month was tooling/config and scaffold styling only, no README learning-log entries closed.
+**Finished:** none — this month was tooling/config and atelier-store scaffold work only, no README learning-log entries closed.
 
 ---
 
