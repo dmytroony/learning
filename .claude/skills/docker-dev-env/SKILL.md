@@ -13,3 +13,5 @@ docker exec -it learning-env bash
 This mounts the whole repo at `/workspace` read-write inside the container; it's a generic shell environment for working across any of the project folders, not a runner for a specific app.
 
 VS Code (or any devcontainer-aware client) can instead use `.devcontainer/devcontainer.json`, which reuses the same `docker-compose.yml` service ("Reopen in Container") instead of running the two commands above by hand.
+
+To restore the Docker setup after the move to plain WSL (git tag `docker-env-baseline`, image backups, step-by-step), follow `ROLLBACK.md` at the repo root.

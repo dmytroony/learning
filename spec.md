@@ -180,6 +180,7 @@ services:
 ```
 - The base image `local-ubuntu-base:24.04` is **not pulled from a registry**. It must already exist on the host.
 - The container runs `tail -f /dev/null` to stay alive. It is a shell environment, not an app runner.
+- Rollback plan for returning to this container after the WSL migration: `ROLLBACK.md` (git tag `docker-env-baseline`).
 
 ```bash
 docker-compose up -d --build
